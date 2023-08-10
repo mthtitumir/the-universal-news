@@ -1,10 +1,13 @@
 import React from 'react';
 
-const NewsCardOne = () => {
+const NewsCardOne = ({ item }) => {
+
+console.log(item);
     return (
         <div className=''>
-            <h1 className=''>Hello, Lorem ipsum dolor sit amet consectetur. Voluptas, aliquid?</h1>
+            <h1>{item?.title}</h1>
             <div className="divider"></div>
+            
         </div>
     );
 };
