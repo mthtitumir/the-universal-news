@@ -1,3 +1,4 @@
+import HomeComponent from '@/components/HomeComponent/HomeComponent'
 import Headline from '@/components/miniComponents/Headline'
 import NewsCardFour from '@/components/newsCards/NewsCardFour'
 import NewsCardOne from '@/components/newsCards/NewsCardOne'
@@ -8,7 +9,10 @@ export default function Home() {
   return (
     <main className='container mx-auto'>
       <div className="divider"></div>
+      <HomeComponent/>
+      <div className="divider"></div>
       <NewsCardOne />
+      <div className="divider"></div>
       <div className="divider"></div>
       <NewsCardTwo />
       <div className="divider"></div>
