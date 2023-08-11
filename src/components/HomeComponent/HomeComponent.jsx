@@ -3,16 +3,17 @@ import fakeData from "../../utils/news.json"
 import NewsCardOne from '../newsCards/NewsCardOne';
 import NewsCardTwo from '../newsCards/NewsCardTwo';
 import NewsCardThree from '../newsCards/NewsCardThree';
+import Headline from '../miniComponents/Headline';
 
 const HomeComponent = () => {
    const data = fakeData.slice(0,6);
    const data1 = fakeData.slice(0,1);
    const data2 = fakeData.slice(0,3);
     return (
-        <div className='bg-base-200 mt-5'>
-            <h1 className='text-2xl font-bold'>Recent News</h1>
-            <div className='flex gap-5 justify-between  items-center'>
-                <div className='px-8'>
+        <div className='mt-5'>
+            <Headline headline={"Recent News"} seeMore={""} />
+            <div className='grid md:grid-cols-3'>
+                <div className=''>
                     {
                         data.map(item => <NewsCardOne
                             key={item.id}
@@ -20,7 +21,7 @@ const HomeComponent = () => {
                         ></NewsCardOne>)
                     }
                 </div>
-                <div className='h-60'>
+                <div className='h-60 '>
                     {
                         data1.map(item => <NewsCardTwo
                             key={item.id}
@@ -28,7 +29,7 @@ const HomeComponent = () => {
                         ></NewsCardTwo>)
                     }
                 </div>
-                <div>
+                <div className=''>
                     {
                         data2.map(item => <NewsCardThree
                             key={item.id}

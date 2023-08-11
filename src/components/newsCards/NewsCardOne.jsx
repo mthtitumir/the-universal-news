@@ -7,7 +7,6 @@ const NewsCardOne = ({ item }) => {
         <div className=''>
             <h1>{item?.title}</h1>
             <div className="divider"></div>
-            
         </div>
     );
 };
