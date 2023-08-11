@@ -1,4 +1,5 @@
 import HomeComponent from '@/components/HomeComponent/HomeComponent'
+import Carosoul from '@/components/homeComponents/Carosoul/Carosoul'
 import Headline from '@/components/miniComponents/Headline'
 import NewsCardFour from '@/components/newsCards/NewsCardFour'
 import NewsCardOne from '@/components/newsCards/NewsCardOne'
@@ -21,6 +22,10 @@ export default function Home() {
       <Headline />
       <NewsCardFour />
       <div className="divider"></div>
+
+      <div className='w-full '>
+        <Carosoul></Carosoul>
+      </div>
     </main>
   )
 }
