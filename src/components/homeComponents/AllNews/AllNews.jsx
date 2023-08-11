@@ -9,10 +9,13 @@ const AllNews = () => {
     const data3 = fakeData.slice(0,10)
 
     return (
-        <div className='flex justify-between'>
+        <div className='flex justify-between gap-4'>
             <div>
-                <h1>Sports</h1>
-                <div>
+                <div className='flex justify-between pr-4'>
+                    <h1 className='text-2xl font-bold'>Sports</h1>
+                    <p>See more</p>
+                </div>
+                <div className='pb-6'>
                     {
                         data1.map(item=> <NewsCardThree
                         key={item.id}
@@ -20,8 +23,11 @@ const AllNews = () => {
                         ></NewsCardThree>)
                     }
                 </div>
-                <h1>Business</h1>
-                <div>
+                <div className='flex justify-between pr-4'>
+                    <h1 className='text-2xl font-bold'>Sports</h1>
+                    <p>See more</p>
+                </div>
+                <div className='pb-6'>
                 {
                         data2.map(item=> <NewsCardThree
                         key={item.id}
@@ -31,8 +37,11 @@ const AllNews = () => {
                 </div>
             </div>
             <div>
-                <h1>Sports</h1>
-                <div>
+            <div className='flex justify-between pr-4'>
+                    <h1 className='text-2xl font-bold'>Sports</h1>
+                    <p>See more</p>
+                </div>
+                <div className='pb-6'>
                     {
                         data1.map(item=> <NewsCardThree
                         key={item.id}
@@ -40,8 +49,11 @@ const AllNews = () => {
                         ></NewsCardThree>)
                     }
                 </div>
-                <h1>Business</h1>
-                <div>
+                <div className='flex justify-between pr-4'>
+                    <h1 className='text-2xl font-bold'>Sports</h1>
+                    <p>See more</p>
+                </div>
+                <div className='pb-6'>
                 {
                         data2.map(item=> <NewsCardThree
                         key={item.id}
@@ -51,8 +63,11 @@ const AllNews = () => {
                 </div>
             </div>
             <div>
-            <h1>Trending</h1>
-                <div>
+            <div className='flex justify-between pr-4'>
+                    <h1 className='text-2xl font-bold'>Sports</h1>
+                    <p>See more</p>
+                </div>
+                <div className='pb-6'>
                 {
                         data3.map(item=> <NewsCardOne
                         key={item.id}
