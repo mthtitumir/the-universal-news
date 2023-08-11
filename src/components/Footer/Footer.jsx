@@ -1,11 +1,20 @@
 import React from 'react';
 import logo from '../../../public/21601.png'
+import Image from 'next/image'
+
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
-                <img className='w-20' src="https://cdn-icons-png.flaticon.com/512/21/21601.png" alt="" />
+                <Image
+                    src={logo}
+                    height={20}
+                    width={70}
+                    alt="Picture of the author"
+                >
+                </Image>
+                {/* <img className='w-20' src="https://cdn-icons-png.flaticon.com/512/21/21601.png" alt="" /> */}
                 <p>The Universal News</p>
             </div>
             <div>
@@ -33,8 +42,8 @@ const Footer = () => {
                     <label className="label">
                     </label>
                     <div className="relative">
-                        <input type="text" 
-                         className=" py-1  border-y-2  w-full pr-16 rounded-none" />
+                        <input type="text"
+                            className=" py-1  border-y-2  w-full pr-16 rounded-none" />
                         <button className="py-1 mt-1 bg-indigo-950 text-white text-sm absolute top-0 right-0  ">Subscribe</button>
                     </div>
                     <label className='flex mt-5'>

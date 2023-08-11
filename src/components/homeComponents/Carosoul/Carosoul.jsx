@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -65,22 +66,63 @@ const Carosoul = () => {
                 className="mySwiper px-5"
             >
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/t8L980p/New-Project-1.png" />
+                    <Image
+                        src="https://i.ibb.co/t8L980p/New-Project-1.png"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/W3ZXrR8/New-Project-4.png" />
+                    <Image
+                        src="https://i.ibb.co/W3ZXrR8/New-Project-4.png"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
+                    {/* <img className='w-full h-full' src="https://i.ibb.co/W3ZXrR8/New-Project-4.png" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/NSR88Fx/New-Project.png" />
+                    <Image
+                        src="https://i.ibb.co/NSR88Fx/New-Project.png"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
+                    {/* <img className='w-full h-full' src="https://i.ibb.co/NSR88Fx/New-Project.png" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/9YGZxcw/New-Project-2.png" />
+                    <Image
+                        src="https://i.ibb.co/9YGZxcw/New-Project-2.png"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
+                    {/* <img className='w-full h-full' src="https://i.ibb.co/9YGZxcw/New-Project-2.png" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/5vKm348/New-Project-3.png" />
+                    <Image
+                        src="https://i.ibb.co/5vKm348/New-Project-3.png"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
+                    {/* <img className='w-full h-full' src="https://i.ibb.co/5vKm348/New-Project-3.png" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-full' src="https://i.ibb.co/23PbRmh/New-Project.jpg" />
+                    <Image
+                        src="https://i.ibb.co/23PbRmh/New-Project.jpg"
+                        height={400}
+                        width={600}
+                        alt="Picture of the author"
+                    >
+                    </Image>
+                    {/* <img className='w-full h-full' src="https://i.ibb.co/23PbRmh/New-Project.jpg" /> */}
                 </SwiperSlide>
             </Swiper>
         </>
