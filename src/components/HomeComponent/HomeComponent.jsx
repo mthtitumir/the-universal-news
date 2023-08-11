@@ -9,9 +9,8 @@ const HomeComponent = () => {
    const data1 = fakeData.slice(0,1);
    const data2 = fakeData.slice(0,3);
     return (
-        <div>
-
-            <h1>Recent News</h1>
+        <div className='bg-base-200 mt-5'>
+            <h1 >Recent News</h1>
             <div className='flex gap-5 justify-between  items-center'>
                 <div className='px-8'>
                     {

@@ -2,13 +2,13 @@ import Marquee from "react-fast-marquee";
 
 const Navbar = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white container mx-auto">
             <div className="text-center">
                 <h2 className="text-2xl mt-5">The Universal News</h2>
-                <p className="text-xs">PlanetWatch: Tracking the Global Heatwave Crisis</p>
+                <p className="text-xs">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
 
-            <div className=" bg-base-100 items-center">
+            <div className="bg-base-100 items-center">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
