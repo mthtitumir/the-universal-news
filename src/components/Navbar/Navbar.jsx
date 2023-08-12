@@ -4,8 +4,8 @@ const Navbar = () => {
     return (
         <div className="bg-white container mx-auto">
             <div className="text-center">
-                <h2 className="text-2xl mt-5">The Universal News</h2>
-                <p className="text-xs">Breaking Borders, Breaking News: Where the World Comes to Know</p>
+                <h2 className="text-5xl mt-5">The Universal News</h2>
+                <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
 
             <div className="bg-base-100 items-center">
@@ -15,7 +15,7 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>World</li>
+                            <li>World</li>
                             <li>US</li>
                             <li>Politics</li>
                             <li>Business</li>
@@ -25,6 +25,7 @@ const Navbar = () => {
                             <li>Books</li>
                             <li>Arts</li>
                             <li>Style</li>
+                            <li>Food</li>
                             <li>Food</li>
                             <li>Travel</li>
                             <li>Magazine</li>
@@ -48,6 +49,7 @@ const Navbar = () => {
                         <li className=" px-3">Arts</li>
                         <li className=" px-3">Style</li>
                         <li className=" px-3">Food</li>
+                        <li className=" px-3">Food</li>
                         <li className=" px-3">Travel</li>
                         <li className=" px-3">Magazine</li>
                         <li className=" px-3">Cooking</li>
@@ -60,10 +62,10 @@ const Navbar = () => {
             </div>
 
             <div className='flex justify-center items-center mx-20 my-10 bg-slate-100 rounded-sm p-2'>
-                    <button className="py-3 px-4 bg-teal-600 text-white">Latest</button>
-                    <Marquee className="text-red-600 px-2" speed={100}>
-                        In a shocking turn of events, an unprecedented heatwave is currently engulfing regions across multiple continents, setting new temperature records and raising concerns about the escalating impacts of climate change. Reports are pouring in of scorching temperatures exceeding historical averages by several degrees, with major cities grappling to provide relief to their residents. Meteorologists are attributing the heatwave to a confluence of climate patterns, warning that extreme weather events like this could become more frequent without urgent global action. Authorities are urging citizens to take precautions, stay hydrated, and avoid outdoor activities during peak heat hours. The situation is evolving rapidly, and experts are closely monitoring the development of this extraordinary climate event. Stay tuned for updates on this unfolding crisis.
-                    </Marquee>
+                <button className="py-3 px-4 bg-teal-600 text-white">Latest</button>
+                <Marquee className="text-red-600 px-2" speed={90}>
+                    In a shocking turn of events, an unprecedented heatwave is currently engulfing regions across multiple continents, setting new temperature records and raising concerns about the escalating impacts of climate change. Reports are pouring in of scorching temperatures exceeding historical averages by several degrees, with major cities grappling to provide relief to their residents. Meteorologists are attributing the heatwave to a confluence of climate patterns, warning that extreme weather events like this could become more frequent without urgent global action. Authorities are urging citizens to take precautions, stay hydrated, and avoid outdoor activities during peak heat hours. The situation is evolving rapidly, and experts are closely monitoring the development of this extraordinary climate event. Stay tuned for updates on this unfolding crisis.
+                </Marquee>
             </div>
 
 

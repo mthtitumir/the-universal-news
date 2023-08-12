@@ -9,7 +9,7 @@ const MoreNews = () => {
     return (
         <div className='my-12'>
             <Headline headline={"More News"} seeMore={""} />
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+            <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {
                     data.map(item=><NewsCardFour
                     key={item.id}

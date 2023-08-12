@@ -14,6 +14,7 @@ import './Carosoul.css';
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import Headline from '@/components/miniComponents/Headline';
 
 
 const Carosoul = () => {
@@ -22,6 +23,7 @@ const Carosoul = () => {
 
     return (
         <>
+            <Headline headline={"Videos"} seeMore={""} />
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#000',
@@ -30,29 +32,29 @@ const Carosoul = () => {
                 }}
                 loop={true}
                 spaceBetween={10}
-                navigation={true}
+                // navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper2"
             >
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/RfI602XEEaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/RfI602XEEaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/HKEtLdfPQLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/HKEtLdfPQLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/rqUICw5O0pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/rqUICw5O0pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/UcQet3Tcx9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/UcQet3Tcx9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/Za810UPDdD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/Za810UPDdD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[88%] h-[510px]' src="https://www.youtube.com/embed/_7151uEf71Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/_7151uEf71Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </SwiperSlide>
             </Swiper>
             <Swiper
@@ -63,7 +65,7 @@ const Carosoul = () => {
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper px-5"
+                className="mySwiper"
             >
                 <SwiperSlide>
                     <Image

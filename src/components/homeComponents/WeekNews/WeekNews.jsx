@@ -2,25 +2,23 @@ import React from 'react';
 import fakeData from "../../../utils/news.json"
 import Headline from '@/components/miniComponents/Headline';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
-import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
 import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import Image from 'next/image'
+import './WeeklyNews.css'
 
 
 
 
 const WeekNews = () => {
-    const data = fakeData.slice(0, 7);
-    const data1 = fakeData.slice(0, 1);
+    const data = fakeData.slice(0, 5);
     const data2 = fakeData.slice(0, 4);
 
 
     return (
-        <div className='mt-5 md:mb-4'>
-            <div className='grid md:grid-cols-3 w-[97%] mx-auto gap-7'>
-                <div className=''>
+        <div className='mt-5 md:mb-4 '>
+            <div className='grid md:grid-cols-3 grid-layout w-[97%] mx-auto gap-7'>
+                <div className='flex flex-col gap-3 h-[400px] '>
                     <Headline headline={"Weekly News"} seeMore={"see more"} />
-
                     {
                         data2.map(item => <NewsCardThree
                             key={item.id}
@@ -29,7 +27,7 @@ const WeekNews = () => {
                     }
                 </div>
                 <div className=''>
-                    <div className='lg:h-20'>
+                    <div className='lg:h-20 h-[400px] '>
                         <Headline headline={"Weekly News"} seeMore={"see more"} />
                         {
                             data.map(item => <NewsCardOne

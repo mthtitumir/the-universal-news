@@ -4,16 +4,17 @@ import NewsCardOne from '../newsCards/NewsCardOne';
 import NewsCardTwo from '../newsCards/NewsCardTwo';
 import NewsCardThree from '../newsCards/NewsCardThree';
 import Headline from '../miniComponents/Headline';
+import "./HomeComponent.css"
 
 const HomeComponent = () => {
-   const data = fakeData.slice(0,6);
-   const data1 = fakeData.slice(0,1);
-   const data2 = fakeData.slice(0,3);
+   const data = fakeData.slice(0,10);
+   const data1 = fakeData.slice(0, 10);
+   const data2 = fakeData.slice(0,10);
     return (
-        <div className='mt-5'>
+        <div className='mt-5 '>
             <Headline headline={"Recent News"} seeMore={""} />
-            <div className='grid md:grid-cols-3'>
-                <div className=''>
+            <div className='grid md:grid-cols-3 grid-layout gap-3'>
+                <div className='overflow-y-scroll overflow-x-hidden h-screen'>
                     {
                         data.map(item => <NewsCardOne
                             key={item.id}
@@ -21,7 +22,7 @@ const HomeComponent = () => {
                         ></NewsCardOne>)
                     }
                 </div>
-                <div className='h-60 '>
+                <div className='flex flex-col gap-3 overflow-y-scroll overflow-x-hidden h-screen'>
                     {
                         data1.map(item => <NewsCardTwo
                             key={item.id}
@@ -29,7 +30,7 @@ const HomeComponent = () => {
                         ></NewsCardTwo>)
                     }
                 </div>
-                <div className=''>
+                <div className='flex flex-col gap-3 overflow-y-scroll overflow-x-hidden h-screen'>
                     {
                         data2.map(item => <NewsCardThree
                             key={item.id}
