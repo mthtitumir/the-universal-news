@@ -6,7 +6,7 @@ const Test = async () => {
   console.log(data)
   return (
     <div>Test herer
-      <h1>{data[0].title}</h1>
+      <h1>{data[0].title}</h1> 
       <h2>test2 likheche</h2>
     </div>
   )
