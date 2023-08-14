@@ -22,7 +22,7 @@ const Carosoul = () => {
 
 
     return (
-        <>
+        <div className='mt-10'>
             <Headline headline={"Videos"} seeMore={""} />
             <Swiper
                 style={{
@@ -127,7 +127,7 @@ const Carosoul = () => {
                     {/* <img className='w-full h-full' src="https://i.ibb.co/23PbRmh/New-Project.jpg" /> */}
                 </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 }
 export default Carosoul;
