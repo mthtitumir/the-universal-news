@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    background-color: #fff;
-    color: black;
+.title:hover {
+    cursor: pointer;
 }
+
+.card1::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* .light {
+    background-color: white;
+    color: #111;
+}
+
+.dark {
+    background-color: #111;
+    color: #bbb;
+}
+.theme {
+    transition: 1s all ease;
+} */

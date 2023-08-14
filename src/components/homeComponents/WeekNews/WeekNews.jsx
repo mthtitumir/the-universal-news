@@ -6,19 +6,16 @@ import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import Image from 'next/image'
 import './WeeklyNews.css'
 
-
-
-
 const WeekNews = () => {
-    const data = fakeData.slice(0, 5);
-    const data2 = fakeData.slice(0, 4);
+    const data = fakeData.slice(0, 20);
+    const data2 = fakeData.slice(0, 20);
 
 
     return (
-        <div className='mt-5 md:mb-4 '>
-            <div className='grid md:grid-cols-3 grid-layout w-[97%] mx-auto gap-7'>
-                <div className='flex flex-col gap-3 h-[400px] '>
-                    <Headline headline={"Weekly News"} seeMore={"see more"} />
+        <div className='mt-5 grid grid-cols-12 gap-3 md:h-[70vh]'>
+            <div className='col-span-4 overflow-y-scroll overflow-x-hidden card1'>
+                <Headline headline={"Week's Hottest"} seeMore={"see more"} />
+                <div className='flex flex-col gap-3'>
                     {
                         data2.map(item => <NewsCardThree
                             key={item.id}
@@ -26,26 +23,27 @@ const WeekNews = () => {
                         ></NewsCardThree>)
                     }
                 </div>
-                <div className=''>
-                    <div className='lg:h-20 h-[400px] '>
-                        <Headline headline={"Weekly News"} seeMore={"see more"} />
-                        {
-                            data.map(item => <NewsCardOne
-                                key={item.id}
-                                item={item}
-                            ></NewsCardOne>)
-                        }
-                    </div>
+            </div>
+            <div className='col-span-5 overflow-y-scroll overflow-x-hidden card1'>
+                <Headline headline={"Weekly News"} seeMore={"see more"} />
+                <div>
+                    {
+                        data.map(item => <NewsCardOne
+                            key={item.id}
+                            item={item}
+                        ></NewsCardOne>)
+                    }
                 </div>
-                <div className='mt-6'>
-                    <Image
-                        src="https://i.ibb.co/92BFdLM/5190537997-89cf7af050-c.jpg"
-                        height={400}
-                        width={300}
-                        alt="Picture of the author"
-                    >
-                    </Image>
-                </div>
+            </div>
+            <div className='relative col-span-3'>
+                <Image
+                    src="https://i.ibb.co/92BFdLM/5190537997-89cf7af050-c.jpg"
+                    height={400}
+                    width={300}
+                    alt="Advertisement"
+                    className=' absolute right-0 '
+                >
+                </Image>
             </div>
         </div>
     );

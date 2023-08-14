@@ -1,18 +1,21 @@
-import Marquee from "react-fast-marquee";
+import LatestMarque from "../miniComponents/LatestMarque";
+import { PiHamburger } from "react-icons/pi";
+import localFont from 'next/font/local'
+const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
 const Navbar = () => {
     return (
         <div className="bg-white container mx-auto">
             <div className="text-center">
-                <h2 className="text-5xl mt-5">The Universal News</h2>
+                <h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2>
                 <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
 
             <div className="bg-base-100 items-center">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <label tabIndex={0} className="btn btn-ghost md:hidden">
+                            <PiHamburger />
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li>World</li>
@@ -36,7 +39,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="pl-6 hidden lg:flex border-b-4 border-gray-500">
+                <div className="pl-6 hidden md:flex ">
                     <ul className="menu menu-horizontal px-1">
                         <li className=" px-3">World</li>
                         <li className=" px-3">US</li>
@@ -58,15 +61,14 @@ const Navbar = () => {
                         <li className=" px-3"> TV Show</li>
                     </ul>
                 </div>
+                <div className="flex flex-col gap-[2px]">
+                    <div className="bg-black h-[1px]"></div>
+                    <div className="bg-black h-[1px]"></div>
+                </div>
 
             </div>
+            <LatestMarque />
 
-            <div className='flex justify-center items-center mx-20 my-10 bg-slate-100 rounded-sm p-2'>
-                <button className="py-3 px-4 bg-teal-600 text-white">Latest</button>
-                <Marquee className="text-red-600 px-2" speed={90}>
-                    In a shocking turn of events, an unprecedented heatwave is currently engulfing regions across multiple continents, setting new temperature records and raising concerns about the escalating impacts of climate change. Reports are pouring in of scorching temperatures exceeding historical averages by several degrees, with major cities grappling to provide relief to their residents. Meteorologists are attributing the heatwave to a confluence of climate patterns, warning that extreme weather events like this could become more frequent without urgent global action. Authorities are urging citizens to take precautions, stay hydrated, and avoid outdoor activities during peak heat hours. The situation is evolving rapidly, and experts are closely monitoring the development of this extraordinary climate event. Stay tuned for updates on this unfolding crisis.
-                </Marquee>
-            </div>
 
 
 
