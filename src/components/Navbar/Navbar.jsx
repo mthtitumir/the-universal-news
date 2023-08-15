@@ -1,6 +1,7 @@
 import LatestMarque from "../miniComponents/LatestMarque";
 import { PiHamburger } from "react-icons/pi";
 import localFont from 'next/font/local'
+import Link from "next/link";
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
 const Navbar = () => {
