@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="bg-white container mx-auto">
             <div className="text-center">
-                <h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2>
+                <Link href="/"><h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2></Link>
                 <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
 
