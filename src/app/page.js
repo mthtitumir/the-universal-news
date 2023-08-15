@@ -1,22 +1,19 @@
-import Headline from '@/components/miniComponents/Headline'
-import NewsCardFour from '@/components/newsCards/NewsCardFour'
-import NewsCardOne from '@/components/newsCards/NewsCardOne'
-import NewsCardThree from '@/components/newsCards/NewsCardThree'
-import NewsCardTwo from '@/components/newsCards/NewsCardTwo'
+import HomeComponent from '@/components/HomeComponent/HomeComponent'
+import AllNews from '@/components/homeComponents/AllNews/AllNews'
+import Carosoul from '@/components/homeComponents/Carosoul/Carosoul'
+import MoreNews from '@/components/homeComponents/MoreNews/MoreNews'
+import WeekNews from '@/components/homeComponents/WeekNews/WeekNews'
 
 export default function Home() {
   return (
-    <main className='container mx-auto'>
-      <div className="divider"></div>
-      <NewsCardOne />
-      <div className="divider"></div>
-      <NewsCardTwo />
-      <div className="divider"></div>
-      <NewsCardThree />
-      <div className="divider"></div>
-      <Headline />
-      <NewsCardFour />
-      <div className="divider"></div>
+    <main className='container bg-white mx-auto'>
+      <HomeComponent/>
+      <MoreNews/>
+      <AllNews/>
+      <div className='w-full'>
+        <Carosoul></Carosoul>
+      </div>
+      <WeekNews></WeekNews>
     </main>
   )
 }
