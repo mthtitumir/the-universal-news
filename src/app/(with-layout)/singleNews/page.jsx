@@ -1,5 +1,5 @@
 import React from 'react';
-import fakeData from "../../utils/news.json"
+import fakeData from "../../../utils/news.json"
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';

@@ -9,7 +9,7 @@ const SingleScore = ({ liveScore }) => {
                 
                 <div className='flex '>
                 <p>{teamInfo[0].shortname}</p>
-                <div className='flex ml-2'>
+                <div className='flex ml-3'>
                     <p>{score[0]?.r}/</p>
                     <p>{score[0]?.w}</p>
                     <p className='ml-2'>({score[0]?.o})</p>
@@ -17,7 +17,7 @@ const SingleScore = ({ liveScore }) => {
                 </div>
                 <div className='flex justify-between items-center'>
                 <p>{teamInfo[1].shortname}</p>
-                <div className='flex ml-2'>
+                <div className='flex ml-4'>
                     <p>{score[1]?.r}/</p>
                     <p>{score[1]?.w}</p>
                     <p className='ml-2'>({score[1]?.o})</p>
