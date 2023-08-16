@@ -1,5 +1,5 @@
 import React from 'react';
-import fakeData from "../../utils/news.json"
+import fakeData from "@/utils/news.json";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';
@@ -16,7 +16,7 @@ const singleNews = () => {
 
     return (
         <div>
-            <div className='px-4  grid md:grid-cols-3 gap-8 '>
+            <div className='px-4  grid md:grid-cols-3 gap-8 container mx-auto'>
 
                 <div className=' col-span-2'>
                     <h2 className='text-2xl font-semibold'>Food</h2>
