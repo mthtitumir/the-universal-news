@@ -1,12 +1,17 @@
+"use client"
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
 import React from 'react';
 import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import { categories } from '@/hooks/useCategories';
 
 
-const category = () => {
+const category = async ({params}) => {
+    // console.log(params.category);
+    const categoryData = await categories(params.category);
+    console.log(categoryData);
     const data = fakeData.slice(0, 6);
     const data1 = fakeData.slice(0, 1);
     const data2 = fakeData.slice(0, 10);

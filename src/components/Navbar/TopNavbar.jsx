@@ -29,7 +29,6 @@ const TopNavbar = () => {
             toast.dismiss(toastId);
         }
     };
-    console.log(user);
     return (
         <div className=' mt-5 '>
             <div className='container mx-auto flex items-center justify-between'>
