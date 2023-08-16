@@ -3,9 +3,9 @@ import Themes from './Themes';
 
 const TopNavbar = () => {
     return (
-        <div className=' bg-cyan-500'>
+        <div className=' '>
             <div className='container mx-auto'>
-                <Themes />
+                {/* <Themes /> */}
             </div>
         </div>
     );

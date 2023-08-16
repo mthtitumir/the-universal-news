@@ -3,7 +3,7 @@
 import SignupForm from "./SignupFrom";
 
 export const metadata = {
-    title: "Signup - Easy Shop",
+    title: "Register | The Universal News",
 };
 
 const SignupPage = () => {
