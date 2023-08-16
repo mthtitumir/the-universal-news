@@ -25,8 +25,8 @@ const LoginForm = () => {
         const { email, password } = data;
         const toastId = toast.loading("Loading...");
         try {
-            await signIn(email, password);
-            // await createJWT({ email });
+            const user = await signIn(email, password);
+            await createJWT({ email });
             startTransition(() => {
                 refresh();
                 replace(from);
@@ -39,17 +39,17 @@ const LoginForm = () => {
         }
     };
 
-    const handleGoogleLogin = async () => {
-        try {
-            const user = await GoogleLogin()
-        } catch (error) {
-            console.log(error.message)
-        }
-    }
+    // const handleGoogleLogin = async () => {
+    //     try {
+    //         const user = await GoogleLogin()
+    //     } catch (error) {
+    //         console.log(error.message)
+    //     }
+    // }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-            <h2 className="text-center text-2xl">Log in or create an account</h2>
+            <h2 className="text-center text-2xl">Log in your account</h2>
 
             <div className="form-control">
                 <label htmlFor="email" className="label label-text">
