@@ -2,7 +2,7 @@
 import { genaretPrice } from '@/data/genaretSherePrice';
 import React, { useEffect, useState } from 'react';
 
-const RendomPrice = () => {
+const ShareUpdate = () => {
     const [stockData, setStockData] = useState({ name: '', number: '' });
 
     useEffect(() => {
@@ -21,4 +21,4 @@ const RendomPrice = () => {
     );
 };
 
-export default RendomPrice;
+export default ShareUpdate;
