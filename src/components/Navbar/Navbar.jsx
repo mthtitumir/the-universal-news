@@ -4,6 +4,7 @@ import { PiHamburger } from "react-icons/pi";
 import localFont from 'next/font/local'
 import Link from "next/link";
 import { navData } from "@/data/navData";
+import RendomPrice from "../RendomPrice/RendomPrice";
 
 
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
@@ -16,8 +17,12 @@ const Navbar = () => {
                 <Link href="/"><h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2></Link>
                 <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
-
+            <div className='flex gap-7 float-right mb-8'>
+            <RendomPrice />
+             <button>vew all</button>
+             </div>
             <div className="">
+           
                 <div className="md:hidden">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost md:hidden">

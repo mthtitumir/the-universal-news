@@ -5,7 +5,6 @@ import NewsCardTwo from '../newsCards/NewsCardTwo';
 import NewsCardThree from '../newsCards/NewsCardThree';
 import Headline from '../miniComponents/Headline';
 import "./HomeComponent.css"
-import RendomPrice from '../RendomPrice/RendomPrice';
 
 const HomeComponent = () => {
    const data = fakeData.slice(0,20);
@@ -13,10 +12,7 @@ const HomeComponent = () => {
    const data2 = fakeData.slice(0,10);
     return (
         <div className=''>
-             <div className='flex gap-7 float-right'>
-            <RendomPrice />
-             <button>vew all</button>
-             </div>
+           
             <Headline headline={"Recent News"} seeMore={""} />
            
             <div className='grid md:grid-cols-12 gap-3 md:h-[70vh]'>
