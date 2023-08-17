@@ -23,7 +23,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex gap-8'>
                     <ShareUpdate />
-                    <button>vew all</button>
+                    <Link href='bussness/shere-market'>view all</Link>
                 </div>
             </div>
             <div className="">
