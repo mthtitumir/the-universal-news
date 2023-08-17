@@ -24,7 +24,8 @@ const Test = () => {
         <li className=""> TV Show</li>
         <li className=""> TV Show</li>
       </ul>
-      <h1>Shakil</h1>
+
+      
     </div>
   )
 }
