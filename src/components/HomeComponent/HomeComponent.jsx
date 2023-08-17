@@ -11,8 +11,10 @@ const HomeComponent = () => {
    const data1 = fakeData.slice(0, 10);
    const data2 = fakeData.slice(0,10);
     return (
-        <div className='mt-5 '>
+        <div className=''>
+           
             <Headline headline={"Recent News"} seeMore={""} />
+           
             <div className='grid md:grid-cols-12 gap-3 md:h-[70vh]'>
                 <div className='card1 col-span-3 overflow-y-scroll overflow-x-hidden '>
                     {

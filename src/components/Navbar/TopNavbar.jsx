@@ -30,7 +30,7 @@ const TopNavbar = () => {
         }
     };
     return (
-        <div className=' mt-5 '>
+        <div className=' mt-2'>
             <div className='container mx-auto flex items-center justify-between'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
                     <AiOutlineMenu />
