@@ -2,6 +2,7 @@
 
 import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
+import createJwt from "@/utils/createJwt";
 // import GoogleLogin from "@/components/GoogleLogin";
 // import createJWT from "@/utils/createJWT";
 import Link from "next/link";
@@ -53,7 +54,8 @@ const SignupForm = () => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
         try {
-            await createUser(email, password);
+            const user = await createUser(email, password);
+            createJwt({email})
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,
