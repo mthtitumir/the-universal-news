@@ -1,13 +1,14 @@
-import React from 'react';
+"use clint"
 import fakeData from "@/utils/news.json";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser, BiSolidPaperPlane } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
-import Headline from '@/components/miniComponents/Headline';
 
 const singleNews = () => {
+
+  
     const data = fakeData.slice(0, 1)[0];
     const socialShare = <>
         <div className='flex items-center gap-2 text-3xl text-white'>
@@ -76,6 +77,11 @@ const singleNews = () => {
                             <div className='flex justify-end mt-3'>
                                 <button className='bg-cyan-500 text-white px-2 py-1 rounded flex items-center gap-1'> <BiSolidPaperPlane />Post</button>
                             </div>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                            <BiUser className='text-5xl bg-slate-300 rounded-full p-3 '></BiUser>
+                            <textarea cols="70" className=' border-b-4 border-black'
+                                placeholder='Share your thoughts'></textarea>
                         </div>
                     </div>
                 </div>
