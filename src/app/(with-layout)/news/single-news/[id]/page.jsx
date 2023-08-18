@@ -14,7 +14,7 @@ const singleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { user } = useAuth();
     const id = params?.id;
-    const res = await fetch(`https://the-universal-news.vercel.app/api/all-news/${id}`)
+    const res = await fetch(`http://localhost:3000/api/all-news/${id}`)
     const data = await res.json();
     const { _id, img, title, description, category, author, published_date, comments } = data;
     // const comments = data.comments;
