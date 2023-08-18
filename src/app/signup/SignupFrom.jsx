@@ -55,16 +55,16 @@ const SignupForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const user = await createUser(email, password);
-            createJwt({email})
+            await createJwt({email})
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,
             });
             startTransition(() => {
                 refresh();
-                replace(from);
                 toast.dismiss(toastId);
                 toast.success("User signed in successfully");
+                replace(from);
             });
         } catch (error) {
             toast.dismiss(toastId);
@@ -177,7 +177,7 @@ const SignupForm = () => {
             </div>
             <div className="divider mt-5">OR</div>
             {/* <GoogleLogin from={from} /> */}
-            <GoogleLogin from={from}></GoogleLogin>
+            <GoogleLogin />
 
             <p className="mt-3">
                 Already have an account?{" "}
