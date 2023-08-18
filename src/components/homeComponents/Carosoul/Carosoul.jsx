@@ -38,23 +38,23 @@ const Carosoul = () => {
                 className="mySwiper2"
             >
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/RfI602XEEaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/RfI602XEEaY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/HKEtLdfPQLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/HKEtLdfPQLk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/rqUICw5O0pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/rqUICw5O0pQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/UcQet3Tcx9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/UcQet3Tcx9M" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/Za810UPDdD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/Za810UPDdD4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/_7151uEf71Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='w-[100%] h-[510px]' src="https://www.youtube.com/embed/_7151uEf71Y" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </SwiperSlide>
             </Swiper>
             <Swiper
