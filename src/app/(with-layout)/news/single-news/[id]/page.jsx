@@ -12,9 +12,9 @@ import Link from 'next/link';
 
 const singleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const {user} = useAuth();
+    const { user } = useAuth();
     const id = params?.id;
-    const res = await fetch(`http://localhost:3000/api/all-news/${id}`)
+    const res = await fetch(`https://the-universal-news.vercel.app/api/all-news/${id}`)
     const data = await res.json();
     const { _id, img, title, description, category, author, published_date, comments } = data;
     // const comments = data.comments;
@@ -78,11 +78,11 @@ const singleNews = async ({ params }) => {
                             </div>
                             <div className="divider"></div>
                             <div className='flex justify-end'>
-                                <h1 className='text-lg'>{user?user.displayName:<span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
+                                <h1 className='text-lg'>{user ? user.displayName : <span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
                             </div>
                             <div className="divider"></div>
                             <HandleComment id={_id} comments={comments} />
-                            
+
                         </div>
                     </div>
                 </div>
