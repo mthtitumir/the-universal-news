@@ -29,9 +29,9 @@ const LoginForm = () => {
             await createJWT({ email });
             startTransition(() => {
                 refresh();
-                replace(from);
                 toast.dismiss(toastId);
                 toast.success("User signed in successfully");
+                replace(from);
             });
         } catch (error) {
             toast.dismiss(toastId);
@@ -99,7 +99,7 @@ const LoginForm = () => {
             </div>
 
             <div className="divider mt-5">OR</div>
-            <GoogleLogin from={from} />
+            <GoogleLogin  />
             <p className="mt-3">
                 Don&apos;t have an account?
                 <Link className="text-black underline ml-1" href="/signup">

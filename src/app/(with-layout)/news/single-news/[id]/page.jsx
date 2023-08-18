@@ -1,15 +1,26 @@
-"use clint"
-import fakeData from "@/utils/news.json";
+"use client"
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser, BiSolidPaperPlane } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import Headline from "@/components/miniComponents/Headline";
+import HandleComment from "@/components/miniComponents/HandleComment";
+import { categories } from "@/hooks/useCategories";
+import useAuth from '@/hooks/useAuth';
+import Link from 'next/link';
 
-const singleNews = () => {
+const singleNews = async ({ params }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const {user} = useAuth();
+    const id = params?.id;
+    const res = await fetch(`http://localhost:3000/api/all-news/${id}`)
+    const data = await res.json();
+    const { _id, img, title, description, category, author, published_date, comments } = data;
+    // const comments = data.comments;
+    // const data = fakeData.slice(0, 1)[0];
+    const categoryData = await categories(category);
 
-  
-    const data = fakeData.slice(0, 1)[0];
     const socialShare = <>
         <div className='flex items-center gap-2 text-3xl text-white'>
             <BiLogoFacebook className='rounded-full bg-blue-600 ' ></BiLogoFacebook>
@@ -20,18 +31,18 @@ const singleNews = () => {
         </div>
     </>;
     // console.log(data);  
-    const data1 = fakeData.slice(0, 8);
-    const relatedNewsData = fakeData.slice(0, 20)
+    const data1 = categoryData.slice(0, 8);
+    const relatedNewsData = categoryData.slice(0, 20)
     return (
         <div className='container mx-auto mt-5'>
             <div className='px-4  grid md:grid-cols-12 gap-8'>
                 <div className='col-span-9'>
-                    <h2 className='text-3xl font-semibold my-5 text-red-500'>Food</h2>
-                    <h1 className='text-3xl'>{data.title}</h1>
-                    <p className='my-1'>Author - Dhaka</p>
+                    <h2 className='text-3xl font-semibold my-5 text-cyan-500'>{category.toUpperCase()}</h2>
+                    <h1 className='text-3xl'>{title}</h1>
+                    <p className='my-1'>Author - {author}</p>
                     <div className='flex justify-between items-center'>
                         <div>
-                            <h1>Update - {data.published_date}</h1>
+                            <h1>Update - {published_date}</h1>
                         </div>
                         {socialShare}
                     </div>
@@ -42,17 +53,17 @@ const singleNews = () => {
                                 <Image
                                     height={700}
                                     width={900}
-                                    src={data.img}
+                                    src={img}
                                     alt="Picture of the author"
                                     className='mx-auto'
                                 ></Image>
                                 <div className='w-[900px] mx-auto mt-1'>
                                     <h1>{data.title}</h1>
-                                    <p className='italic'>Photo - Photo</p>
+                                    <p className='italic'>Photo - {author}</p>
                                 </div>
                             </div>
                             <div >
-                                <p className='text-lg'>{data.description}</p>
+                                <p className='text-lg'>{description}</p>
                             </div>
                         </div>
 
@@ -67,21 +78,11 @@ const singleNews = () => {
                             </div>
                             <div className="divider"></div>
                             <div className='flex justify-end'>
-                                <h1 className='text-lg'>Name</h1>
+                                <h1 className='text-lg'>{user?user.displayName:<span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
                             </div>
                             <div className="divider"></div>
-                            <div className='flex items-center gap-5'>
-                                <Image className='rounded-full' src={"https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} height={40} width={40} alt='user photo ' />
-                                <input type="text" placeholder='Write your comment!' className='border flex-1 px-5 py-2 rounded focus:outline-none' />
-                            </div>
-                            <div className='flex justify-end mt-3'>
-                                <button className='bg-cyan-500 text-white px-2 py-1 rounded flex items-center gap-1'> <BiSolidPaperPlane />Post</button>
-                            </div>
-                        </div>
-                        <div className='flex items-center gap-3'>
-                            <BiUser className='text-5xl bg-slate-300 rounded-full p-3 '></BiUser>
-                            <textarea cols="70" className=' border-b-4 border-black'
-                                placeholder='Share your thoughts'></textarea>
+                            <HandleComment id={_id} comments={comments} />
+                            
                         </div>
                     </div>
                 </div>

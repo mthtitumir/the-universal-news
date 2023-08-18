@@ -9,10 +9,10 @@ export const POST = async (request, {params}) => {
             const id = params.id
             const db = await DbConnect();
             const allNews = db.collection('all-news');
-            const { comments, author,currentDate } = body;
+            const { comments, author, userImg, date } = body;
             const result = await allNews.updateOne(
                 { _id: new ObjectId(id) },
-                { $push: { comments: { id: Math.floor(Math.random() * 100000), author, text: comments, date: currentDate } } }
+                { $push: { comments: { id: Math.floor(Math.random() * 100000), author, userImg, text: comments, date } } }
             );
             return NextResponse.json(result);
         } catch (error) {

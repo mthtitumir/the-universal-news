@@ -8,7 +8,7 @@ export const GET = async ({}) => {
     return NextResponse.json(result);
    } catch (error) {
     console.error(error)
-    return NextResponse.json({error:'error to geting data'});
+    return NextResponse.json({error:'error to get data'});
    }
 };
 

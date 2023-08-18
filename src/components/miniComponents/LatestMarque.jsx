@@ -1,12 +1,20 @@
+import { allNews } from '@/hooks/useAllNews';
 import React from 'react';
 import Marquee from "react-fast-marquee";
 
-const LatestMarque = () => {
+const LatestMarque = async () => {
+    const data = await allNews();
+    const myData = data.slice(0, 20);
+
     return (
-        <div className='flex justify-center items-center mx-20 my-2 bg-slate-100 rounded-sm p-2'>
+        <div className='flex justify-center items-center mx-20 my-5 bg-slate-100 rounded-sm p-2'>
             <button className='bg-cyan-500 rounded px-2 py-1 text-white'>Latest</button>
             <Marquee className="text-red-600 " speed={100}>
-                <h1 className='px-3'>Shakib Al Hassan won the Cricket world cup 2023 in india </h1>    
+                {
+                    myData.map(data => (<h1 key={data._id} className='px-3'>{data?.title}</h1>))
+                }
+                    
+                
             </Marquee>
         </div>
     );

@@ -5,11 +5,15 @@ import NewsCardTwo from '../newsCards/NewsCardTwo';
 import NewsCardThree from '../newsCards/NewsCardThree';
 import Headline from '../miniComponents/Headline';
 import "./HomeComponent.css"
+import { allNews } from '@/hooks/useAllNews';
 
-const HomeComponent = () => {
-   const data = fakeData.slice(0,20);
-   const data1 = fakeData.slice(0, 10);
-   const data2 = fakeData.slice(0,10);
+const HomeComponent = async () => {
+    const news = await allNews();
+    const data = news.slice(0,20);
+    const data1 = news.slice(0, 10);
+    const data2 = news.slice(0,10);
+//    console.log(news.length);
+
     return (
         <div className=''>
            

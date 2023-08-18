@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const NewsCardThree = ({ item }) => {
@@ -11,7 +12,7 @@ const NewsCardThree = ({ item }) => {
                 </div>
             </div>
             <div className="w-2/3">
-                <h2 className="text-base title">{item?.title.slice(0, 58)}...</h2>
+                <Link href={`/news/single-news/${item?._id}`}><h2 className="text-base title">{item?.title.slice(0, 58)}...</h2></Link>
                 <p className='my-1 text-sm'>{item?.published_date}</p>
             </div>
         </div>
