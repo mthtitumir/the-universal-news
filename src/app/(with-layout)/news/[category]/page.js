@@ -1,19 +1,24 @@
+"use client"
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
 import React from 'react';
 import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import { categories } from '@/hooks/useCategories';
 
 
-const category = () => {
+const category = async ({params}) => {
+    // console.log(params.category);
+    const categoryData = await categories(params.category);
+    console.log(categoryData);
     const data = fakeData.slice(0, 6);
     const data1 = fakeData.slice(0, 1);
     const data2 = fakeData.slice(0, 10);
     const relatedNewsData = fakeData.slice(0,8)
 
     return (
-        <div className='px-5'>
+        <div className=' container mx-auto'>
             {/* Category Navbar */}
             <div className='flex items-center gap-7'>
                 <h2 className='text-2xl font-semibold'>Food</h2>
@@ -33,7 +38,7 @@ const category = () => {
             {/* Category Banner */}
             <div className='mt-5 '>
                 <div className='grid md:grid-cols-12 gap-5 md:h-[70vh]'>
-                    <div className='card1 col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden '>
+                    <div className='card1 col-span-6 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden '>
                         {
                             data1.map(item => <NewsCardTwo
                                 key={item.id}
