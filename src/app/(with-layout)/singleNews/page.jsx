@@ -1,34 +1,38 @@
 import React from 'react';
 import fakeData from "@/utils/news.json";
-import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser } from 'react-icons/bi'
+import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser, BiSolidPaperPlane } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import Headline from '@/components/miniComponents/Headline';
 
 const singleNews = () => {
     const data = fakeData.slice(0, 1)[0];
+    const socialShare = <>
+        <div className='flex items-center gap-2 text-3xl text-white'>
+            <BiLogoFacebook className='rounded-full bg-blue-600 ' ></BiLogoFacebook>
+            <BiLogoLinkedin className='rounded-full text-blue-700'></BiLogoLinkedin>
+            <BiLogoInstagram className='rounded-full text-indigo-600'></BiLogoInstagram>
+            <BiLogoTwitter className='rounded-full bg-blue-50 text-sky-500'></BiLogoTwitter>
+            <PiShareFatFill className='rounded-full text-red-600'></PiShareFatFill>
+        </div>
+    </>;
     // console.log(data);  
     const data1 = fakeData.slice(0, 8);
-    const relatedNewsData = fakeData.slice(0, 4)
+    const relatedNewsData = fakeData.slice(0, 20)
     return (
         <div className='container mx-auto mt-5'>
             <div className='px-4  grid md:grid-cols-12 gap-8'>
                 <div className='col-span-9'>
-                    <h2 className='text-3xl font-semibold my-5'>Food</h2>
-                    <h1 className='text-xl'>{data.title}</h1>
-                    <p>Author - Dhaka</p>
-                    <div className='flex justify-between'>
+                    <h2 className='text-3xl font-semibold my-5 text-red-500'>Food</h2>
+                    <h1 className='text-3xl'>{data.title}</h1>
+                    <p className='my-1'>Author - Dhaka</p>
+                    <div className='flex justify-between items-center'>
                         <div>
                             <h1>Update - {data.published_date}</h1>
                         </div>
-                        <div className='flex items-center gap-2 text-3xl text-white'>
-                            <BiLogoFacebook className='rounded-full bg-blue-600 ' ></BiLogoFacebook>
-                            <BiLogoLinkedin className='rounded-full text-blue-700'></BiLogoLinkedin>
-                            <BiLogoInstagram className='rounded-full text-indigo-600'></BiLogoInstagram>
-                            <BiLogoTwitter className='rounded-full bg-blue-50 text-sky-500'></BiLogoTwitter>
-                            <PiShareFatFill className='rounded-full text-red-600'></PiShareFatFill>
-                        </div>
+                        {socialShare}
                     </div>
                     <div>
                         {/* image and description */}
@@ -52,24 +56,26 @@ const singleNews = () => {
                         </div>
 
                         {/* Comment */}
-                        <div className='flex justify-between items-center mt-8'>
-                            <div>
-                                <ul className='flex justify-start gap-4 py-5 '>
-                                    <li>Comment</li>
-                                </ul>
+                        <div>
+                            <div className="divider"></div>
+                            <div className='flex justify-between items-center'>
+                                <div>
+                                    <h1 className='text-2xl'>Comment</h1>
+                                </div>
+                                {socialShare}
                             </div>
-                            <div className='flex items-center gap-2 text-3xl text-white'>
-                                <BiLogoFacebook className='rounded-full bg-blue-600 ' ></BiLogoFacebook>
-                                <BiLogoLinkedin className='rounded-full text-blue-700'></BiLogoLinkedin>
-                                <BiLogoInstagram className='rounded-full text-indigo-600'></BiLogoInstagram>
-                                <BiLogoTwitter className='rounded-full bg-blue-50 text-sky-500'></BiLogoTwitter>
-                                <PiShareFatFill className='rounded-full text-red-600'></PiShareFatFill>
+                            <div className="divider"></div>
+                            <div className='flex justify-end'>
+                                <h1 className='text-lg'>Name</h1>
                             </div>
-                        </div>
-                        <div className='flex items-center gap-3'>
-                            <BiUser className='text-5xl bg-slate-300 rounded-full p-3 '></BiUser>
-                            <textarea cols="70" className=' border-b-4 border-black'
-                                placeholder='Share your thoughts'></textarea>
+                            <div className="divider"></div>
+                            <div className='flex items-center gap-5'>
+                                <Image className='rounded-full' src={"https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} height={40} width={40} alt='user photo ' />
+                                <input type="text" placeholder='Write your comment!' className='border flex-1 px-5 py-2 rounded focus:outline-none' />
+                            </div>
+                            <div className='flex justify-end mt-3'>
+                                <button className='bg-cyan-500 text-white px-2 py-1 rounded flex items-center gap-1'> <BiSolidPaperPlane />Post</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,6 +105,8 @@ const singleNews = () => {
 
             {/* related news */}
             <div className='my-12'>
+                {/* <h1 className='text-2xl my-3'>Read more about politics</h1> */}
+                <Headline headline={"Read more about politics"} />
                 <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
                     {
                         relatedNewsData.map(item => <NewsCardFour
