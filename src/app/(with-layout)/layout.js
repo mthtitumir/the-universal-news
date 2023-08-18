@@ -11,14 +11,15 @@ import { Toaster } from "react-hot-toast"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Home | The Universal News',
-  description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
-}
+// export const metadata = {
+//   title: 'Home | The Universal News',
+//   description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
+// }
 
 const WithLayout = ({ children }) => {
   const pathname = usePathname();
   // console.log(pathname);
+  // const pathname = Path();
   return (
     <html lang="en" data-theme="light">
       <body className={`${inter.className} bg-white`}>
