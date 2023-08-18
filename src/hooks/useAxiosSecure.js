@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import useAuth from './useAuth';
 
 const axiosSecure = axios.create({
-    baseURL: 'https://game-tactics-server.vercel.app',
+    baseURL: 'http://localhost:3000',
 });
 
 const useAxiosSecure = () => {

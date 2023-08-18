@@ -1,12 +1,15 @@
-import React from 'react';
+"use clint"
 import fakeData from "@/utils/news.json";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser } from 'react-icons/bi'
 import { PiShareFatFill } from 'react-icons/pi'
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import HandleComment from "@/components/miniComponents/HandleComment";
 
 const singleNews = () => {
+
+  
     const data = fakeData.slice(0, 1)[0];
     // console.log(data);  
     const data1 = fakeData.slice(0, 8);
@@ -68,8 +71,7 @@ const singleNews = () => {
                         </div>
                         <div className='flex items-center gap-3'>
                             <BiUser className='text-5xl bg-slate-300 rounded-full p-3 '></BiUser>
-                            <textarea cols="70" className=' border-b-4 border-black'
-                                placeholder='Share your thoughts'></textarea>
+                           <HandleComment />
                         </div>
                     </div>
                 </div>
