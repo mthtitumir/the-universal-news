@@ -1,5 +1,4 @@
 import React from 'react';
-import fakeData from "../../utils/news.json"
 import NewsCardOne from '../newsCards/NewsCardOne';
 import NewsCardTwo from '../newsCards/NewsCardTwo';
 import NewsCardThree from '../newsCards/NewsCardThree';

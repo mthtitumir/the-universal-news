@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopLosserAndTopGainer = () => {
+const TopLoserAndTopGainer = () => {
     return (
         <div className='md:grid grid-cols-3 gap-3'>
             
@@ -186,4 +186,4 @@ const TopLosserAndTopGainer = () => {
     );
 };
 
-export default TopLosserAndTopGainer;
+export default TopLoserAndTopGainer;
