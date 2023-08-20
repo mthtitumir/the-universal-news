@@ -1,39 +1,29 @@
-"use client"
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
-import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
-import React from 'react';
-import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import { categories } from '@/hooks/useCategories';
-
+import Headline from '@/components/miniComponents/Headline';
 
 const category = async ({params}) => {
-    // console.log(params.category);
     const categoryData = await categories(params.category);
-    console.log(categoryData);
-    const data = fakeData.slice(0, 6);
-    const data1 = fakeData.slice(0, 1);
-    const data2 = fakeData.slice(0, 10);
-    const relatedNewsData = fakeData.slice(0,8)
+    const data = categoryData.slice(0, 10);
+    const data1 = categoryData.slice(0, 10);
+    const relatedNewsData = categoryData.slice(0,8);
 
     return (
-        <div className=' container mx-auto'>
+        <div className=' container mx-auto mt-5'>
             {/* Category Navbar */}
             <div className='flex items-center gap-7'>
-                <h2 className='text-2xl font-semibold'>Food</h2>
+                <h2 className='text-3xl font-semibold text-cyan-500'>{params.category.toUpperCase()}</h2>
                 <div>
-                    <ul className='flex justify-start gap-4 py-5 '>
-                        <li>Chines</li>
-                        <li>Japanese</li>
-                        <li>Italian</li>
-                        <li>Indian</li>
-                        <li>South Korean</li>
+                    <ul className=' flex justify-start gap-4 py-5  '>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Mathematics</li>
+                        <li>Biology</li>
                     </ul>
                 </div>
             </div>
-
-
 
             {/* Category Banner */}
             <div className='mt-5 '>
@@ -55,7 +45,6 @@ const category = async ({params}) => {
                             ></NewsCardFour>)
                         }
                     </div>
-
                     <div className='card1 col-span-3 '>
                         {
                             data.map(item => <NewsCardOne
@@ -67,11 +56,9 @@ const category = async ({params}) => {
                 </div>
             </div>
 
-
-
-
             {/* Related Category */}
             <div className='my-12'>
+                <Headline headline={"Related News"} />
                 <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
                     {
                         relatedNewsData.map(item => <NewsCardFour
@@ -82,7 +69,6 @@ const category = async ({params}) => {
                 </div>
             </div>
         </div>
-
     );
 };
 

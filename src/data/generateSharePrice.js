@@ -1,4 +1,4 @@
-export const genaretPrice = () => {
+export const generatePrice = () => {
     const stocks = [
         { name: "Tesla", number: 4.5},
         { name: "Google", number: 3.5 },

@@ -23,7 +23,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex gap-8'>
                     <ShareUpdate />
-                    <Link href='bussness/shere-market'>view all</Link>
+                    <Link href='business/share-market'>View All</Link>
                 </div>
             </div>
             <div className="">

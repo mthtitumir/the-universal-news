@@ -1,24 +1,18 @@
-"use client"
-import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin, BiUser, BiSolidPaperPlane } from 'react-icons/bi'
-import { PiShareFatFill } from 'react-icons/pi'
+import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
+import { PiShareFatFill } from 'react-icons/pi';
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import Headline from "@/components/miniComponents/Headline";
 import HandleComment from "@/components/miniComponents/HandleComment";
 import { categories } from "@/hooks/useCategories";
-import useAuth from '@/hooks/useAuth';
-import Link from 'next/link';
+import { singleNews } from '@/hooks/useSingleNews';
 
-const singleNews = async ({ params }) => {
+const SingleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { user } = useAuth();
     const id = params?.id;
-    const res = await fetch(`https://the-universal-news.vercel.app/api/all-news/${id}`)
-    const data = await res.json();
+    const data = await singleNews(id);
     const { _id, img, title, description, category, author, published_date, comments } = data;
-    // const comments = data.comments;
-    // const data = fakeData.slice(0, 1)[0];
     const categoryData = await categories(category);
 
     const socialShare = <>
@@ -35,7 +29,7 @@ const singleNews = async ({ params }) => {
     const relatedNewsData = categoryData.slice(0, 20)
     return (
         <div className='container mx-auto mt-5'>
-            <div className='px-4  grid md:grid-cols-12 gap-8'>
+            <div className=' grid md:grid-cols-12 gap-8'>
                 <div className='col-span-9'>
                     <h2 className='text-3xl font-semibold my-5 text-cyan-500'>{category.toUpperCase()}</h2>
                     <h1 className='text-3xl'>{title}</h1>
@@ -69,24 +63,11 @@ const singleNews = async ({ params }) => {
 
                         {/* Comment */}
                         <div>
-                            <div className="divider"></div>
-                            <div className='flex justify-between items-center'>
-                                <div>
-                                    <h1 className='text-2xl'>Comment</h1>
-                                </div>
-                                {socialShare}
-                            </div>
-                            <div className="divider"></div>
-                            <div className='flex justify-end'>
-                                <h1 className='text-lg'>{user ? user.displayName : <span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
-                            </div>
-                            <div className="divider"></div>
-                            <HandleComment id={_id} comments={comments} />
-
+                            <HandleComment id={_id} comments={comments} socialShare={socialShare} />
                         </div>
                     </div>
                 </div>
-                {/* Card one and billboard */}
+                {/* Related news and billboard */}
                 <div className='col-span-3'>
                     <div className='card1 col-span-3 overflow-y-scroll overflow-x-hidden'>
                         {
@@ -96,6 +77,7 @@ const singleNews = async ({ params }) => {
                             ></NewsCardOne>)
                         }
                     </div>
+                    {/* billboard */}
                     <div>
                         <Image
                             height={550}
@@ -103,13 +85,11 @@ const singleNews = async ({ params }) => {
                             src="https://i.ibb.co/rMrqg6z/pexels-jessica-michaelson-1672100.jpg"
                             alt='Ad'
                         >
-
                         </Image>
                     </div>
 
                 </div>
             </div>
-
             {/* related news */}
             <div className='my-12'>
                 {/* <h1 className='text-2xl my-3'>Read more about politics</h1> */}
@@ -124,8 +104,7 @@ const singleNews = async ({ params }) => {
                 </div>
             </div>
         </div>
-
     );
 };
 
-export default singleNews;
+export default SingleNews;
