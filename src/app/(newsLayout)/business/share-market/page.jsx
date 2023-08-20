@@ -1,11 +1,10 @@
 
-
-import StockChart from '@/components/shere-market/ShereMarket';
-import TopLosserAndTopGainer from '@/components/shere-market/TopLosserAndTopGainer';
+import StockChart from '@/components/ShareMarket/ShareMarket';
+import TopLoserAndTopGainer from '@/components/ShareMarket/TopLoserAndTopGainer';
 import sampleData from '@/data/simpleData';
 import React from 'react';
 
-const ShereMarket = () => {
+const ShareMarket = () => {
    
     return (
         <div className='container mx-auto my-11'>
@@ -16,7 +15,7 @@ const ShereMarket = () => {
             <p className='text-xl font-bold my-4'>Stock Spotlight</p>
 
             <div>
-                <TopLosserAndTopGainer />
+                <TopLoserAndTopGainer />
             </div>
             <p className='text-xl font-bold my-4'>WORLD MARKETS</p>
             <div>
@@ -26,4 +25,4 @@ const ShereMarket = () => {
     );
 };
 
-export default ShereMarket;
+export default ShareMarket;

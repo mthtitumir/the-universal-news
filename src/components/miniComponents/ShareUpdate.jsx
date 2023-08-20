@@ -1,5 +1,5 @@
 "use client"
-import { genaretPrice } from '@/data/genaretSherePrice';
+import { generatePrice } from '@/data/generateSharePrice';
 import React, { useEffect, useState } from 'react';
 
 const ShareUpdate = () => {
@@ -7,7 +7,7 @@ const ShareUpdate = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-          const randomStockData = genaretPrice();
+          const randomStockData = generatePrice();
           setStockData(randomStockData);
         }, 2000);
     
