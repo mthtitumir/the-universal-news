@@ -44,7 +44,7 @@ const TopNavbar = () => {
                 </div>
                 <Link href="/"><h2 className={`${myFont.className} text-3xl`}>The Universal News</h2></Link>
                 <div className='flex justify-between items-center gap-2 text-md '>
-                    <Link href="/"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Subscribe</button></Link>
+                    <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Subscribe</button></Link>
                     {
                         uid ? <button onClick={handleLogout} className='bg-cyan-500 rounded px-2 py-1 text-white'>Logout</button>
                             :

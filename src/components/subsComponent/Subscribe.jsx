@@ -9,7 +9,7 @@ const myFont = localFont({ src: "../Navbar/Engravers' Old English.woff2" });
 
 const Subscribe = () => {
     return (
-        <div className='sm:flex-row md:flex items-center gap-10 sm:px-28 mx-auto '>
+        <div className='sm:flex-row md:flex items-center gap-10 sm:px-28 mx-auto bg-white '>
 
             <div className='sm:mb-6'>
                 <Link href="/"><h2 className={`${myFont.className} text-3xl mt-5`}>The Universal News</h2></Link>
@@ -36,7 +36,7 @@ const Subscribe = () => {
                         </div>
                         <button
                             type="button"
-                            className="btn bg-slate-950 text-white hover:text-black rounded w-full"
+                            className="btn bg-slate-950 text-white hover:text-black rounded w-full mt-4"
 
                         >Subscribe Now </button>
                     </form>
