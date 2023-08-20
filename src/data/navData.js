@@ -28,7 +28,7 @@ export const navData = [
         title: 'Opinion'
     },
     {
-        path:'/info/science',
+        path:'/news/science',
         title: 'Science'
     },
     {

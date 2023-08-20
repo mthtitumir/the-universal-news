@@ -4,10 +4,10 @@ import React from 'react';
 import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import HandleModal from '@/components/miniComponents/HandleModal';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import HandleSportsGelary from '@/components/miniComponents/HandleSportsGelary';
 
 const Sports = () => {
     const data = fakeData.slice(0, 6);
@@ -44,7 +44,7 @@ const Sports = () => {
                             ></NewsCardTwo>)
                         }
                     </div>
-                    {/* <HandleSportsGelary /> */}
+                    <HandleSportsGelary />
                     <div className='card1 col-span-3 overflow-y-scroll overflow-x-hidden '>
                         {
                             data1.map(item => <NewsCardFour

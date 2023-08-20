@@ -2,13 +2,13 @@
 import useAuth from '@/hooks/useAuth';
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { BiSolidPaperPlane } from 'react-icons/bi';
 
-const HandleComment = ({ id, comments }) => {
-    const { user } = useAuth()
-
+const HandleComment = ({ id, comments, socialShare }) => {
+    const { user } = useAuth();
     const {
         register,
         handleSubmit,
@@ -30,10 +30,24 @@ const HandleComment = ({ id, comments }) => {
     }
     return (
         <>
+            <div className="divider"></div>
+            <div className='flex justify-between items-center'>
+                <div>
+                    <h1 className='text-2xl'>Comment</h1>
+                </div>
+                {socialShare}
+            </div>
+            <div className="divider"></div>
+            <div className='flex justify-end'>
+                <h1 className='text-lg'>{user ? user.displayName : <span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
+            </div>
+            <div className="divider"></div>
+
+            {/* user comment input starts   */}
             <div className='my-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='flex items-center gap-5'>
-                        <Image className='rounded-full' src={user?user.photoURL:"https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} height={40} width={40} alt='user photo ' />
+                        <Image className='rounded-full' src={user ? user.photoURL : "https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} height={40} width={40} alt='user photo ' />
                         <input {...register("comment")} type="text" placeholder='Write your comment!' className='border flex-1 px-5 py-2 rounded focus:outline-none' />
                     </div>
                     <div className='flex justify-end mt-3'>
