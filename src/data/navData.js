@@ -20,7 +20,7 @@ export const navData = [
         title: 'Business'
     },
     {
-        path:'/news/sports',
+        path:'/sports',
         title: 'Sports'
     },
     {

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import styles from './modal.css';
-// Modal.setAppElement('#root');
 import bg from '../../../public/congrats-7.gif'
 import Image from 'next/image'
 const HandleModal = () => {
@@ -11,7 +10,6 @@ const HandleModal = () => {
   
     const closeModal = () => {
         setIsOpen(false);
-        // Save the modal's closed state in local storage
         localStorage.setItem('modalClosed', 'true');
     };
 
