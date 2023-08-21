@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const LatestMarque = async () => {
     const data = await allNews();
+    console.log(data)
     const myData = data.slice(0, 20);
 
     return (
