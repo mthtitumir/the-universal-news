@@ -1,7 +1,7 @@
 import DbConnect from "@/services/DbConnect";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
-
+'server-only'
 export const POST = async (request, {params}) => {
     if (request.method === "POST") {
         try {

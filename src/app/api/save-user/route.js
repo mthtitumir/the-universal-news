@@ -1,5 +1,6 @@
 import DbConnect from "@/services/DbConnect";
 import { NextResponse } from "next/server";
+'server-only'
 
 export const POST = async (request) => {
     if (request.method === "POST") {
@@ -8,7 +9,6 @@ export const POST = async (request) => {
             const db = await DbConnect();
             const allUsers = db.collection('all-users');
             const { name, email, photo } = body;
-            console.log(email)
             const doc = {
                 name, email, photo
             }

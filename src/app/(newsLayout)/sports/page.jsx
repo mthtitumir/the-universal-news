@@ -5,10 +5,6 @@ import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import HandleModal from '@/components/miniComponents/HandleModal';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-
 const Sports = () => {
     const data = fakeData.slice(0, 6);
     const data1 = fakeData.slice(0, 1);
@@ -44,7 +40,6 @@ const Sports = () => {
                             ></NewsCardTwo>)
                         }
                     </div>
-                    {/* <HandleSportsGelary /> */}
                     <div className='card1 col-span-3 overflow-y-scroll overflow-x-hidden '>
                         {
                             data1.map(item => <NewsCardFour
