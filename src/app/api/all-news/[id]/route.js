@@ -1,7 +1,7 @@
 import DbConnect from "@/services/DbConnect";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
-
+'server-only'
 export const GET = async (request, { params }) => {
     try {
         const id = params.id;
