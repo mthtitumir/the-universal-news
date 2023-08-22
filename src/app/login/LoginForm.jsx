@@ -1,7 +1,6 @@
 "use client";
 
 import useAuth from "@/hooks/useAuth";
-import Image from "next/image";
 // import createJWT from "@/utils/createJWT";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";

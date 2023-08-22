@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const LatestMarque = async () => {
     const data = await allNews();
+    console.log(data)
     const myData = data.slice(0, 20);
 
     return (
@@ -13,8 +14,6 @@ const LatestMarque = async () => {
                 {
                     myData.map(data => (<h1 key={data._id} className='px-3'>{data?.title}</h1>))
                 }
-                    
-                
             </Marquee>
         </div>
     );
