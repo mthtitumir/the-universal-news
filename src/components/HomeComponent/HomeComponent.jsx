@@ -8,10 +8,10 @@ import { allNews } from '@/hooks/useAllNews';
 
 const HomeComponent = async () => {
     const news = await allNews();
+    // console.log(news);
     const data = news.slice(0,20);
     const data1 = news.slice(0, 10);
     const data2 = news.slice(0,10);
-//    console.log(news.length);
 
     return (
         <div className=''>

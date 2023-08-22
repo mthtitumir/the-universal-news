@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from '../../../public/21601.png'
 import Image from 'next/image'
-
-
 const Footer = () => {
     return (
         <footer className="mt-10 py-5 bg-base-200">

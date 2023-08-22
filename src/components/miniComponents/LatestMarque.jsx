@@ -13,8 +13,6 @@ const LatestMarque = async () => {
                 {
                     myData.map(data => (<h1 key={data._id} className='px-3'>{data?.title}</h1>))
                 }
-                    
-                
             </Marquee>
         </div>
     );

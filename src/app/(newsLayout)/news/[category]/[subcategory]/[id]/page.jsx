@@ -12,7 +12,7 @@ const SingleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const id = params?.id;
     const data = await singleNews(id);
-    const { _id, img, title, description, category, author, published_date, comments } = data;
+    const {  img, _id, title, description, category, author, published_date, comments } = data;
     const categoryData = await categories(category);
 
     const socialShare = <>
