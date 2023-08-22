@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "title": "Kung Pao Chicken",
+    "description": "A spicy and flavorful Chinese stir-fry dish with chicken, peanuts, and vegetables.",
+    "img": "https://i.ibb.co/br00VR4/Kung-Pao-Chicken.jpg",
+    "category": "food",
+    "subcategory": "chinese",
+    "published_date": "2023-08-17",
+    "author": "Emma",
+    "tags": ["food", "chinese cuisine", "spicy"],
+    "likes": 145,
+    "comments": [
+      {
+        "id": 151,
+        "author": "Emma",
+        "text": "Kung Pao Chicken is my go-to Chinese dish!",
+        "date": "2023-08-17"
+      },
+      {
+        "id": 152,
+        "author": "Alex",
+        "text": "The combination of flavors is simply amazing.",
+        "date": "2023-08-17"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Tuscan Ribollita Soup",
+    "description": "A hearty vegetable and bread soup, often made with cannellini beans, kale, carrots, tomatoes, and stale bread.",
+    "img": "https://i.ibb.co/s6XywTr/Tuscan-Ribollita-Soup.jpg",
+    "category": "food",
+    "subcategory": "italian",
+    "published_date": "2023-08-18",
+    "author": "Isabella Russo",
+    "tags": ["food", "italian cuisine", "ribollita soup"],
+    "likes": 155,
+    "comments": [
+      {
+        "id": 383,
+        "author": "Isabella Russo",
+        "text": "Ribollita warms the soul and nourishes the body.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 384,
+        "author": "Leonardo",
+        "text": "A taste of Tuscan countryside traditions.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Savory Masala Dosa",
+    "description": "Thin and crispy rice crepe stuffed with a spiced potato filling, served with coconut chutney and tangy sambar.",
+    "img": "https://i.ibb.co/xLL4Sd4/Savory-Masala-Dosa.jpg",
+    "category": "food",
+    "subcategory": "indian",
+    "published_date": "2023-08-18",
+    "author": "Vikram Kapoor",
+    "tags": ["food", "indian cuisine", "masala dosa"],
+    "likes": 198,
+    "comments": [
+      {
+        "id": 391,
+        "author": "Vikram Kapoor",
+        "text": "Masala dosa is a South Indian delight loved by all.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 392,
+        "author": "Sarika",
+        "text": "A crispy and flavorful journey for the palate.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Tacos al Pastor",
+    "description": "A Mexican dish featuring marinated pork cooked on a vertical rotisserie, typically served in tortillas.",
+    "img": "https://i.ibb.co/7VdBvMY/Tacos-al-Pastor.jpg",
+    "category": "food",
+    "subcategory": "mexican",
+    "published_date": "2023-08-08",
+    "author": "Carlos",
+    "tags": ["food", "mexican cuisine", "tacos"],
+    "likes": 189,
+    "comments": [
+      {
+        "id": 181,
+        "author": "Carlos",
+        "text": "Tacos al Pastor are a burst of flavors in every bite.",
+        "date": "2023-08-08"
+      },
+      {
+        "id": 182,
+        "author": "Elena",
+        "text": "This dish is a must-try for anyone visiting Mexico.",
+        "date": "2023-08-08"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Sushi Platter",
+    "description": "A delightful Japanese dish featuring a variety of fresh raw fish and other ingredients over vinegared rice.",
+    "img": "https://i.ibb.co/h8kdhnd/Sushi-Platter.jpg",
+    "category": "food",
+    "subcategory": "japanese",
+    "published_date": "2023-08-06",
+    "author": "Yuki",
+    "tags": ["food", "japanese cuisine", "sushi"],
+    "likes": 267,
+    "comments": [
+      {
+        "id": 191,
+        "author": "Yuki",
+        "text": "Sushi is an art form that tantalizes the senses.",
+        "date": "2023-08-06"
+      },
+      {
+        "id": 192,
+        "author": "Hiroshi",
+        "text": "A sushi platter is a culinary masterpiece.",
+        "date": "2023-08-06"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Dim Sum Sampler",
+    "description": "A variety of bite-sized Chinese dishes, including dumplings, buns, and rolls, often served with dipping sauces.",
+    "img": "https://i.ibb.co/8NX0hTZ/Dim-Sum-Sampler.jpg",
+    "category": "food",
+    "subcategory": "chinese",
+    "published_date": "2023-08-17",
+    "author": "Liang",
+    "tags": ["food", "chinese cuisine", "dim sum"],
+    "likes": 122,
+    "comments": [
+      {
+        "id": 153,
+        "author": "Liang",
+        "text": "Dim sum brings friends and family together.",
+        "date": "2023-08-17"
+      },
+      {
+        "id": 154,
+        "author": "Mei",
+        "text": "Every bite is a delightful surprise.",
+        "date": "2023-08-17"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Flavorful Eggplant Parmesan",
+    "description": "Slices of eggplant coated in breadcrumbs, fried until golden, layered with tomato sauce and mozzarella, then baked to perfection.",
+    "img": "https://i.ibb.co/3rvmZQv/Flavorful-Eggplant-Parmesan.jpg",
+    "category": "food",
+    "subcategory": "italian",
+    "published_date": "2023-08-18",
+    "author": "Lorenzo Martini",
+    "tags": ["food", "italian cuisine", "eggplant parmesan"],
+    "likes": 197,
+    "comments": [
+      {
+        "id": 381,
+        "author": "Lorenzo Martini",
+        "text": "Eggplant Parmesan is comfort food elevated.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 382,
+        "author": "Alessia",
+        "text": "A harmonious blend of textures and flavors.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Creamy Malai Kofta",
+    "description": "Soft paneer and vegetable dumplings simmered in a rich and creamy tomato-based gravy, garnished with fresh cilantro.",
+    "img": "https://i.ibb.co/dmpqjPc/Creamy-Malai-Kofta.jpg",
+    "category": "food",
+    "subcategory": "indian",
+    "published_date": "2023-08-18",
+    "author": "Rajendra Mehta",
+    "tags": ["food", "indian cuisine", "malai kofta"],
+    "likes": 164,
+    "comments": [
+      {
+        "id": 393,
+        "author": "Rajendra Mehta",
+        "text": "Malai kofta is a royal treat for the senses.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 394,
+        "author": "Aishwarya",
+        "text": "A luscious and comforting dish that transports you to India.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Chiles en Nogada",
+    "description": "A Mexican dish featuring poblano peppers stuffed with a mixture of meat and fruits, topped with walnut sauce and pomegranate seeds.",
+    "img": "https://i.ibb.co/f16M4kw/Chiles-en-Nogada.jpg",
+    "category": "food",
+    "subcategory": "mexican",
+    "published_date": "2023-08-08",
+    "author": "Alejandra",
+    "tags": ["food", "mexican cuisine", "stuffed peppers"],
+    "likes": 154,
+    "comments": [
+      {
+        "id": 183,
+        "author": "Alejandra",
+        "text": "Chiles en Nogada is a festive and flavorful dish.",
+        "date": "2023-08-08"
+      },
+      {
+        "id": 184,
+        "author": "Miguel",
+        "text": "The colors of the dish are as vibrant as its taste.",
+        "date": "2023-08-08"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Mochi Medley",
+    "description": "Sweet and chewy rice cakes called mochi, served in various forms including filled with red bean paste, wrapped in seaweed, or grilled.",
+    "img": "https://i.ibb.co/sHFnRMz/Mochi-Medley.jpg",
+    "category": "food",
+    "subcategory": "japanese",
+    "published_date": "2023-08-18",
+    "author": "Takeshi Nakamura",
+    "tags": ["food", "japanese cuisine", "mochi"],
+    "likes": 136,
+    "comments": [
+      {
+        "id": 363,
+        "author": "Takeshi Nakamura",
+        "text": "Mochi is a delightful balance of texture and taste.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 364,
+        "author": "Sakura",
+        "text": "The sweetness of mochi is pure comfort.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Peking Duck",
+    "description": "A famous Chinese dish featuring crispy roasted duck served with thin pancakes, scallions, and hoisin sauce.",
+    "img": "https://i.ibb.co/Lt0cS5z/Peking-Duck.jpg",
+    "category": "food",
+    "subcategory": "chinese",
+    "published_date": "2023-08-20",
+    "author": "Wei",
+    "tags": ["food", "chinese cuisine", "duck"],
+    "likes": 135,
+    "comments": [
+      {
+        "id": 203,
+        "author": "Wei",
+        "text": "Peking Duck is a culinary masterpiece of China.",
+        "date": "2023-08-20"
+      },
+      {
+        "id": 204,
+        "author": "Yan",
+        "text": "The combination of flavors is exceptional.",
+        "date": "2023-08-20"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Margherita Pizza",
+    "description": "A classic Italian pizza topped with tomato sauce, mozzarella cheese, fresh basil leaves, and a drizzle of olive oil.",
+    "img": "https://i.ibb.co/NpGpDjL/Margherita-Pizza.jpg",
+    "category": "food",
+    "subcategory": "italian",
+    "published_date": "2023-08-18",
+    "author": "Giovanni",
+    "tags": ["food", "italian cuisine", "pizza"],
+    "likes": 192,
+    "comments": [
+      {
+        "id": 213,
+        "author": "Giovanni",
+        "text": "Margherita Pizza captures the essence of Italy.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 214,
+        "author": "Elena",
+        "text": "Simple ingredients, incredible taste.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Chicken Biryani",
+    "description": "A flavorful Indian dish made with fragrant basmati rice, tender chicken, aromatic spices, and saffron-infused strands.",
+    "img": "https://i.ibb.co/R6WG1cG/Chicken-Biryani.jpg",
+    "category": "food",
+    "subcategory": "indian",
+    "published_date": "2023-08-16",
+    "author": "Amit",
+    "tags": ["food", "indian cuisine", "rice"],
+    "likes": 178,
+    "comments": [
+      {
+        "id": 223,
+        "author": "Amit",
+        "text": "Chicken Biryani is a celebration of flavors.",
+        "date": "2023-08-16"
+      },
+      {
+        "id": 224,
+        "author": "Sneha",
+        "text": "Each spoonful is a delightful journey.",
+        "date": "2023-08-16"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Zesty Guacamole and Chips",
+    "description": "Creamy avocado dip made with ripe avocados, tomatoes, onions, cilantro, lime juice, and served with crispy tortilla chips.",
+    "img": "https://i.ibb.co/BP0ttKQ/Zesty-Guacamole-and-Chips.jpg",
+    "category": "food",
+    "subcategory": "mexican",
+    "published_date": "2023-08-18",
+    "author": "Luisa Martinez",
+    "tags": ["food", "mexican cuisine", "guacamole"],
+    "likes": 175,
+    "comments": [
+      {
+        "id": 399,
+        "author": "Luisa Martinez",
+        "text": "Guacamole is a fiesta of flavors that brings people together.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 400,
+        "author": "Ana",
+        "text": "A refreshing and addictive dip that adds excitement to any meal.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Ramen Reverie",
+    "description": "A comforting bowl of ramen featuring chewy noodles, savory broth, slices of tender pork, bamboo shoots, and a soft-boiled egg.",
+    "img": "https://i.ibb.co/N26V2Ns/Ramen-Reverie.jpg",
+    "category": "food",
+    "subcategory": "japanese",
+    "published_date": "2023-08-18",
+    "author": "Emi Nakamura",
+    "tags": ["food", "japanese cuisine", "ramen"],
+    "likes": 141,
+    "comments": [
+      {
+        "id": 357,
+        "author": "Emi Nakamura",
+        "text": "Ramen warms both the body and the soul.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 358,
+        "author": "Taro",
+        "text": "The umami flavors dance in every slurp.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Hot Pot Harmony",
+    "description": "A communal dining experience where diners cook a variety of raw ingredients in a simmering broth at the center of the table.",
+    "img": "https://i.ibb.co/jrnS5mz/Hot-Pot-Harmony.jpg",
+    "category": "food",
+    "subcategory": "chinese",
+    "published_date": "2023-08-18",
+    "author": "Yan Zhao",
+    "tags": ["food", "chinese cuisine", "hot pot"],
+    "likes": 178,
+    "comments": [
+      {
+        "id": 371,
+        "author": "Yan Zhao",
+        "text": "Hot pot is the embodiment of shared joy.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 372,
+        "author": "Hua",
+        "text": "Every bite is a creation of your own.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Risotto alla Milanese",
+    "description": "An Italian comfort dish made with creamy Arborio rice, saffron, and Parmesan cheese.",
+    "img": "https://i.ibb.co/hdncvLx/Risotto-alla-Milanese.jpg",
+    "category": "food",
+    "subcategory": "italian",
+    "published_date": "2023-08-08",
+    "author": "Luisa",
+    "tags": ["food", "italian cuisine", "risotto"],
+    "likes": 179,
+    "comments": [
+      {
+        "id": 263,
+        "author": "Luisa",
+        "text": "Risotto alla Milanese is a taste of luxury.",
+        "date": "2023-08-08"
+      },
+      {
+        "id": 264,
+        "author": "Marco",
+        "text": "Creamy, fragrant, and utterly delicious.",
+        "date": "2023-08-08"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Paneer Tikka Masala",
+    "description": "A popular Indian dish featuring marinated and grilled paneer cubes in a rich tomato-based curry.",
+    "img": "https://i.ibb.co/z7sp1fy/Paneer-Tikka-Masala.jpg",
+    "category": "food",
+    "subcategory": "indian",
+    "published_date": "2023-08-06",
+    "author": "Priya",
+    "tags": ["food", "indian cuisine", "paneer"],
+    "likes": 143,
+    "comments": [
+      {
+        "id": 273,
+        "author": "Priya",
+        "text": "Paneer Tikka Masala is a flavor explosion.",
+        "date": "2023-08-06"
+      },
+      {
+        "id": 274,
+        "author": "Raj",
+        "text": "Perfectly balanced spices in every bite.",
+        "date": "2023-08-06"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Enchiladas Verdes",
+    "description": "A Mexican favorite featuring rolled tortillas stuffed with chicken, covered in green chili sauce and melted cheese.",
+    "img": "https://i.ibb.co/L9rNnpj/Enchiladas-Verdes.jpg",
+    "category": "food",
+    "subcategory": "mexican",
+    "published_date": "2023-08-04",
+    "author": "Ana",
+    "tags": ["food", "mexican cuisine", "enchiladas"],
+    "likes": 156,
+    "comments": [
+      {
+        "id": 283,
+        "author": "Ana",
+        "text": "Enchiladas Verdes are a burst of flavors.",
+        "date": "2023-08-04"
+      },
+      {
+        "id": 284,
+        "author": "Luis",
+        "text": "The tangy sauce adds a wonderful kick.",
+        "date": "2023-08-04"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Okonomiyaki Feast",
+    "description": "A savory Japanese pancake made with shredded cabbage, flour, eggs, and various toppings like pork, seafood, and a tangy sauce.",
+    "img": "https://i.ibb.co/sPkqJJ0/Okonomiyaki-Feast.jpg",
+    "category": "food",
+    "subcategory": "japanese",
+    "published_date": "2023-08-18",
+    "author": "Aiko Yamamoto",
+    "tags": ["food", "japanese cuisine", "okonomiyaki"],
+    "likes": 127,
+    "comments": [
+      {
+        "id": 359,
+        "author": "Aiko Yamamoto",
+        "text": "Okonomiyaki brings friends and flavors together.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 360,
+        "author": "Riku",
+        "text": "Every bite is a delightful surprise.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Mapo Tofu Magic",
+    "description": "A spicy and flavorful Sichuan dish featuring silky tofu, ground pork, and a fiery chili bean paste sauce.",
+    "img": "https://i.ibb.co/HxXhXtX/Mapo-Tofu-Magic.jpg",
+    "category": "food",
+    "subcategory": "chinese",
+    "published_date": "2023-08-18",
+    "author": "Xia Liu",
+    "tags": ["food", "chinese cuisine", "mapo tofu"],
+    "likes": 163,
+    "comments": [
+      {
+        "id": 373,
+        "author": "Xia Liu",
+        "text": "Mapo tofu ignites your taste buds with spice.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 374,
+        "author": "Chen",
+        "text": "A dance of bold flavors in every mouthful.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Spaghetti Carbonara",
+    "description": "An Italian pasta dish featuring spaghetti, eggs, Pecorino Romano cheese, pancetta, and black pepper.",
+    "img": "https://i.ibb.co/LYXm327/Spaghetti-Carbonara.jpg",
+    "category": "food",
+    "subcategory": "italian",
+    "published_date": "2023-07-29",
+    "author": "Giovanni",
+    "tags": ["food", "italian cuisine", "pasta"],
+    "likes": 152,
+    "comments": [
+      {
+        "id": 313,
+        "author": "Giovanni",
+        "text": "Spaghetti Carbonara is a true comfort food.",
+        "date": "2023-07-29"
+      },
+      {
+        "id": 314,
+        "author": "Francesca",
+        "text": "Creamy and flavorful, it's a timeless classic.",
+        "date": "2023-07-29"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Aromatic Biryani",
+    "description": "Fragrant basmati rice layered with succulent meat (chicken, lamb, or goat), aromatic spices, and caramelized onions.",
+    "img": "https://i.ibb.co/LdGzN26/Aromatic-Biryani.jpg",
+    "category": "food",
+    "subcategory": "indian",
+    "published_date": "2023-08-18",
+    "author": "Anjali Singh",
+    "tags": ["food", "indian cuisine", "biryani"],
+    "likes": 189,
+    "comments": [
+      {
+        "id": 387,
+        "author": "Anjali Singh",
+        "text": "Biryani is a celebration of flavors in every bite.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 388,
+        "author": "Amit",
+        "text": "A culinary masterpiece that showcases India's diverse spices.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Rich Mole Poblano",
+    "description": "A complex sauce made from a blend of chiles, chocolate, spices, and other ingredients, served over chicken or turkey.",
+    "img": "https://i.ibb.co/X5K7NxB/Rich-Mole-Poblano.jpg",
+    "category": "food",
+    "subcategory": "mexican",
+    "published_date": "2023-08-18",
+    "author": "Carmen Ramirez",
+    "tags": ["food", "mexican cuisine", "mole poblano"],
+    "likes": 164,
+    "comments": [
+      {
+        "id": 403,
+        "author": "Carmen Ramirez",
+        "text": "Mole poblano is a labor of love that symbolizes Mexican culinary tradition.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 404,
+        "author": "Javier",
+        "text": "A harmonious blend of flavors that tells a story of Mexican culture.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Tempura",
+    "description": "A Japanese dish consisting of lightly battered and deep-fried seafood, vegetables, or other ingredients.",
+    "img": "https://i.ibb.co/BP0ttKQ/Zesty-Guacamole-and-Chips.jpg",
+    "category": "food",
+    "subcategory": "japanese",
+    "published_date": "2023-08-17",
+    "author": "Sakura",
+    "tags": ["food", "japanese cuisine", "tempura"],
+    "likes": 139,
+    "comments": [
+      {
+        "id": 353,
+        "author": "Sakura",
+        "text": "Tempura's delicate crunch and flavors are captivating.",
+        "date": "2023-08-17"
+      },
+      {
+        "id": 354,
+        "author": "Haruki",
+        "text": "A delightful balance of texture and taste in every bite.",
+        "date": "2023-08-17"
+      }
+    ]
+  }
+]
