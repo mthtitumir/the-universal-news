@@ -2,6 +2,7 @@
 
 import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
+import axios from "axios";
 // import createJwt from "@/utils/createJwt";
 // import GoogleLogin from "@/components/GoogleLogin";
 // import createJWT from "@/utils/createJWT";
@@ -55,6 +56,15 @@ const SignupForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
+            const name = user?.displayName
+            const photo = user?.photoURL
+            const email = user?.email
+            try {
+                const response = await axios.post(`/api/save-user`, { name, email, photo });
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
             // await createJwt({ email: user.email });
             startTransition(() => {
                 refresh();
@@ -71,6 +81,13 @@ const SignupForm = () => {
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
+        try {
+            const response = await axios.post(`/api/save-user`, { name, email, photo });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+
         try {
             const user = await createUser(email, password);
             // await createJwt({email})

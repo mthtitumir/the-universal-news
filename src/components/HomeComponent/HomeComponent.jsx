@@ -7,13 +7,12 @@ import "./HomeComponent.css";
 import { allNews } from "@/hooks/useAllNews";
 
 const HomeComponent = async () => {
-  const news = await allNews();
-  console.log(news);
-  const data = news.slice(0, 20);
-  const data1 = news.slice(0, 10);
-  const data2 = news.slice(0, 10);
-  //    console.log(news.length);
-
+    const news = await allNews();
+    // console.log(news);
+    const data = news.slice(0,20);
+    const data1 = news.slice(0, 10);
+    const data2 = news.slice(0,10);
+  
   return (
     <div className="">
       <Headline headline={"Recent News"} seeMore={""} />

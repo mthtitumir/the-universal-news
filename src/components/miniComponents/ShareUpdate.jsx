@@ -9,7 +9,7 @@ const ShareUpdate = () => {
         const interval = setInterval(() => {
           const randomStockData = generatePrice();
           setStockData(randomStockData);
-        }, 2000);
+        }, 1000);
     
         return () => clearInterval(interval);
       }, []);
