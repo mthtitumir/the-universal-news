@@ -1,4 +1,3 @@
-
 import StockChart from '@/components/ShareMarket/ShareMarket';
 import TopLoserAndTopGainer from '@/components/ShareMarket/TopLoserAndTopGainer';
 import sampleData from '@/data/simpleData';

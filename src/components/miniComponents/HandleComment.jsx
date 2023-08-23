@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import { BiSolidPaperPlane } from 'react-icons/bi';
 
 const HandleComment = ({ id, comments, socialShare }) => {
+    // console.log(comments);
     const { user } = useAuth();
     const {
         register,
@@ -15,14 +16,17 @@ const HandleComment = ({ id, comments, socialShare }) => {
         reset
     } = useForm();
     const onSubmit = async (data) => {
-        const comments = data.comment;
+        if (!user) {
+            return;
+        }
+        const text = data.text;
         const author = user?.displayName;
         const userImg = user?.photoURL;
         const date = new Date().toISOString();
         const newsId = id;
         try {
-            const response = await axios.post(`/api/add-comment/${newsId}`, { comments, author, userImg, date });
-            console.log(response.data);
+            const response = await axios.post(`/api/add-comment/${newsId}`, { text, author, userImg, date });
+            console.log(response.data, "from comment");
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -43,18 +47,20 @@ const HandleComment = ({ id, comments, socialShare }) => {
             </div>
             <div className="divider"></div>
 
-            {/* user comment input starts   */}
+            {/* user comment input functionality starts   */}
             <div className='my-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='flex items-center gap-5'>
                         <Image className='rounded-full' src={user ? user.photoURL : "https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} height={40} width={40} alt='user photo ' />
-                        <input {...register("comment")} type="text" placeholder='Write your comment!' className='border flex-1 px-5 py-2 rounded focus:outline-none' />
+                        <input {...register("text")} type="text" placeholder='Write your comment!' className='border flex-1 px-5 py-2 rounded focus:outline-none' />
                     </div>
                     <div className='flex justify-end mt-3'>
                         <button type="submit" className='bg-cyan-500 text-white px-2 py-1 rounded flex items-center gap-1'> <BiSolidPaperPlane />Post</button>
                     </div>
                 </form>
             </div>
+
+            {/* comment s display  */}
             <div>
                 {
                     comments.map(comment => <div key={comment.id} className='flex items-center my-5 gap-5 border py-3 rounded-xl px-3'>

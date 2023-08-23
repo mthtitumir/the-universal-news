@@ -15,12 +15,12 @@ const NewsLayout = ({ children }) => {
   return (
     <html lang="en" data-theme="light">
       <body className={`${inter.className} bg-white`}>
-          <Providers>
-            <TopNavbar />
-            {children}
-            <Footer />
-          </Providers>
-          <Toaster />
+        <Providers>
+          <TopNavbar />
+          {children}
+          <Footer />
+        </Providers>
+        <Toaster />
       </body>
     </html>
   )

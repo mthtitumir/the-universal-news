@@ -13,8 +13,7 @@ const MoreNews = () => {
                 {
                     data.map(item=><NewsCardFour
                     key={item.id}
-                    item={item}
-                    
+                    item={item}   
                     ></NewsCardFour>)
                 }
             </div>
