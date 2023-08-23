@@ -1,6 +1,5 @@
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
-import React from 'react';
 import fakeData from "@/utils/news.json"
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import HandleModal from '@/components/miniComponents/HandleModal';
@@ -14,8 +13,8 @@ const Sports = () => {
         <div className=' container mx-auto'>
             {/* Category Navbar */}
             <div className='flex items-center gap-7'>
-                <h2 className='text-2xl font-semibold'>Food</h2>
                 <HandleModal />
+                <h2 className='text-2xl font-semibold'>Food</h2>
                 <div>
                     <ul className='flex justify-start gap-4 py-5 '>
                         <li>Chines</li>
