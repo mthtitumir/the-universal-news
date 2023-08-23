@@ -8,7 +8,7 @@ const Cricket = async() => {
     return (
         <div className="md:mt-11 cint">
             <h1>cricket Scorecard</h1>
-            <div className='md:grid grid-cols-5 justify-between gap-1'>
+            <div className='md:grid grid-cols-4 justify-between gap-1'>
                 {
                    liveScores.data.map(liveScore=><SingleScore key={liveScore.id}
                     liveScore={liveScore}
