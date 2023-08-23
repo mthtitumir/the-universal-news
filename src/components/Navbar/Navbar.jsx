@@ -1,5 +1,4 @@
 'use client'
-import LatestMarque from "../miniComponents/LatestMarque";
 import { PiHamburger } from "react-icons/pi";
 import localFont from 'next/font/local'
 import Link from "next/link";
@@ -21,7 +20,7 @@ const Navbar = () => {
                 <div>
                     <h1></h1>
                 </div>
-                <div className='flex gap-8'>
+                <div className='flex gap-3 items-center text-xs'>
                     <ShareUpdate />
                     <Link href='business/share-market'>View All</Link>
                 </div>
@@ -35,7 +34,7 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {
                                 navData.map(({ path, title }) => (
-                                    <Link key={title} href={path}><li>{title}</li></Link>
+                                    <Link key={title} href={path}><li className="text-xs">{title}</li></Link>
                                 ))
                             }
                         </ul>
@@ -45,7 +44,7 @@ const Navbar = () => {
                     <ul className="flex justify-between">
                         {
                             navData.map(({ path, title }) => (
-                                <Link key={title} href={path}><li>{title}</li></Link>
+                                <Link key={title} href={path}><li className="text-xs">{title}</li></Link>
                             ))
                         }
                     </ul>

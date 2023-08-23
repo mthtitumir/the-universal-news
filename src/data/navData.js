@@ -8,10 +8,6 @@ export const navData = [
         title: 'World'
     },
     {
-        path:'/news/us',
-        title: 'US'
-    },
-    {
         path:'/news/politics',
         title: 'Politics'
     },
@@ -24,8 +20,8 @@ export const navData = [
         title: 'Sports'
     },
     {
-        path:'/info/opinion',
-        title: 'Opinion'
+        path:'/news/technology',
+        title: 'Technology'
     },
     {
         path:'/news/science',
@@ -56,8 +52,20 @@ export const navData = [
         title: 'Travel'
     },
     {
+        path:'/news/fashion',
+        title: 'Fashion'
+    },
+    {
         path:'/info/magazine',
         title: 'Magazine'
+    },
+    {
+        path:'/athlete',
+        title: 'Athlete'
+    },
+    {
+        path:'/jobs',
+        title: 'Jobs'
     },
     {
         path:'/listen/podcast',

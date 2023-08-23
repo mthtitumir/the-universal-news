@@ -38,7 +38,7 @@ const TopNavbar = () => {
     };
     return (
         <div className='  '>
-            <div className='container mx-auto flex items-center justify-between py-3'>
+            <div className='container mx-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
                     <h1><AiOutlineMenu /></h1>
                     <h1><AiOutlineSearch /></h1>

@@ -5,7 +5,7 @@ import NewsCardTwo from "../newsCards/NewsCardTwo";
 import NewsCardFour from "../newsCards/NewsCardFour";
 const CricInfo = async () => {
   const news = await allNews();
-  console.log(news);
+  // console.log(news);
   const data = news.slice(0, 20);
   const data1 = news.slice(0, 20);
   return (

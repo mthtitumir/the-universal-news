@@ -1,6 +1,7 @@
 "use client"
 import { generatePrice } from '@/data/generateSharePrice';
 import React, { useEffect, useState } from 'react';
+import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 
 const ShareUpdate = () => {
     const [stockData, setStockData] = useState({ name: '', number: '' });
@@ -14,9 +15,10 @@ const ShareUpdate = () => {
         return () => clearInterval(interval);
       }, []);
     return (
-        <div className='flex gap-8'>
+        <div className='flex gap-3 items-center text-xs'>
             <p>{stockData.name}</p>
-            <p>{stockData.number}%</p>
+            <p className={stockData.number > 0 ? "text-green-500" : "text-red-500"}>{stockData.number}%</p>
+            <p className={stockData.number > 0 ? "text-green-500" : "text-red-500"}>{stockData.number > 0 ? <AiOutlineArrowUp /> : <AiOutlineArrowDown />}</p>
         </div>
     );
 };
