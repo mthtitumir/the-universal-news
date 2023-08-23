@@ -9,6 +9,9 @@
 .card1::-webkit-scrollbar {
     display: none;
 }
+.primary-btn{
+    @apply bg-cyan-500 rounded px-2 py-1 text-white;
+}
 
 
 /* .light {
