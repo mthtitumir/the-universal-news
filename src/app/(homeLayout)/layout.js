@@ -4,6 +4,7 @@ import TopNavbar from "@/components/Navbar/TopNavbar"
 import Providers from "@/providers"
 import { Inter } from "next/font/google"
 import Toaster from "@/components/Toaster"
+import LatestMarque from "@/components/miniComponents/LatestMarque"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ const HomeLayout = ({ children }) => {
         <Providers>
           <TopNavbar />
           <Navbar />
+          <LatestMarque />
           {children}
           <Footer />
         </Providers>
