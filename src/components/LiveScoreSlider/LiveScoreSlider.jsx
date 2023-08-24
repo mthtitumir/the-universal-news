@@ -20,7 +20,7 @@ const LiveScoreSlider = () => {
     // const liveScores = await scoreUrl.json()
     // console.log(liveScores);
     const { data } = Scores();
-    console.log(data);
+    // console.log(data);
     return (
         <>
             {
