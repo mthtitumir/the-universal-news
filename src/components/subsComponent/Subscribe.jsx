@@ -32,7 +32,7 @@ const Subscribe = () => {
                             <input type="radio" id="week" name="subscribe" />
                             <div>
                                 <label className='font-semibold text-slate-950'><span className='text-gray-500 font-semibold  line-through '> $90</span> $10/year</label><br />
-                                <small className='text-sm text-gray-500'>Billed once for the first year.</small>
+                                <small className='text-sm text-gray-500'>Billed once for the first years.</small>
                             </div>
                         </div>
                         <button
