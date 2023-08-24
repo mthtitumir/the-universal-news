@@ -1,6 +1,5 @@
 "use client";
 
-import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
 // import createJWT from "@/utils/createJWT";
 import Link from "next/link";
@@ -8,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginForm = () => {
     const {
@@ -26,12 +26,12 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const user = await signIn(email, password);
-            await createJWT({ email });
+            // await createJWT({ email });
             startTransition(() => {
                 refresh();
-                replace(from);
                 toast.dismiss(toastId);
                 toast.success("User signed in successfully");
+                replace(from);
             });
         } catch (error) {
             toast.dismiss(toastId);
@@ -39,19 +39,27 @@ const LoginForm = () => {
         }
     };
 
-    // const handleGoogleLogin = async () => {
-    //     try {
-    //         const user = await GoogleLogin()
-    //     } catch (error) {
-    //         console.log(error.message)
-    //     }
-    // }
+    const handleGoogleLogin = async () => {
+        const toastId = toast.loading("Loading...");
+        try {
+            const { user } = await googleLogin();
+            // await createJwt({ email: user.email });
+            startTransition(() => {
+                refresh();
+                toast.dismiss(toastId);
+                toast.success("User signed in successfully");
+                replace(from);
+            });
+        } catch (error) {
+            toast.dismiss(toastId);
+            toast.error(error.message || "User not signed in");
+        }
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-center text-2xl">Log in your account</h2>
-
-            <div className="form-control">
+                <div className="form-control">
                 <label htmlFor="email" className="label label-text">
                     Email
                 </label>
@@ -98,14 +106,22 @@ const LoginForm = () => {
                 </button>
             </div>
 
-            <div className="divider mt-5">OR</div>
-            <GoogleLogin from={from} />
             <p className="mt-3">
                 Don&apos;t have an account?
                 <Link className="text-black underline ml-1" href="/signup">
                     Signup
                 </Link>
             </p>
+            <div className="divider mt-5">OR</div>
+            {/* google login  */}
+            <button
+                onClick={handleGoogleLogin}
+                type="button"
+                className="btn bg-transparent text-black border-black rounded mx-auto"
+
+            >
+                <FcGoogle className="text-2xl " /> <span className="text-xs">Continue with google</span>
+            </button>
         </form>
     );
 };

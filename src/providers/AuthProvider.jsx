@@ -1,4 +1,3 @@
-"use client"
 import AuthContext from "@/contexts/AuthContext";
 import auth, { googleProvider } from "@/firebase/firebase.auth";
 import {
@@ -14,6 +13,7 @@ import { useEffect, useState } from "react";
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    // console.log(user);
 
     const createUser = (email, password) => {
         setLoading(true);

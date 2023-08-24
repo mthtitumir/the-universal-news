@@ -2,7 +2,8 @@
 
 import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
-import createJwt from "@/utils/createJwt";
+import axios from "axios";
+// import createJwt from "@/utils/createJwt";
 // import GoogleLogin from "@/components/GoogleLogin";
 // import createJWT from "@/utils/createJWT";
 import Link from "next/link";
@@ -10,6 +11,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
 
 const SignupForm = () => {
     const {
@@ -20,7 +22,7 @@ const SignupForm = () => {
         setValue,
     } = useForm();
 
-    const { createUser, profileUpdate } = useAuth();
+    const { createUser, profileUpdate, googleLogin } = useAuth();
     const search = useSearchParams();
     const from = search.get("redirectUrl") || "/";
     const { replace, refresh } = useRouter();
@@ -50,21 +52,54 @@ const SignupForm = () => {
         }
     };
 
+    const handleGoogleLogin = async () => {
+        const toastId = toast.loading("Loading...");
+        try {
+            const { user } = await googleLogin();
+            const name = user?.displayName
+            const photo = user?.photoURL
+            const email = user?.email
+            try {
+                const response = await axios.post(`/api/save-user`, { name, email, photo });
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
+            // await createJwt({ email: user.email });
+            startTransition(() => {
+                refresh();
+                toast.dismiss(toastId);
+                toast.success("User signed in successfully");
+                replace(from);
+            });
+        } catch (error) {
+            toast.dismiss(toastId);
+            toast.error(error.message || "User not signed in");
+        }
+    };
+
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
         try {
+            const response = await axios.post(`/api/save-user`, { name, email, photo });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+
+        try {
             const user = await createUser(email, password);
-            createJwt({email})
+            // await createJwt({email})
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,
             });
             startTransition(() => {
                 refresh();
-                replace(from);
                 toast.dismiss(toastId);
                 toast.success("User signed in successfully");
+                replace(from);
             });
         } catch (error) {
             toast.dismiss(toastId);
@@ -175,9 +210,8 @@ const SignupForm = () => {
                     Register
                 </button>
             </div>
-            <div className="divider mt-5">OR</div>
             {/* <GoogleLogin from={from} /> */}
-            <GoogleLogin from={from}></GoogleLogin>
+            {/* <GoogleLogin /> */}
 
             <p className="mt-3">
                 Already have an account?{" "}
@@ -185,6 +219,15 @@ const SignupForm = () => {
                     Login
                 </Link>
             </p>
+            <div className="divider mt-5">OR</div>
+            <button
+                onClick={handleGoogleLogin}
+                type="button"
+                className="btn bg-transparent text-black border-black rounded mx-auto"
+
+            >
+                <FcGoogle className="text-2xl " /> <span className="text-xs">Continue with google</span>
+            </button>
         </form>
     );
 };
