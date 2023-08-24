@@ -6,9 +6,9 @@ const Subscribe2 = () => {
     return (
         <div className=''>
             <div className='border-b-2'>
-                <h2 className='text-slate-950 text-4xl  text-center my-20 mx-4'>Subscribers enjoy more with New York Times All Access.</h2>
+                <h2 className='text-slate-950 text-4xl  text-center my-20 '>Subscribers enjoy more with The Universal news  All Access.</h2>
 
-                <div className='sm:flex-row md:flex items-center gap-10 sm:px-28 mx-auto mb-14'>
+                <div className='sm:flex-row md:flex items-center justify-center gap-10 sm:px-28 mx-auto mb-14'>
                     {/* image */}
                     <div>
                         <Image

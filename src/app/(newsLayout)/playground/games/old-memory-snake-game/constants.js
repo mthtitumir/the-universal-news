@@ -1,11 +1,11 @@
 // Remove this duplicated section
-const CANVAS_SIZE = [400, 400];
+const CANVAS_SIZE = [430, 400];
 const SNAKE_START = [
   [8, 7],
   [8, 8]
 ];
 const APPLE_START = [8, 3];
-const SCALE = 20;
+const SCALE = 15;
 const SPEED = 220;
 const DIRECTIONS = {
   38: [0, -1], // up
