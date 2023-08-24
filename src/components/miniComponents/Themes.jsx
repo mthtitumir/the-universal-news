@@ -2,7 +2,6 @@
 import { ThemeContext } from '@/contexts/ThemeContext';
 import React, { useContext } from 'react';
 
-
 const Themes = () => {
     const { setMode } = useContext(ThemeContext);
 

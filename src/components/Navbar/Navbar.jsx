@@ -1,18 +1,19 @@
 import LatestMarque from "../miniComponents/LatestMarque";
 import { PiHamburger } from "react-icons/pi";
 import localFont from 'next/font/local'
+import Link from "next/link";
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
 const Navbar = () => {
     return (
-        <div className="bg-white container mx-auto">
+        <div className="container mx-auto">
             <div className="text-center">
-                <h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2>
+                <Link href="/"><h2 className={`${myFont.className} text-6xl mt-5`}>The Universal News</h2></Link>
                 <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
 
-            <div className="bg-base-100 items-center">
-                <div className="navbar-start">
+            <div className="">
+                <div className="md:hidden">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost md:hidden">
                             <PiHamburger />
@@ -39,28 +40,32 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="pl-6 hidden md:flex ">
-                    <ul className="menu menu-horizontal px-1">
-                        <li className=" px-3">World</li>
-                        <li className=" px-3">US</li>
-                        <li className=" px-3">Politics</li>
-                        <li className=" px-3">Business</li>
-                        <li className=" px-3">Opinion</li>
-                        <li className=" px-3">Science</li>
-                        <li className=" px-3">Health</li>
-                        <li className=" px-3">Books</li>
-                        <li className=" px-3">Arts</li>
-                        <li className=" px-3">Style</li>
-                        <li className=" px-3">Food</li>
-                        <li className=" px-3">Food</li>
-                        <li className=" px-3">Travel</li>
-                        <li className=" px-3">Magazine</li>
-                        <li className=" px-3">Cooking</li>
-                        <li className=" px-3">Games</li>
-                        <li className=" px-3">Prod Cast</li>
-                        <li className=" px-3"> TV Show</li>
+                <div className="hidden md:block mt-3">
+                    <ul className="flex justify-between">
+                        <li className="">World</li>
+                        <li className="">US</li>
+                        <li className="">Politics</li>
+                        <li className="">Business</li>
+                        <li className="">Opinion</li>
+                        <li className="">Science</li>
+                        <li className="">Health</li>
+                        <li className="">Books</li>
+                        <li className="">Arts</li>
+                        <li className="">Style</li>
+                        <li className="">Food</li>
+                        <li className="">Food</li>
+                        <li className="">Travel</li>
+                        <li className="">Magazine</li>
+                        <li className="">Cooking</li>
+                        <li className="">Games</li>
+                        <li className="">Prod Cast</li>
+                        <li className=""> TV Show</li>
+                        <li className=""> TV Show</li>
                     </ul>
                 </div>
+
+
+                {/* double-divider */}
                 <div className="flex flex-col gap-[2px]">
                     <div className="bg-black h-[1px]"></div>
                     <div className="bg-black h-[1px]"></div>
