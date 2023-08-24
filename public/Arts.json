@@ -1,0 +1,626 @@
+[
+  {
+    "id": 21,
+    "title": "The Art of Ballet",
+    "description": "Exploring the elegance and grace of classical ballet.",
+    "img": "https://i.ibb.co/197bkGD/The-Art-of-Ballet.jpg",
+    "category": "Arts",
+    "subcategory": "Dance",
+    "published_date": "2023-08-20",
+    "author": "Anna Pavlova",
+    "tags": ["Ballet", "Dance", "Classical"],
+    "likes": 120,
+    "comments": [
+      {
+        "id": 141,
+        "author": "Sophia",
+        "text": "Ballet is poetry in motion.",
+        "date": "2023-08-15"
+      },
+      {
+        "id": 142,
+        "author": "Daniel",
+        "text": "Anna Pavlova's performances were legendary.",
+        "date": "2023-08-15"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "The Evolution of Jazz",
+    "description": "Tracing the history and influence of jazz music.",
+    "img": "https://i.ibb.co/xHFzL8y/The-Evolution-of-Jazz.jpg",
+    "category": "Arts",
+    "subcategory": "Music",
+    "published_date": "2023-08-19",
+    "author": "Louis Armstrong",
+    "tags": ["Jazz", "Music History", "Louis Armstrong"],
+    "likes": 180,
+    "comments": [
+      {
+        "id": 143,
+        "author": "Oliver",
+        "text": "Jazz is the heartbeat of America.",
+        "date": "2023-08-14"
+      },
+      {
+        "id": 144,
+        "author": "Ella",
+        "text": "Louis Armstrong's trumpet changed the world of music.",
+        "date": "2023-08-14"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "The Golden Age of TV Serials",
+    "description": "Recalling the iconic TV serials of the 20th century.",
+    "img": "https://i.ibb.co/GFQ1r5Y/The-Golden-Age-of-TV-Serials.jpg",
+    "category": "Arts",
+    "subcategory": "TV Serial",
+    "published_date": "2023-08-18",
+    "author": "Lucy Ricardo",
+    "tags": ["Television", "Classic TV", "Nostalgia"],
+    "likes": 220,
+    "comments": [
+      {
+        "id": 145,
+        "author": "Ricky",
+        "text": "Those were the days of great storytelling on TV.",
+        "date": "2023-08-13"
+      },
+      {
+        "id": 146,
+        "author": "Ethel",
+        "text": "Lucy Ricardo remains an iconic character in TV history.",
+        "date": "2023-08-13"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "The Impact of Pop Culture",
+    "description": "Analyzing the influence of pop culture on society.",
+    "img": "https://i.ibb.co/nPBjNbP/Pop-Culture-and-the-Digital-Age.jpg",
+    "category": "Arts",
+    "subcategory": "Pop Culture",
+    "published_date": "2023-08-17",
+    "author": "Andy Warhol",
+    "tags": ["Pop Culture", "Society", "Art"],
+    "likes": 260,
+    "comments": [
+      {
+        "id": 147,
+        "author": "Marilyn",
+        "text": "Pop culture shapes our collective identity.",
+        "date": "2023-08-12"
+      },
+      {
+        "id": 148,
+        "author": "Basquiat",
+        "text": "Andy Warhol was the pop art maestro.",
+        "date": "2023-08-12"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Hollywood's Glittering Awards",
+    "description": "A look at the history and glamour of Hollywood awards ceremonies.",
+    "img": "https://i.ibb.co/4S1sdMc/Hollywood-s-Glittering-Awards.jpg",
+    "category": "Arts",
+    "subcategory": "Awards",
+    "published_date": "2023-08-16",
+    "author": "Meryl Streep",
+    "tags": ["Awards", "Hollywood", "Cinema"],
+    "likes": 310,
+    "comments": [
+      {
+        "id": 149,
+        "author": "Leonardo",
+        "text": "The Oscars are the epitome of film recognition.",
+        "date": "2023-08-11"
+      },
+      {
+        "id": 150,
+        "author": "Cate",
+        "text": "Meryl Streep is a true Hollywood legend.",
+        "date": "2023-08-11"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "The Magic of Cinema",
+    "description": "Exploring the art and technology behind movie-making.",
+    "img": "https://i.ibb.co/n3Nsmcj/The-Magic-of-Cinema.jpg",
+    "category": "Arts",
+    "subcategory": "Movies",
+    "published_date": "2023-08-15",
+    "author": "Alfred Hitchcock",
+    "tags": ["Cinema", "Filmmaking", "Alfred Hitchcock"],
+    "likes": 280,
+    "comments": [
+      {
+        "id": 151,
+        "author": "Grace Kelly",
+        "text": "Movies transport us to different worlds.",
+        "date": "2023-08-10"
+      },
+      {
+        "id": 152,
+        "author": "James Stewart",
+        "text": "Alfred Hitchcock was the master of suspense.",
+        "date": "2023-08-10"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Contemporary Dance: Breaking Boundaries",
+    "description": "Exploring the innovative and boundary-pushing world of contemporary dance.",
+    "img": "https://i.ibb.co/JtJrSSH/Contemporary-Dance-Breaking-Boundaries.jpg",
+    "category": "Arts",
+    "subcategory": "Dance",
+    "published_date": "2023-08-22",
+    "author": "Isabella Duncan",
+    "tags": ["Dance", "Contemporary Dance", "Innovation"],
+    "likes": 135,
+    "comments": [
+      {
+        "id": 153,
+        "author": "Michael",
+        "text": "Contemporary dance challenges our perceptions of movement.",
+        "date": "2023-08-17"
+      },
+      {
+        "id": 154,
+        "author": "Sophie",
+        "text": "Isabella Duncan is a visionary in the dance world.",
+        "date": "2023-08-17"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Music Legends: Icons Who Changed the Industry",
+    "description": "Celebrating the legendary musicians who revolutionized the music industry.",
+    "img": "https://i.ibb.co/FmHYKhM/Music-Legends-Icons-Who-Changed-the-Industry.jpg",
+    "category": "Arts",
+    "subcategory": "Music",
+    "published_date": "2023-08-21",
+    "author": "Bob Dylan",
+    "tags": ["Music", "Legends", "Music Revolution"],
+    "likes": 190,
+    "comments": [
+      {
+        "id": 155,
+        "author": "Johnny",
+        "text": "Bob Dylan's lyrics are a reflection of a generation's spirit.",
+        "date": "2023-08-16"
+      },
+      {
+        "id": 156,
+        "author": "Joni",
+        "text": "Music owes a lot to these trailblazers.",
+        "date": "2023-08-16"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "TV Series That Defined a Decade",
+    "description": "Looking back at the TV series that left a lasting mark on the 2010s.",
+    "img": "https://i.ibb.co/4ZhcN4Q/TV-Series-That-Defined-a-Decade.jpg",
+    "category": "Arts",
+    "subcategory": "TV Serial",
+    "published_date": "2023-08-20",
+    "author": "David Lynch",
+    "tags": ["Television", "Decade", "Memorable Series"],
+    "likes": 250,
+    "comments": [
+      {
+        "id": 157,
+        "author": "Cooper",
+        "text": "Twin Peaks was a game-changer in TV storytelling.",
+        "date": "2023-08-15"
+      },
+      {
+        "id": 158,
+        "author": "Laura",
+        "text": "David Lynch's surrealism is unparalleled.",
+        "date": "2023-08-15"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Pop Culture and the Digital Age",
+    "description": "Analyzing how the digital era has transformed pop culture consumption.",
+    "img": "https://i.ibb.co/7KVsYTD/Pop-Culture.jpg",
+    "category": "Arts",
+    "subcategory": "Pop Culture",
+    "published_date": "2023-08-19",
+    "author": "Digital Analyst",
+    "tags": ["Pop Culture", "Digital Revolution", "Media Consumption"],
+    "likes": 275,
+    "comments": [
+      {
+        "id": 159,
+        "author": "Techie",
+        "text": "The internet changed how we engage with pop culture forever.",
+        "date": "2023-08-14"
+      },
+      {
+        "id": 160,
+        "author": "Influencer",
+        "text": "Pop culture is now at our fingertips, thanks to technology.",
+        "date": "2023-08-14"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Cinematic Marvels: The Unforgettable Films of the 21st Century",
+    "description": "Highlighting the remarkable movies that defined cinema in the 21st century.",
+    "img": "https://i.ibb.co/kDWRGcZ/Cinematic-Marvels.jpg",
+    "category": "Arts",
+    "subcategory": "Movies",
+    "published_date": "2023-08-18",
+    "author": "Ava DuVernay",
+    "tags": ["Cinema", "21st Century Films", "Movie Magic"],
+    "likes": 300,
+    "comments": [
+      {
+        "id": 161,
+        "author": "Film Buff",
+        "text": "These films are a testament to the power of storytelling.",
+        "date": "2023-08-13"
+      },
+      {
+        "id": 162,
+        "author": "Movie Lover",
+        "text": "Ava DuVernay's insights always enrich our film knowledge.",
+        "date": "2023-08-13"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "The Art of Flamenco",
+    "description": "Exploring the passionate and rhythmic world of Flamenco dance and music.",
+    "img": "https://i.ibb.co/xhD7fmZ/The-Art-of-Flamenco.jpg",
+    "category": "Arts",
+    "subcategory": "Dance",
+    "published_date": "2023-08-26",
+    "author": "Carlos Montoya",
+    "tags": ["Flamenco", "Dance", "Spanish Culture"],
+    "likes": 155,
+    "comments": [
+      {
+        "id": 163,
+        "author": "Maria",
+        "text": "Flamenco is a celebration of life and emotion.",
+        "date": "2023-08-21"
+      },
+      {
+        "id": 164,
+        "author": "Antonio",
+        "text": "Carlos Montoya is a true maestro of Flamenco.",
+        "date": "2023-08-21"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Soulful Sounds: The Blues Revolution",
+    "description": "Delving into the origins and influence of blues music on modern genres.",
+    "img": "https://i.ibb.co/rMT9zdk/Soulful-Sounds-The-Blues-Revolution.jpg",
+    "category": "Arts",
+    "subcategory": "Music",
+    "published_date": "2023-08-25",
+    "author": "B.B. King",
+    "tags": ["Blues", "Music History", "Musical Revolution"],
+    "likes": 210,
+    "comments": [
+      {
+        "id": 165,
+        "author": "Robert",
+        "text": "The blues is the root of so much great music.",
+        "date": "2023-08-20"
+      },
+      {
+        "id": 166,
+        "author": "Etta",
+        "text": "B.B. King's guitar could sing the blues like no other.",
+        "date": "2023-08-20"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "TV Dramas That Redefined Storytelling",
+    "description": "Examining the TV dramas that pushed the boundaries of storytelling.",
+    "img": "https://i.ibb.co/THSxdhD/TV-Dramas-That-Redefined-Storytelling.jpg",
+    "category": "Arts",
+    "subcategory": "TV Serial",
+    "published_date": "2023-08-24",
+    "author": "Aaron Sorkin",
+    "tags": ["Television", "Drama", "Storytelling"],
+    "likes": 245,
+    "comments": [
+      {
+        "id": 167,
+        "author": "Audrey",
+        "text": "TV dramas have become a platform for profound narratives.",
+        "date": "2023-08-19"
+      },
+      {
+        "id": 168,
+        "author": "Charlie",
+        "text": "Aaron Sorkin's scripts are a masterclass in dialogue.",
+        "date": "2023-08-19"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Icons of Pop Culture: From Elvis to TikTok",
+    "description": "Tracing the evolution of pop culture icons from the '50s to the digital age.",
+    "img": "https://i.ibb.co/fxb70rT/Icons-of-Pop-Culture-From-Elvis-to-Tik-Tok.jpg",
+    "category": "Arts",
+    "subcategory": "Pop Culture",
+    "published_date": "2023-08-23",
+    "author": "Cultural Historian",
+    "tags": ["Pop Culture", "Iconic Figures", "Cultural Evolution"],
+    "likes": 290,
+    "comments": [
+      {
+        "id": 169,
+        "author": "ElvisFan",
+        "text": "Elvis Presley defined an era of music and style.",
+        "date": "2023-08-18"
+      },
+      {
+        "id": 170,
+        "author": "TikToker",
+        "text": "TikTok is reshaping pop culture in real-time.",
+        "date": "2023-08-18"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Oscars Through the Years: A Visual Journey",
+    "description": "Exploring the changing aesthetics and fashion at the Academy Awards over time.",
+    "img": "https://i.ibb.co/G9mP2Dt/Oscars-Through-the-Years-A-Visual-Journey.jpg",
+    "category": "Arts",
+    "subcategory": "Awards",
+    "published_date": "2023-08-22",
+    "author": "Fashion Historian",
+    "tags": ["Awards", "Fashion", "Red Carpet"],
+    "likes": 325,
+    "comments": [
+      {
+        "id": 171,
+        "author": "Fashionista",
+        "text": "The Oscars red carpet is a showcase of glamour and style.",
+        "date": "2023-08-17"
+      },
+      {
+        "id": 172,
+        "author": "History Buff",
+        "text": "Fashion history is intertwined with the Oscars' evolution.",
+        "date": "2023-08-17"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Contemporary Dance: Expressing Emotions Through Movement",
+    "description": "Exploring the abstract and emotive world of contemporary dance.",
+    "img": "https://i.ibb.co/LdPhJpc/Contemporary-Dance.jpg",
+    "category": "Arts",
+    "subcategory": "Dance",
+    "published_date": "2023-08-21",
+    "author": "Isabella Duncan",
+    "tags": ["Contemporary Dance", "Emotion", "Abstract"],
+    "likes": 175,
+    "comments": [
+      {
+        "id": 173,
+        "author": "DanceLover",
+        "text": "Contemporary dance is like poetry with the body.",
+        "date": "2023-08-16"
+      },
+      {
+        "id": 174,
+        "author": "ArtEnthusiast",
+        "text": "Isabella Duncan's choreography is mesmerizing.",
+        "date": "2023-08-16"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "The Rhythm of Tap Dancing",
+    "description": "Diving into the history and precision of tap dancing.",
+    "img": "https://i.ibb.co/smH2pvm/The-Rhythm-of-Tap-Dancing.jpg",
+    "category": "Arts",
+    "subcategory": "Dance",
+    "published_date": "2023-08-20",
+    "author": "Gregory Hines",
+    "tags": ["Tap Dance", "Rhythm", "Dance History"],
+    "likes": 198,
+    "comments": [
+      {
+        "id": 175,
+        "author": "TapDanceFan",
+        "text": "Tap dancing is like making music with your feet.",
+        "date": "2023-08-15"
+      },
+      {
+        "id": 176,
+        "author": "DanceHistorian",
+        "text": "Gregory Hines was a tap dance legend.",
+        "date": "2023-08-15"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "The Sound of Classical Music",
+    "description": "An exploration of the timeless beauty and complexity of classical music.",
+    "img": "https://i.ibb.co/W3gv8Bb/The-Sound-of-Classical-Music.jpg",
+    "category": "Arts",
+    "subcategory": "Music",
+    "published_date": "2023-08-19",
+    "author": "Ludwig Beethoven",
+    "tags": ["Classical Music", "Composers", "Orchestral"],
+    "likes": 265,
+    "comments": [
+      {
+        "id": 177,
+        "author": "MusicLover",
+        "text": "Classical music touches the soul in profound ways.",
+        "date": "2023-08-14"
+      },
+      {
+        "id": 178,
+        "author": "MusicScholar",
+        "text": "Beethoven's symphonies are masterpieces of human expression.",
+        "date": "2023-08-14"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Exploring the World of Indie Rock",
+    "description": "A journey through the independent and alternative music scene.",
+    "img": "https://i.ibb.co/WsjtzPF/Exploring-the-World-of-Indie-Rock.jpg",
+    "category": "Arts",
+    "subcategory": "Music",
+    "published_date": "2023-08-18",
+    "author": "Indie Enthusiast",
+    "tags": ["Indie Rock", "Alternative Music", "Music Subculture"],
+    "likes": 210,
+    "comments": [
+      {
+        "id": 179,
+        "author": "IndieFanatic",
+        "text": "Indie rock has an authenticity that's hard to find elsewhere.",
+        "date": "2023-08-13"
+      },
+      {
+        "id": 180,
+        "author": "MusicExplorer",
+        "text": "The indie scene is a treasure trove of musical innovation.",
+        "date": "2023-08-13"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Classic Sitcoms: Laughter Through the Decades",
+    "description": "Remembering the timeless sitcoms that have kept us laughing for generations.",
+    "img": "https://i.ibb.co/ss47w0N/Classic-Sitcoms-Laughter-Through-the-Decades.png",
+    "category": "Arts",
+    "subcategory": "TV Serial",
+    "published_date": "2023-08-16",
+    "author": "SitcomNostalgia",
+    "tags": ["Sitcoms", "Comedy", "Nostalgia"],
+    "likes": 320,
+    "comments": [
+      {
+        "id": 183,
+        "author": "LaughLover",
+        "text": "Sitcoms are a source of endless joy and humor.",
+        "date": "2023-08-11"
+      },
+      {
+        "id": 184,
+        "author": "TimelessFan",
+        "text": "SitcomNostalgia's insights into classic TV are delightful.",
+        "date": "2023-08-11"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "title": "The Nobel Prize: Celebrating Excellence in Science and Literature",
+    "description": "A tribute to the Nobel laureates who have shaped our world.",
+    "img": "https://i.ibb.co/xFqQNs2/The-Nobel-Prize.jpg",
+    "category": "Arts",
+    "subcategory": "Awards",
+    "published_date": "2023-08-13",
+    "author": "NobelObserver",
+    "tags": ["Nobel Prize", "Excellence", "Achievement"],
+    "likes": 295,
+    "comments": [
+      {
+        "id": 189,
+        "author": "CuriousMind",
+        "text": "The Nobel Prize inspires us to reach new heights of knowledge.",
+        "date": "2023-08-08"
+      },
+      {
+        "id": 190,
+        "author": "LiterateSoul",
+        "text": "NobelObserver's articles on excellence are truly enlightening.",
+        "date": "2023-08-08"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "title": "The Tony Awards: Broadway's Night of Stars",
+    "description": "A glimpse into the glamour and talent of Broadway's most prestigious awards.",
+    "img": "https://i.ibb.co/ZVfjPGw/The-Tony-Awards.jpg",
+    "category": "Arts",
+    "subcategory": "Awards",
+    "published_date": "2023-08-12",
+    "author": "BroadwayFanatic",
+    "tags": ["Tony Awards", "Broadway", "Theater Excellence"],
+    "likes": 275,
+    "comments": [
+      {
+        "id": 191,
+        "author": "TheaterEnthusiast",
+        "text": "The Tony Awards celebrate the magic of the stage.",
+        "date": "2023-08-07"
+      },
+      {
+        "id": 192,
+        "author": "StageLover",
+        "text": "BroadwayFanatic's insights into theater are spellbinding.",
+        "date": "2023-08-07"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Animation Revolution: The Rise of Digital Cartoons",
+    "description": "Exploring how digital animation has transformed the world of cartoons.",
+    "img": "https://i.ibb.co/sHJzSmt/Animation-Revolution-The-Rise-of-Digital-Cartoons.jpg",
+    "category": "Arts",
+    "subcategory": "Movies",
+    "published_date": "2023-08-10",
+    "author": "AnimationGeek",
+    "tags": ["Digital Animation", "Cartoons", "Animation Evolution"],
+    "likes": 345,
+    "comments": [
+      {
+        "id": 195,
+        "author": "CartoonEnthusiast",
+        "text": "Digital animation has brought cartoons to a new level of creativity.",
+        "date": "2023-08-05"
+      },
+      {
+        "id": 196,
+        "author": "AnimationCritic",
+        "text": "AnimationGeek's insights into the animation world are spot on.",
+        "date": "2023-08-05"
+      }
+    ]
+  }
+]
