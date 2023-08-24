@@ -1,7 +1,7 @@
 import CricInfo from "@/components/SportsComponents/CricInfo/CricInfo";
 import LiveScoreSlider from "@/components/SportsComponents/LiveScoreSlider/LiveScoreSlider";
 
-const Cricket = () => {
+const CricketCompo = () => {
 
     // console.log(liveScores);
     return (
@@ -10,12 +10,10 @@ const Cricket = () => {
                 <LiveScoreSlider />
             </div>
             <div>
-                <div>
-                    <CricInfo />
-                </div>
+                <CricInfo />
             </div>
         </div>
     );
 };
 
-export default Cricket;
+export default CricketCompo;

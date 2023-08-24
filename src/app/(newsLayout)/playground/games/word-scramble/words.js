@@ -1,4 +1,4 @@
-export const words = [
+export const wordList = [
     {
         word: "addition",
         hint: "The process of adding numbers"

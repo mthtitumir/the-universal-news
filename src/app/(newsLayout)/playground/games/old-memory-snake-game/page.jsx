@@ -112,7 +112,7 @@ const TheSnake = () => {
       tabIndex="0"
       onKeyDown={handleKeyDown} className=" py-14 bg-gray-200 flex items-center justify-center"  >
       <div className="border border-gray-400 p-6 bg-white rounded-lg shadow-md">
-        <p className='text-center text-xl text-teal-500 my-4'> your poients {appleCount}</p>
+        <p className='text-center text-xl text-teal-500 my-4'> Your Points : {appleCount}</p>
         <div className="flex justify-center items-center " role="button" tabIndex="0" onKeyDown={e => moveSnake(e)} style={{ backgroundImage: `url(${snakeImage})` }}>
           <div className="relative" >
             <canvas
