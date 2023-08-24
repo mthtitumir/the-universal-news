@@ -5,7 +5,7 @@ import NewsCardFour from '@/components/newsCards/NewsCardFour';
 
 const CategoryDisplay = ({ data }) => {
     return (
-        <>
+        <div className='c-auto'>
             {/* category banner */}
             <div className='mt-5 '>
                 <div className='grid md:grid-cols-12 gap-5'>
@@ -50,7 +50,7 @@ const CategoryDisplay = ({ data }) => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -8,9 +8,9 @@ const SingleScore = ({ singleScore }) => {
             <div className="flex flex-col gap-1">
                 <div className="flex justify-between items-center gap-2">
                     <p className='text-xs'>
-                        {name.length < 36
+                        {name.length < 47
                             ? name
-                            : `${name.slice(0, 35)}...`}
+                            : `${name.slice(0, 46)}...`}
                     </p>
                     <p className='text-sm badge badge-success text-white'>
                         {matchType ? matchType : 'odi'}
@@ -69,10 +69,7 @@ const SingleScore = ({ singleScore }) => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <p className='text-sm text-red-500'>{status.length < 36
-                        ? status
-                        : `${name.slice(0, 35)}...`}</p>
-                    <p className='text-green-500 text-xs'>Please refresh your page to see the latest update!</p>
+                    <p className='text-sm text-red-500'>{status}</p>
                 </div>
             </div>
         </div>

@@ -17,7 +17,11 @@ const nextConfig = {
           {
             protocol: "https",
             hostname: "g.cricapi.com" 
-          }
+          },
+          {
+            protocol: "https",
+            hostname: "media.tenor.com" 
+          },
         ],
       },
 }

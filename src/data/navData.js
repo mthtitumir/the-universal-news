@@ -16,7 +16,7 @@ export const navData = [
         title: 'Business'
     },
     {
-        path:'/sports',
+        path:'/sports/sports',
         title: 'Sports'
     },
     {

@@ -1,4 +1,3 @@
-
 import { categories } from '@/hooks/useCategories';
 import Link from 'next/link';
 import CategoryDisplay from './CategoryDisplay';
