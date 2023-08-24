@@ -13,7 +13,7 @@ const TopNavbar = () => {
     const { uid, displayName, photoURL } = user || {};
     const { replace } = useRouter();
     const pathName = usePathname();
-    console.log(pathName);
+    // console.log(pathName);
     // console.log(pathName.split("/")[2].toUpperCase());
     const handleLogout = async () => {
         const toastId = toast.loading("Loading...");
