@@ -13,20 +13,20 @@ const Navbar = () => {
     return (
         <div className="container mx-auto">
             <div className="text-center">
-                <Link href="/"><h2 className={`${myFont.className} text-6xl mt-2`}>The Universal News</h2></Link>
+                <Link href="/"><h2 className={`${myFont.className} text-3xl md:text-6xl mt-2`}>The Universal News</h2></Link>
                 <p className="text-sm mt-3">Breaking Borders, Breaking News: Where the World Comes to Know</p>
             </div>
-            <div className="flex justify-between">
-                <div>
+            <div className="flex justify-between px-3 md:px-0">
+                <div className="hidden md:block">
                     <h1></h1>
                 </div>
-                <div className='flex gap-3 items-center text-xs'>
+                <div className='flex gap-3 items-center text-xs mx-auto md:mx-0'>
                     <ShareUpdate />
                     <Link href='business/share-market'>View All</Link>
                 </div>
             </div>
             <div className="">
-                <div className="md:hidden">
+                {/* <div className="md:hidden">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost md:hidden">
                             <PiHamburger />
@@ -39,7 +39,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                </div>
+                </div> */}
                 <div className="hidden md:block my-3">
                     <ul className="flex justify-between">
                         {

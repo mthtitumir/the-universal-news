@@ -4,7 +4,7 @@ import React from 'react';
 
 const NewsCardThree = ({ item }) => {
     return (
-        <div className="card gap-3 card-side rounded-none">
+        <div className="card gap-3 card-side rounded-none px-3 md:px-0">
             <div className='w-1/3 relative'>
                 <Image width={460} height={510} src={item?.img} alt='banner' />
                 <div className='absolute top-0 right-0 px-4 py-1 bg-black bg-opacity-70'>

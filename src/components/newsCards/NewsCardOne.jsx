@@ -5,7 +5,7 @@ const NewsCardOne = ({ item }) => {
 
 // console.log(item);
     return (
-        <div className=''>
+        <div className='px-3 md:px-0'>
             <Link href={`/news/${item?.category}/${item?.subcategory}/${item?._id}`}><h1 className='leading-6'>{item?.title}</h1></Link>
             <div className="bg-black my-2 h-[1px]"></div>
         </div>

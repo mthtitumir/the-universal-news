@@ -23,7 +23,7 @@ const HomeComponent = async () => {
             <NewsCardOne key={item.id} item={item}></NewsCardOne>
           ))}
         </div>
-        <div className="card1 col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
+        <div className="card1 order-first md:order-none col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
           {data1.map((item) => (
             <NewsCardTwo key={item.id} item={item}></NewsCardTwo>
           ))}

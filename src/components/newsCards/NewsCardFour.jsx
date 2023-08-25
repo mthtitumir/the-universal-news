@@ -5,7 +5,7 @@ import React from 'react';
 const NewsCardFour = ({ item }) => {
     // console.log(item);
     return (
-        <div className=" w-full">
+        <div className=" w-full px-3 md:px-0">
             <div className='relative'>
                 <Image width={460} height={256} src={item?.img} alt='banner' />
                 <div className='absolute top-0 right-0 px-4 py-1 bg-black bg-opacity-70'>
