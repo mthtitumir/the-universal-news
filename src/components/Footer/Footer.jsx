@@ -44,9 +44,9 @@ const Footer = () => {
                                 className=" py-1  border-y-2  w-full pr-16 rounded-none" />
                             <button className="py-1 mt-1 bg-indigo-950 text-white text-sm absolute top-0 right-0  ">Subscribe</button>
                         </div>
-                        <label className='flex mt-5'>
-                            <img className='w-24 ' src="https://i0.wp.com/www.techdigest.tv/wp-content/uploads/2021/02/get-it-on-google-play-badge.png?ssl=1" alt="" />
-                            <img className='w-24 ' src="https://gotoaarhus.com/images/app-store.svg" alt="" />
+                        <label className='flex mt-5 gap-5'>
+                            <Image width={100} height={30} src="https://i0.wp.com/www.techdigest.tv/wp-content/uploads/2021/02/get-it-on-google-play-badge.png?ssl=1" alt="" />
+                            <Image width={120} height={30} src="https://gotoaarhus.com/images/app-store.svg" alt="" />
                         </label>
                     </div>
                 </div>
