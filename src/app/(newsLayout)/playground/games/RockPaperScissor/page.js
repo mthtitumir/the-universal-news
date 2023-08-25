@@ -1,6 +1,7 @@
 "use client"
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const options = ['rock', 'paper', 'scissors'];
@@ -13,16 +14,9 @@ const getRandomOption = () => {
 const RockPaperScissors = () => {
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
-  const [result, setResult] = useState(localStorage.getItem('rpsResult') || '');
-  const [userScore, setUserScore] = useState(Number(localStorage.getItem('rpsUserScore')) || 0);
-  const [computerScore, setComputerScore] = useState(Number(localStorage.getItem('rpsComputerScore')) || 0);
-
-  useEffect(() => {
-    // Save the result and scores to localStorage whenever they change
-    localStorage.setItem('rpsResult', result);
-    localStorage.setItem('rpsUserScore', userScore);
-    localStorage.setItem('rpsComputerScore', computerScore);
-  }, [result, userScore, computerScore]);
+  const [result, setResult] = useState('');
+  const [userScore, setUserScore] = useState(0);
+  const [computerScore, setComputerScore] = useState(0);
 
   const playGame = (userChoice) => {
     const computerChoice = getRandomOption();
@@ -54,12 +48,11 @@ const RockPaperScissors = () => {
     setUserChoice(null);
     setComputerChoice(null);
     setResult('');
-    setUserScore(0);
-    setComputerScore(0);
   };
 
   return (
     <div className="flex flex-col items-center">
+      <Toaster position="top-right" />
 
       <h1 className="text-2xl font-bold mb-4">Rock, Paper, Scissors</h1>
       <div className="mb-4">
