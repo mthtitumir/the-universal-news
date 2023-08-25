@@ -110,14 +110,14 @@ const TheSnake = () => {
   return (
     <div role="button"
       tabIndex="0"
-      onKeyDown={handleKeyDown} className=" py-14 bg-gray-200 flex items-center justify-center"  >
-      <div className="border border-gray-400 p-6 bg-white rounded-lg shadow-md">
+      onKeyDown={handleKeyDown} className=" py-14 bg-gray-200 flex items-center justify-center  border-4 border-red-500"  >
+      <div className=" p-6 bg-white rounded-lg shadow-md  border-4 border-black ">
         <p className='text-center text-xl text-teal-500 my-4'> Your Points : {appleCount}</p>
         <div className="flex justify-center items-center " role="button" tabIndex="0" onKeyDown={e => moveSnake(e)} style={{ backgroundImage: `url(${snakeImage})` }}>
-          <div className="relative" >
+          <div className="relative border-dashed  border-4 border-red-500 shadow-2xl" >
             <canvas
 
-              className="border border-black "
+              className=" border-dashed  border-4 border-black  "
               ref={canvasRef}
               width={`${CANVAS_SIZE[0]}px`}
               height={`${CANVAS_SIZE[1]}px`}
@@ -128,7 +128,7 @@ const TheSnake = () => {
         </div>
         <div className="flex justify-center mt-4">
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600"
+            className="primary-btn"
             onClick={startGame}
           >
             Start Game
@@ -140,3 +140,4 @@ const TheSnake = () => {
 };
 
 export default TheSnake;
+

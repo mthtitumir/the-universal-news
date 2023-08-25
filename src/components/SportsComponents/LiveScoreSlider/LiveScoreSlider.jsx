@@ -17,9 +17,6 @@ import Scores from '@/hooks/useLiveScores';
 import Image from 'next/image';
 
 const LiveScoreSlider = () => {
-    // const scoreUrl = await fetch('https://api.cricapi.com/v1/currentMatches?apikey=32c8bddb-0190-47ae-a781-61664a2f8783&offset=0')
-    // const liveScores = await scoreUrl.json()
-    // console.log(liveScores);
     const { data } = Scores();
     // console.log(data);
     return (
