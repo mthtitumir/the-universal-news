@@ -46,8 +46,8 @@ const HandleQuize = () => {
                         </div>
                     ) : (
                         <div className="text-xl text-center">
-                            Congratulations, {user?.displayName}! You've completed the quiz.
-                            <p>youre score {score}/5</p>
+                            Congratulations, {user?.displayName}! You have completed the quiz.
+                            <p>your score {score}/5</p>
                         </div>
                     )}
                 </div>

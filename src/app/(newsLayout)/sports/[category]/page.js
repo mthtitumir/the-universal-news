@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const category = async ({ params }) => {
     const categoryData = await categories(params.category);
+    console.log(categoryData);
     const subcategories = [];
     categoryData.forEach(item => {
         if (!subcategories.includes(item.subcategory)) {
