@@ -22,6 +22,10 @@ const nextConfig = {
             protocol: "https",
             hostname: "media.tenor.com" 
           },
+          {
+            protocol: "https",
+            hostname: "i0.wp.com" 
+          },
         ],
       },
 }
