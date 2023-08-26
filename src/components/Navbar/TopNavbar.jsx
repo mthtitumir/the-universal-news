@@ -42,20 +42,18 @@ const TopNavbar = () => {
         <div className=' px-3 md:px-0 '>
             <div className='container mx-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
-                    {/* <h1><AiOutlineMenu /></h1> */}
-                    <div className="">
-                        <div className="dropdown">
-                            <label tabIndex={0} className="text-md">
-                                <PiHamburger />
-                            </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 border shadow bg-base-100 rounded-box w-30 ">
-                                {
-                                    navData.map(({ path, title }) => (
-                                        <Link key={title} href={path}><li className="text-xs my-1">{title}</li></Link>
-                                    ))
-                                }
-                            </ul>
-                        </div>
+                    {/* <h1></h1> */}
+                    <div className="dropdown">
+                        <label tabIndex={0} className="text-md">
+                            <AiOutlineMenu />
+                        </label>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-5 py-2 border shadow bg-base-100 rounded-lg w-30 ">
+                            {
+                                navData.map(({ path, title }) => (
+                                    <li key={title} className="text-xs my-1 hover:underline"><Link href={path}>{title}</Link></li>
+                                ))
+                            }
+                        </ul>
                     </div>
 
                     {/* search menu  */}

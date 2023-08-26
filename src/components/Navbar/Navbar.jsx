@@ -43,7 +43,7 @@ const Navbar = () => {
                     <ul className="flex justify-between">
                         {
                             navData.map(({ path, title }) => (
-                                <Link key={title} href={path}><li className="text-xs">{title}</li></Link>
+                                <Link key={title} href={path}><li className="text-sm">{title}</li></Link>
                             ))
                         }
                     </ul>

@@ -37,13 +37,13 @@ const HandleComment = ({ id, comments, socialShare }) => {
             <div className="divider"></div>
             <div className='flex justify-between items-center'>
                 <div>
-                    <h1 className='text-2xl'>Comment</h1>
+                    <h1 className='text-xl md:text-2xl'>Comment</h1>
                 </div>
                 {socialShare}
             </div>
             <div className="divider"></div>
             <div className='flex justify-end'>
-                <h1 className='text-lg'>{user ? user.displayName : <span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
+                <h1 className='text-md md:text-lg'>{user ? user.displayName : <span className='text-cyan-500 border rounded-lg px-2 py-1'><Link href={'/login'}>Login</Link></span>}</h1>
             </div>
             <div className="divider"></div>
 
@@ -69,11 +69,11 @@ const HandleComment = ({ id, comments, socialShare }) => {
                         </div>
                         <div className='flex-1'>
                             <div className='flex items-center gap-5'>
-                                <h1 className='text-lg'>{comment?.author}</h1>
-                                <p className='text-sm'>{comment?.date}</p>
+                                <h1 className='text-md md:text-lg'>{comment?.author}</h1>
+                                <p className='text-xs md:text-sm'>{comment?.date}</p>
                             </div>
                             <div>
-                                <h1 className='text-md'>{comment.text}</h1>
+                                <h1 className='text-sm md:text-md'>{comment.text}</h1>
                             </div>
                         </div>
                     </div>)
