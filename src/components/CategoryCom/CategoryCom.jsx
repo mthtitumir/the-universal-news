@@ -22,23 +22,24 @@ const CategoryCom = async ({ params }) => {
     }
 
     return (
-        <><div className=' container mx-auto mt-5'>
-            {/* Category Navbar */}
-            <div className='flex items-center gap-7'>
-                <h2 className='text-3xl font-semibold text-cyan-500'>{categoryName}</h2>
+        <>
+            <div className=' container mx-auto mt-5'>
+                {/* Category Navbar */}
+                <div className='flex items-center gap-7'>
+                    <h2 className='text-3xl font-semibold text-cyan-500'>{categoryName}</h2>
+                    <div>
+                        <ul className=' flex justify-start gap-4 py-5  '>
+                            {
+                                subcategories.map((subCat, index) => <Link href={`/news/${params.category}/${subCat}`} key={index + 1}><li >{subCat.toUpperCase()}</li></Link>)
+                            }
+                        </ul>
+                    </div>
+                </div>
+
                 <div>
-                    <ul className=' flex justify-start gap-4 py-5  '>
-                        {
-                            subcategories.map((subCat, index) => <Link href={`/news/${params.category}/${subCat}`} key={index + 1}><li >{subCat.toUpperCase()}</li></Link>)
-                        }
-                    </ul>
+                    <CategoryDisplay data={data} />
                 </div>
             </div>
-
-            <div>
-                <CategoryDisplay data={data} />
-            </div>
-        </div>
         </>
     )
 }

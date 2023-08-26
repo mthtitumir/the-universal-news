@@ -15,7 +15,7 @@ const ShareUpdate = () => {
         return () => clearInterval(interval);
       }, []);
     return (
-        <div className='flex gap-3 items-center text-xs '>
+        <div className='flex gap-3 items-center text-xs my-1'>
             <p>{stockData.name}</p>
             <p className={stockData.number > 0 ? "text-green-500" : "text-red-500"}>{stockData.number}%</p>
             <p className={stockData.number > 0 ? "text-green-500" : "text-red-500"}>{stockData.number > 0 ? <AiOutlineArrowUp /> : <AiOutlineArrowDown />}</p>

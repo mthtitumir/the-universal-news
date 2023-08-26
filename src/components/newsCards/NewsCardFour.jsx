@@ -13,7 +13,7 @@ const NewsCardFour = ({ item }) => {
                 </div>
             </div>
             <div className="mt-3">
-                <Link href={`/news/${item?.category}/${item?.subcategory}/${item?._id}`}><h2 className="text-lg font-medium hover:underline">{item?.title.slice(0, 70)}...</h2></Link>
+                <h2 className="text-lg font-medium hover:underline"><Link href={`/news/${item?.category}/${item?.subcategory}/${item?._id}`}>{item?.title.slice(0, 70)}...</Link></h2>
                 <p className='text-sm mt-2'>{item?.published_date}</p>
             </div>
         </div>
