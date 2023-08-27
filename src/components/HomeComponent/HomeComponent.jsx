@@ -5,9 +5,10 @@ import NewsCardThree from "../newsCards/NewsCardThree";
 import Headline from "../miniComponents/Headline";
 import "./HomeComponent.css";
 import { allNews } from "@/hooks/useAllNews";
+import GetAllNews from "@/services/GetAllNews";
 
 const HomeComponent = async () => {
-    const news = await allNews();
+    const news = await GetAllNews();
     // console.log(news);
     const data = news.slice(0,20);
     const data1 = news.slice(0, 10);
@@ -17,18 +18,18 @@ const HomeComponent = async () => {
     <div className="">
       <Headline headline={"Recent News"} seeMore={""} />
 
-      <div className="grid md:grid-cols-12 gap-3 md:h-[70vh]">
-        <div className="card1 col-span-3 overflow-y-scroll overflow-x-hidden ">
+      <div className="grid sm:grid-cols-3 md:grid-cols-12 gap-3 md:h-[70vh]">
+        <div className="card1 md:col-span-3 overflow-y-scroll overflow-x-hidden ">
           {data.map((item) => (
             <NewsCardOne key={item.id} item={item}></NewsCardOne>
           ))}
         </div>
-        <div className="card1 col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
+        <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
           {data1.map((item) => (
             <NewsCardTwo key={item.id} item={item}></NewsCardTwo>
           ))}
         </div>
-        <div className="card1 col-span-4 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
+        <div className="card1 md:col-span-4 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
           {data2.map((item) => (
             <NewsCardThree key={item.id} item={item}></NewsCardThree>
           ))}

@@ -35,8 +35,8 @@ const WordScramble = () => {
     const checkAnswer = (event) => {
         event.preventDefault();
         const userInput = event.target.input.value;
-        console.log(originalWord);
-        console.log(userInput);
+        // console.log(originalWord);
+        // console.log(userInput);
         if (userInput.toLowerCase() === originalWord) {
             setMessage("Correct!");
         } else {
