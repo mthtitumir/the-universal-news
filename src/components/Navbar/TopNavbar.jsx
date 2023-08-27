@@ -42,20 +42,18 @@ const TopNavbar = () => {
         <div className=' px-3 md:px-0 '>
             <div className='container mx-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
-                    {/* <h1><AiOutlineMenu /></h1> */}
-                    <div className="">
-                        <div className="dropdown">
-                            <label tabIndex={0} className="text-md">
-                                <PiHamburger />
-                            </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
-                                {
-                                    navData.map(({ path, title }) => (
-                                        <Link key={title} href={path}><li className="text-xs">{title}</li></Link>
-                                    ))
-                                }
-                            </ul>
-                        </div>
+                    {/* <h1></h1> */}
+                    <div className="dropdown">
+                        <label tabIndex={0} className="text-md">
+                            <AiOutlineMenu />
+                        </label>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-5 py-2 border shadow bg-base-100 rounded-lg w-30 ">
+                            {
+                                navData.map(({ path, title }) => (
+                                    <li key={title} className="text-xs my-1 hover:underline"><Link href={path}>{title}</Link></li>
+                                ))
+                            }
+                        </ul>
                     </div>
 
                     {/* search menu  */}
@@ -63,7 +61,7 @@ const TopNavbar = () => {
 
                 </div>
                 {
-                    pathName !== '/' && <Link href="/"><h2 className={`${myFont.className} text-2xl md:text-3xl`}>The Universal News</h2></Link>
+                    pathName !== '/' && <h2 className={`${myFont.className} text-2xl md:text-3xl`}><Link href="/">The Universal News</Link></h2>
                 }
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>

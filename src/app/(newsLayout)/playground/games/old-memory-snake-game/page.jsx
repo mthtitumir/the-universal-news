@@ -122,7 +122,7 @@ const TheSnake = () => {
               height={`${CANVAS_SIZE[1]}px`}
             />
             {gameOver && <div className="text-red-600 text-xl font-semibold absolute top-2/3 left-1/2 transform -translate-x-1/2">GAME OVER!</div>}
-            {gameOver && <div className="text-red-600 text-xl font-semibold absolute top-3/4 left-1/2 transform -translate-x-1/2"> your poients {appleCount}</div>}
+            {gameOver && <div className="text-red-600 text-xl font-semibold absolute top-3/4 left-1/2 transform -translate-x-1/2">Your Points - {appleCount}</div>}
           </div>
         </div>
         <div className="flex justify-center mt-4">

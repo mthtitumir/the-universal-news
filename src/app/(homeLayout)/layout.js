@@ -6,7 +6,7 @@ import { Inter } from "next/font/google"
 import Toaster from "@/components/Toaster"
 import LatestMarque from "@/components/miniComponents/LatestMarque"
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Home | The Universal News',
@@ -15,18 +15,16 @@ export const metadata = {
 
 const HomeLayout = ({ children }) => {
   return (
-    <html lang="en" data-theme="light">
-      <body className={`${inter.className} bg-white`}>
-        <Providers>
-          <TopNavbar />
-          <Navbar />
-          <LatestMarque />
-          {children}
-          <Footer />
-        </Providers>
-        <Toaster />
-      </body>
-    </html>
+    <div>
+      <Providers>
+        <TopNavbar />
+        <Navbar />
+        <LatestMarque />
+        {children}
+        <Footer />
+      </Providers>
+      <Toaster />
+    </div>
   )
 }
 export default HomeLayout;
