@@ -116,7 +116,6 @@ const TheSnake = () => {
         <div className="flex justify-center items-center " role="button" tabIndex="0" onKeyDown={e => moveSnake(e)} style={{ backgroundImage: `url(${snakeImage})` }}>
           <div className="relative border-dashed  border-4 border-red-500 shadow-2xl" >
             <canvas
-
               className=" border-dashed  border-4 border-black  "
               ref={canvasRef}
               width={`${CANVAS_SIZE[0]}px`}

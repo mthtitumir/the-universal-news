@@ -5,15 +5,16 @@ import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import Headline from "@/components/miniComponents/Headline";
 import HandleComment from "@/components/miniComponents/HandleComment";
-import { categories } from "@/hooks/useCategories";
 import { singleNews } from '@/hooks/useSingleNews';
+import GetCategoryData from '@/services/GetCategoryData';
+import GetSingleNews from '@/services/GetSingleNews';
 
 const SingleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const id = params?.id;
-    const data = await singleNews(id);
+    const data = await GetSingleNews(id);
     const {  img, _id, title, description, category, author, published_date, comments } = data;
-    const categoryData = await categories(category);
+    const categoryData = await GetCategoryData(category);
 
     const socialShare = <>
         <div className='flex items-center gap-2 text-3xl text-white'>
