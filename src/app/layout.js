@@ -1,7 +1,6 @@
 import {  Josefin_Sans } from 'next/font/google';
 import './globals.css';
 import Providers from '@/providers';
-
 const josefinSans = Josefin_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],

@@ -3,43 +3,17 @@ import React from 'react';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 import useAuth from '@/hooks/useAuth';
-import { toast } from 'react-hot-toast';
-import { usePathname, useRouter } from 'next/navigation';
-import localFont from 'next/font/local';
+import { usePathname } from 'next/navigation';
 import { navData } from '@/data/navData';
-const myFont = localFont({ src: "./Engravers' Old English.woff2" });
+import { myFont } from './font';
 
-const TopNavbar = () => {
+const SectionNavbar = () => {
     const { user, logout } = useAuth();
     const { uid, displayName, photoURL } = user || {};
-    const { replace } = useRouter();
     const pathName = usePathname();
-    // console.log(pathName);
-    // console.log(pathName.split("/")[2].toUpperCase());
-    const handleLogout = async () => {
-        const toastId = toast.loading("Loading...");
-        try {
-            await logout();
-            const res = await fetch("/api/auth/logout", {
-                method: "POST",
-            });
-            await res.json();
-            if (path.includes("/dashboard") || path.includes("/profile")) {
-                replace(`/login?redirectUrl=${path}`);
-            }
-            toast.dismiss(toastId);
-            toast.success("Successfully logout!");
-            startTransition(() => {
-                refresh();
-            });
-        } catch (error) {
-            toast.error("Successfully not logout!");
-            toast.dismiss(toastId);
-        }
-    };
     return (
         <div className=' px-3 md:px-0 '>
-            <div className='container mx-auto flex items-center justify-between py-2'>
+            <div className='c-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
                     {/* <h1></h1> */}
                     <div className="dropdown">
@@ -59,16 +33,14 @@ const TopNavbar = () => {
                     <h1 className='text-md'><AiOutlineSearch /></h1>
 
                 </div>
-                {
-                    pathName !== '/' && <h2 className={`${myFont.className} text-2xl md:text-3xl`}><Link href="/">The Universal News</Link></h2>
-                }
+                <h2 className={`${myFont.className} text-2xl md:text-3xl`}><Link href="/">{pathName.slice(1)} | The Universal News</Link></h2>
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
-                    {
+                    {/* {
                         uid ? <Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link>
                             :
                             <Link href="/login"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Login</button></Link>
-                    }
+                    } */}
                 </div>
             </div>
             {
@@ -81,4 +53,4 @@ const TopNavbar = () => {
     );
 };
 
-export default TopNavbar;
+export default SectionNavbar;
