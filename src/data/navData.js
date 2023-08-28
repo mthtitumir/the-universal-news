@@ -32,7 +32,7 @@ export const navData = [
         title: 'Health'
     },
     {
-        path:'/info/books',
+        path:'books',
         title: 'Books'
     },
     {

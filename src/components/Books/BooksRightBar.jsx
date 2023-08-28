@@ -15,7 +15,7 @@ import SingleBooks from './SingleBooks';
 
 const BooksRightBar = () => {
     const booksData = data;
-    console.log(booksData)
+    // console.log(booksData)
 
 
     return (
