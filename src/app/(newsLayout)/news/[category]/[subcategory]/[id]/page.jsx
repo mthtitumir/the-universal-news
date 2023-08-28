@@ -3,9 +3,8 @@ import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import Headline from "@/components/miniComponents/Headline";
 import HandleComment from "@/components/CommentCompos/HandleComment";
-import GetCategoryData from '@/services/GetCategoryData';
-import GetSingleNews from '@/services/GetSingleNews';
 import SocialShare from '@/components/miniComponents/SocialShare';
+import { GetCategoryData, GetSingleNews } from '@/services/GetAllNews';
 
 const SingleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks

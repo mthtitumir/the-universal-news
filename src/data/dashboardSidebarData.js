@@ -53,7 +53,7 @@ export const reporterSideNavbar = [
         title: 'Add a News'
     },
     {
-        path:'/your-news',
+        path:'/dashboard/my-news',
         title: 'My News'
     },
     {
