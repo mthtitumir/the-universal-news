@@ -31,8 +31,6 @@ const SingleBooks = ({ book }) => {
                     <p className=''>{ratings}</p>
                 </div>
                 <p className='text-base text-red-700'>${price}</p>
-
-
             </div>
         </div>
     );
