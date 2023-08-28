@@ -15,7 +15,7 @@ const Dashboard = ({ children }) => {
 
   const admin = false;
   const employer = false;
-  const reporter = false;
+  const reporter = true;
   let navData;
 
   if(admin){
