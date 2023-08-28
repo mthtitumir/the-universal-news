@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Serial",
+    "image": "URL_to_Serial_Podcast_Image",
+    "description": "Investigative journalism and storytelling.",
+    "genre": "True Crime",
+    "host": "Sarah Koenig",
+    "release_date": "Mondays",
+    "listeners": "Millions",
+    "website": "https://serialpodcast.org/"
+  },
+  {
+    "id": 2,
+    "title": "Reply All",
+    "image": "URL_to_Reply_All_Podcast_Image",
+    "description": "A podcast about the internet and technology's impact on our lives.",
+    "genre": "Technology",
+    "host": "PJ Vogt and Alex Goldman",
+    "release_date": "Thursdays",
+    "listeners": "Millions",
+    "website": "https://gimletmedia.com/shows/reply-all"
+  },
+  {
+    "id": 3,
+    "title": "The Daily",
+    "image": "URL_to_The_Daily_Podcast_Image",
+    "description": "A daily news podcast from The New York Times.",
+    "genre": "News and Politics",
+    "host": "Michael Barbaro",
+    "release_date": "Weekdays",
+    "listeners": "Millions",
+    "website": "https://www.nytimes.com/column/the-daily"
+  },
+  {
+    "id": 4,
+    "title": "The Tim Ferriss Show",
+    "image": "URL_to_Tim_Ferriss_Podcast_Image",
+    "description": "Features interviews with high achievers and experts in various fields.",
+    "genre": "Personal Development",
+    "host": "Tim Ferriss",
+    "release_date": "Fridays",
+    "listeners": "Millions",
+    "website": "https://tim.blog/podcast/"
+  },
+  {
+    "id": 5,
+    "title": "Science Vs",
+    "image": "URL_to_Science_Vs_Podcast_Image",
+    "description": "Examines scientific debates and topics in a fun and accessible way.",
+    "genre": "Science",
+    "host": "Wendy Zukerman",
+    "release_date": "Fridays",
+    "listeners": "Hundreds of thousands",
+    "website": "https://gimletmedia.com/shows/science-vs"
+  },
+  {
+    "id": 6,
+    "title": "The Moth",
+    "image": "URL_to_The_Moth_Podcast_Image",
+    "description": "Live storytelling performances from around the world.",
+    "genre": "Storytelling",
+    "host": "Various storytellers",
+    "release_date": "Tuesdays",
+    "listeners": "Millions",
+    "website": "https://themoth.org/"
+  },
+  {
+    "id": 7,
+    "title": "My Dad Wrote A Porno",
+    "image": "URL_to_My_Dad_Wrote_A_Porno_Podcast_Image",
+    "description": "A humorous exploration of an unintentionally hilarious erotic novel.",
+    "genre": "Comedy",
+    "host": "Jamie Morton, James Cooper, and Alice Levine",
+    "release_date": "Mondays",
+    "listeners": "Millions",
+    "website": "http://www.mydadwroteaporno.com/"
+  },
+  {
+    "id": 8,
+    "title": "Planet Money",
+    "image": "URL_to_Planet_Money_Podcast_Image",
+    "description": "Explains economic concepts in an engaging way.",
+    "genre": "Business and Finance",
+    "host": "Various hosts",
+    "release_date": "Twice a week",
+    "listeners": "Millions",
+    "website": "https://www.npr.org/sections/money/"
+  },
+  {
+    "id": 9,
+    "title": "Revolutions",
+    "image": "URL_to_Revolutions_Podcast_Image",
+    "description": "Focuses on various historical revolutions.",
+    "genre": "History",
+    "host": "Mike Duncan",
+    "release_date": "Bi-weekly",
+    "listeners": "Hundreds of thousands",
+    "website": "http://www.revolutionspodcast.com/"
+  },
+  {
+    "id": 10,
+    "title": "TED Radio Hour",
+    "image": "URL_to_TED_Radio_Hour_Podcast_Image",
+    "description": "Explores a wide range of fascinating TED Talks.",
+    "genre": "Education",
+    "host": "Guy Raz",
+    "release_date": "Fridays",
+    "listeners": "Millions",
+    "website": "https://www.npr.org/programs/ted-radio-hour/"
+  },
+  {
+    "id": 11,
+    "title": "The School of Greatness",
+    "image": "URL_to_School_of_Greatness_Podcast_Image",
+    "description": "Host Lewis Howes interviews inspiring individuals to uncover their secrets to success.",
+    "genre": "Personal Development",
+    "host": "Lewis Howes",
+    "release_date": "Mondays",
+    "listeners": "Millions",
+    "website": "https://lewishowes.com/blog/"
+  },
+  {
+    "id": 12,
+    "title": "Song Exploder",
+    "image": "URL_to_Song_Exploder_Podcast_Image",
+    "description": "Artists break down their songs and discuss the creative process.",
+    "genre": "Music",
+    "host": "Hrishikesh Hirway",
+    "release_date": "Bi-weekly",
+    "listeners": "Hundreds of thousands",
+    "website": "https://songexploder.net/"
+  },
+  {
+    "id": 13,
+    "title": "The Joe Biden Podcast",
+    "image": "URL_to_Joe_Biden_Podcast_Image",
+    "description": "Discussions on various political topics and policies.",
+    "genre": "News and Politics",
+    "host": "Joe Biden",
+    "release_date": "Weekly",
+    "listeners": "Thousands",
+    "website": "https://www.whitehouse.gov/"
+  },
+  {
+    "id": 14,
+    "title": "The Michelle Obama Podcast",
+    "image": "URL_to_Michelle_Obama_Podcast_Image",
+    "description": "Conversations on relationships, life, and the world with Michelle Obama.",
+    "genre": "Personal Development",
+    "host": "Michelle Obama",
+    "release_date": "Bi-weekly",
+    "listeners": "Millions",
+    "website": "https://www.obama.org/"
+  },
+  {
+    "id": 15,
+    "title": "Freakonomics Radio",
+    "image": "URL_to_Freakonomics_Radio_Podcast_Image",
+    "description": "Explores the hidden side of everyday life and economics.",
+    "genre": "Economics",
+    "host": "Stephen J. Dubner",
+    "release_date": "Fridays",
+    "listeners": "Millions",
+    "website": "https://freakonomics.com/"
+  },
+  {
+    "id": 16,
+    "title": "Hidden Brain",
+    "image": "URL_to_Hidden_Brain_Podcast_Image",
+    "description": "Investigates the unconscious patterns that drive human behavior.",
+    "genre": "Science",
+    "host": "Shankar Vedantam",
+    "release_date": "Weekly",
+    "listeners": "Millions",
+    "website": "https://www.npr.org/sections/hidden-brain/"
+  },
+  {
+    "id": 17,
+    "title": "The Dave Ramsey Show",
+    "image": "URL_to_Dave_Ramsey_Show_Podcast_Image",
+    "description": "Financial advice and strategies for personal and business success.",
+    "genre": "Business and Finance",
+    "host": "Dave Ramsey",
+    "release_date": "Daily",
+    "listeners": "Millions",
+    "website": "https://www.ramseysolutions.com/shows/the-dave-ramsey-show"
+  },
+  {
+    "id": 18,
+    "title": "TED Talks Daily",
+    "image": "URL_to_TED_Talks_Daily_Podcast_Image",
+    "description": "Daily talks on various topics from the TED stage.",
+    "genre": "Education",
+    "host": "Various Speakers",
+    "release_date": "Daily",
+    "listeners": "Millions",
+    "website": "https://www.ted.com/talks"
+  },
+  {
+    "id": 19,
+    "title": "The History of Rome",
+    "image": "URL_to_History_of_Rome_Podcast_Image",
+    "description": "A chronological account of the history of Rome.",
+    "genre": "History",
+    "host": "Mike Duncan",
+    "release_date": "Weekly",
+    "listeners": "Hundreds of thousands",
+    "website": "http://www.historyofrome.typepad.com/"
+  },
+  {
+    "id": 20,
+    "title": "The Dave Chang Show",
+    "image": "URL_to_Dave_Chang_Show_Podcast_Image",
+    "description": "Conversations with chefs, celebrities, and artists on food and culture.",
+    "genre": "Food",
+    "host": "Dave Chang",
+    "release_date": "Mondays",
+    "listeners": "Hundreds of thousands",
+    "website": "https://davechangshow.com/"
+  }
+]

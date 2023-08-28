@@ -147,7 +147,7 @@ const RockPaperScissors = () => {
               </div>
             </div>
             <button
-              className="from-pink-500 via-red-500 to-yellow-500 rounded-xl text-white font-bold py-2 px-4 "
+              className=" bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl text-white font-bold py-2 px-4"
               onClick={resetGame}
             >
               Reset
