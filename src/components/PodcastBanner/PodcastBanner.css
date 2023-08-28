@@ -11,3 +11,12 @@
 .awssld__controls button{
     top: calc(40% - (0.5 * var(--control-button-height))) !important;
 }
+
+.awssld__timer {
+  background-color: white !important;
+
+}
+
+.awssld__container figure, .awssld__content, .awssld__box{
+  height: 85% !important;
+}
