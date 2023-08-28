@@ -1,9 +1,10 @@
-import GetAllNews from "@/services/GetAllNews";
+// import GetAllNews from "@/services/GetAllNews";
 import Headline from "../miniComponents/Headline";
 import UserInfo from "./UserInfo";
 import NewsCardThree from "../newsCards/NewsCardThree";
-import GetSingleNews from "@/services/GetSingleNews";
+// import GetSingleNews from "@/services/GetSingleNews";
 import DisplayComment from "../CommentCompos/DisplayComment";
+import { GetAllNews, GetSingleNews } from "@/services/GetAllNews";
 
 const ProfilePage = async () => {
     const savedNews = await GetAllNews();
