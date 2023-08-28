@@ -49,12 +49,12 @@ export const reporterSideNavbar = [
         title: 'Profile'
     },
     {
-        path:'/your-news',
-        title: 'My News'
+        path:'/dashboard/add-news',
+        title: 'Add a News'
     },
     {
-        path:'/add-news',
-        title: 'Add a News'
+        path:'/your-news',
+        title: 'My News'
     },
     {
         path:'/profile',
