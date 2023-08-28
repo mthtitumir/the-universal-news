@@ -1,9 +1,8 @@
 import BooksRightBar from '@/components/Books/BooksRightBar';
-import React from 'react';
 
 const Books = () => {
     return (
-        <div className='flex-row md:flex '>
+        <div className='flex-row md:flex c-auto'>
             {/* left bar */}
             <div className='md:w-[20%]'>
                 books left bar

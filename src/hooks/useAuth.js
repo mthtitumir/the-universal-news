@@ -5,7 +5,7 @@ const useAuth = () => {
   const auth = useContext(AuthContext);
   // const isClient = typeof window !== "undefined";
 
-  // if (!isClient && !auth) return {};
+  if (!auth) return {};
 
   if (!auth) {
     throw new Error(

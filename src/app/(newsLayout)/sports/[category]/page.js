@@ -1,10 +1,11 @@
 import CategoryCom from '@/components/CategoryCom/CategoryCom';
 import CategoryDisplay from '@/components/CategoryCom/CategoryDisplay';
 import { categories } from '@/hooks/useCategories';
+import GetCategoryData from '@/services/GetCategoryData';
 import Link from 'next/link';
 
 const category = async ({ params }) => {
-    const categoryData = await categories(params.category);
+    const categoryData = await GetCategoryData(params.category);
     // console.log(categoryData);
     const subcategories = [];
     categoryData.forEach(item => {

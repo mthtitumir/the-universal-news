@@ -1,30 +1,20 @@
-import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
-import { PiShareFatFill } from 'react-icons/pi';
 import Image from 'next/image';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 import Headline from "@/components/miniComponents/Headline";
-import HandleComment from "@/components/miniComponents/HandleComment";
-import { categories } from "@/hooks/useCategories";
-import { singleNews } from '@/hooks/useSingleNews';
+import HandleComment from "@/components/CommentCompos/HandleComment";
+import GetCategoryData from '@/services/GetCategoryData';
+import GetSingleNews from '@/services/GetSingleNews';
+import SocialShare from '@/components/miniComponents/SocialShare';
 
 const SingleNews = async ({ params }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const id = params?.id;
-    const data = await singleNews(id);
+    const data = await GetSingleNews(id);
     // console.log(data);
     const { img, _id, title, description, category, author, published_date, comments } = data;
-    const categoryData = await categories(category);
+    const categoryData = await GetCategoryData(category);
 
-    const socialShare = <>
-        <div className='flex items-center gap-2 text-xl md:text-2xl text-white'>
-            <BiLogoFacebook className='rounded-full bg-blue-600 ' ></BiLogoFacebook>
-            <BiLogoLinkedin className='rounded-full text-blue-700'></BiLogoLinkedin>
-            <BiLogoInstagram className='rounded-full text-indigo-600'></BiLogoInstagram>
-            <BiLogoTwitter className='rounded-full bg-blue-50 text-sky-500'></BiLogoTwitter>
-            <PiShareFatFill className='rounded-full text-red-600'></PiShareFatFill>
-        </div>
-    </>;
     // console.log(data);  
     const data1 = categoryData.slice(0, 8);
     const relatedNewsData = categoryData.slice(0, 20)
@@ -39,7 +29,7 @@ const SingleNews = async ({ params }) => {
                         <div>
                             <h1 className='text-sm md:text-base'>Update - {published_date}</h1>
                         </div>
-                        {socialShare}
+                        <SocialShare />
                     </div>
                     <div>
                         {/* image and description */}
@@ -64,7 +54,7 @@ const SingleNews = async ({ params }) => {
 
                         {/* Comment */}
                         <div>
-                            <HandleComment id={_id} comments={comments} socialShare={socialShare} />
+                            <HandleComment id={_id} comments={comments} />
                         </div>
                     </div>
                 </div>

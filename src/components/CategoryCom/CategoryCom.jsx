@@ -1,9 +1,11 @@
 import { categories } from '@/hooks/useCategories';
 import Link from 'next/link';
 import CategoryDisplay from './CategoryDisplay';
+import GetCategoryData from '@/services/GetCategoryData';
 
 const CategoryCom = async ({ params }) => {
-    const categoryData = await categories(params.category);
+    const category = params.category
+    const categoryData = await GetCategoryData(category);
     let data = [];
     let categoryName = "";
     const subcategories = [];

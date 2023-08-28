@@ -7,7 +7,6 @@ import { toast } from 'react-hot-toast';
 import { usePathname, useRouter } from 'next/navigation';
 import localFont from 'next/font/local';
 import { navData } from '@/data/navData';
-import { PiHamburger } from 'react-icons/pi';
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
 const TopNavbar = () => {
@@ -66,7 +65,7 @@ const TopNavbar = () => {
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
                     {
-                        uid ? <button onClick={handleLogout} className='bg-cyan-500 rounded px-2 py-1 text-white'>Logout</button>
+                        uid ? <Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link>
                             :
                             <Link href="/login"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Login</button></Link>
                     }
