@@ -16,6 +16,11 @@
     @apply container mx-auto
 }
 
+/* user info styles  */
+.info-h1{
+    @apply flex items-center gap-2 md:text-xl
+}
+
 
 /* .light {
     background-color: white;
