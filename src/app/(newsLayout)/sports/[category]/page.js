@@ -1,6 +1,4 @@
-import CategoryCom from '@/components/CategoryCom/CategoryCom';
 import CategoryDisplay from '@/components/CategoryCom/CategoryDisplay';
-import { categories } from '@/hooks/useCategories';
 import GetCategoryData from '@/services/GetCategoryData';
 import Link from 'next/link';
 

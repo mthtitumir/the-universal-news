@@ -5,9 +5,8 @@ import Link from 'next/link';
 import useAuth from '@/hooks/useAuth';
 import { toast } from 'react-hot-toast';
 import { usePathname, useRouter } from 'next/navigation';
-import localFont from 'next/font/local';
 import { navData } from '@/data/navData';
-const myFont = localFont({ src: "./Engravers' Old English.woff2" });
+import { myFont } from './font';
 
 const TopNavbar = () => {
     const { user, logout } = useAuth();
@@ -15,7 +14,6 @@ const TopNavbar = () => {
     const { replace } = useRouter();
     const pathName = usePathname();
     // console.log(pathName);
-    // console.log(pathName.split("/")[2].toUpperCase());
     const handleLogout = async () => {
         const toastId = toast.loading("Loading...");
         try {
