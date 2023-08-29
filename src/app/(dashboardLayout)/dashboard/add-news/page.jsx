@@ -5,17 +5,19 @@ import { useForm } from 'react-hook-form';
 
 
 const AddaNews = () => {
-    const { user } = useAuth()
+    const { user } = useAuth();
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = async (data) => {
-        const id = Math.floor(Math.random() * 100000)
-        const comments = []
-        const likes = 0
+        const id = Math.floor(Math.random() * 100000);
+        const status = 'pending';
+        const comments = [];
+        const likes = 0;
         const published_date = new Date().toISOString();
-        const { title, description, img, category, subcategory, author, tagses, email } = data
-        const tags = tagses.split(',')
+        const { title, description, img, category, subcategory, author, tagses, email, } = data;
+        const tags = tagses.split(',');
         try {
-            const response = await axios.post(`/api/add-news`, { id, title, description, img, category, subcategory, author, tags, comments, email, published_date,likes });
+            const response = await axios.post(`/api/add-news`, { id, title, description, img, category, subcategory, author, tags, comments, email, published_date,likes,status });
             console.log(response.data);
         } catch (error) {
             console.error('Error submitting form:', error);
