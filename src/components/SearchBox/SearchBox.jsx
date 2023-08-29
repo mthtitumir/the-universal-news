@@ -13,7 +13,7 @@ const SearchBox = () => {
           />
           <button
             type="submit"
-            className="relative lg:right-8 lg:-right-0 -right-48 lg:-top-0 -top-8 text-lg cursor-pointer"
+            className="relative lg:right-8 -right-48 lg:-top-0 -top-8 text-lg cursor-pointer"
           >
             🔍
           </button>
