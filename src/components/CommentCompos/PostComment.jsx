@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useForm } from "react-hook-form";
 import { BiSolidPaperPlane } from 'react-icons/bi';
 import SocialShare from "../miniComponents/SocialShare";
+import axios from "axios";
 
 const PostComment = ({ id }) => {
   const { user } = useAuth();
