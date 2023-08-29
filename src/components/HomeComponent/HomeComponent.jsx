@@ -4,10 +4,10 @@ import NewsCardTwo from "../newsCards/NewsCardTwo";
 import NewsCardThree from "../newsCards/NewsCardThree";
 import Headline from "../miniComponents/Headline";
 import "./HomeComponent.css";
-import { allNews } from "@/hooks/useAllNews";
+import { GetAllNews } from "@/services/GetAllNews";
 
 const HomeComponent = async () => {
-    const news = await allNews();
+    const news = await GetAllNews();
     // console.log(news);
     const data = news.slice(0,20);
     const data1 = news.slice(0, 10);

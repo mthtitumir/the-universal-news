@@ -1,9 +1,10 @@
-import { allNews } from '@/hooks/useAllNews';
+
+import { GetAllNews } from '@/services/GetAllNews';
 import React from 'react';
 import Marquee from "react-fast-marquee";
 
 const LatestMarque = async () => {
-    const data = await allNews();
+    const data = await GetAllNews();
     const myData = data.slice(0, 20);
 
     return (

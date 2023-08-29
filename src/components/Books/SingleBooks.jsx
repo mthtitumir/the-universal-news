@@ -1,6 +1,7 @@
-import Image from "next/image";
-import React from "react";
-import StarRatings from "react-star-ratings";
+"use client"
+import Image from 'next/image';
+import React from 'react';
+import StarRatings from 'react-star-ratings';
 
 const SingleBooks = ({ book }) => {
   const { name, img, description, ratings, price } = book;

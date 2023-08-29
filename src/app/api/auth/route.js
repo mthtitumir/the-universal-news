@@ -1,7 +1,6 @@
 import { SignJWT } from "jose";
 import {cookies} from "next/headers";
 import { NextResponse } from "next/server";
-'server-only'
 export const POST = async (request) => {
     const body = await request.json();
     const secret = new TextEncoder().encode(process.env.jwt_secret);
