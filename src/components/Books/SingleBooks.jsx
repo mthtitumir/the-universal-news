@@ -4,8 +4,7 @@ import React from 'react';
 import StarRatings from 'react-star-ratings';
 
 const SingleBooks = ({ book }) => {
-
-    const { name, img, description, ratings, price } = book;
+  const { name, img, description, ratings, price } = book;
 
     return (
         <div className="card w-full bg-base-100 border  rounded-sm ">
