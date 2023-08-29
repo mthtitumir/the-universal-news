@@ -1,22 +1,24 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import StarRatings from 'react-star-ratings';
-
-const SingleBooks = ({ book }) => {
-  const { name, img, description, ratings, price } = book;
+const SingleBooks = ({ books }) => {
+  const { id, name, img, description, ratings, price } = books;
 
   return (
     <div className="card w-full bg-base-100 border  rounded-sm ">
-      <figure>
-        <Image
-          height={50}
-          width={120}
-          src={img}
-          alt="book image"
-          className="mt-4"
-        ></Image>
-      </figure>
+      <Link href={`/books/${id}`}>
+        <figure>
+          <Image
+            height={50}
+            width={120}
+            src={img}
+            alt="book image"
+            className="mt-4"
+          ></Image>
+        </figure>
+      </Link>
       <div className="card-body text-center">
         <h2 className="text-xl font-semibold text-center">{name}</h2>
         <p>{description.slice(0, 30)}</p>

@@ -8,7 +8,7 @@ import { PiClockClockwise } from 'react-icons/pi'
 
 
 const SingleJob = ({ job }) => {
-    const { id, employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate } = job
+    const { id, jobTitle, companyName,  employmentType, salaryOrHourlyWage, jobType, startingTime, jobCategory, experience, postDate } = job
     return (
         <div className="card w-full bg-white mb-3 rounded-sm border-gray-500">
             <div className="card-body">
