@@ -52,18 +52,5 @@ export const GetSubcategoryFromDb = async (subCategories) => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetSingleReporterNewsFromDb = async (email) => {
-    try {
-        const emails = email;
-        const db = await DbConnect();
-        const allNews = db.collection('all-news');
-        const query = { email: emails }
-        const result = await allNews.findOne(query)
-        console.log(result)
-        return result;
-    } catch (error) {
-        console.error(error)
-        return ({ error: 'error to get data' });
-    }
-};
+
 

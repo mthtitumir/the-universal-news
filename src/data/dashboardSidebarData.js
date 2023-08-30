@@ -45,7 +45,7 @@ export const employerSideNavbar = [
 ]
 export const reporterSideNavbar = [
     {
-        path:'/profile',
+        path:'/dashboard',
         title: 'Profile'
     },
     {
@@ -56,10 +56,7 @@ export const reporterSideNavbar = [
         path:'/dashboard/my-news',
         title: 'My News'
     },
-    {
-        path:'/profile',
-        title: 'Profile'
-    },
+ 
 ]
 export const userSideNavbar = [
     {

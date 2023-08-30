@@ -59,8 +59,9 @@ const SignupForm = () => {
             const name = user?.displayName
             const photo = user?.photoURL
             const email = user?.email
+            const role = 'user'
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
@@ -81,16 +82,15 @@ const SignupForm = () => {
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
-        try {
-            const response = await axios.post(`/api/save-user`, { name, email, photo });
-            console.log(response.data);
-        } catch (error) {
-            console.error('Error submitting form:', error);
-        }
-
+        const role = 'user'
         try {
             const user = await createUser(email, password);
-            // await createJwt({email})
+            try {
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,

@@ -1,9 +1,30 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from "next/link";
 import localFont from 'next/font/local'
+import chackout from '@/components/stripecheckouts/chackout';
+import useAuth from '@/hooks/useAuth';
 
 const JobPost = () => {
+    const {user} = useAuth()
+    const [isSuccess, setIsSuccess] = useState(false);
+
+    const handleBuyClick = () => {
+        chackout({
+            lineItems: [{ price: "price_1NkctcIaZAuMRrsm4jGYwQXE", quantity: 1 }],
+        });
+    };
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        
+        const successParam = params.get("success");
+        console.log(successParam)
+        if (successParam === "true") {
+            setIsSuccess(true);
+        }
+    }, []);
     return (
         <div className='  md:flex justify-center items-center bg-orange-50'>
 
@@ -13,30 +34,26 @@ const JobPost = () => {
                     <h2 className='text-slate-950 text-4xl my-14'>Post Your Jobs</h2>
 
                     <div>
-                        <p className=' text-slate-950  mb-3'>Welcome offer</p>
+                        <p className=' text-slate-950  '>Subscribe now for become a employer  </p>
+                        <span className='text-sm text-cyan-500 my-4'>(only 50$ par maunthe for post unlimited job)</span>
 
                         <form className=''>
                             <div className='flex gap-3 border-y border-gray-300 py-3'>
                                 <input type="radio" id="week" name="subscribe" />
                                 <div>
-                                    <label className='font-semibold text-slate-950'><span className='text-gray-500 font-semibold  line-through '>$3</span> $0.25/week</label><br />
-                                    <small className='text-sm text-gray-500'>Billed as $1 every 4 weeks for the first year.</small>
+                                    <label className='font-semibold text-slate-950'>50$</label><br />
+
                                 </div>
                             </div>
 
-                            <div className='flex gap-3 border-y border-gray-300 py-3'>
-                                <input type="radio" id="week" name="subscribe" />
-                                <div>
-                                    <label className='font-semibold text-slate-950'><span className='text-gray-500 font-semibold  line-through '> $90</span> $10/year</label><br />
-                                    <small className='text-sm text-gray-500'>Billed once for the first years.</small>
-                                </div>
-                            </div>
                             <button
+                                onClick={handleBuyClick}
                                 type="button"
                                 className="btn bg-slate-950 text-white hover:text-black rounded w-full mt-4"
 
-                            >Post Job</button>
+                            >Subcribe now</button>
                         </form>
+                        {isSuccess && <p className='text-green text-lg my-4 text-green-500'>Payment successful! Thank you for your purchase.</p>}
                         <p className='font-semibold text-slate-950 text-center mt-2'>Cancel or pause anytime.</p>
                         <div className='flex gap-3 justify-center mt-2 mb-14'>
                             <Image

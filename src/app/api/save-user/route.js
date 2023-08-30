@@ -10,7 +10,7 @@ export const POST = async (request) => {
             const allUsers = db.collection('all-users');
             const { name, email, photo } = body;
             const doc = {
-                name, email, photo
+                name, email, photo,role
             }
             const query = { email: allUsers.email };
             const existingUser = await userses.findOne(query);

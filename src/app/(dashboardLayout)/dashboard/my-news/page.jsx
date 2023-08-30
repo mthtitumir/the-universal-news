@@ -5,44 +5,26 @@ import { useEffect, useState } from "react";
 
 const MyNews = () => {
     const { user } = useAuth();
-    const [userEmail, setUserEmail] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        if (user) {
-            setUserEmail(user.email);
-            setIsLoading(false); 
-        }
-    }, [user]);
-
+    const [newsData, setNewsData] = useState([]);
     const fetchData = async () => {
-        if (userEmail) {
+        if (user) {
             try {
-                const mynews = await axios.get(`/api/getSingleReporterNews?email=${userEmail}`);
-                console.log(mynews.data);
-                // Handle mynews.data here
+                const mynews = await axios.get(`/api/getSingleReporterNews?email=${user.email}`);
+                setNewsData(mynews.data);
             } catch (error) {
                 console.error("Error fetching reporter news:", error);
             }
         }
     };
-
-    useEffect(() => {
-        if (!isLoading) {
-            fetchData(); // Call fetchData once user data is available
-        }
-    }, [isLoading]);
-
+    fetchData();
     return (
         <div>
-            {isLoading ? (
-                <p>Loading...</p>
-            ) : (
-                <div>
-                    <p>Email: {userEmail}</p>
-                    {/* Render other content */}
+            <p>Email: {user?.email}</p>
+            {newsData.map((newsItem, index) => (
+                <div key={index}>
+                    <p>Category: {newsItem.category}</p>
                 </div>
-            )}
+            ))}
         </div>
     );
 };
