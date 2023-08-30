@@ -1,5 +1,4 @@
 "use client";
-import { BsFillBookmarkPlusFill } from "react-icons/bs";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,7 +16,6 @@ const MovieBannerLeft = () => {
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
   }, []);
-  console.log(movies);
   return (
     <div className="">
       <Swiper
@@ -36,7 +34,7 @@ const MovieBannerLeft = () => {
       >
         <div className="relative">
           {movies.map((movie) => (
-            <SwiperSlide key={movie.id}>
+            <SwiperSlide  key={movie.id}>
               <Image
                 alt="banner image"
                 width={600}
