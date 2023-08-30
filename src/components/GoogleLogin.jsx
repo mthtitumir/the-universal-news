@@ -1,5 +1,5 @@
 import useAuth from "@/hooks/useAuth";
-import createJwt from "@/utils/createJwt";
+import createJWT from "@/utils/createJWT";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
 import { toast } from "react-hot-toast";
@@ -15,7 +15,7 @@ const GoogleLogin = () => {
     const toastId = toast.loading("Loading...");
     try {
       const { user } = await googleLogin();
-      await createJwt({ email: user.email });
+      await createJWT({ email: user.email });
       startTransition(() => {
         refresh();
         toast.dismiss(toastId);

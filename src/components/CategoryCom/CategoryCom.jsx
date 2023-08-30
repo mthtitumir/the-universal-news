@@ -1,7 +1,9 @@
-import { categories } from '@/hooks/useCategories';
+
 import Link from 'next/link';
 import CategoryDisplay from './CategoryDisplay';
-import GetCategoryData from '@/services/GetCategoryData';
+import { GetCategoryData } from '@/services/GetAllNews';
+
+
 
 const CategoryCom = async ({ params }) => {
     const category = params.category

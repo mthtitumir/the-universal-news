@@ -1,10 +1,10 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
 import StarRatings from 'react-star-ratings';
 
 const SingleBooks = ({ book }) => {
-
-    const { name, img, description, ratings, price } = book;
+  const { name, img, description, ratings, price } = book;
 
     return (
         <div className="card w-full bg-base-100 border  rounded-sm ">
@@ -30,8 +30,6 @@ const SingleBooks = ({ book }) => {
                     <p className=''>{ratings}</p>
                 </div>
                 <p className='text-base text-red-700'>${price}</p>
-
-
             </div>
         </div>
     );

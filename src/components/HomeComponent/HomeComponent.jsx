@@ -4,8 +4,7 @@ import NewsCardTwo from "../newsCards/NewsCardTwo";
 import NewsCardThree from "../newsCards/NewsCardThree";
 import Headline from "../miniComponents/Headline";
 import "./HomeComponent.css";
-import { allNews } from "@/hooks/useAllNews";
-import GetAllNews from "@/services/GetAllNews";
+import { GetAllNews } from "@/services/GetAllNews";
 
 const HomeComponent = async () => {
     const news = await GetAllNews();

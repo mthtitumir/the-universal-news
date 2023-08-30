@@ -1,5 +1,5 @@
-import { allNews } from '@/hooks/useAllNews';
-import GetAllNews from '@/services/GetAllNews';
+
+import { GetAllNews } from '@/services/GetAllNews';
 import React from 'react';
 import Marquee from "react-fast-marquee";
 
