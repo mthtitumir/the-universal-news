@@ -56,13 +56,13 @@ const SignupForm = () => {
             const name = user?.displayName
             const photo = user?.photoURL
             const email = user?.email
-            try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo });
-                console.log(response.data);
-            } catch (error) {
-                console.error('Error submitting form:', error);
-            }
-            // await createJwt({ email: user.email });
+            // try {
+            //     const response = await axios.post(`/api/save-user`, { name, email, photo });
+            //     console.log(response.data);
+            // } catch (error) {
+            //     console.error('Error submitting form:', error);
+            // }
+            await createJWT({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -88,7 +88,7 @@ const SignupForm = () => {
 
         try {
             const user = await createUser(email, password);
-            await createJWT({email})
+            await createJWT({email});
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,
@@ -207,8 +207,6 @@ const SignupForm = () => {
                     Register
                 </button>
             </div>
-            {/* <GoogleLogin from={from} /> */}
-            {/* <GoogleLogin /> */}
 
             <p className="mt-3">
                 Already have an account?{" "}

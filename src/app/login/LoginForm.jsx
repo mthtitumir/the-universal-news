@@ -1,6 +1,6 @@
 "use client"
 import useAuth from "@/hooks/useAuth";
-// import createJWT from "@/utils/createJWT";
+import createJWT from "@/utils/createJWT";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
@@ -25,7 +25,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const user = await signIn(email, password);
-            // await createJWT({ email });
+            await createJWT({ email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -42,7 +42,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
-            // await createJWT({ email: user.email });
+            await createJWT({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -51,7 +51,7 @@ const LoginForm = () => {
             });
         } catch (error) {
             toast.dismiss(toastId);
-            toast.error(error.message || "User not signed in");
+            toast.error(error.message, "ok" || "User not signed in");
         }
     };
 

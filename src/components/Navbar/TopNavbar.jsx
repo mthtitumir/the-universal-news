@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import { startTransition } from 'react';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 import useAuth from '@/hooks/useAuth';
@@ -11,7 +11,7 @@ import { myFont } from './font';
 const TopNavbar = () => {
     const { user, logout } = useAuth();
     const { uid, displayName, photoURL } = user || {};
-    const { replace } = useRouter();
+    const { replace, refresh } = useRouter();
     const pathName = usePathname();
     // console.log(pathName);
     const handleLogout = async () => {
@@ -22,8 +22,8 @@ const TopNavbar = () => {
                 method: "POST",
             });
             await res.json();
-            if (path.includes("/dashboard") || path.includes("/profile")) {
-                replace(`/login?redirectUrl=${path}`);
+            if (pathName.includes("/dashboard") || pathName.includes("/profile")) {
+                replace(`/login?redirectUrl=${pathName}`);
             }
             toast.dismiss(toastId);
             toast.success("Successfully logout!");
@@ -63,7 +63,7 @@ const TopNavbar = () => {
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
                     {
-                        uid ? <Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link>
+                        uid ? <><Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link> <button className='primary-btn' onClick={handleLogout}>Logout</button></>
                             :
                             <Link href="/login"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Login</button></Link>
                     }
