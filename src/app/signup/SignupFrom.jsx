@@ -1,7 +1,7 @@
 "use client";
 
 import useAuth from "@/hooks/useAuth";
-import createJWT from "@/utils/createJwt";
+import usejwt from "@/utils/usejwt";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -58,12 +58,12 @@ const SignupForm = () => {
             const email = user?.email
             const role = 'user'
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo,role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
             }
-            await createJWT({ email: user.email });
+            await usejwt({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -89,7 +89,7 @@ const SignupForm = () => {
             } catch (error) {
                 console.error('Error submitting form:', error);
             }
-            await createJWT({ email });
+            await usejwt({ email });
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,

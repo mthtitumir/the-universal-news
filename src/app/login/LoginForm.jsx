@@ -1,6 +1,6 @@
 "use client"
 import useAuth from "@/hooks/useAuth";
-import createJWT from "@/utils/createJwt";
+import usejwt from "@/utils/usejwt";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
@@ -25,7 +25,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const user = await signIn(email, password);
-            await createJWT({ email });
+            await usejwt({ email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -42,7 +42,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
-            await createJWT({ email: user.email });
+            await usejwt({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
