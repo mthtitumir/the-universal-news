@@ -27,7 +27,6 @@ const JobPost = () => {
                     console.log(response.data);
 
                     setIsSuccess(true);
-                    setShowSuccessMessage(true);
                 } catch (error) {
                     console.error('Error updating role:', error);
                 }

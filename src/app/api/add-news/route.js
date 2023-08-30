@@ -7,9 +7,9 @@ export const POST = async (request) => {
             console.log(body);
             const db = await DbConnect();
             const allNews = db.collection('all-news');
-            const {  id, title, description, img, category, subcategory, author, tags, comments, email, published_date} = body;
+            const {  id, title, description, img, category, subcategory, author, tags, comments, email, published_date ,status} = body;
             const doc ={
-                id, title, description, img, category, subcategory, author, tags, comments, email, published_date
+                id, title, description, img, category, subcategory, author, tags, comments, email, published_date,status
             }
             const result = await allNews.insertOne(doc)
             return NextResponse.json(result);
