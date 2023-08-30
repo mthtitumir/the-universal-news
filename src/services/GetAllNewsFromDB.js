@@ -50,22 +50,17 @@ export const GetSubcategoryFromDb = async (subCategories) => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetSingleReporterNewsFromDb = async (email) => {
+export const GetAllUsersFromDB = async () => {
     try {
-        if (!email) {
-            return ({ Error: "Couldn't detect any email!" });
-        }
-        const emails = email;
-        console.log(emails);
         const db = await DbConnect();
-        const allNews = db.collection('all-news');
-        const query = { email: emails }
-        const result = await allNews.findOne(query);
-        // console.log(result)
+        const allUsers = db.collection('all-users');
+        const result = await allUsers.find().toArray();
         return result;
     } catch (error) {
         console.error(error)
         return ({ error: 'error to get data' });
     }
 };
+
+
 
