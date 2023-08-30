@@ -30,3 +30,4 @@ const MyNews = () => {
 };
 
 export default MyNews;
+

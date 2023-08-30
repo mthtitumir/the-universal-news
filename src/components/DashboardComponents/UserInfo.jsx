@@ -10,7 +10,7 @@ const UserInfo = () => {
         <div>
             <h1 className="text-xl md:text-3xl mt-5 text-center">Welcome <span className="text-cyan-600">{user ? user.displayName : "Sir"}</span> !</h1>
             <div className="flex flex-col md:flex-row mt-10 gap-5 items-center justify-center">
-                <figure className=" p-3 flex justify-center rounded-lg border-r-1"><Image className="rounded-full" height={250} width={250} src={"https://i.ibb.co/BqDXqHd/Titumir-1.jpg"} alt={`${user?.displayName}'s profile photo`} /></figure>
+                <figure className=" p-3 flex justify-center rounded-lg border-r-1"><Image className="rounded-full" height={250} width={250} src={user?.photoURL || "https://i.ibb.co/BqDXqHd/Titumir-1.jpg"} alt={`${user?.displayName}'s profile photo`} /></figure>
                 
                 <div className="flex flex-col gap-5">
                     <h1 className="info-h1"><AiOutlineProfile />UserId: {user?.uid}</h1>

@@ -1,30 +1,45 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from "next/link";
-import localFont from 'next/font/local'
 import chackout from '@/components/stripecheckouts/chackout';
 import useAuth from '@/hooks/useAuth';
+import axios from 'axios';
+import Link from 'next/link';
 
 const JobPost = () => {
-    const {user} = useAuth()
+    const { user } = useAuth()
     const [isSuccess, setIsSuccess] = useState(false);
-
     const handleBuyClick = () => {
         chackout({
             lineItems: [{ price: "price_1NkctcIaZAuMRrsm4jGYwQXE", quantity: 1 }],
         });
     };
 
+
+
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
-        
         const successParam = params.get("success");
-        console.log(successParam)
-        if (successParam === "true") {
-            setIsSuccess(true);
-        }
-    }, []);
+        const updateUserRole = async () => {
+            if (successParam === "true" && user) {
+                try {
+                    const response = await axios.post(`api/change-user-role-after-payment?email=${user?.email}`);
+                    console.log(response.data);
+
+                    setIsSuccess(true);
+                    setShowSuccessMessage(true);
+                } catch (error) {
+                    console.error('Error updating role:', error);
+                }
+            }
+
+        };
+
+        updateUserRole()
+
+    }
+        , [user]);
+
     return (
         <div className='  md:flex justify-center items-center bg-orange-50'>
 
@@ -53,7 +68,16 @@ const JobPost = () => {
 
                             >Subcribe now</button>
                         </form>
-                        {isSuccess && <p className='text-green text-lg my-4 text-green-500'>Payment successful! Thank you for your purchase.</p>}
+                        {isSuccess && (
+                            <p className='text-green text-lg my-4 text-green-500'>
+                                Payment successful! Thank you for your purchase.
+                            </p>
+                        )}
+                        {isSuccess && (
+                            <Link href={'/dashboard'}>
+                                <button className='primary-btn'>Visit your dashboard</button>
+                            </Link>
+                        )}
                         <p className='font-semibold text-slate-950 text-center mt-2'>Cancel or pause anytime.</p>
                         <div className='flex gap-3 justify-center mt-2 mb-14'>
                             <Image

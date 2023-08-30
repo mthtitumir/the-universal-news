@@ -1,4 +1,3 @@
-import PodcastBanner from "@/components/PodcastBanner/PodcastBanner";
 import Banner from "@/components/PodcastBanner/Banner";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import Trending from "@/components/Trending/Trandings";
@@ -6,7 +5,7 @@ import React from "react";
 
 const Podcast = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 c-auto">
       <div>
         <p className="text-center text-4xl font-bold text-cyan-600 mb-6">
           Universal podcast

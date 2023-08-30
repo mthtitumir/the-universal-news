@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import TrendingCast from "../../utils/podcast.json";
-import SingleCard from "@/app/(newsLayout)/playground/games/memory-game/singleCardComp/SingleCard";
 import SingleCast from "./SingleCast";
 const Trending = () => {
   const data = TrendingCast;

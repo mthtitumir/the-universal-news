@@ -1,11 +1,8 @@
 "use client";
 
-import GoogleLogin from "@/components/GoogleLogin";
 import useAuth from "@/hooks/useAuth";
+import createJWT from "@/utils/createJWT";
 import axios from "axios";
-// import createJwt from "@/utils/createJwt";
-// import GoogleLogin from "@/components/GoogleLogin";
-// import createJWT from "@/utils/createJWT";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
@@ -61,12 +58,12 @@ const SignupForm = () => {
             const email = user?.email
             const role = 'user'
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo,role });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
             }
-            // await createJwt({ email: user.email });
+            await createJWT({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -83,14 +80,16 @@ const SignupForm = () => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
         const role = 'user'
+
         try {
             const user = await createUser(email, password);
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo,role });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
             }
+            await createJWT({ email });
             await profileUpdate({
                 displayName: name,
                 photoURL: photo,
@@ -110,7 +109,6 @@ const SignupForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-center text-2xl">Register here</h2>
-
             <div className="form-control">
                 <label htmlFor="name" className="label label-text">
                     Name
@@ -210,8 +208,6 @@ const SignupForm = () => {
                     Register
                 </button>
             </div>
-            {/* <GoogleLogin from={from} /> */}
-            {/* <GoogleLogin /> */}
 
             <p className="mt-3">
                 Already have an account?{" "}

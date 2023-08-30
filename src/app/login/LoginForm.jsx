@@ -1,7 +1,6 @@
-"use client";
-
+"use client"
 import useAuth from "@/hooks/useAuth";
-// import createJWT from "@/utils/createJWT";
+import createJWT from "@/utils/createJWT";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
@@ -16,7 +15,7 @@ const LoginForm = () => {
         formState: { errors },
     } = useForm();
 
-    const { signIn } = useAuth();
+    const { signIn, googleLogin } = useAuth();
     const search = useSearchParams();
     const from = search.get("redirectUrl") || "/";
     const { replace, refresh } = useRouter();
@@ -26,7 +25,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const user = await signIn(email, password);
-            // await createJWT({ email });
+            await createJWT({ email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -43,7 +42,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
-            // await createJwt({ email: user.email });
+            await createJWT({ email: user.email });
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
@@ -52,14 +51,14 @@ const LoginForm = () => {
             });
         } catch (error) {
             toast.dismiss(toastId);
-            toast.error(error.message || "User not signed in");
+            toast.error(error.message, "ok" || "User not signed in");
         }
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-center text-2xl">Log in your account</h2>
-                <div className="form-control">
+            <div className="form-control">
                 <label htmlFor="email" className="label label-text">
                     Email
                 </label>
@@ -118,7 +117,6 @@ const LoginForm = () => {
                 onClick={handleGoogleLogin}
                 type="button"
                 className="btn bg-transparent text-black border-black rounded mx-auto"
-
             >
                 <FcGoogle className="text-2xl " /> <span className="text-xs">Continue with google</span>
             </button>

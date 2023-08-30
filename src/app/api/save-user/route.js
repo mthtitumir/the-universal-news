@@ -1,6 +1,5 @@
 import DbConnect from "@/services/DbConnect";
 import { NextResponse } from "next/server";
-'server-only'
 
 export const POST = async (request) => {
     if (request.method === "POST") {
@@ -8,12 +7,12 @@ export const POST = async (request) => {
             const body = await request.json();
             const db = await DbConnect();
             const allUsers = db.collection('all-users');
-            const { name, email, photo } = body;
+            const { name, email, photo,role } = body;
             const doc = {
                 name, email, photo,role
             }
             const query = { email: allUsers.email };
-            const existingUser = await userses.findOne(query);
+            const existingUser = await allUsers.findOne(query);
             if (existingUser) {
                 return NextResponse.json({ message: 'vai already added' });
             }
