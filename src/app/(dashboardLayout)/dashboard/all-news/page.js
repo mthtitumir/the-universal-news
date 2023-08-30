@@ -4,7 +4,7 @@ const allNews = async () => {
     const news = await GetAllNews();
     return (
         <div className="overflow-x-auto p-3">
-            <div className=' border-2 border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
+            <div className=' border-2  border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
                 <h1 className="text-3xl text-red-600 font-semibold animate-pulse">{news.length} - Live News</h1>
             </div>
             <table className="table table-xs mt-5">

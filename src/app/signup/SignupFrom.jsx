@@ -84,7 +84,7 @@ const SignupForm = () => {
         try {
             const user = await createUser(email, password);
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo,role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);

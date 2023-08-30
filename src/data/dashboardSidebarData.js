@@ -4,7 +4,7 @@ export const adminSideNavbar = [
         title: 'Overview'
     },
     {
-        path:'/dashboard/users',
+        path:'/dashboard/all-users',
         title: 'Users'
     },
     {
