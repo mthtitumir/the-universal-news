@@ -3,15 +3,15 @@ import { NextResponse } from "next/server";
 export const POST = async (request) => {
     if (request.method === "POST") {
         try {
-            const body = await request.json();
-            console.log(body);
+            const {searchParams} = new URL(request.url)
+            const emails = searchParams.get('email');
             const db = await DbConnect();
-            const allNews = db.collection('all-news');
-            const {  id, title, description, img, category, subcategory, author, tags, comments, email, published_date ,status} = body;
-            const doc ={
-                id, title, description, img, category, subcategory, author, tags, comments, email, published_date,status
-            }
-            const result = await allNews.insertOne(doc)
+            const role = 'employer'
+            const allUsers = db.collection('all-users');
+            const result = await allUsers.updateOne(
+                {email:emails},
+                { $set: { role: role } }
+            );
             return NextResponse.json(result);
         } catch (error) {
             console.error("Error adding comment:", error);
