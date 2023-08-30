@@ -1,5 +1,5 @@
 import CategoryDisplay from '@/components/CategoryCom/CategoryDisplay';
-import GetCategoryData from '@/services/GetCategoryData';
+import { GetCategoryData } from '@/services/GetAllNews';
 import Link from 'next/link';
 
 const category = async ({ params }) => {

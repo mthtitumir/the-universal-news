@@ -13,7 +13,7 @@ export const POST = async (request) => {
                 name, email, photo
             }
             const query = { email: allUsers.email };
-            const existingUser = await userses.findOne(query);
+            const existingUser = await allUsers.findOne(query);
             if (existingUser) {
                 return NextResponse.json({ message: 'vai already added' });
             }

@@ -56,10 +56,6 @@ export const reporterSideNavbar = [
         path:'/dashboard/my-news',
         title: 'My News'
     },
-    {
-        path:'/profile',
-        title: 'Profile'
-    },
 ]
 export const userSideNavbar = [
     {
