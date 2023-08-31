@@ -1,30 +1,36 @@
 "use client"
-
+import { useState, useEffect } from "react";
 import axios from "axios";
 import useAuth from "./useAuth";
-import { useEffect } from "react";
 
 const useAdmin = () => {
-    const { user } = useAuth()
+    const { user } = useAuth();
+    const [adminData, setAdminData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
-        const handleAdmin = async () => {
+        const fetchAdminData = async () => {
             if (user) {
                 try {
                     const response = await axios.get(`/api/verifyAdmin?email=${user.email}`);
-                    console.log(response.data);
+                    setAdminData(response.data);
                 } catch (error) {
-                    console.error("Error fetching admin data:", error);
+                    setError(error);
+                } finally {
+                    setIsLoading(false);
                 }
             }
         };
 
-        handleAdmin();
+        fetchAdminData();
     }, [user]);
-    return (
-        <div>
 
-        </div>
-    );
+    return {
+        adminData,
+        isLoading,
+        error
+    };
 };
 
 export default useAdmin;
