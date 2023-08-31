@@ -1,4 +1,3 @@
-import React from "react";
 
 const SearchBox = () => {
   return (
@@ -7,7 +6,7 @@ const SearchBox = () => {
         <div>
           <input
             type="search"
-            name="serch"
+            name="search"
             placeholder="Search for artists, brands, tracks and podcast "
             className="bg-gray-200 h-10 px-5 pr-10 rounded-full w-full  lg:w-[500px]  text-sm focus:outline-none"
           />

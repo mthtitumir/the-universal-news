@@ -77,7 +77,7 @@ const AddaNews = () => {
                         </label>
                         <select className='input input-bordered input-accent w-full' {...register("subcategory", { required: true })}>
 
-                            <option value="asia">slect a sub category</option>
+                            <option value="asia">select a sub category</option>
                             <option value="asia">asia</option>
                             <option value="north-america">north america</option>
                             <option value="south-america">south america</option>
@@ -108,13 +108,13 @@ const AddaNews = () => {
                         <label className="label">
                             <span className="label-text card-text-secondary">author name</span>
                         </label>
-                        <input type="text" placeholder="instractot name" {...register("author")} value={user?.displayName} className="input input-bordered" />
+                        <input type="text" placeholder="instractor name" {...register("author")} value={user?.displayName} className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text card-text-secondary">author email</span>
                         </label>
-                        <input type="text" placeholder="instractot name" {...register("email")} value={user?.email} className="input input-bordered" />
+                        <input type="text" placeholder="instractor name" {...register("email")} value={user?.email} className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">

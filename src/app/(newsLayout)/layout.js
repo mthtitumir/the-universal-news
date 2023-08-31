@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer/Footer"
 import TopNavbar from "@/components/Navbar/TopNavbar"
 import Providers from "@/providers"
-import { Inter } from "next/font/google"
 import Toaster from "@/components/Toaster"
 
 

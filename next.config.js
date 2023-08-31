@@ -32,7 +32,6 @@ const nextConfig = {
       }
     ],
   },
-  permissionsPolicy: "default-src 'self';",
 }
 
 module.exports = nextConfig

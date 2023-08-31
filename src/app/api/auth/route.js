@@ -4,13 +4,11 @@ import { NextResponse } from "next/server";
 export const POST = async (request) => {
     const body = await request.json();
     const secret = new TextEncoder().encode(process.env.jwt_secret);
-    const alg = 'HS256'
+    const alg = 'HS256';
 
     const jwt = await new SignJWT(body)
         .setProtectedHeader({ alg })
         .setIssuedAt()
-        .setIssuer('urn:example:issuer')
-        .setAudience('urn:example:audience')
         .setExpirationTime('90d')
         .sign(secret);
 
