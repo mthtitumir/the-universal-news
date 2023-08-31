@@ -79,7 +79,7 @@ const SignupForm = () => {
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
-        const role = 'user'
+        const role = 'user';
 
         try {
             const user = await createUser(email, password);
