@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Brad Pitt's Latest Ventures",
+    "image": "https://i.ibb.co/K0b0LCV/Brad-Pitt-s-Latest-Ventures.jpg",
+    "description": "Brad Pitt is currently preparing for his role in 'Stellar Odyssey,' an upcoming sci-fi blockbuster. He's also working on an art exhibition featuring his own artwork. Additionally, he's an advocate for climate change awareness and recently joined a campaign to promote sustainable living practices.",
+    "posted_time": "1 hr ago",
+    "author": "John Smith"
+  },
+  {
+    "id": 2,
+    "title": "Sarah Adams' Musical Journey",
+    "image": "https://i.ibb.co/rkVS07B/fullcover-180x1080.jpg",
+    "description": "Sarah Adams is currently on her 'Midnight Melodies' album tour, wowing audiences with her live performances. She's also working on a children's charity album aimed at raising funds for underprivileged youth.",
+    "posted_time": "2 hrs ago",
+    "author": "Emily Anderson"
+  },
+  {
+    "id": 3,
+    "title": "Scarlett Johansson's Impact on Entertainment",
+    "image": "https://i.ibb.co/C55JFWw/Scarlett-Johansson-s-Impact-on-Entertainment.jpg",
+    "description": "Scarlett Johansson is busy promoting her latest film, 'Echoes of Destiny,' a powerful drama generating significant buzz. She's also gearing up for an upcoming action-packed thriller and working with a nonprofit organization focused on gender equality.",
+    "posted_time": "1 min ago",
+    "author": "David Johnson"
+  },
+  {
+    "id": 4,
+    "title": "Elon Musk's Innovations",
+    "image": "https://i.ibb.co/MB8XW2G/Elon-Musk-s-Innovations.jpg",
+    "description": "Elon Musk, the visionary entrepreneur, continues to push the boundaries of technology. He is focusing on advancing space exploration through SpaceX's upcoming mission to Mars. Additionally, he's working on groundbreaking developments in electric vehicle technology at Tesla and has recently announced plans for a new sustainable energy project.",
+    "posted_time": "30 mins ago",
+    "author": "Richard Williams"
+  },
+  {
+    "id": 5,
+    "title": "Emma Watson's Philanthropic Endeavors",
+    "image": "https://i.ibb.co/PQ9f5w5/Emma-Watson-s-Philanthropic-Endeavors.jpg",
+    "description": "Emma Watson, the accomplished actress and activist, is actively involved in various philanthropic endeavors. She's dedicated to promoting gender equality, girls' education, and sustainable fashion. Currently, she's working on a documentary shedding light on environmental issues and is collaborating with a global initiative to empower disadvantaged women.",
+    "posted_time": "15 mins ago",
+    "author": "Sophia Roberts"
+  },
+  {
+    "id": 6,
+    "title": "Tom Hanks' Upcoming Projects",
+    "image": "https://i.ibb.co/QJbTZLY/Tom-Hanks-Upcoming-Projects.jpg",
+    "description": "Tom Hanks, the beloved actor, is gearing up for several exciting projects. He's set to star in a historical drama that's already generating Oscar buzz. Additionally, he's working on a book adaptation and lending his voice to a highly-anticipated animated film.",
+    "posted_time": "45 mins ago",
+    "author": "Michael Brown"
+  }
+]
