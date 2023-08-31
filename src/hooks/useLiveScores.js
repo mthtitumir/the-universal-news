@@ -8,7 +8,7 @@ const Scores = () => {
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
  
-  return data;
+  return data; 
 }
 
 export default Scores;

@@ -13,7 +13,6 @@ export const metadata = {
 }
 
 const Dashboard = ({ children }) => {
-
   const admin = true;
   const employer = false;
   const reporter = false;
