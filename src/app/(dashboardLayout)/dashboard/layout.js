@@ -4,6 +4,7 @@ import Link from "next/link"
 import { AiOutlineMenu } from "react-icons/ai"
 import SectionNavbar from "@/components/Navbar/SectionNavbar"
 import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar, generalSidebar } from "@/data/dashboardSidebarData"
+import VerifyUser from "@/components/DashboardComponents/VerifyUser"
 
 
 export const metadata = {
@@ -16,7 +17,7 @@ const Dashboard = ({ children }) => {
   const admin = true;
   const employer = false;
   const reporter = false;
-  let navData;
+  let navData; 
 
   if(admin){
     navData = adminSideNavbar;
@@ -32,6 +33,7 @@ const Dashboard = ({ children }) => {
     <div>
       <Providers>
         <SectionNavbar />
+        <VerifyUser />
         <div className="drawer lg:drawer-open c-auto">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col gap-3  md:z-auto">

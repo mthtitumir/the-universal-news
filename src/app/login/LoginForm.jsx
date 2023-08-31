@@ -1,11 +1,6 @@
 "use client"
 import useAuth from "@/hooks/useAuth";
-<<<<<<< HEAD
-import createJWT from "@/utils/createJWT";
-import axios from "axios";
-=======
 import usejwt from "@/utils/usejwt";
->>>>>>> b87e035bf93f5c90d4dc76d4968a343d8a027196
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { startTransition } from "react";
@@ -47,21 +42,7 @@ const LoginForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
-<<<<<<< HEAD
-            const name = user?.displayName
-            const photo = user?.photoURL
-            const email = user?.email
-            const role = 'user'
-            try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
-                console.log(response.data);
-            } catch (error) {
-                console.error('Error submitting form:', error);
-            }
-            await createJWT({ email: user.email });
-=======
             await usejwt({ email: user.email });
->>>>>>> b87e035bf93f5c90d4dc76d4968a343d8a027196
             startTransition(() => {
                 refresh();
                 toast.dismiss(toastId);
