@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import PostComment from './PostComment';
 import DisplayComment from './DisplayComment';
 
