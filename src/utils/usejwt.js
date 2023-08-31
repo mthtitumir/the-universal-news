@@ -1,4 +1,4 @@
-const createJWT = async (payload) => {
+const usejwt = async (payload) => {
     try {
         const res = await fetch('/api/auth', {
             method: "POST",
@@ -14,4 +14,4 @@ const createJWT = async (payload) => {
     }
 }
 
-export default createJWT;
+export default usejwt;

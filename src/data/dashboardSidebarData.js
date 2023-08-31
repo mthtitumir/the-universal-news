@@ -4,23 +4,23 @@ export const adminSideNavbar = [
         title: 'Overview'
     },
     {
-        path:'/users',
+        path:'/dashboard/all-users',
         title: 'Users'
     },
     {
-        path:'/reporters',
+        path:'/dashboard/reporters',
         title: 'Reporters'
     },
     {
-        path:'/all-news',
+        path:'/dashboard/all-news',
         title: 'All News'
     },
     {
-        path:'/pending-news',
+        path:'/dashboard/pending-news',
         title: 'Pending News'
     },
     {
-        path:'/comments',
+        path:'/dashboard/comments',
         title: 'Comments'
     },
 

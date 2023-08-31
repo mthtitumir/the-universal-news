@@ -15,7 +15,7 @@ export const POST = async (request) => {
             return NextResponse.json(result);
         } catch (error) {
             console.error("Error adding comment:", error);
-            NextResponse.json({ error: "Eroor ading data" });
+            NextResponse.json({ error: "Error adding data" });
         }
     } else {
         NextResponse.json({ message: "Method not allowed" });

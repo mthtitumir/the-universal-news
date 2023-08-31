@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import Image from "next/image";
 
@@ -29,7 +29,7 @@ const SingleCast = ({ TrendingCast, handleSrc }) => {
         {/* {isPlaying ? ( */}
         <AiFillPlayCircle
           className="w-10 h-10 text-white cursor-pointer"
-          onClick={() => handleSrc(src)}
+          onClick={() => handleSrc(src, title)}
         />
         {/* ) : ( */}
         {/* <AiFillPlayCircle
