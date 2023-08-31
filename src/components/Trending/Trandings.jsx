@@ -9,7 +9,7 @@ const Trending = () => {
   const [img, setImg] = useState("");
   const [title, setTitle] = useState("");
   const iframeRef = useRef(null);
-  const [playingIndex, setPlayingIndex] = useState(-1); // Initialize as -1, meaning nothing is playing
+  const [playingIndex, setPlayingIndex] = useState(0); // Initialize as -1, meaning nothing is playing
 
   const handleSrc = (src, title, index) => {
     if (playingIndex === index) {
