@@ -26,6 +26,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "i0.wp.com"
       },
+      {
+        protocol : "https",
+        hostname : "image.tmdb.org"
+      }
     ],
   },
 }
