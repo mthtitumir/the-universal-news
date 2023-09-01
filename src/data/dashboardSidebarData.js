@@ -1,6 +1,6 @@
 export const adminSideNavbar = [
     {
-        path:'/',
+        path:'/dashboard',
         title: 'Overview'
     },
     {
@@ -27,21 +27,23 @@ export const adminSideNavbar = [
 ]
 export const employerSideNavbar = [
     {
-        path:'/profile',
+        path:'/dashboard',
         title: 'Profile'
     },
     {
-        path:'/applications',
-        title: 'Job Applications'
+        path:'/dashboard/add-job',
+        title: 'Add a Job'
     },
     {
-        path:'/your-jobs',
+        path:'/dashboard/your-jobs',
         title: 'All Jobs'
     },
     {
-        path:'/add-job',
-        title: 'Add a Job'
-    },
+        path:'/dashboard/applications',
+        title: 'Job Applications'
+    }
+   
+    
 ]
 export const reporterSideNavbar = [
     {

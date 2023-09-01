@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { navData } from '@/data/navData';
 import { myFont } from './font';
 
-const SectionNavbar = () => {
+const SectionNavbar = ({}) => {
     const { user, logout } = useAuth();
     const { uid, displayName, photoURL } = user || {};
     const pathName = usePathname();
