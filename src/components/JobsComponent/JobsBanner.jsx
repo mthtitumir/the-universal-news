@@ -6,7 +6,7 @@ import SingleJob from './SingleJob';
 import Link from 'next/link';
 
 const JobsBanner = () => {
-    const jobsData = data
+    const jobsData = data;
     // console.log(jobsData)
     return (
         <div>
