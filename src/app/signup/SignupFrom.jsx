@@ -54,6 +54,7 @@ const SignupForm = () => {
         try {
             const { user } = await googleLogin();
             const name = user?.displayName
+            console.log(name)
             const photo = user?.photoURL
             const email = user?.email
             const role = 'user'
