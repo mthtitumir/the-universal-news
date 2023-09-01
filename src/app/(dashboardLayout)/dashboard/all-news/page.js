@@ -28,7 +28,7 @@ const allNews = async () => {
                         news.map(singleNews => (
                             <tr className="" key={singleNews._id}>
                                 <td>{singleNews?.id}</td>
-                                <th>{singleNews?.title.split(0,30)}</th>
+                                <th>{singleNews?.title.slice(0,15)}...</th>
                                 <td>{singleNews?.author}</td>
                                 <td>{singleNews?.published_date}</td>
                                 <td>{singleNews?.category}</td>

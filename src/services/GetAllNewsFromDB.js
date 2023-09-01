@@ -87,5 +87,3 @@ export const GetPendingNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 }
-
-
