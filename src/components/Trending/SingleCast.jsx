@@ -1,18 +1,12 @@
-"use client";
-import { useState } from "react";
-import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
+import React from "react";
 import Image from "next/image";
+import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 
-const SingleCast = ({ TrendingCast, handleSrc }) => {
-  //   const [isPlaying, setIsPlaying] = useState(false);
-  const { title, image, src, host, release_date, viewers } = TrendingCast;
-
-  const togglePlayPause = () => {
-    setIsPlaying((prevState) => !prevState);
-  };
+const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
+  const { title, image, host, chanel_logo } = TrendingCast;
 
   return (
-    <div className="card w-full bg-base-100 shadow-xl relative group">
+    <div className="card w-full bg-base-100 shadow-xl relative h-[450px]">
       <figure>
         <Image
           height={50}
@@ -20,30 +14,45 @@ const SingleCast = ({ TrendingCast, handleSrc }) => {
           src={image}
           alt="book image"
           className="w-full h-full"
-        ></Image>
-      </figure>
-      <div className="card-body">
-        <h2 className="lg:text-xl text-lg font-semibold">{title}</h2>
-      </div>
-      <div className="absolute top-[20%] left-1/2 hidden group-hover:block transition-colors duration-300 ease-in-out delay-100">
-        {/* {isPlaying ? ( */}
-        <AiFillPlayCircle
-          className="w-10 h-10 text-white cursor-pointer"
-          onClick={() => handleSrc(src)}
         />
-        {/* ) : ( */}
-        {/* <AiFillPlayCircle
+      </figure>
+      <div className="card-body absolute bottom-1">
+        <h2 className="lg:text-xl text-lg font-semibold">{title}</h2>
+        <div className="flex items-center justify-between py-4 gap-10">
+          <div className="flex items-center gap-1">
+            <Image
+              height={48}
+              width={48}
+              src={chanel_logo}
+              alt="book image"
+              className="w-12 h-12 rounded-full"
+            />
+            <p className="text-xl font-semibold">{host}</p>
+          </div>
+          <p className="py-2 px-1 bg-black text-white text-center rounded-3xl shadow-lg cursor-pointer">Follow</p>
+        </div>
+      </div>
+
+      <div className="absolute top-[20%] left-1/2 transition-colors duration-300 ease-in-out delay-100">
+        {isPlaying ? (
+          <AiFillPauseCircle
             className="w-10 h-10 text-white cursor-pointer"
-            onClick={togglePlayPause}
+            onClick={() => {
+              handleSrc(); // Pause by clearing the iframe source
+            }}
           />
-        )} */}
+        ) : (
+          <AiFillPlayCircle
+            className="w-10 h-10 text-white cursor-pointer"
+            onClick={() => {
+              handleSrc();
+              scrollToIframe(); // Scroll to the iframe when clicked
+            }}
+          />
+        )}
       </div>
     </div>
   );
 };
 
 export default SingleCast;
-
-/* 
-// <iframe width="560" height="315" src="https://www.youtube.com/embed/ihD8jA0eyis?si=JJALFREIQq49XrYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-*/

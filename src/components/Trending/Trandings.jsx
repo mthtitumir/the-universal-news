@@ -1,45 +1,84 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import TrendingCast from "../../utils/podcast.json";
-import SingleCard from "@/app/(newsLayout)/playground/games/memory-game/singleCardComp/SingleCard";
 import SingleCast from "./SingleCast";
+import Headline from "../miniComponents/Headline";
+
 const Trending = () => {
   const data = TrendingCast;
   const [img, setImg] = useState("");
-  console.log(data);
-  const handleSrc = (src) => {
-    const imgSrc = src;
-    setImg(imgSrc);
+  const [title, setTitle] = useState("");
+  const iframeRef = useRef(null);
+  const [playingIndex, setPlayingIndex] = useState(0); // Initialize as -1, meaning nothing is playing
+
+  const handleSrc = (src, title, index) => {
+    if (playingIndex === index) {
+      // Clicked on the currently playing item, pause it
+      setPlayingIndex(-1);
+      setImg("");
+    } else {
+      // Clicked on a new item, play it
+      setImg(src);
+      setTitle(title);
+      setPlayingIndex(index);
+    }
   };
-  console.log(img);
+
+  const scrollToIframe = () => {
+    iframeRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <div>
-      <div className="flex items-center justify-center px-10">
+      <div className="flex flex-col justify-center px-10">
         <iframe
+          ref={iframeRef}
           src={
             img
               ? img
               : "https://www.youtube.com/embed/VYDdvW-nN9k?si=Vqc-pbRnZVC5u4cC"
           }
           title="YouTube video player"
-          frameborder="0"
-          className="w-full lg:px-20 px-6 lg:h-[500px] h-[250px] "
+          frameBorder="0"
+          className="w-full lg:h-[700px] h-[250px] "
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
-      </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:mt-20 mb-10 my-6 lg:mx-20 mx-6">
-        {data.map((TrendingCast) => (
-          <SingleCast
-            key={TrendingCast.id}
-            TrendingCast={TrendingCast}
-            handleSrc={handleSrc}
-          ></SingleCast>
-        ))}
-      </div>
-        <div className=" flex justify-center items-center">
-        <button className="flex justify-center items-center bg-cyan-500 p-5 text-white rounded-lg">Explore more</button>
+        <div className="mt-5">
+          <h1 className="md:text-4xl">
+            {title ||
+              "Science, Religion, Philosophy: Perspectives Podcast (Podcast-01) | Yahiya Amin and @sadmansadic"}
+          </h1>
         </div>
+      </div>
+
+      {/* more on this topic  */}
+      <div className="">
+        <div className="divider"></div>
+        <Headline headline={"Listen More Like This"}></Headline>
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-10 my-6">
+          {data.map((TrendingCast, index) => (
+            <SingleCast
+              key={TrendingCast.id}
+              TrendingCast={TrendingCast}
+              handleSrc={() =>
+                handleSrc(TrendingCast.src, TrendingCast.title, index)
+              }
+              isPlaying={playingIndex === index}
+              scrollToIframe={scrollToIframe}
+            />
+          ))}
+        </div>
+      </div>
+      <div className=" flex justify-center items-center">
+        <button className="flex justify-center items-center bg-cyan-500 p-5 text-white rounded-lg">
+          Explore More
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import DbConnect from './DbConnect';
 import { ObjectId } from 'mongodb';
 
@@ -13,9 +12,8 @@ export const GetAllNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetCatagoryDataFromDb = async (category) => {
+export const GetCategoryDataFromDb = async (category) => {
     try {
-        const categorys = category
         const query = { category: category };
         const db = await DbConnect();
         const allNews = db.collection('all-news');
@@ -52,18 +50,42 @@ export const GetSubcategoryFromDb = async (subCategories) => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetSingleReporterNewsFromDb = async (email) => {
+export const GetAllUsersFromDB = async () => {
     try {
-        const emails = email;
         const db = await DbConnect();
-        const allNews = db.collection('all-news');
-        const query = { email: emails }
-        const result = await allNews.findOne(query)
-        console.log(result)
+        const allUsers = db.collection('all-users');
+        const result = await allUsers.find().toArray();
         return result;
     } catch (error) {
         console.error(error)
         return ({ error: 'error to get data' });
     }
 };
+
+export const GetAllReportersFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allUsers = db.collection('all-users');
+        const query = { role: "reporter" }
+        const result = await allUsers.find(query).toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+}
+
+export const GetPendingNewsFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allNews = db.collection('all-news');
+        const query = { status: "pending" };
+        const result = await allNews.find(query).toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+}
+
 

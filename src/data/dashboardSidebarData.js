@@ -1,51 +1,53 @@
 export const adminSideNavbar = [
     {
-        path:'/',
+        path:'/dashboard',
         title: 'Overview'
     },
     {
-        path:'/users',
+        path:'/dashboard/all-users',
         title: 'Users'
     },
     {
-        path:'/reporters',
+        path:'/dashboard/reporters',
         title: 'Reporters'
     },
     {
-        path:'/all-news',
+        path:'/dashboard/all-news',
         title: 'All News'
     },
     {
-        path:'/pending-news',
+        path:'/dashboard/pending-news',
         title: 'Pending News'
     },
     {
-        path:'/comments',
+        path:'/dashboard/comments',
         title: 'Comments'
     },
 
 ]
 export const employerSideNavbar = [
     {
-        path:'/profile',
+        path:'/dashboard',
         title: 'Profile'
     },
     {
-        path:'/applications',
-        title: 'Job Applications'
+        path:'/dashboard/add-job',
+        title: 'Add a Job'
     },
     {
-        path:'/your-jobs',
+        path:'/dashboard/your-jobs',
         title: 'All Jobs'
     },
     {
-        path:'/add-job',
-        title: 'Add a Job'
-    },
+        path:'/dashboard/applications',
+        title: 'Job Applications'
+    }
+   
+    
 ]
 export const reporterSideNavbar = [
     {
-        path:'/profile',
+        path:'/dashboard',
         title: 'Profile'
     },
     {
@@ -55,10 +57,6 @@ export const reporterSideNavbar = [
     {
         path:'/dashboard/my-news',
         title: 'My News'
-    },
-    {
-        path:'/profile',
-        title: 'Profile'
     },
 ]
 export const userSideNavbar = [

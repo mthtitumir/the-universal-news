@@ -8,49 +8,71 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 const Banner = () => {
+  const pods = [
+    'https://i.ibb.co/sCpkQ7d/pod5.jpg',
+    'https://i.ibb.co/cwW23nF/pod4.jpg',
+    'https://i.ibb.co/CwMZPH7/pod3.jpg',
+    'https://i.ibb.co/gzKgKxj/pod2.jpg',
+    'https://i.ibb.co/KxFk643/pod1.jpg'
+  ]
   return (
     <div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 3500,
+          disableOnInteraction: true,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="relative">
-            <Image
-              height={500}
-              width={800}
-              src="https://i.ibb.co/2KwfmgT/Podcast-Banner-1.jpg"
-              alt="book image"
-              className="w-full h-96"
-            ></Image>
-            <div className="absolute  flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-              <div className="text-white space-y-3 lg:space-y-7 pl-4 lg:pl-28 w-3/4">
-                <h2 className="lg:text-5xl  text-2xl font-bold">
-                  Music Extravaganza
-                </h2>
-                <p className="text-gray-200 text-xs lg:text-base ">
-                  Dive into the rhythm of life with our music-packed episodes,
-                  where we explore the world's melodies, beats, and stories
-                  behind the tunes that shape our lives.
-                </p>
-                <button className="bg-cyan-500 rounded px-2 py-1 text-white">
-                  Discover More
-                </button>
+        {
+          pods.map(pod => <SwiperSlide key={pod}>
+            <div className="relative">
+              <Image
+                height={450}
+                width={800}
+                src={pod}
+                alt="book image"
+                className="w-full h-96"
+              ></Image>
+              <div className="absolute  flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
+                <div className="text-white space-y-3 lg:space-y-7 pl-4 lg:pl-28 w-3/4">
+                  <h2 className="lg:text-5xl  text-2xl font-bold">
+                    Music Extravaganza
+                  </h2>
+                  <p className="text-gray-200 text-xs lg:text-base ">
+                    Dive into the rhythm of life with our music-packed episodes,
+                    where we explore the world's melodies, beats, and stories
+                    behind the tunes that shape our lives.
+                  </p>
+                  <button className="bg-cyan-500 rounded px-2 py-1 text-white">
+                    Discover More
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
+          </SwiperSlide>)
+        }
+
+      </Swiper>
+    </div>
+  );
+};
+
+export default Banner;
+
+
+
+
+
+
+{/* <SwiperSlide>
           <div className="relative">
             <Image
               height={500}
@@ -154,10 +176,4 @@ const Banner = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  );
-};
-
-export default Banner;
+        </SwiperSlide> */}
