@@ -39,7 +39,6 @@ const JobsBanner = () => {
                         {/* input */}
 
                         <HandleSearchFunction />
-
                         <div>
                             <div className='flex items-center gap-2 my-3'>
                                 <input type="checkbox" style={{ width: '17px', height: '20px' }} />
