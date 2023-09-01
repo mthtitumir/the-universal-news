@@ -40,22 +40,21 @@ const JobsBanner = () => {
 
                         <HandleSearchFunction />
 
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>Remote</label>
+                        <div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>Remote</label>
+                            </div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>Include all jobs matching filter</label>
+                            </div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>
+                                    Part time</label>
+                            </div>
                         </div>
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>Include all jobs matching filter</label>
-                        </div>
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>
-                                Part time</label>
-                        </div>
-
-
-
                     </div>
 
                     {/* Jobs Options */}
