@@ -3,10 +3,10 @@ import Image from "next/image";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 
 const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
-  const { title, image } = TrendingCast;
+  const { title, image, host, chanel_logo } = TrendingCast;
 
   return (
-    <div className="card w-full bg-base-100 shadow-xl relative">
+    <div className="card w-full bg-base-100 shadow-xl relative h-[450px]">
       <figure>
         <Image
           height={50}
@@ -16,9 +16,23 @@ const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
           className="w-full h-full"
         />
       </figure>
-      <div className="card-body">
+      <div className="card-body absolute bottom-1">
         <h2 className="lg:text-xl text-lg font-semibold">{title}</h2>
+        <div className="flex items-center justify-between py-4 gap-10">
+          <div className="flex items-center gap-1">
+            <Image
+              height={48}
+              width={48}
+              src={chanel_logo}
+              alt="book image"
+              className="w-12 h-12 rounded-full"
+            />
+            <p className="text-xl font-semibold">{host}</p>
+          </div>
+          <p className="py-2 px-1 bg-black text-white text-center rounded-3xl shadow-lg cursor-pointer">Follow</p>
+        </div>
       </div>
+
       <div className="absolute top-[20%] left-1/2 transition-colors duration-300 ease-in-out delay-100">
         {isPlaying ? (
           <AiFillPauseCircle
