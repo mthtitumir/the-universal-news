@@ -6,6 +6,13 @@ import {MdLocationPin} from "react-icons/md";
 
 const UserInfo = () => {
     const { user } = useAuth();
+    // const checkEm = async (user) =>{
+    //     const res = await axios.get(`/api/verify-employer/${user?.email}`);
+    //     // console.log(res);
+    // }
+    // console.log(checkEm(user));
+    // const role = GetRole(user?.email);
+    // console.log(role);
     return (
         <div>
             <h1 className="text-xl md:text-3xl mt-5 text-center">Welcome <span className="text-cyan-600">{user ? user.displayName : "Sir"}</span> !</h1>
