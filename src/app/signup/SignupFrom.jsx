@@ -54,6 +54,7 @@ const SignupForm = () => {
         try {
             const { user } = await googleLogin();
             const name = user?.displayName
+            console.log(name)
             const photo = user?.photoURL
             const email = user?.email
             const role = 'user'
@@ -79,7 +80,7 @@ const SignupForm = () => {
     const onSubmit = async (data, event) => {
         const { name, email, password, photo } = data;
         const toastId = toast.loading("Loading...");
-        const role = 'user'
+        const role = 'user';
 
         try {
             const user = await createUser(email, password);

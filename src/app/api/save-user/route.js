@@ -11,7 +11,7 @@ export const POST = async (request) => {
             const doc = {
                 name, email, photo,role
             }
-            const query = { email: allUsers.email };
+            const query = { email: email };
             const existingUser = await allUsers.findOne(query);
             if (existingUser) {
                 return NextResponse.json({ message: 'vai already added' });
