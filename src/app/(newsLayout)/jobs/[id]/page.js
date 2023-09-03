@@ -1,18 +1,35 @@
 "use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../../../../utils/job.json'
 import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
 import { CgSandClock } from 'react-icons/cg'
 import { GoPeople, GoClockFill } from 'react-icons/go'
 import Link from 'next/link';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 const JobDetails = ({ params }) => {
-    const jobDetailsData = data;
     const id = params.id;
-    const jobDetails = jobDetailsData.find(job => job.id == id);
+    const [jobDetails, setjobDetails] = useState({})
+    useEffect(() => {
+        const singlejob = async () => {
+            const resposne = await axios.get(`/api/getSinglejobsdata/${id}`)
+            setjobDetails(resposne.data)
+        }
+        singlejob()
+    }, [id])
     const { employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const resume = form.resume.value
+        const coverLetter = form.letter.value;
+        console.log(resume, coverLetter);
+        event.target.reset();
+    }
 
 
     return (
@@ -128,9 +145,7 @@ const JobDetails = ({ params }) => {
 
                     <p className='text-base font-semibold mt-4'>Skill(s) required</p>
                     <div className='flex items-center gap-4 text-center md:w-2/4'>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[0]}</p>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[1]}</p>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[2]}</p>
+                        {requiredSkills?.map(skils => <p key={skils}>{skils}</p>)}
                     </div>
 
                     <p className='text-base font-semibold mt-4'>Salary</p>
@@ -145,18 +160,13 @@ const JobDetails = ({ params }) => {
                     </p>
 
                     <div className='mx-auto text-center w-full'>
-                        <button className=" px-7 py-4 bg-cyan-500 text-white rounded text-lg" onClick={() => window.my_modal_5.showModal()}>Apply Now</button>
+                        <button className="px-7 py-4 bg-cyan-500 text-white rounded text-lg" onClick={() => window.my_modal_2.showModal()}>Apply Now</button>
                     </div>
 
-                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle w-[95%]">
-                        <form method="dialog" className="modal-box">
-                            <div className="modal-action">
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn btn-circle btn-outline -mt-10 mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                </button>
-                            </div>
 
+                    {/* Open the modal using ID.showModal() method */}
+                    <dialog id="my_modal_2" className="modal">
+                        <form method="dialog" onSubmit={handleSubmit} className="modal-box">
                             <div className='bg-gray-100 px-3 py-5 rounded'>
                                 <p className='text-base font-semibold '>Applying for {jobTitle} {jobCategory}
                                 </p>
@@ -170,15 +180,16 @@ const JobDetails = ({ params }) => {
                             </p>
                             <p className='text-gray-500 text-sm mb-2'>Your current resume will be submitted along with this application. </p>
                             <input
-                                type="file"
-                                id="photo"
-                                className="file-input file-input-bordered rounded file-input-info w-full h-9"
+                                type='text'
+                                name='resume'
+                                placeholder='Your resume Link'
+                                className="border rounded w-2/4 px-2 h-9"
                             />
 
                             <p className='text-base font-semibold mt-4'>Cover letter *
                             </p>
                             <p className='text-gray-500 text-sm mb-4'>Why should you be hired for this role? </p>
-                            <textarea placeholder='Submit Your Cover Latter' className='border w-full h-28 p-3'></textarea>
+                            <textarea name='letter' placeholder='Submit Your Cover Latter' className='border w-full h-28 p-3'></textarea>
 
 
                             <p className='text-base font-semibold mt-4'>Your availability
@@ -197,6 +208,9 @@ const JobDetails = ({ params }) => {
                             <div className='mx-auto w-3/4 text-center py-4'>
                                 <button className="primary-btn">Submit Application</button>
                             </div>
+                        </form>
+                        <form method="dialog" className="modal-backdrop">
+                            <button>close</button>
                         </form>
                     </dialog>
                 </div>
