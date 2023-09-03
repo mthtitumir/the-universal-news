@@ -31,12 +31,16 @@ export const employerSideNavbar = [
         title: 'Profile'
     },
     {
+        path:'/dashboard/employerOverview',
+        title: 'overview'
+    },
+    {
         path:'/dashboard/add-job',
         title: 'Add a Job'
     },
     {
-        path:'/dashboard/your-jobs',
-        title: 'All Jobs'
+        path:'/dashboard/my-job',
+        title: 'my Jobs'
     },
     {
         path:'/dashboard/applications',

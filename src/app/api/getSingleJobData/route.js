@@ -5,13 +5,11 @@ export const GET = async (request) => {
     if (request.method === "GET") {
         try {
             const { searchParams } = new URL(request.url);
-            const search = searchParams.get('search');
-            console.log(search)
+            const emails = searchParams.get('email');
             const db = await DbConnect();
             const allJobs = db.collection('all-jobs');
-            const query = { jobTitle: {$regex :search,$options:"i" }};
+            const query = { email: emails };
             const result = await allJobs.find(query).toArray(); 
-            console.log(result)
             return NextResponse.json(result);
         } catch (error) {
             console.error("Error fetching user data:", error);
