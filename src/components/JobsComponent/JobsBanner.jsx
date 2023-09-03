@@ -5,10 +5,10 @@ import data from '../../utils/job.json'
 import SingleJob from './SingleJob';
 import Link from 'next/link';
 import HandleSearchFunction from './HandleSearchFunction';
+import { GetAllJobs } from '@/services/GetAllNews';
 
-const JobsBanner = () => {
-    const jobsData = data;
-    // console.log(jobsData)
+const JobsBanner =async () => {
+    const jobsData = await GetAllJobs();
     return (
         <div>
             <div className=' bg-cyan-500 text-white py-3 flex justify-center gap-10 items-center'>

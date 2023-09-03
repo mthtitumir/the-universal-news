@@ -1,17 +1,26 @@
 "use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../../../../utils/job.json'
 import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
 import { CgSandClock } from 'react-icons/cg'
 import { GoPeople, GoClockFill } from 'react-icons/go'
 import Link from 'next/link';
+import axios from 'axios';
 
 const JobDetails = ({ params }) => {
-    const jobDetailsData = data;
     const id = params.id;
-    const jobDetails = jobDetailsData.find(job => job.id == id);
+    const [jobDetails,setjobDetails] = useState({})
+    useEffect(() => {
+        const singlejob = async () =>{
+            const resposne =await axios.get(`/api/getSinglejobsdata/${id}`)
+            setjobDetails(resposne.data)
+        }
+        singlejob()
+    }, [id])
+    
+    // const jobDetails = jobDetailsData.find(job => job.id == id);
     const { employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
 
 
@@ -128,9 +137,7 @@ const JobDetails = ({ params }) => {
 
                     <p className='text-base font-semibold mt-4'>Skill(s) required</p>
                     <div className='flex items-center gap-4 text-center md:w-2/4'>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[0]}</p>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[1]}</p>
-                        <p className='bg-gray-100 px-3 py-1 rounded-xl text-gray-500'>{requiredSkills[2]}</p>
+                    {requiredSkills?.map(skils=><p key={skils}>skils</p>)}
                     </div>
 
                     <p className='text-base font-semibold mt-4'>Salary</p>
