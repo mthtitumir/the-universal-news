@@ -4,7 +4,7 @@ import { BiFilterAlt } from 'react-icons/bi'
 import data from '../../utils/job.json'
 import SingleJob from './SingleJob';
 import Link from 'next/link';
-import HandleSearchFunction from './HandleSearchefuntion';
+import HandleSearchFunction from './HandleSearchFunction';
 
 const JobsBanner = () => {
     const jobsData = data;
