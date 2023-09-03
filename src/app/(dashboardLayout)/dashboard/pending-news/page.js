@@ -10,7 +10,7 @@ const PendingNews = async () => {
             <div className=' border-2  border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
                 <h1 className="text-3xl text-red-600 font-semibold animate-pulse">{pendingNews?.length} - Pending News</h1>
             </div>
-            <table className="table table-xs mt-5">
+            <table className="table table-sm mt-5">
                 <thead>
                     <tr>
                         <th>ID</th>

@@ -68,6 +68,7 @@ export const GetAllReportersFromDB = async () => {
         const allUsers = db.collection('all-users');
         const query = { role: "reporter" }
         const result = await allUsers.find(query).toArray();
+        console.log(result.length);
         return result;
     } catch (error) {
         console.error(error)
