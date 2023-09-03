@@ -27,12 +27,12 @@ export const adminSideNavbar = [
 ]
 export const employerSideNavbar = [
     {
-        path:'/dashboard/employerOverview',
-        title: 'overview'
+        path:'/dashboard',
+        title: 'Profile'
     },
     {
-        path:'/dashboard/Profile',
-        title: 'Profile'
+        path:'/dashboard/employerOverview',
+        title: 'overview'
     },
     {
         path:'/dashboard/add-job',
