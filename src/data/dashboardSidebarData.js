@@ -27,7 +27,11 @@ export const adminSideNavbar = [
 ]
 export const employerSideNavbar = [
     {
-        path:'/dashboard',
+        path:'/dashboard/employerOverview',
+        title: 'overview'
+    },
+    {
+        path:'/dashboard/Profile',
         title: 'Profile'
     },
     {

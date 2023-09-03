@@ -2,10 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
-// import { FaArrowTrendUp } from 'react-icons/fa'
-
-
-
 
 const SingleJob = ({ job }) => {
     const {_id, id, jobTitle, companyName,  employmentType, salaryOrHourlyWage, jobType, startingTime, jobCategory, experience, postDate } = job
@@ -57,7 +53,6 @@ const SingleJob = ({ job }) => {
                     <Link href={`/jobs/${_id}`}>
                         <button className='secondary-btn'>View Details</button>
                     </Link>
-                    <button className="primary-btn">Apply Now</button>
                 </div>
             </div>
         </div>

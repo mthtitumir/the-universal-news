@@ -8,21 +8,23 @@ import { CgSandClock } from 'react-icons/cg'
 import { GoPeople, GoClockFill } from 'react-icons/go'
 import Link from 'next/link';
 import axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 const JobDetails = ({ params }) => {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const id = params.id;
-    const [jobDetails,setjobDetails] = useState({})
+    const [jobDetails, setjobDetails] = useState({})
     useEffect(() => {
-        const singlejob = async () =>{
-            const resposne =await axios.get(`/api/getSinglejobsdata/${id}`)
+        const singlejob = async () => {
+            const resposne = await axios.get(`/api/getSinglejobsdata/${id}`)
             setjobDetails(resposne.data)
         }
         singlejob()
     }, [id])
-    
-    // const jobDetails = jobDetailsData.find(job => job.id == id);
     const { employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
-
+    const onSubmit = async (data) => {
+        console.log(data)
+    }
 
     return (
         <div className='p-4 border c-auto'>
@@ -137,7 +139,7 @@ const JobDetails = ({ params }) => {
 
                     <p className='text-base font-semibold mt-4'>Skill(s) required</p>
                     <div className='flex items-center gap-4 text-center md:w-2/4'>
-                    {requiredSkills?.map(skils=><p key={skils}>skils</p>)}
+                        {requiredSkills?.map(skils => <p key={skils}>{skils}</p>)}
                     </div>
 
                     <p className='text-base font-semibold mt-4'>Salary</p>
@@ -156,7 +158,7 @@ const JobDetails = ({ params }) => {
                     </div>
 
                     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle w-[95%]">
-                        <form method="dialog" className="modal-box">
+                        <form  method="dialog" className="modal-box">
                             <div className="modal-action">
                                 {/* if there is a button in form, it will close the modal */}
                                 <button className="btn btn-circle btn-outline -mt-10 mb-4">
@@ -177,15 +179,16 @@ const JobDetails = ({ params }) => {
                             </p>
                             <p className='text-gray-500 text-sm mb-2'>Your current resume will be submitted along with this application. </p>
                             <input
-                                type="file"
+                                type="text"
                                 id="photo"
                                 className="file-input file-input-bordered rounded file-input-info w-full h-9"
+                                {...register("resumelink", { required: true })}
                             />
 
                             <p className='text-base font-semibold mt-4'>Cover letter *
                             </p>
                             <p className='text-gray-500 text-sm mb-4'>Why should you be hired for this role? </p>
-                            <textarea placeholder='Submit Your Cover Latter' className='border w-full h-28 p-3'></textarea>
+                            <textarea {...register("coverlatter", { required: true })} placeholder='Submit Your Cover Latter' className='border w-full h-28 p-3'></textarea>
 
 
                             <p className='text-base font-semibold mt-4'>Your availability
