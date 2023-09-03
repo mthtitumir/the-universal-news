@@ -5,6 +5,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import axios from 'axios';
 
 const AddAJob = () => {
     const { user } = useAuth();
@@ -113,7 +114,7 @@ const AddAJob = () => {
                                 {...register("applicationDeadline", { required: true })}
                                 render={({ field }) => (
                                     <DatePicker
-                                        className="input input-bordered input-accent w-full"
+                                        className="input input-bordered  w-full"
                                         {...field}
                                         selected={field.value}
                                         onChange={(date) => field.onChange(date)}

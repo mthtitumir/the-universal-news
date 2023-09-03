@@ -4,7 +4,6 @@ export const POST = async (request) => {
     if (request.method === "POST") {
         try {
             const body = await request.json();
-            console.log(body);
             const db = await DbConnect();
             const allJobs = db.collection('all-jobs');
             const {  id, title, description, requiredSkills, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, status, datePosted, email,author} = body;
