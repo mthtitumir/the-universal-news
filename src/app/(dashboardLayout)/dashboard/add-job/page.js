@@ -169,6 +169,24 @@ const AddAJob = () => {
                         <input type="text" placeholder="Job experience" {...register("experience", { required: true })} className="input input-bordered" />
                     </div>
                     {errors.title?.type === 'required' && <p className="text-red-500">Job experience is required</p>}
+                  <div className='md:flex justify-center items-center gap-4'>
+                  <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text card-text-secondary">Job applicationInstructions</span>
+                        </label>
+                        <textarea placeholder="applicationInstructions" {...register("applicationInstructions", { required: true })}  className="textarea textarea-bordered textarea-lg " ></textarea>
+                    </div>
+                    {errors.applicationInstructions?.type === 'required' && <p className="text-red-500">Job applicationInstructions is required</p>}
+                  <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text card-text-secondary">Job description</span>
+                        </label>
+                        <textarea placeholder="description" {...register("description", { required: true })}  className="textarea textarea-bordered textarea-lg " ></textarea>
+                    </div>
+                    {errors.description?.type === 'required' && <p className="text-red-500">Job description is required</p>}
+                 
+                
+                  </div>
                     <div className="form-control mt-6">
                         <button className="primary-btn">Add This Job</button>
                     </div>
