@@ -20,6 +20,7 @@ const JobDetails = ({ params }) => {
         const resume = form.resume.value
         const coverLetter = form.letter.value;
         console.log(resume, coverLetter);
+        event.target.reset();
     }
 
 
