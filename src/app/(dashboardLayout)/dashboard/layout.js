@@ -1,10 +1,12 @@
+"use client"
 import Providers from "@/providers"
 import Toaster from "@/components/Toaster"
-import Link from "next/link"
 import { AiOutlineMenu } from "react-icons/ai"
 import SectionNavbar from "@/components/Navbar/SectionNavbar"
 import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar, generalSidebar } from "@/data/dashboardSidebarData"
 import NavLink from "@/components/Navbar/NavLink"
+import useAuth from "@/hooks/useAuth"
+import useRole from "@/hooks/useRole"
 
 export const metadata = {
   title: 'Dashboard | The Universal News',
@@ -12,15 +14,17 @@ export const metadata = {
 }
 
 const Dashboard = ({ children }) => {
-  const admin = true;
+  const { user, loading } = useAuth();
+  const [role, isRoleLoading] = useRole();
+  const admin = role === "admin";
   const employer = false;
   const reporter = false;
-  let navData; 
-  if(admin){
+  let navData;
+  if (role === "admin") {
     navData = adminSideNavbar;
-  } else if(employer){
+  } else if (role === "employer") {
     navData = employerSideNavbar;
-  } else if(reporter){
+  } else if (role === "reporter") {
     navData = reporterSideNavbar;
   } else {
     navData = userSideNavbar;
