@@ -37,7 +37,7 @@ const MyJobs = () => {
                                     <th>category</th>
                                     <th>datePosted</th>
                                     <th>jobLocation</th>
-                                    <th>category</th>
+                                    <th>jobType</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,7 +49,7 @@ const MyJobs = () => {
                                         <td>{jobdata.category}</td>
                                         <td>{jobdata.datePosted}</td>
                                         <td>{jobdata.jobLocation}</td>
-                                        <td>{jobdata.category}</td>
+                                        <td>{jobdata.jobType}</td>
                                         <DeleteNews />
                                     </tr>
                                 ))}

@@ -8,26 +8,30 @@ import { CgSandClock } from 'react-icons/cg'
 import { GoPeople, GoClockFill } from 'react-icons/go'
 import Link from 'next/link';
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
+import useAuth from '@/hooks/useAuth';
 
 const JobDetails = ({ params }) => {
+    const {user} = useAuth()
     const id = params.id;
     const [jobDetails, setjobDetails] = useState({})
     useEffect(() => {
         const singlejob = async () => {
-            const resposne = await axios.get(`/api/getSinglejobsdata/${id}`)
-            setjobDetails(resposne.data)
+            const response = await axios.get(`/api/getSinglejobsdata/${id}`)
+            setjobDetails(response.data)
         }
         singlejob()
     }, [id])
-    const { employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
+    const { email, employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
         const resume = form.resume.value
         const coverLetter = form.letter.value;
-        console.log(resume, coverLetter);
+        const usersemail = user.email
+        const response = await axios.post('/api/add-apply',{resume,coverLetter,email,usersemail})
+        console.log(response.data)
+        console.log(resume, coverLetter, email);
         event.target.reset();
     }
 
