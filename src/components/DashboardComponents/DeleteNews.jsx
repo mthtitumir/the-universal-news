@@ -34,7 +34,7 @@ const DeleteNews = ({ id }) => {
     }
     return (
         <>
-            <td onClick={() => { handleDelete(id) }} className="text-center text-white bg-red-500 px-1 rounded">Delete</td>
+            <td  onClick={() => { handleDelete(id) }} className="text-center text-white bg-red-500 px-1 rounded border">Delete</td>
         </>
     )
 }

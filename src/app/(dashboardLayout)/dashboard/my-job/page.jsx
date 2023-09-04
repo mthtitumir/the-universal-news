@@ -31,25 +31,25 @@ const MyJobs = () => {
                         <table className="table">
                             <thead>
                                 <tr className=' '>
-                                    <th>serial</th>
-                                    <th>title</th>
-                                    <th>companyName</th>
-                                    <th>category</th>
-                                    <th>datePosted</th>
-                                    <th>jobLocation</th>
-                                    <th>jobType</th>
+                                    <th className='border '>serial</th>
+                                    <th className='border '>title</th>
+                                    <th className='border '>companyName</th>
+                                    <th className='border '>category</th>
+                                    <th className='border '>datePosted</th>
+                                    <th className='border '>jobLocation</th>
+                                    <th className='border '>jobType</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {jobDatas.map((jobdata,index) => (
                                     <tr key={jobdata.id}>
-                                        <td>{index + 1}</td>
-                                        <td>{jobdata.title}</td>
-                                        <td>{jobdata.companyName}</td>
-                                        <td>{jobdata.category}</td>
-                                        <td>{jobdata.datePosted}</td>
-                                        <td>{jobdata.jobLocation}</td>
-                                        <td>{jobdata.jobType}</td>
+                                        <td className='border '>{index + 1}</td>
+                                        <td className='border '>{jobdata.title}</td>
+                                        <td className='border '>{jobdata.companyName}</td>
+                                        <td className='border '>{jobdata.category}</td>
+                                        <td className='border '>{jobdata.datePosted}</td>
+                                        <td className='border '>{jobdata.jobLocation}</td>
+                                        <td className='border '>{jobdata.jobType}</td>
                                         <DeleteNews />
                                     </tr>
                                 ))}
