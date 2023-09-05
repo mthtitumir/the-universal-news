@@ -1,21 +1,29 @@
 "use client"
-
-import useRole from '@/hooks/useRole';
-import useAuth from '@/hooks/useAuth';
+import ReactApexChart from "react-apexcharts";
 
 const Test = () => {
-  const { user, loading } = useAuth();
-  const [role, isAdminLoading] = useRole();
-  console.log(role);
+  const options = {
+    chart: {
+      id: "basic-bar"
+    },
+    xaxis: {
+      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+    }
+  };
+  const series = [
+    {
+      name: "Readers",
+      data: [30, 40, 45, 50, 49, 60, 70, 91, 104]
+    }
+  ]
 
-  if (loading || isAdminLoading) {
-    return <progress className="progress w-56"></progress>
-  }
 
-  if (user && role) {
-    return <h1>Hello {role}!</h1>;
-  }
-  return <h1>Hello now!</h1>
+  return (
+    <div>
+      <h1>Hello from test</h1>
+      <ReactApexChart series={series} options={options} type="bar" />
+    </div>
+  );
 };
 
-export default Test
+export default Test;

@@ -63,7 +63,7 @@ const TopNavbar = () => {
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
                     {
-                        uid ? <><Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link> <button className='primary-btn' onClick={handleLogout}>Logout</button></>
+                        uid ? <><Link href="/dashboard"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Account</button></Link> <button className='primary-btn' title={user?.email} onClick={handleLogout}>Logout</button></>
                             :
                             <Link href="/login"><button className='bg-cyan-500 rounded px-2 py-1 text-white'>Login</button></Link>
                     }
