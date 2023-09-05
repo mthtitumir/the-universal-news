@@ -1,10 +1,12 @@
+"use client"
 import Providers from "@/providers"
 import Toaster from "@/components/Toaster"
-import Link from "next/link"
 import { AiOutlineMenu } from "react-icons/ai"
 import SectionNavbar from "@/components/Navbar/SectionNavbar"
 import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar, generalSidebar } from "@/data/dashboardSidebarData"
-
+import NavLink from "@/components/Navbar/NavLink"
+import useAuth from "@/hooks/useAuth"
+import useRole from "@/hooks/useRole"
 
 export const metadata = {
   title: 'Dashboard | The Universal News',
@@ -12,17 +14,17 @@ export const metadata = {
 }
 
 const Dashboard = ({ children }) => {
-
-  const admin = true;
+  const { user, loading } = useAuth();
+  const [role, isRoleLoading] = useRole();
+  const admin = role === "admin";
   const employer = false;
   const reporter = false;
   let navData;
-
-  if(admin){
+  if (role === "admin") {
     navData = adminSideNavbar;
-  }else if(employer){
+  } else if (role === "employer") {
     navData = employerSideNavbar;
-  }else if(reporter){
+  } else if (role === "reporter") {
     navData = reporterSideNavbar;
   } else {
     navData = userSideNavbar;
@@ -41,15 +43,15 @@ const Dashboard = ({ children }) => {
 
           <div className="drawer-side ">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+            <ul className=" p-4 w-80 min-h-full bg-base-200 border border-cyan-600 text-base-content mt-3 rounded-lg">
               {/* Sidebar content here */}
               {/* <h2 className={`${myFont.className} text-xl md:text-2xl text-center`}><Link href="/">The Universal News</Link></h2> */}
               {
-                navData.map(nav => <li key={nav.path}><Link href={nav.path}>{nav.title}</Link></li>)
+                navData.map(nav => <li key={nav.path} className="mb-2 hover:underline" ><NavLink exact activeClassName={"text-cyan-600"} href={nav.path}>{nav.title}</NavLink></li>)
               }
               <div className="divider"></div>
               {
-                generalSidebar.map(nav => <li key={nav.path}><Link href={nav.path}>{nav.title}</Link></li>)
+                generalSidebar.map(nav => <li key={nav.path} className=" mb-2 hover:underline" ><NavLink exact activeClassName={"text-cyan-600"} href={nav.path}>{nav.title}</NavLink></li>)
               }
 
             </ul>

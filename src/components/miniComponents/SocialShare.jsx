@@ -1,5 +1,5 @@
 "use client"
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookMessengerShareButton } from 'react-share';
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { BiLogoFacebook, BiLogoTwitter, BiLogoWhatsapp } from 'react-icons/bi'
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
 import copy from 'clipboard-copy';

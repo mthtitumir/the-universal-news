@@ -6,17 +6,20 @@ import { useEffect, useState } from "react";
 const MyNews = () => {
     const { user } = useAuth();
     const [newsData, setNewsData] = useState([]);
-    const fetchData = async () => {
-        if (user) {
-            try {
-                const mynews = await axios.get(`/api/getSingleReporterNews?email=${user.email}`);
-                setNewsData(mynews.data);
-            } catch (error) {
-                console.error("Error fetching reporter news:", error);
+    useEffect(()=>{
+        const fetchData = async () => {
+            if (user) {
+                try {
+                    const mynews = await axios.get(`/api/getSingleReporterNews?email=${user.email}`);
+                    setNewsData(mynews.data);
+                } catch (error) {
+                    console.error("Error fetching reporter news:", error);
+                }
             }
-        }
-    };
-    fetchData();
+        };
+        fetchData();
+    },[user])
+    
     return (
         <div>
             <p>Email: {user?.email}</p>

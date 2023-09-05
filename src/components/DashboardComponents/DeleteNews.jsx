@@ -1,5 +1,6 @@
 "use client"
 import axios from "axios";
+import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 
 const DeleteNews = ({ id }) => {
@@ -34,7 +35,7 @@ const DeleteNews = ({ id }) => {
     }
     return (
         <>
-            <td onClick={() => { handleDelete(id) }} className="text-center text-white bg-red-500 px-1 rounded">Delete</td>
+            <td onClick={() => { handleDelete(id) }} className="text-center text-2xl text-red-600"><MdDelete /></td>
         </>
     )
 }

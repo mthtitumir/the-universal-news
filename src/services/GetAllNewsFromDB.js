@@ -68,6 +68,7 @@ export const GetAllReportersFromDB = async () => {
         const allUsers = db.collection('all-users');
         const query = { role: "reporter" }
         const result = await allUsers.find(query).toArray();
+        console.log(result.length);
         return result;
     } catch (error) {
         console.error(error)
@@ -87,5 +88,27 @@ export const GetPendingNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 }
-
-
+export const GetAllJobsFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allJobs = db.collection('all-jobs');
+        const result = await allJobs.find().toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+}
+export const GetSingleJobsFromDB = async (id) => {
+    try {
+        const ids = id;
+        const db = await DbConnect();
+        const allJobs = db.collection('all-jobs');
+        const query = { id: ids }
+        const result = await allJobs.findOne(query)
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};

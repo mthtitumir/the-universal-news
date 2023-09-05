@@ -13,7 +13,7 @@
     @apply bg-cyan-500 rounded px-2 py-1 text-white;
 }
 .secondary-btn{
-    @apply bg-transparent rounded px-2 py-1 text-cyan-500;
+    @apply bg-transparent rounded px-2 py-1 text-cyan-500 border border-cyan-500;
 }
 .c-auto{
     @apply container mx-auto

@@ -1,6 +1,7 @@
 "use client"
 
 import axios from "axios";
+import { FcApproval } from "react-icons/fc";
 import Swal from "sweetalert2";
 
 const ApproveNews = ({ id }) => {
@@ -36,7 +37,7 @@ const ApproveNews = ({ id }) => {
     }
     return (
         <>
-            <td onClick={() => { handleApprove(id) }} className="text-center text-white bg-cyan-500 rounded ">Approve</td>
+            <td onClick={() => { handleApprove(id) }} className=" text-2xl "><FcApproval /></td>
         </>
     );
 };

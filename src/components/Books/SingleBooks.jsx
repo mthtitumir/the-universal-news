@@ -1,11 +1,10 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import StarRatings from 'react-star-ratings';
-
-const SingleBooks = ({ book }) => {
-  const { name, img, description, ratings, price } = book;
-
+const SingleBooks = ({ books }) => {
+  const { id, name, img, description, ratings, price } = books;
     return (
         <div className="card w-full bg-base-100 border  rounded-sm ">
             <figure>
@@ -31,6 +30,7 @@ const SingleBooks = ({ book }) => {
                 </div>
                 <p className='text-base text-red-700'>${price}</p>
             </div>
+
         </div>
     );
 };

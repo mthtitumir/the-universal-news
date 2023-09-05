@@ -6,7 +6,9 @@
         "description": "Embark on a magical journey through the Enchanted Forest, where mystical creatures and ancient secrets await. Join our young hero as they uncover the truth about their destiny and confront the darkness threatening their realm.",
         "ratings": 4.7,
         "category": "Fantasy",
-        "price": 24.99
+        "price": 24.99,
+        "authorName": "John Smith",
+        "authorImage": "https://i.ibb.co/tBNBFPR/rm328-366-tong-08-1.jpg"
     },
     {
         "id": 2,
@@ -15,7 +17,9 @@
         "description": "In the foggy countryside stands Misty Manor, a place shrouded in mystery and intrigue. Follow Detective Anderson as he unravels the secrets hidden within its walls, leading to shocking revelations and unexpected alliances.",
         "ratings": 4.2,
         "category": "Mystery",
-        "price": 19.50
+        "price": 19.50,
+        "authorName": "Jane Doe",
+        "authorImage": "https://i.ibb.co/W2bMVb5/360-F-322533850-Lz5-JL2-K0n-Vq-L48gj-Ci-RLSa2ssxpdfyer.jpg"
     },
     {
         "id": 3,
@@ -24,7 +28,9 @@
         "description": "Embark on a thrilling Galactic Odyssey as humanity ventures beyond the stars. Join Captain Nova and her diverse crew as they navigate cosmic anomalies, encounter alien civilizations, and strive to save Earth from an interstellar threat.",
         "ratings": 4.9,
         "category": "Science Fiction",
-        "price": 29.75
+        "price": 29.75,
+        "authorName": "Sam Smith",
+        "authorImage": "https://i.ibb.co/j32wxRc/360-F-326985142-1aa-Kc-Ej-MQW6-ULp6o-I9-MYuv8l-N9f8s-Fmj.jpg"
     },
     {
         "id": 4,
@@ -33,7 +39,9 @@
         "description": "Amidst the vibrant hues of autumn leaves, two souls find each other in a small town. Experience a heartwarming tale of love, second chances, and the beauty of embracing life's changing seasons.",
         "ratings": 4.5,
         "category": "Romance",
-        "price": 16.00
+        "price": 16.00,
+        "authorName": "Mr. Lee",
+        "authorImage": "https://i.ibb.co/LnMrcSx/360-F-224869519-a-Rae-Lneq-ALf-PNBzg0xx-MZXghtv-BXkf-IA.jpg"
     },
     {
         "id": 5,
@@ -42,7 +50,9 @@
         "description": "Step into the realm of Eldoria, where magic and destiny intertwine. Join our unlikely heroes as they embark on a quest to save their world from a growing darkness. Adventure, friendship, and epic battles await.",
         "ratings": 4.6,
         "category": "Fantasy",
-        "price": 22.75
+        "price": 22.75,
+        "authorName": "Mr. Park",
+        "authorImage": "https://i.ibb.co/6H6GPWc/114677373-handsome-businessman-near-window-in-office.jpg"
     },
     {
         "id": 6,
@@ -51,7 +61,9 @@
         "description": "Uncover the ancient prophecies in a world where echoes of the past shape the future. Follow a group of adventurers as they decode enigmatic texts, traverse forgotten ruins, and confront the enigmatic Order of the Eternal.",
         "ratings": 4.4,
         "category": "Fantasy",
-        "price": 21.99
+        "price": 21.99,
+        "authorName": "Mis Hallen",
+        "authorImage": "https://i.ibb.co/NKgrL7r/depositphotos-188125512-stock-photo-portrait-smiling-businessman-suit-eyeglasses.webp"
     },
     {
         "id": 7,
@@ -60,7 +72,9 @@
         "description": "In the city of Noirhaven, where secrets thrive in the darkness, two detectives must unravel a web of lies to solve a series of mysterious disappearances. As midnight shadows lengthen, they discover the horrifying truth.",
         "ratings": 4.7,
         "category": "Mystery",
-        "price": 18.75
+        "price": 18.75,
+        "authorName": "Mr. Chiso",
+        "authorImage": "https://i.ibb.co/RpxqSYN/depositphotos-118080638-stock-photo-portrait-of-serious-calm-minded.webp"
     },
     {
         "id": 8,
@@ -69,7 +83,9 @@
         "description": "Venture into the realm of quantum physics where reality blurs and dimensions collide. Join physicist Maya Turner as she races to prevent a catastrophic experiment that could rupture the fabric of the universe.",
         "ratings": 4.8,
         "category": "Science Fiction",
-        "price": 27.50
+        "price": 27.50,
+        "authorName": "Jane Doe",
+        "authorImage": "https://i.ibb.co/60pYKsX/depositphotos-146971633-stock-photo-smiling-guy-in-blue-shirt.webp"
     },
     {
         "id": 9,
@@ -78,7 +94,9 @@
         "description": "In the picturesque village of Serendipity, two strangers with troubled pasts find solace and unexpected love. A heartwarming tale of healing, community, and the transformative power of human connection.",
         "ratings": 4.5,
         "category": "Romance",
-        "price": 15.99
+        "price": 15.99,
+        "authorName": "Choi Smith",
+        "authorImage": "https://i.ibb.co/CPC0Lwf/360-F-144946314-8-FFd-VY6c2-WJk-CWB5-Cp-IQCtym-YJlhqqmp.jpg"
     },
     {
         "id": 10,
@@ -87,7 +105,9 @@
         "description": "Journey across the vast deserts of Eldoria in search of the mythical Sands of Destiny, said to grant the power to reshape reality. A high-stakes adventure of courage, sacrifice, and the pursuit of ultimate power.",
         "ratings": 4.6,
         "category": "Fantasy",
-        "price": 23.25
+        "price": 23.25,
+        "authorName": "Robert Wilson",
+        "authorImage": "https://i.ibb.co/8r2Z82W/360-F-200902415-G4e-Z9-Ok3-Ypd4-SZZKjc8nq-Jy-FVp1e-OD6-V.jpg"
     },
     {
         "id": 11,
@@ -96,7 +116,9 @@
         "description": "In a world where messages are carried by the wind, a young messenger must deliver a life-changing letter to the distant Mountain City. Along the way, they uncover secrets that challenge everything they've known.",
         "ratings": 4.3,
         "category": "Fantasy",
-        "price": 20.99
+        "price": 20.99,
+        "authorName": "Daniel Martinez",
+        "authorImage": "https://i.ibb.co/yBrjNKw/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg"
     },
     {
         "id": 12,
@@ -105,7 +127,9 @@
         "description": "Enter the world of espionage and political intrigue, where nothing is as it seems. Follow Agent Maya as she navigates a dangerous web of deceit, betrayal, and international conspiracies.",
         "ratings": 4.6,
         "category": "Mystery",
-        "price": 17.50
+        "price": 17.50,
+        "authorName": "Andrew Lee",
+        "authorImage": "https://i.ibb.co/tBNBFPR/rm328-366-tong-08-1.jpg"
     },
     {
         "id": 13,
@@ -114,7 +138,9 @@
         "description": "Embark on an intergalactic journey aboard the starship Celestial Voyager. Join Captain Arion as he leads his diverse crew through cosmic phenomena, extraterrestrial encounters, and the search for a new home.",
         "ratings": 4.9,
         "category": "Science Fiction",
-        "price": 29.99
+        "price": 29.99,
+        "authorName": "George Phillips",
+        "authorImage": "https://i.ibb.co/CPC0Lwf/360-F-144946314-8-FFd-VY6c2-WJk-CWB5-Cp-IQCtym-YJlhqqmp.jpg"
     },
     {
         "id": 14,
@@ -123,7 +149,9 @@
         "description": "Set in the opulent world of 18th-century France, this novel follows the intertwined lives of aristocrats and artists. Amid grand balls and romantic liaisons, dark secrets emerge that could shatter their world.",
         "ratings": 4.5,
         "category": "Romance",
-        "price": 18.25
+        "price": 18.25,
+        "authorName": "Jonathan Young",
+        "authorImage": "https://i.ibb.co/RpxqSYN/depositphotos-118080638-stock-photo-portrait-of-serious-calm-minded.webp"
     },
     {
         "id": 15,
@@ -132,7 +160,9 @@
         "description": "In the realm of Etheria, where magic is fueled by dreams, a group of unlikely heroes must stand against an ancient darkness. The fate of their world hinges on their ability to awaken forgotten powers.",
         "ratings": 4.7,
         "category": "Fantasy",
-        "price": 22.75
+        "price": 22.75,
+        "authorName": "Peter Rodriguez",
+        "authorImage": "https://i.ibb.co/NKgrL7r/depositphotos-188125512-stock-photo-portrait-smiling-businessman-suit-eyeglasses.webp"
     },
     {
         "id": 16,
@@ -141,7 +171,9 @@
         "description": "In the quiet town of Echo Springs, strange echoes from the past start haunting the residents. As secrets resurface, a group of friends must confront their shared history and the dark events that shaped it.",
         "ratings": 4.2,
         "category": "Mystery",
-        "price": 16.99
+        "price": 16.99,
+        "authorName": "Matthew Clark",
+        "authorImage": "https://i.ibb.co/6H6GPWc/114677373-handsome-businessman-near-window-in-office.jpg"
     },
     {
         "id": 17,
@@ -150,7 +182,9 @@
         "description": "Set in a future where human minds are connected to a global network, a brilliant neuroscientist uncovers a sinister plot to control minds. She must navigate a digital landscape to expose the truth.",
         "ratings": 4.8,
         "category": "Science Fiction",
-        "price": 26.50
+        "price": 26.50,
+        "authorName": "William Johnson",
+        "authorImage": "https://i.ibb.co/LnMrcSx/360-F-224869519-a-Rae-Lneq-ALf-PNBzg0xx-MZXghtv-BXkf-IA.jpg"
     },
     {
         "id": 18,
@@ -159,7 +193,9 @@
         "description": "In a small village known for its annual masquerade ball, a dance teacher and a reclusive artist form an unlikely bond. As they collaborate on a breathtaking waltz, their hidden pasts slowly intertwine.",
         "ratings": 4.4,
         "category": "Romance",
-        "price": 14.99
+        "price": 14.99,
+        "authorName": "James Brown",
+        "authorImage": "https://i.ibb.co/j32wxRc/360-F-326985142-1aa-Kc-Ej-MQW6-ULp6o-I9-MYuv8l-N9f8s-Fmj.jpg"
     },
     {
         "id": 19,
@@ -168,7 +204,9 @@
         "description": "In a land ruled by ancient clans, a young warrior seeks to unite the fractured kingdom against a common enemy. Amid battles and political intrigue, he discovers his own destiny as the key to salvation.",
         "ratings": 4.6,
         "category": "Fantasy",
-        "price": 24.50
+        "price": 24.50,
+        "authorName": "Michael Davis",
+        "authorImage": "https://i.ibb.co/W2bMVb5/360-F-322533850-Lz5-JL2-K0n-Vq-L48gj-Ci-RLSa2ssxpdfyer.jpg"
     },
     {
         "id": 20,
@@ -177,6 +215,8 @@
         "description": "High above the world, a floating city holds the secrets of advanced technology and untold mysteries. When a curious engineer stumbles upon hidden agendas, he must decide whether to save or expose the city's truths.",
         "ratings": 4.3,
         "category": "Science Fiction",
-        "price": 23.25
+        "price": 23.25,
+        "authorName": "David Anderson",
+        "authorImage": "https://i.ibb.co/tBNBFPR/rm328-366-tong-08-1.jpg"
     }
 ]

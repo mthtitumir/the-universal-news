@@ -6,6 +6,7 @@ export const GET = async (request) => {
         try {
             const { searchParams } = new URL(request.url);
             const email = searchParams.get('email');
+            console.log(email)
             const db = await DbConnect();
             const allNews = db.collection('all-news');
             const query = { email: email };
