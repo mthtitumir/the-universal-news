@@ -1,9 +1,12 @@
 import ReadersChart from "@/components/DashboardComponents/ReadersChart";
 import RevenueChart from "@/components/DashboardComponents/RevenueChart";
 import AdminInfos from "@/hooks/useAdminInfos";
+import { GetAllComments } from "@/services/GetAllNews";
 
 const AdminHome = async() => {
   const lengthInfo = await AdminInfos();
+  const comments = await GetAllComments()
+  console.log(comments);
   // console.log(lengthInfo);
   return (
     <div className='p-3 md:pr-0 flex flex-col gap-5'>
