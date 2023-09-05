@@ -13,8 +13,8 @@ const BooksRightBar = () => {
 
             <AllBooks></AllBooks>
 
-            {/* <Author></Author> */}
-            {/* <h1 className='text-3xl font-semibold mt-16 mb-3'>Popular authors & series</h1> */}
+            <Author></Author>
+
         </div>
     );
 };

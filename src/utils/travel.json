@@ -1,0 +1,427 @@
+[
+    {
+        "id": 1,
+        "title": "Exploring Ancient Ruins",
+        "img": "https://i.ibb.co/C0trXPj/Machu-Picchu-Peru.jpg",
+        "description": "Embark on a journey through time as you explore the fascinating ancient ruins of a lost civilization.",
+        "date": "2023-05-15",
+        "location": "Machu Picchu, Peru",
+        "category": "travel",
+        "tags": [
+            "adventure",
+            "history",
+            "culture"
+        ],
+        "likes": 1245,
+        "comments": [
+            {
+                "username": "Traveler123",
+                "comment": "Visited this place last year, it was truly an awe-inspiring experience!"
+            },
+            {
+                "username": "HistoryBuff",
+                "comment": "The history and architecture here are simply incredible. A must-visit for history enthusiasts!"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Beach Paradise Getaway",
+        "img": "https://i.ibb.co/mhcM5Gz/download.jpg",
+        "description": "Relax and unwind on the sun-kissed beaches of a tropical paradise, where crystal-clear waters and white sands await.",
+        "date": "2023-07-28",
+        "location": "Maldives",
+        "category": "travel",
+        "tags": [
+            "relaxation",
+            "beach",
+            "ocean"
+        ],
+        "likes": 1892,
+        "comments": [
+            {
+                "username": "BeachLover",
+                "comment": "Spent a week here and it was pure bliss. The Maldives never disappoint!"
+            },
+            {
+                "username": "SunSeeker",
+                "comment": "The perfect destination for soaking up the sun and enjoying the turquoise waters."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Awe-Inspiring Northern Lights",
+        "img": "https://i.ibb.co/RTHJDnF/photo-1584467541268-b040f83be3fd.jpg",
+        "description": "Witness the magical dance of the Northern Lights in the Arctic sky, a breathtaking natural phenomenon.",
+        "date": "2023-12-10",
+        "location": "Tromsø, Norway",
+        "category": "travel",
+        "tags": [
+            "aurora",
+            "nature",
+            "Arctic"
+        ],
+        "likes": 2876,
+        "comments": [
+            {
+                "username": "AuroraChaser",
+                "comment": "Seeing the Northern Lights was a dream come true. The colors are beyond description!"
+            },
+            {
+                "username": "NaturePhotog",
+                "comment": "Capturing the vibrant lights on camera was a challenge, but the experience was unforgettable."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Cycling Through Tuscany",
+        "img": "https://i.ibb.co/8XZxYbQ/Travel-Destinations.jpg",
+        "description": "Pedal through the picturesque landscapes of Tuscany, passing vineyards, olive groves, and charming villages.",
+        "date": "2023-06-23",
+        "location": "Tuscany, Italy",
+        "category": "travel",
+        "tags": [
+            "cycling",
+            "Tuscany",
+            "landscape"
+        ],
+        "likes": 1395,
+        "comments": [
+            {
+                "username": "CycleExplorer",
+                "comment": "Tuscany's rolling hills make for an incredible cycling adventure. And the food and wine? Delizioso!"
+            },
+            {
+                "username": "OutdoorEnthusiast",
+                "comment": "Biking past sunflower fields and historic towns was a fantastic way to experience Tuscany's beauty."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Serenity in the Swiss Alps",
+        "img": "https://i.ibb.co/1vhQXt1/download-1.jpg",
+        "description": "Escape to the Swiss Alps for tranquility, surrounded by towering peaks, fresh mountain air, and stunning vistas.",
+        "date": "2023-09-17",
+        "location": "Swiss Alps, Switzerland",
+        "category": "travel",
+        "tags": [
+            "mountains",
+            "alpine",
+            "peace"
+        ],
+        "likes": 2187,
+        "comments": [
+            {
+                "username": "MountainDreamer",
+                "comment": "Waking up to the view of snow-capped mountains was like stepping into a postcard."
+            },
+            {
+                "username": "AdventureSeeker",
+                "comment": "The Swiss Alps offer endless hiking trails with breathtaking views at every turn."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Cultural Dive into Marrakech",
+        "img": "https://i.ibb.co/yBvJDZh/Paris.jpg",
+        "description": "Immerse yourself in the vibrant colors, bustling souks, and rich culture of Marrakech's historic medina.",
+        "date": "2023-04-05",
+        "location": "Marrakech, Morocco",
+        "category": "travel",
+        "tags": [
+            "Marrakech",
+            "culture",
+            "souks"
+        ],
+        "likes": 1763,
+        "comments": [
+            {
+                "username": "TravelEnthusiast",
+                "comment": "Marrakech's medina is a sensory overload in the best way possible. So much to explore!"
+            },
+            {
+                "username": "CulturalNomad",
+                "comment": "The architecture, the spices, the labyrinthine alleys – Marrakech is a true adventure for the senses."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Sailing the Greek Isles",
+        "img": "https://i.ibb.co/BGjBfk2/Menton-France-2.jpg",
+        "description": "Set sail on the azure waters of the Aegean Sea, hopping between the idyllic islands of Greece.",
+        "date": "2023-08-09",
+        "location": "Greek Isles",
+        "category": "travel",
+        "tags": [
+            "sailing",
+            "Greece",
+            "islands"
+        ],
+        "likes": 2954,
+        "comments": [
+            {
+                "username": "SeaLover",
+                "comment": "Greece's islands have a unique charm. Each one offers something different, from beaches to history."
+            },
+            {
+                "username": "WanderlustSailor",
+                "comment": "Sailing from island to island, discovering hidden coves and enjoying Greek hospitality – an unforgettable experience."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Wildlife Safari in Serengeti",
+        "img": "https://i.ibb.co/WK1RfQc/Tropical-Island.jpg",
+        "description": "Embark on a thrilling safari through the vast plains of the Serengeti, witnessing the incredible African wildlife.",
+        "date": "2023-10-30",
+        "location": "Serengeti, Tanzania",
+        "category": "travel",
+        "tags": [
+            "safari",
+            "wildlife",
+            "Africa"
+        ],
+        "likes": 2417,
+        "comments": [
+            {
+                "username": "SafariAdventurer",
+                "comment": "Spotting lions, elephants, and wildebeests in their natural habitat was an unmatched experience."
+            },
+            {
+                "username": "NatureObserver",
+                "comment": "The diversity of animals in the Serengeti is astounding. Every moment on safari was full of excitement."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Chasing Waterfalls in Iceland",
+        "img": "https://i.ibb.co/xFf9PKD/Venice.jpg",
+        "description": "Explore Iceland's otherworldly landscapes, chasing breathtaking waterfalls, geysers, and volcanic formations.",
+        "date": "2023-07-19",
+        "location": "Iceland",
+        "category": "travel",
+        "tags": [
+            "Iceland",
+            "waterfalls",
+            "nature"
+        ],
+        "likes": 1836,
+        "comments": [
+            {
+                "username": "NatureExplorer",
+                "comment": "Iceland's raw beauty is like nowhere else. Every turn brings a new marvel to discover."
+            },
+            {
+                "username": "WaterfallChaser",
+                "comment": "Standing in front of a roaring Icelandic waterfall is an experience that makes you feel truly alive."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Enchanting Venice Canals",
+        "img": "https://i.ibb.co/YQK9NZV/Iceland.jpg",
+        "description": "Navigate through the romantic canals of Venice aboard a gondola, surrounded by historic architecture and Venetian charm.",
+        "date": "2023-09-25",
+        "location": "Venice, Italy",
+        "category": "travel",
+        "tags": [
+            "Venice",
+            "canals",
+            "romance"
+        ],
+        "likes": 1985,
+        "comments": [
+            {
+                "username": "CanalDreamer",
+                "comment": "Venice is like stepping into a fairy tale. The gondola ride was pure magic!"
+            },
+            {
+                "username": "TravelingCouple",
+                "comment": "Exploring the hidden corners of Venice by boat was the highlight of our romantic getaway."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Beach Paradise Getaway",
+        "img": "https://i.ibb.co/WFqcH8m/Serengeti.jpg",
+        "description": "Escape to the pristine sandy beaches and enjoy the soothing sound of waves.",
+        "date": "2023-05-10",
+        "location": "Tropical Island",
+        "category": "Beach",
+        "tags": [
+            "beach",
+            "sun",
+            "relaxation"
+        ],
+        "likes": 587,
+        "comments": [
+            {
+                "author": "SunshineSeeker",
+                "text": "The beach was like heaven on Earth. Missing it already!"
+            },
+            {
+                "author": "BeachBum123",
+                "text": "Spent the best week of my life here. Can't wait to return next year!"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Historical European Adventure",
+        "img": "https://i.ibb.co/PGsNRjf/Greek-Isles.jpg",
+        "description": "Immerse yourself in the rich history and diverse cultures of Europe's most iconic cities.",
+        "date": "2023-03-20",
+        "location": "Various European Cities",
+        "category": "Culture",
+        "tags": [
+            "Europe",
+            "history",
+            "sightseeing"
+        ],
+        "likes": 1023,
+        "comments": [
+            {
+                "author": "HistoryBuff456",
+                "text": "Every corner turned in Europe reveals a new story. Unforgettable trip!"
+            },
+            {
+                "author": "WanderlustExplorer",
+                "text": "Eating croissants in Paris and pasta in Rome - the dream came true."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "City of Lights Tour",
+        "img": "https://i.ibb.co/S6jvk3K/Marrakech.jpg",
+        "description": "Explore the romantic streets of Paris, visit iconic landmarks, and savor exquisite cuisine.",
+        "date": "2023-06-15",
+        "location": "Paris, France",
+        "category": "City",
+        "tags": [
+            "Paris",
+            "romance",
+            "cuisine"
+        ],
+        "likes": 1289,
+        "comments": [
+            {
+                "author": "RomanticSoul",
+                "text": "Paris oozes love and charm. An enchanting journey with my partner."
+            },
+            {
+                "author": "FoodieTraveler",
+                "text": "Croissants, escargot, and macarons – a culinary affair to remember!"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Zen Retreat in the Mountains",
+        "img": "https://i.ibb.co/hcNRGRc/Swiss-Alps.jpg",
+        "description": "Unplug and unwind in a cozy mountain cabin surrounded by peaceful landscapes.",
+        "date": "2023-04-28",
+        "location": "Mountain Haven, Canada",
+        "category": "Nature",
+        "tags": [
+            "mountains",
+            "retreat",
+            "peace"
+        ],
+        "likes": 432,
+        "comments": [
+            {
+                "author": "SerenitySeeker",
+                "text": "The mountain air and solitude were exactly what my soul needed."
+            },
+            {
+                "author": "Hiker123",
+                "text": "Explored hidden trails and found hidden waterfalls. An adventurer's paradise."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Cultural Immersion in Kyoto",
+        "img": "https://i.ibb.co/7zcr3s7/Tuscany.jpg",
+        "description": "Immerse yourself in the traditions of Kyoto, from tea ceremonies to ancient temples.",
+        "date": "2023-09-10",
+        "location": "Kyoto, Japan",
+        "category": "Culture",
+        "tags": [
+            "Kyoto",
+            "tradition",
+            "temples"
+        ],
+        "likes": 912,
+        "comments": [
+            {
+                "author": "CultureEnthusiast",
+                "text": "Kyoto's blend of history and culture is unlike anything else. Truly awe-inspiring."
+            },
+            {
+                "author": "Wanderer567",
+                "text": "Found inner peace at the temples. Japan's beauty is captivating."
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Adventures in the Amazon Rainforest",
+        "img": "https://i.ibb.co/S5VZW0C/Troms-sentrum-5835702754.jpg",
+        "description": "Navigate the Amazon River, spot exotic wildlife, and learn from indigenous communities.",
+        "date": "2023-07-02",
+        "location": "Amazon Rainforest, Brazil",
+        "category": "Adventure",
+        "tags": [
+            "Amazon",
+            "rainforest",
+            "wildlife"
+        ],
+        "likes": 675,
+        "comments": [
+            {
+                "author": "Explorer789",
+                "text": "Survived the wilderness and formed connections with amazing people."
+            },
+            {
+                "author": "NatureLover22",
+                "text": "The symphony of the rainforest is a melody I'll carry forever."
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Mysteries of Machu Picchu",
+        "img": "https://i.ibb.co/mhcM5Gz/download.jpg",
+        "description": "Embark on a trek to the ancient city of Machu Picchu and uncover its archaeological wonders.",
+        "date": "2023-01-18",
+        "location": "Cusco, Peru",
+        "category": "Historical",
+        "tags": [
+            "Machu Picchu",
+            "archaeology",
+            "trekking"
+        ],
+        "likes": 1378,
+        "comments": [
+            {
+                "author": "HistoryBuff456",
+                "text": "Walking in the footsteps of the Incas was an indescribable journey."
+            },
+            {
+                "author": "TrailBlazer87",
+                "text": "The altitude, the ruins – a true test of endurance and a reward of wonder."
+            }
+        ]
+    }
+]

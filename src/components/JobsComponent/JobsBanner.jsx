@@ -4,11 +4,11 @@ import { BiFilterAlt } from 'react-icons/bi'
 import data from '../../utils/job.json'
 import SingleJob from './SingleJob';
 import Link from 'next/link';
-import HandleSearchFunction from './HandleSearchefuntion';
+import HandleSearchFunction from './HandleSearchFunction';
+import { GetAllJobs } from '@/services/GetAllNews';
 
-const JobsBanner = () => {
-    const jobsData = data
-    // console.log(jobsData)
+const JobsBanner =async () => {
+    const jobsData = await GetAllJobs();
     return (
         <div>
             <div className=' bg-cyan-500 text-white py-3 flex justify-center gap-10 items-center'>
@@ -39,23 +39,21 @@ const JobsBanner = () => {
                         {/* input */}
 
                         <HandleSearchFunction />
-
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>Remote</label>
+                        <div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>Remote</label>
+                            </div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>Include all jobs matching filter</label>
+                            </div>
+                            <div className='flex items-center gap-2 my-3'>
+                                <input type="checkbox" style={{ width: '17px', height: '20px' }} />
+                                <label className='text-gray-400 text-base'>
+                                    Part time</label>
+                            </div>
                         </div>
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>Include all jobs matching filter</label>
-                        </div>
-                        <div className='flex items-center gap-2 my-3'>
-                            <input type="checkbox" style={{ width: '17px', height: '20px' }} />
-                            <label className='text-gray-400 text-base'>
-                                Part time</label>
-                        </div>
-
-
-
                     </div>
 
                     {/* Jobs Options */}

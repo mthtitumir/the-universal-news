@@ -2,13 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
-// import { FaArrowTrendUp } from 'react-icons/fa'
-
-
-
 
 const SingleJob = ({ job }) => {
-    const { id, employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate } = job
+    const {_id, id, jobTitle, companyName,  employmentType, salaryOrHourlyWage, jobType, startingTime, jobCategory, experience, postDate } = job
     return (
         <div className="card w-full bg-white mb-3 rounded-sm border-gray-500">
             <div className="card-body">
@@ -54,10 +50,9 @@ const SingleJob = ({ job }) => {
                 <hr />
 
                 <div className="card-actions justify-end">
-                    <Link href={`/jobs/${id}`}>
+                    <Link href={`/jobs/${_id}`}>
                         <button className='secondary-btn'>View Details</button>
                     </Link>
-                    <button className="primary-btn">Apply Now</button>
                 </div>
             </div>
         </div>
