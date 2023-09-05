@@ -1,20 +1,24 @@
 "use client"
-import useRole from '@/hooks/useRole';
 import useAuth from '@/hooks/useAuth';
+import Spinner from '@/components/ErrorComponents/Spinner';
+import { useRouter } from 'next/navigation';
+import useRole from '@/hooks/useRole';
 
 const EmployerDashboardLayout = ({ children }) => {
     const { user, loading } = useAuth();
     const [role, isRoleLoading] = useRole();
-    console.log(role);
+    const { replace, refresh } = useRouter();
+    // console.log(role);
 
     if (loading || isRoleLoading) {
-        return <progress className="progress w-56"></progress>
+        return <Spinner />
     }
 
-    if (user && role && role==='employer') {
+    if (user && role && role === 'employer') {
         return children;
     }
-    return <h1>Hello now!</h1>
+    refresh()
+    replace("/dashboard")
 }
 
 export default EmployerDashboardLayout
