@@ -21,7 +21,7 @@ function TextToVoiceConverter() {
     } else {
       pauseAudio();
     }
-  }, [isPlaying, playAudio]);
+  }, [isPlaying]);
 
   const initSpeechSynthesis = () => {
     const availableVoices = window.speechSynthesis.getVoices();
@@ -52,19 +52,17 @@ function TextToVoiceConverter() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-800 to-purple-900 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-4xl text-white font-semibold mb-5">
-        Text to Speech Converter
-      </h1>
+    <div className="bg-white  h-full w-full flex flex-col items-center justify-center pb-4">
+      
       <textarea
-        className="bg-purple-800 text-white w-96 h-48 px-4 py-2 rounded-lg resize-none outline-none border-0 mb-5"
+        className="bg-white border border-cyan-600  w-full h-72 px-4 py-2 rounded-lg resize-none outline-none  mb-5"
         placeholder="Write anything here"
         value={textToSpeech}
         onChange={handleTextChange}
       ></textarea>
       <div className="flex items-center gap-4">
         <select
-          className="text-white bg-purple-800 h-10 px-4 py-2 rounded-lg appearance-none"
+          className="border border-cyan-600  h-10 px-4 py-2 rounded-lg appearance-none"
           value={selectedVoiceIndex}
           onChange={handleVoiceChange}
         >
@@ -76,7 +74,7 @@ function TextToVoiceConverter() {
           ))}
         </select>
         <button
-          className="bg-pink-600 text-white px-4 py-2 rounded-lg cursor-pointer flex items-center"
+          className="bg-cyan-600 text-white px-4 py-2 rounded-lg cursor-pointer flex items-center  gap-1"
           onClick={toggleAudio}
         >
           {isPlaying ? <FaPause /> : <FaPlay />} Listen

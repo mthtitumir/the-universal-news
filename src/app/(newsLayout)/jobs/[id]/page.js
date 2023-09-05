@@ -131,7 +131,6 @@ const JobDetails = ({ params }) => {
 
           <p className="text-base font-semibold my-4">About {companyName}</p>
           <p className="text-gray-500 text-sm">{description}</p>
-
           <div className="border p-3 rounded-lg md:mx-3">
             <p className="text-sm font-semibold my-2 text-gray-600">
               Activity on Internshala
