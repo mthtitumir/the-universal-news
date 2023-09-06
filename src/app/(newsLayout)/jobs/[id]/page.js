@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -59,6 +60,44 @@ const JobDetails = ({ params }) => {
     console.log(resume, coverLetter);
     event.target.reset();
   };
+=======
+"use client"
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import data from '../../../../utils/job.json'
+import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail } from 'react-icons/bi'
+import { PiClockClockwise } from 'react-icons/pi'
+import { CgSandClock } from 'react-icons/cg'
+import { GoPeople, GoClockFill } from 'react-icons/go'
+import Link from 'next/link';
+import axios from 'axios';
+import useAuth from '@/hooks/useAuth';
+
+const JobDetails = ({ params }) => {
+    const {user} = useAuth()
+    const id = params.id;
+    const [jobDetails, setjobDetails] = useState({})
+    useEffect(() => {
+        const singlejob = async () => {
+            const response = await axios.get(`/api/getSinglejobsdata/${id}`)
+            setjobDetails(response.data)
+        }
+        singlejob()
+    }, [id])
+    const { email, employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const resume = form.resume.value
+        const coverLetter = form.letter.value;
+        const usersemail = user.email
+        const response = await axios.post('/api/add-apply',{resume,coverLetter,email,usersemail})
+        console.log(response.data)
+        console.log(resume, coverLetter, email);
+        event.target.reset();
+    }
+>>>>>>> 6fe0fc54acb4b93e28dd530f2207295a0ccac8b6
 
   return (
     <div className="p-4 border c-auto">
