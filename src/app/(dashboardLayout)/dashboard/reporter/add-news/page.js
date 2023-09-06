@@ -1,4 +1,5 @@
 "use client"
+import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
 import useAuth from '@/hooks/useAuth';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
@@ -37,12 +38,11 @@ const AddaNews = () =>  {
             toast.error(error.message || "News posting failed!");
         }
         reset();
-
     }
     return (
-        <div>
-            <h1 className='text-center text-5xl text-cyan-500 mt-5'>Add a news </h1>
-            <div className=" w-full  shadow-2xl card-background ">
+        <div className='p-3 md:pr-0'>
+            <DashboardBanner text={"Add a News"} />
+            <div className=" w-full  shadow-2xl card-background border border-cyan-500 rounded-lg mt-3">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                         <label className="label">

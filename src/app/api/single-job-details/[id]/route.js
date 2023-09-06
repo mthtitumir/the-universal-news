@@ -7,7 +7,7 @@ export const GET = async (request, {params}) => {
             const db = await DbConnect();
             const allJobs = db.collection('all-jobs');
             const query = {_id: new ObjectId(params?.id)}
-            const result = await allJobs.findOne(query)
+            const result = await allJobs.findOne(query);
             return NextResponse.json(result);
         } catch (error) {
             console.error("Error adding comment:", error);

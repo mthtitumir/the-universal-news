@@ -1,33 +1,37 @@
 "use client"
+import Spinner from "@/components/ErrorComponents/Spinner";
 import useAuth from "@/hooks/useAuth";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 const MyNews = () => {
-    const { user } = useAuth();
-    const [newsData, setNewsData] = useState([]);
-    useEffect(()=>{
-        const fetchData = async () => {
-            if (user) {
-                try {
-                    const mynews = await axios.get(`/api/getSingleReporterNews?email=${user.email}`);
-                    setNewsData(mynews.data);
-                } catch (error) {
-                    console.error("Error fetching reporter news:", error);
-                }
+    const { user, loading } = useAuth();
+    const { data: myNews, isLoading: isMyNewsLoading } = useQuery({
+        queryKey: ['myNews', user?.email],
+        enabled: !loading,
+        queryFn: async () => {
+            try {
+                const res = await axios.get(`/api/reporters-all-news/${user?.email}`);
+                // console.log(res);
+                return res.data;
+            } catch (error) {
+                console.error("Error fetching reporter news:", error);
             }
-        };
-        fetchData();
-    },[user])
-    
+        }
+    });
+    // console.log(myNews);
+    if( loading || isMyNewsLoading ) {
+        return <Spinner />
+    }
     return (
         <div>
             <p>Email: {user?.email}</p>
-            {newsData.map((newsItem, index) => (
+            <p>MyNews : {myNews?.length}</p>
+            {/* {myNews.map((newsItem, index) => (
                 <div key={index}>
                     <p>Category: {newsItem.category}</p>
                 </div>
-            ))}
+            ))} */}
         </div>
     );
 };

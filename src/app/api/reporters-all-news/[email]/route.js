@@ -10,6 +10,7 @@ export const GET = async (request, {params}) => {
             const allNews = db.collection('all-news');
             const query = { email: email };
             const result = await allNews.find(query).toArray(); 
+            // console.log(result);
             return NextResponse.json(result);
         } catch (error) {
             console.error("Error fetching user data:", error);
