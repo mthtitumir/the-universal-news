@@ -9,5 +9,4 @@ export const GetAllEmployers = () => GetAllEmployersFromDB();
 export const GetPendingNews = () => GetPendingNewsFromDB();
 export const GetAllJobs = () => GetAllJobsFromDB();
 export const GetSingleJobs = (id) => GetSingleJobsFromDB(id);
-export const GetAllComments = () => GetAllCommentsFromDB();
 

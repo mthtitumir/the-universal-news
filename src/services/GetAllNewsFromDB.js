@@ -125,13 +125,3 @@ export const GetSingleJobsFromDB = async (id) => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetAllCommentsFromDB = async () =>{
-    try {
-        const db  = await DbConnect();
-        const comments = await db.collection("all-news").distinct("comments");
-        return comments;
-      } catch (error) {
-        console.error("Error retrieving comments:", error);
-        return ({ error: "Internal server error" });
-      }
-}
