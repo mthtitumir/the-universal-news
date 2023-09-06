@@ -48,7 +48,7 @@ export const navData = [
         title: 'Games'
     },
     {
-        path:'/news/travel',
+        path:'/travel',
         title: 'Travel'
     },
     {
