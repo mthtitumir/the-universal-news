@@ -1,10 +1,10 @@
 import NewsCardOne from "../../newsCards/NewsCardOne";
 import NewsCardTwo from "../../newsCards/NewsCardTwo";
 import NewsCardFour from "../../newsCards/NewsCardFour";
-import { subCategories } from "@/hooks/useSubCategories";
 import Headline from "@/components/miniComponents/Headline";
+import { GetSubCategory } from "@/services/GetAllNews";
 const CricInfo = async () => {
-  const news = await subCategories("cricket");
+  const news = await GetSubCategory("cricket");
   // console.log(news);
   const data = news.slice(0, 20);
   const data1 = news.slice(0, 20);

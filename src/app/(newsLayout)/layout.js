@@ -1,10 +1,9 @@
 import Footer from "@/components/Footer/Footer"
 import TopNavbar from "@/components/Navbar/TopNavbar"
 import Providers from "@/providers"
-import { Inter } from "next/font/google"
 import Toaster from "@/components/Toaster"
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Home | The Universal News',
@@ -13,16 +12,14 @@ export const metadata = {
 
 const NewsLayout = ({ children }) => {
   return (
-    <html lang="en" data-theme="light">
-      <body className={`${inter.className} bg-white`}>
-        <Providers>
+    <div>
+      <Providers>
           <TopNavbar />
           {children}
           <Footer />
-        </Providers>
-        <Toaster />
-      </body>
-    </html>
+      </Providers>
+      <Toaster />
+    </div>
   )
 }
 export default NewsLayout;
