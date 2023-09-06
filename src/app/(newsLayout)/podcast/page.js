@@ -1,5 +1,7 @@
 import Banner from "@/components/PodcastBanner/Banner";
+import ScrollToTopButton from "@/components/ScrollToTop/ScrollToTopButton";
 import SearchBox from "@/components/SearchBox/SearchBox";
+import MyModal from "@/components/TextToVoiceModal/MyModal";
 import Trending from "@/components/Trending/Trandings";
 import React from "react";
 
@@ -19,6 +21,10 @@ const Podcast = () => {
       </div>
       <div>
         <Trending />
+      </div>
+      <div>
+        <ScrollToTopButton />
+        <MyModal />
       </div>
     </div>
   );
