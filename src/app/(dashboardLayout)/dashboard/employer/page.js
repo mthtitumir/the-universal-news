@@ -75,4 +75,4 @@ const EmployerOverview = () => {
     );
 };
 
-export default EmployerHome;
+export default EmployerOverview;
