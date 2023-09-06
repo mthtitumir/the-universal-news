@@ -13,8 +13,8 @@ const SecondSec = () => {
     // console.log(travelData)
     return (
         <>
-            <h2 className='text-center text-3xl font-semibold my-9'>Find Your Destination</h2>
-            <div className='flex-row md:flex gap-3 my-7 w-[100%]'>
+            <h2 className='text-center text-3xl font-semibold  mt-20'>Find Your Destination</h2>
+            <div className='flex-row md:flex gap-8 my-7 w-[100%]'>
 
                 <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden md:w-[70%]">
                     {travelData.map((item) => (
