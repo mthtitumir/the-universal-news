@@ -4,17 +4,19 @@ import Link from 'next/link';
 import React from 'react';
 import StarRatings from 'react-star-ratings';
 const SingleBooks = ({ books }) => {
-  const { id, name, img, description, ratings, price } = books;
+    const { id, name, img, description, ratings, price } = books;
     return (
         <div className="card w-full bg-base-100 border  rounded-sm ">
             <figure>
-                <Image
-                    height={50}
-                    width={120}
-                    src={img}
-                    alt='book image'
-                    className='mt-4'
-                ></Image>
+                <Link href={`/books/${id}`}>
+                    <Image
+                        height={50}
+                        width={120}
+                        src={img}
+                        alt='book image'
+                        className='mt-4'
+                    ></Image>
+                </Link>
             </figure>
             <div className="card-body text-center">
                 <h2 className="text-xl font-semibold text-center">{name}</h2>
