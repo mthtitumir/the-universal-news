@@ -1,39 +1,38 @@
-"use client"
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import data from '../../../../utils/job.json'
-import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail } from 'react-icons/bi'
-import { PiClockClockwise } from 'react-icons/pi'
-import { CgSandClock } from 'react-icons/cg'
-import { GoPeople, GoClockFill } from 'react-icons/go'
-import Link from 'next/link';
-import axios from 'axios';
-import useAuth from '@/hooks/useAuth';
+"use client";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import {BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail} from "react-icons/bi";
+import { PiClockClockwise } from "react-icons/pi";
+import { CgSandClock } from "react-icons/cg";
+import { GoPeople, GoClockFill } from "react-icons/go";
+import axios from "axios";
+import useAuth from "@/hooks/useAuth";
 
 const JobDetails = ({ params }) => {
-    const {user} = useAuth()
-    const id = params.id;
-    const [jobDetails, setJobDetails] = useState({})
-    useEffect(() => {
-        const singleJob = async () => {
-            const response = await axios.get(`/api/getSinglejobsdata/${id}`)
-            setJobDetails(response.data)
-        }
-        singleJob()
-    }, [id])
-    const { email, employerUserID, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails
+  const {user} = useAuth();
+  const idP = params.id;
+  const [jobDetails, setjobDetails] = useState({});
+  useEffect(() => {
+    const singlejob = async () => {
+      const resposne = await axios.get(`/api/single-job-details/${idP}`);
+      setjobDetails(resposne.data);
+    };
+    singlejob();
+  }, [idP]);
+  const { id, email, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails;
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const resume = form.resume.value
-        const coverLetter = form.letter.value;
-        const usersemail = user.email
-        const response = await axios.post('/api/add-apply',{resume,coverLetter,email,usersemail})
-        console.log(response.data)
-        console.log(resume, coverLetter, email);
-        event.target.reset();
-    }
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      
+      const resume = form.resume.value;
+      const coverLetter = form.letter.value;
+      const userEmail = user?.email;
+      const response = await axios.post('/api/apply-job',{jobId:id, resume, coverLetter, employerEmail: email, userEmail})
+      // console.log(response.data);
+      // console.log(resume, coverLetter, email);
+      event.target.reset();
+  }
 
   return (
     <div className="p-4 border c-auto">
@@ -150,8 +149,8 @@ const JobDetails = ({ params }) => {
 
           <p className="text-base font-semibold mt-4">Skill(s) required</p>
           <div className="flex items-center gap-4 text-center md:w-2/4">
-            {requiredSkills?.map((skils) => (
-              <p key={skils}>{skils}</p>
+            {requiredSkills?.map((skill) => (
+              <p key={skill}>{skill}</p>
             ))}
           </div>
 

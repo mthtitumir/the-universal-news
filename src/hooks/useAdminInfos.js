@@ -10,27 +10,27 @@ const AdminInfos = async () =>{
     // const lengthInfo = [{"News":allNews?.length}, {"Users":allUsers?.length}, {"Jobs":allJobs?.length}, {"Employers": allEmployers?.length}, {"Reporters": allReporters?.length}, {"Pending-News":allPendingNews?.length}];
     const lengthInfo = [
         {
-            name: "News",
+            name: "Total News",
             number: allNews?.length
         },
         {
-            name: "Users",
+            name: "Registered Users",
             number: allUsers?.length
         },
         {
-            name: "News",
-            number: allNews?.length
+            name: "Pending News",
+            number: allPendingNews?.length
         },
         {
             name: "Jobs",
             number: allJobs?.length
         },
         {
-            name: "Employers",
+            name: "Happy Employers",
             number: allEmployers?.length
         },
         {
-            name: "Reporters",
+            name: "Brave Reporters",
             number: allReporters?.length
         },
 

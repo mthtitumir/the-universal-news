@@ -19,10 +19,21 @@ import Headline from '@/components/miniComponents/Headline';
 
 const Carosoul = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+    // const breakpoints = {
+    //     // For mobile devices (1 card)
+    //     320: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 10, // Adjust the spacing as needed
+    //     },
+    //     // For larger screens (3 cards)
+    //     768: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 30, // Adjust the spacing as needed
+    //     },
+    // };
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 px-3 md:px-0'>
             <Headline headline={"Videos"} seeMore={""} />
             <Swiper
                 style={{

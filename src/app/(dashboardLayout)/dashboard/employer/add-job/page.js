@@ -16,11 +16,12 @@ const AddAJob = () => {
         const id = Math.floor(Math.random() * 100000);
         const status = 'pending';
         const datePosted = new Date().toISOString();
+        const jobId = Math.floor(1000000000 + Math.random() * 9000000000);
         const { title, description, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, requiredSkillses,author } = data;
         const toastId = toast.loading("Loading...");
         const requiredSkills = requiredSkillses.split(',');
         try {
-            const response = await axios.post(`/api/add-job`, { id, title, description, requiredSkills, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, status, datePosted, email,author });
+            const response = await axios.post(`/api/add-job`, { id, title, description, requiredSkills, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, status, datePosted,jobId, email,author });
             // console.log(response.data);
             if (response.data.insertedId) {
                 toast.dismiss(toastId);
@@ -42,7 +43,7 @@ const AddAJob = () => {
         <div className='p-3'>
             {/* <h1 className='text-center text-5xl text-cyan-500 mt-5'>Add a Job </h1> */}
             <DashboardBanner text={"Add a Job"} />
-            <div className=" w-full  shadow-2xl card-background border-2  border-cyan-500 rounded-lg mt-3">
+            <div className=" w-full  shadow-2xl card-background border border-cyan-500 rounded-lg mt-3">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className='md:flex justify-center items-center gap-4'>
                         <div className="form-control md:w-[50%]">
