@@ -1,26 +1,11 @@
 import React from 'react';
-import data from '../../../../utils/json'
-import SinglePhotoInfo from '@/components/PhotoCompoents/SinglePhotoInfo'
 
-
-
-const SingleImage = () => {
-    const photoData = data.slice(0, 1);
-
+const PhotoInfo = () => {
     return (
-        <div className='c-auto'>
-            {
-                photoData.map((photo) => (
-                    <SinglePhotoInfo
-                        key={photo.id}
-                        photo={photo}
-                    />
-                ))
-        }
-    
+        <div>
+            test
         </div>
-
     );
 };
 
-export default SingleImage;
+export default PhotoInfo;
