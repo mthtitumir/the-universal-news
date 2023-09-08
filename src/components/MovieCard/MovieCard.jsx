@@ -1,30 +1,30 @@
 import Image from "next/image";
-import { AiFillStar } from "react-icons/ai";
+import CirCleRating from "../../components/CircleRating/CircleRating";
 import React from "react";
+import Link from "next/link";
 
 const MovieCard = ({ movie }) => {
-  const { poster_path, original_title, vote_average, overview } = movie;
+  const { id, poster_path, original_title, vote_average, release_date } = movie;
   return (
     <div>
-      <div className="shadow-lg relative rounded-xl h-[800px]">
+      <Link href={`/tv-show/${id}`} className="shadow-lg  rounded-xl h-full">
         <div className="basis-1/2">
           <Image
             alt="banner image"
             width={400}
             height={300}
-            className=" z-10 rounded-xl w-full h-[450px]"
-            src={`https://image.tmdb.org/t/p/original${poster_path}`}
+            className=" z-10 rounded-xl w-full h-[300px]"
+            src={poster_path}
           ></Image>
         </div>
-        <div className="basis-1/2 mt-3 flex flex-col items-start justify-center p-6">
-          <h1 className="text-2xl font-bold z-30">{original_title}</h1>
-          <div className="flex  gap-1">
-            <AiFillStar className="text-yellow-400" />
-            <span>{vote_average}</span>
+        <div className="basis-1/2 mt-3 flex relative flex-col items-start justify-center p-6">
+          <div className="absolute transform left-2 -top-14">
+            <CirCleRating rating={vote_average}></CirCleRating>
           </div>
-          <p>{overview}</p>
+          <h1 className="text-2xl font-bold z-30">{original_title}</h1>
+          <p className="text-lg text-gray-500 font-normal ">{release_date}</p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
