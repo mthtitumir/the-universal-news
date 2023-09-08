@@ -10,10 +10,7 @@ import useRole from "@/hooks/useRole"
 import Unauthorized from "@/components/ErrorComponents/Unauthorized"
 import Spinner from "@/components/ErrorComponents/Spinner"
 
-export const metadata = {
-  title: 'Dashboard | The Universal News',
-  description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
-}
+
 
 const Dashboard = ({ children }) => {
   const { user, loading } = useAuth();

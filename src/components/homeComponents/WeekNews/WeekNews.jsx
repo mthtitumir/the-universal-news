@@ -1,4 +1,3 @@
-import React from 'react';
 import fakeData from "../../../utils/news.json"
 import Headline from '@/components/miniComponents/Headline';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
@@ -12,8 +11,8 @@ const WeekNews = () => {
 
 
     return (
-        <div className='mt-5 grid grid-cols-12 gap-3 md:h-[70vh]'>
-            <div className='col-span-4 overflow-y-scroll overflow-x-hidden card1'>
+        <div className='mt-5 grid md:grid-cols-12 gap-3 md:h-[70vh]'>
+            <div className='md:col-span-4 overflow-y-scroll overflow-x-hidden card1'>
                 <Headline headline={"Week's Hottest"} seeMore={"see more"} />
                 <div className='flex flex-col gap-3'>
                     {
@@ -24,7 +23,7 @@ const WeekNews = () => {
                     }
                 </div>
             </div>
-            <div className='col-span-5 overflow-y-scroll overflow-x-hidden card1'>
+            <div className='md:col-span-5 overflow-y-scroll overflow-x-hidden card1'>
                 <Headline headline={"Weekly News"} seeMore={"see more"} />
                 <div>
                     {
@@ -35,13 +34,13 @@ const WeekNews = () => {
                     }
                 </div>
             </div>
-            <div className='relative col-span-3'>
+            <div className='pl-3 md:col-span-3'>
                 <Image
                     src="https://i.ibb.co/92BFdLM/5190537997-89cf7af050-c.jpg"
                     height={400}
                     width={300}
                     alt="Advertisement"
-                    className=' absolute right-0 '
+                    className=''
                 >
                 </Image>
             </div>

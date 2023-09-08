@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 
-const Gellery = () => {
+const Gallery = () => {
     return (
         <div>
             <Image
@@ -12,7 +12,7 @@ const Gellery = () => {
                 alt='book image'
                 className='mt-6'
             ></Image>
-            <div className='grid grid-cols-4 gap-4 my-6 mx-auto '>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 my-6 mx-auto '>
                 <div>
                     <Image
                         height={100}
@@ -50,4 +50,4 @@ const Gellery = () => {
     );
 };
 
-export default Gellery;
+export default Gallery;

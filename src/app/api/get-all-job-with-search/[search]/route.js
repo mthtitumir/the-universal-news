@@ -1,11 +1,10 @@
 import DbConnect from "@/services/DbConnect";
 import { NextResponse } from "next/server";
 
-export const GET = async (request) => {
+export const GET = async (request, {params}) => {
     if (request.method === "GET") {
         try {
-            const { searchParams } = new URL(request.url);
-            const search = searchParams.get('search');
+            const search = params.search;
             console.log(search)
             const db = await DbConnect();
             const allJobs = db.collection('all-jobs');

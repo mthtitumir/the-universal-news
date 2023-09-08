@@ -6,7 +6,7 @@ import StarRatings from 'react-star-ratings';
 const SingleBooks = ({ books }) => {
     const { id, name, img, description, ratings, price } = books;
     return (
-        <div className="card w-full bg-base-100 border  rounded-sm ">
+        <div className="card w-full bg-base-100 border rounded-sm ">
             <figure>
                 <Link href={`/books/${id}`}>
                     <Image
@@ -19,20 +19,20 @@ const SingleBooks = ({ books }) => {
                 </Link>
             </figure>
             <div className="card-body text-center">
-                <h2 className="text-xl font-semibold text-center">{name}</h2>
-                <p>{description.slice(0, 30)}</p>
+                <h2 className="text-md md:text-xl font-semibold text-center">{name}</h2>
+                <p className='text-xs md:text-sm'>{description.slice(0, 30)}</p>
                 <div className='md:flex items-center '>
                     <StarRatings
                         rating={ratings}
-                        starDimension="20px"
+                        starDimension="15px"
                         starSpacing="2px"
                         starRatedColor="orange"
+                        // className="text-3xl"
                     />
-                    <p className=''>{ratings}</p>
+                    <p className='text-sm'>{ratings}</p>
                 </div>
                 <p className='text-base text-red-700'>${price}</p>
             </div>
-
         </div>
     );
 };

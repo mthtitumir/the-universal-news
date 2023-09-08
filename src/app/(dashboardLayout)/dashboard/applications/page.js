@@ -1,9 +1,8 @@
 "use client"
-import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
 import useAuth from '@/hooks/useAuth';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-const Applications = () => {
+import React, { useEffect, useState } from 'react';
+const Application = () => {
     const { user } = useAuth();
     const [aplicationsDatas, setjaplicationsDatas] = useState([]);
     useEffect(() => {
@@ -21,7 +20,8 @@ const Applications = () => {
     }, [user])
     return (
         <div>
-            <DashboardBanner text={"Applications"} />
+            <h1 className='text-center text-5xl text-cyan-500 mt-5'>my aplications</h1>
+            <p className='text-center text-4xl text-cyan-500 mt-5'>Author: {user?.displayName}</p>
             <div>
                 <div className="overflow-x-auto">
                     <table className="table">
@@ -50,4 +50,4 @@ const Applications = () => {
     );
 };
 
-export default Applications;
+export default Application;

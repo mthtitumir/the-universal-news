@@ -8,7 +8,7 @@ const ReporterDashboardLayout = ({ children }) => {
     const { user, loading } = useAuth();
     const [role, isRoleLoading] = useRole();
     const { replace, refresh } = useRouter();
-    console.log(role);
+    // console.log(role);
 
     if (loading || isRoleLoading) {
         return <Spinner />
