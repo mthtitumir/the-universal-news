@@ -1,0 +1,221 @@
+[
+    {
+        "id": 1,
+        "title": "Travel Photography",
+        "description": "Showcase stunning photographs from around the world, capturing the beauty of different cultures, landscapes, and destinations.",
+        "category": "Photography",
+        "img": "https://i.ibb.co/ZXNrDL3/tokyo-pictures-mupik6vfm4prikgy.jpg",
+        "images": [
+            "https://i.ibb.co/ZXNrDL3/tokyo-pictures-mupik6vfm4prikgy.jpg",
+            "https://i.ibb.co/7SSTntZ/Tramonto-Mather-Point-Grand-Canyon.jpg",
+            "https://i.ibb.co/VWhLfnz/Eiffel-Tower-Blue-Hour-from-Pont-de-la-concorde-02-copyright-French-Moments.jpg"
+        ],
+        "captions": [
+            "Exploring the vibrant streets of Tokyo.",
+            "Sunset over the Grand Canyon.",
+            "A serene moment by the Eiffel Tower in Paris."
+        ],
+        "published_date": "August 15, 2023",
+        "author": "John Photographer",
+        "authorEmail": "john@example.com",
+        "slideImage": "https://i.ibb.co/V39sJvL/Whats-App-Image-2023-09-06-at-15-13-59-5.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Nature Photography",
+        "description": "Highlight the wonders of the natural world, including landscapes, wildlife, and macro photography of plants and insects.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/yQgJGCR/Majestic-waterfall-in-the-rainforest.jpg",
+            "https://i.ibb.co/pX5tFMp/Close-up-of-a-colorful-butterfly.jpg",
+            "https://i.ibb.co/2cqq1w2/Snow-capped-mountain-peaks-at-sunrise.jpg"
+        ],
+        "captions": [
+            "Majestic waterfall in the rainforest.",
+            "Close-up of a colorful butterfly.",
+            "Snow-capped mountain peaks at sunrise."
+        ],
+        "published_date": "August 20, 2023",
+        "author": "Jane Photographer",
+        "authorEmail": "jane@example.com",
+        "slideImage": "https://i.ibb.co/gMWQXm9/Whats-App-Image-2023-09-06-at-15-13-59-2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Portrait Photography",
+        "description": "Feature portraits of interesting people from diverse backgrounds, emphasizing their unique stories and experiences.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/cxq2JMJ/A-charismatic-street-performer-in-New-Orleans.jpg",
+            "https://i.ibb.co/jrbZX6q/A-wise-elder-sharing-his-life-story.jpg",
+            "https://i.ibb.co/9ybnCbL/A-young-artist-immersed-in-her-work.jpg"
+        ],
+        "captions": [
+            "A charismatic street performer in New Orleans.",
+            "A wise elder sharing his life story.",
+            "A young artist immersed in her work."
+        ],
+        "published_date": "August 25, 2023",
+        "author": "Sarah Photographer",
+        "authorEmail": "sarah@example.com",
+        "slideImage": "https://i.ibb.co/DLt12Ny/Whats-App-Image-2023-09-06-at-15-13-59-6.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Street Photography",
+        "description": "Showcase candid and authentic moments captured in public spaces, reflecting the everyday life and culture of different cities and regions.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/kQJ01FD/Bustling-street-market-in-Marrakech-Morocco.jpg",
+            "https://i.ibb.co/VB2RkCV/Kids-playing-on-a-quiet-neighborhood-street.jpg",
+            "https://i.ibb.co/HnF2nbM/Street-musicians-creating-magic-in-New-York-City.jpg"
+        ],
+        "captions": [
+            "Bustling street market in Marrakech, Morocco.",
+            "Kids playing on a quiet neighborhood street.",
+            "Street musicians creating magic in New York City."
+        ],
+        "published_date": "September 5, 2023",
+        "author": "David Photographer",
+        "authorEmail": "david@example.com",
+        "slideImage": "https://i.ibb.co/XSn7pn6/Whats-App-Image-2023-09-06-at-15-13-58.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Fashion Photography",
+        "description": "Highlight the latest fashion trends and editorial shoots, including high-end fashion and street style photography.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/VLLzL8X/Elegant-runway-model-showcasing-designer-attire.jpg",
+            "https://i.ibb.co/1nHQLbJ/Street-style-fashion-in-the-heart-of-Tokyo.jpg",
+            "https://i.ibb.co/wCqsCyq/A-behind-the-scenes-look-at-a-fashion-editorial-shoot.jpg"
+        ],
+        "captions": [
+            "Elegant runway model showcasing designer attire.",
+            "Street style fashion in the heart of Tokyo.",
+            "A behind-the-scenes look at a fashion editorial shoot."
+        ],
+        "published_date": "September 10, 2023",
+        "author": "Emily Photographer",
+        "authorEmail": "author@email.com",
+        "slideImage": "https://i.ibb.co/tQj1bzZ/Whats-App-Image-2023-09-06-at-15-13-59-1.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Architecture Photography",
+        "description": "Display architectural marvels, both modern and historical, showcasing the creativity and craftsmanship of architects and builders.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/jD7ySjB/Iconic-Sydney-Opera-House-against-a-blue-sky.jpg",
+            "https://i.ibb.co/R0QxKpK/Intricate-details-of-Gothic-architecture-in-Paris.jpg",
+            "https://i.ibb.co/JC9JJkv/Dubai-architects-unveil-spectacular-future-concept-for-Dubai-skyline-Giant-550-metre-tall-ring-to-en.jpg"
+        ],
+        "captions": [
+            "Iconic Sydney Opera House against a blue sky.",
+            "Intricate details of Gothic architecture in Paris.",
+            "Dubai architects unveil spectacular future concept for Dubai skyline: Giant 550-metre-tall ring to encircle Burj Khalifa"
+        ],
+        "published_date": "September 15, 2023",
+        "author": "Michael Photographer",
+        "authorEmail": "michael@example.com",
+        "slideImage": "https://i.ibb.co/v4XzSG6/Whats-App-Image-2023-09-06-at-15-13-59-4.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Documentary Photography",
+        "description": "Present powerful photojournalism that tells stories of social issues, current events, and human experiences from around the globe.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/5Mkhy7M/Protesters-marching-for-climate-action.jpg",
+            "https://i.ibb.co/47jN0H3/A-heartwarming-moment-in-a-refugee-camp.jpg",
+            "https://i.ibb.co/yQbPKWp/Documenting-the-aftermath-of-a-natural-disaster.jpg"
+        ],
+        "captions": [
+            "Protesters marching for climate action.",
+            "A heartwarming moment in a refugee camp.",
+            "Documenting the aftermath of a natural disaster."
+        ],
+        "published_date": "September 20, 2023",
+        "author": "Sophie Photographer",
+        "authorEmail": "sophie@example.com",
+        "slideImage": "https://i.ibb.co/PCzF0DS/Whats-App-Image-2023-09-06-at-15-13-59-3.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Food Photography",
+        "description": "Explore the art of food photography, capturing the flavors, textures, and aesthetics of delectable dishes from around the world.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/hdj13Pt/Mouthwatering-sushi-platter.jpg",
+            "https://i.ibb.co/vwk4QYT/Aromatic-spices-and-herbs-in-a-bustling-market.jpg",
+            "https://i.ibb.co/bJdBsgp/Artfully-plated-dessert-masterpiece.jpg"
+        ],
+        "captions": [
+            "Mouthwatering sushi platter.",
+            "Aromatic spices and herbs in a bustling market.",
+            "Artfully plated dessert masterpiece."
+        ],
+        "published_date": "September 25, 2023",
+        "author": "Grace Photographer",
+        "authorEmail": "grace@example.com",
+        "slideImage": "https://i.ibb.co/RP78Lh1/Whats-App-Image-2023-09-06-at-15-13-59-7.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Wildlife Photography",
+        "description": "Capture the beauty and majesty of wildlife in their natural habitats, from exotic animals to birds in flight.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/0ct9rpH/Graceful-cheetah-on-the-hunt-in-the-savannah.jpg",
+            "https://i.ibb.co/wRC7X1C/Colorful-toucan-perched-in-a-tropical-rainforest.jpg",
+            "https://i.ibb.co/FVNht9C/A-pair-of-majestic-eagles-soaring-high-above-the-mountains.png"
+        ],
+        "captions": [
+            "Graceful cheetah on the hunt in the savannah.",
+            "Colorful toucan perched in a tropical rainforest.",
+            "A pair of majestic eagles soaring high above the mountains."
+        ],
+        "published_date": "September 30, 2023",
+        "author": "William Photographer",
+        "authorEmail": "william@example.com",
+        "slideImage": "https://i.ibb.co/mRkynWb/Whats-App-Image-2023-09-06-at-15-14-00.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Portrait Photography",
+        "description": "Feature portraits of interesting people from diverse backgrounds, emphasizing their unique stories and experiences.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/cxq2JMJ/A-charismatic-street-performer-in-New-Orleans.jpg",
+            "https://i.ibb.co/jrbZX6q/A-wise-elder-sharing-his-life-story.jpg",
+            "https://i.ibb.co/9ybnCbL/A-young-artist-immersed-in-her-work.jpg"
+        ],
+        "captions": [
+            "A charismatic street performer in New Orleans.",
+            "A wise elder sharing his life story.",
+            "A young artist immersed in her work."
+        ],
+        "published_date": "August 25, 2023",
+        "author": "Sarah Photographer",
+        "authorEmail": "sarah@example.com"
+    },
+    {
+        "id": 11,
+        "title": "Aerial Photography",
+        "description": "Offer a unique perspective from above, showcasing stunning aerial views of landscapes, cities, and natural wonders.",
+        "category": "Photography",
+        "images": [
+            "https://i.ibb.co/H2ShcmN/A-breathtaking-view-of-the-Great-Barrier-Reef.jpg",
+            "https://i.ibb.co/JqHZztY/Cityscape-lights-twinkling-at-night-from-a-helicopter.jpg",
+            "https://i.ibb.co/ZKQgK2P/Majestic-waterfalls-cascading-through-lush-green-canyons-from-a-drone-s-perspective.jpg"
+        ],
+        "captions": [
+            "A breathtaking view of the Great Barrier Reef.",
+            "Cityscape lights twinkling at night from a helicopter.",
+            "Majestic waterfalls cascading through lush green canyons from a drone's perspective."
+        ],
+        "published_date": "October 5, 2023",
+        "author": "Olivia Photographer",
+        "authorEmail": "olivia@example.com"
+    }
+]

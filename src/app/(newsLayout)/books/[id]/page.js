@@ -9,7 +9,6 @@ const BookDetails = ({ params }) => {
     const bookDetails = data;
     const id = params.id;
     const booksDetails = bookDetails.find(job => job.id == id);
-
     const { name, img, description, ratings, price, category, authorName, authorImage } = booksDetails;
 
 
