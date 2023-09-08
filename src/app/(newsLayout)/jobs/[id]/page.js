@@ -21,8 +21,6 @@ const JobDetails = ({ params }) => {
   }, [idP]);
   const { id, email, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails;
 
-
-
   const handleSubmit = async (event) => {
       event.preventDefault();
       const form = event.target;
@@ -35,7 +33,6 @@ const JobDetails = ({ params }) => {
       // console.log(resume, coverLetter, email);
       event.target.reset();
   }
-
 
   return (
     <div className="p-4 border c-auto">
