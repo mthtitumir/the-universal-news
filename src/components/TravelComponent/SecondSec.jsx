@@ -11,7 +11,6 @@ const SecondSec = () => {
     const travelData = data.slice(2, 3);
     const travelData2 = data.slice(6, 8);
 
-    // console.log(travelData)
     return (
         <>
             <h2 className='text-center text-3xl font-semibold  mt-20'>Find Your Destination</h2>
@@ -44,7 +43,6 @@ const SecondSec = () => {
                     }
                 </div>
             </div >
-            {/* ads */}
             < div className='my-7' >
                 <Image
                     height={100}
@@ -54,7 +52,6 @@ const SecondSec = () => {
                     className='mx-auto'
                 ></Image>
             </div >
-
             <h2 className='text-center text-3xl font-semibold my-9 mt-20'>More Place</h2>
             <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {

@@ -116,7 +116,6 @@ const TravelSingleNews = ({ params }) => {
                     <div className='w-full'>
                         <h2 className="card-title">{title}</h2>
                         <p>{description.repeat(5).length > 500 ? description.repeat(5).split(0, 501) : description.repeat(5)}</p>
-                        {/* <p>{date}</p> */}
                         <div className='flex items-center gap-5 capitalize my-3'>
                             <p className='px-4 py-1 bg-cyan-100 rounded'>{tags[0]}</p>
                             <p className='px-4 py-1 bg-cyan-100 rounded'>{tags[1]}</p>
@@ -143,11 +142,3 @@ const TravelSingleNews = ({ params }) => {
 };
 
 export default TravelSingleNews;
-
-
-{/* <SingleSlider bookDetails={bookDetails}></SingleSlider> */ }
-
-{/* 1. Image(2)
-            2. Title, description(1)
-            3. FLEX(author image name, scial share)
-            4. card4 */}

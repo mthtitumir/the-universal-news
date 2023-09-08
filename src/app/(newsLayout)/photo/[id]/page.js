@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../../../../utils/json'
-import SinglePhotoInfo from '@/components/PhotoCompoents/singlePhotoInfo'
+import SinglePhotoInfo from '@/components/PhotoCompoents/SinglePhotoInfo'
 
 
 
