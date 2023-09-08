@@ -68,7 +68,20 @@ export const GetAllReportersFromDB = async () => {
         const allUsers = db.collection('all-users');
         const query = { role: "reporter" }
         const result = await allUsers.find(query).toArray();
-        console.log(result.length);
+        // console.log(result.length);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+}
+export const GetAllEmployersFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allUsers = db.collection('all-users');
+        const query = { role: "employer" }
+        const result = await allUsers.find(query).toArray();
+        // console.log(result.length);
         return result;
     } catch (error) {
         console.error(error)

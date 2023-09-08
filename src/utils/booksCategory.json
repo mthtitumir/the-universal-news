@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "bookCategory": "Fiction",
+      "subCategory": [
+        "Mystery",
+        "Science Fiction",
+        "Romance",
+        "Fantasy",
+        "Adventure"
+      ]
+    },
+    {
+      "id": 2,
+      "bookCategory": "Non-Fiction",
+      "subCategory": [
+        "Biography",
+        "Self-Help",
+        "History",
+        "Science",
+        "Travel"
+      ]
+    },
+    {
+      "id": 3,
+      "bookCategory": "Mystery",
+      "subCategory": [
+        "Detective",
+        "Thriller",
+        "Suspense",
+        "Cozy Mystery",
+        "Crime"
+      ]
+    },
+    {
+      "id": 4,
+      "bookCategory": "Science Fiction",
+      "subCategory": [
+        "Space Opera",
+        "Dystopian",
+        "Time Travel",
+        "Hard Science Fiction",
+        "Cyberpunk"
+      ]
+    },
+    {
+      "id": 5,
+      "bookCategory": "Fantasy",
+      "subCategory": [
+        "Epic Fantasy",
+        "Urban Fantasy",
+        "High Fantasy",
+        "Low Fantasy",
+        "Historical Fantasy"
+      ]
+    },
+    {
+      "id": 6,
+      "bookCategory": "Romance",
+      "subCategory": [
+        "Contemporary Romance",
+        "Historical Romance",
+        "Paranormal Romance",
+        "Erotic Romance",
+        "LGBT Romance"
+      ]
+    },
+    {
+      "id": 7,
+      "bookCategory": "History",
+      "subCategory": [
+        "Ancient History",
+        "Medieval History",
+        "Modern History",
+        "World History",
+        "Military History"
+      ]
+    },
+    {
+      "id": 8,
+      "bookCategory": "Biography",
+      "subCategory": [
+        "Celebrity Biographies",
+        "Political Biographies",
+        "Historical Biographies",
+        "Athlete Biographies",
+        "Musician Biographies"
+      ]
+    },
+    {
+      "id": 9,
+      "bookCategory": "Science",
+      "subCategory": [
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Astronomy",
+        "Environmental Science"
+      ]
+    },
+    {
+      "id": 10,
+      "bookCategory": "Self-Help",
+      "subCategory": [
+        "Personal Development",
+        "Relationships",
+        "Mental Health",
+        "Motivation",
+        "Productivity"
+      ]
+    }
+  ]
+  

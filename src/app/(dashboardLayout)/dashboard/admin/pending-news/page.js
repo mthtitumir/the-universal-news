@@ -1,4 +1,3 @@
-
 import ApproveNews from "@/components/DashboardComponents/ApproveNews";
 import DeleteNews from "@/components/DashboardComponents/DeleteNews";
 import { GetPendingNews } from "@/services/GetAllNews";

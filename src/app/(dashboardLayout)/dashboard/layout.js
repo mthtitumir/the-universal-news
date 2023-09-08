@@ -7,27 +7,28 @@ import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar
 import NavLink from "@/components/Navbar/NavLink"
 import useAuth from "@/hooks/useAuth"
 import useRole from "@/hooks/useRole"
+import Unauthorized from "@/components/ErrorComponents/Unauthorized"
+import Spinner from "@/components/ErrorComponents/Spinner"
 
-export const metadata = {
-  title: 'Dashboard | The Universal News',
-  description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
-}
+
 
 const Dashboard = ({ children }) => {
   const { user, loading } = useAuth();
   const [role, isRoleLoading] = useRole();
-  const admin = role === "admin";
-  const employer = false;
-  const reporter = false;
   let navData;
-  if (role === "admin") {
+  if(loading || isRoleLoading){
+    return <Spinner />
+}
+  if (user && role?.toString() === "admin") {
     navData = adminSideNavbar;
-  } else if (role === "employer") {
+  } else if (user && role?.toString() === "employer") {
     navData = employerSideNavbar;
-  } else if (role === "reporter") {
+  } else if (user && role?.toString() === "reporter") {
     navData = reporterSideNavbar;
-  } else {
+  } else if (user && role?.toString() === "user") {
     navData = userSideNavbar;
+  } else {
+    return <Unauthorized />
   }
 
   return (
@@ -43,15 +44,15 @@ const Dashboard = ({ children }) => {
 
           <div className="drawer-side ">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className=" p-4 w-80 min-h-full bg-base-200 border border-cyan-600 text-base-content mt-3 rounded-lg">
+            <ul className=" p-4 w-48 min-h-full bg-cyan-50 border border-cyan-600 text-base-content mt-3 rounded-lg">
               {/* Sidebar content here */}
               {/* <h2 className={`${myFont.className} text-xl md:text-2xl text-center`}><Link href="/">The Universal News</Link></h2> */}
               {
-                navData.map(nav => <li key={nav.path} className="mb-2 hover:underline" ><NavLink exact activeClassName={"text-cyan-600"} href={nav.path}>{nav.title}</NavLink></li>)
+                navData.map(nav => <li key={nav.path} className="mb-2 hover:underline text-black" ><NavLink exact activeClassName={"text-pink-600"} href={nav.path}>{nav.title}</NavLink></li>)
               }
               <div className="divider"></div>
               {
-                generalSidebar.map(nav => <li key={nav.path} className=" mb-2 hover:underline" ><NavLink exact activeClassName={"text-cyan-600"} href={nav.path}>{nav.title}</NavLink></li>)
+                generalSidebar.map(nav => <li key={nav.path} className=" mb-2 hover:underline text-black" ><NavLink exact activeClassName={"text-pink-600"} href={nav.path}>{nav.title}</NavLink></li>)
               }
 
             </ul>

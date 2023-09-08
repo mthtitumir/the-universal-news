@@ -6,26 +6,40 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import data from '../../../utils/book.json'
 import Image from 'next/image';
+import Headline from '@/components/miniComponents/Headline';
 
 const Author = () => {
-    const bookData = data
+    const bookData = data;
+    const breakpoints = {
+        // For mobile devices (1 card)
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10, // Adjust the spacing as needed
+        },
+        // For larger screens (3 cards)
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 30, // Adjust the spacing as needed
+        },
+    };
 
     return (
         <>
-            <h2 className='text-3xl font-semibold mt-16 mb-5'>Authors</h2>
+            <Headline headline={"Authors"} />
             <Swiper
-                slidesPerView={3}
+                slidesPerView={4}
                 spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
+                // pagination={{
+                //     clickable: true,
+                // }}
                 modules={[Pagination]}
+                breakpoints={breakpoints}
                 className="mySwiper"
             >
                 {bookData.map((author) => (
                     <SwiperSlide
                         key={author.id}
-                        className='w-3/4 py-6'
+                        className='w-3/4 '
                     >
                         <div>
                             <Image
@@ -35,7 +49,7 @@ const Author = () => {
                                 alt='Author image'
                                 className=' rounded-3xl'
                             ></Image>
-                            <p className='text-xl mt-2  text-gray-600'>{author.authorName}</p>
+                            <p className=' md:text-xl mt-2  text-gray-600'>{author.authorName}</p>
                         </div>
                     </SwiperSlide>
                 ))}

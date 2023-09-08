@@ -5,6 +5,7 @@ import Image from "next/image";
 import StarRatings from "react-star-ratings";
 
 const BookDetails = ({ params }) => {
+<<<<<<< HEAD
   const bookDetails = data;
   const id = params.id;
   const booksDetails = bookDetails.find((job) => job.id == id);
@@ -19,6 +20,12 @@ const BookDetails = ({ params }) => {
     authorName,
     authorImage,
   } = booksDetails;
+=======
+    const bookDetails = data;
+    const id = params.id;
+    const booksDetails = bookDetails.find(job => job.id == id);
+    const { name, img, description, ratings, price, category, authorName, authorImage } = booksDetails;
+>>>>>>> b23ca48ddb643c526ada7a9ff20cf5e41a7659bf
 
   return (
     <div className="flex-row md:flex c-auto w-[90%] md:px-20 my-10">

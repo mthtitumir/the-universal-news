@@ -1,17 +1,9 @@
 import { GetAllReporters } from '@/services/GetAllNews'
 import Image from 'next/image'
 
-const Reporters = () => {
-  const reporters = GetAllReporters();
-  console.log(reporters);
-
-  if (!reporters) {
-    return (
-      <div className=' border-2 border-cyan-500 h-40 rounded-lg flex items-center justify-center m-3'>
-        <h1 className="text-3xl text-red-600 font-semibold animate-pulse">No Reporters Yet</h1>
-      </div>
-    )
-  }
+const Reporters = async () => {
+  const reporters = await GetAllReporters();
+  // console.log(reporters);
 
   return (
     <div className="overflow-x-auto p-3">
