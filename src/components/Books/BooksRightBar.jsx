@@ -1,15 +1,15 @@
 import React from 'react';
 import SwiperSection from './booksComponent/SwiperSection';
-import Gellery from './booksComponent/Gellery';
+import Gallery from './booksComponent/Gallery';
 import AllBooks from './booksComponent/AllBooks';
 import Author from './booksComponent/Author';
 
 const BooksRightBar = () => {
     return (
-        <div>
+        <div className='px-3 md:px-0 '>
             <SwiperSection></SwiperSection>
 
-            <Gellery></Gellery>
+            <Gallery></Gallery>
 
             <AllBooks></AllBooks>
 
