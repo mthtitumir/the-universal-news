@@ -7,24 +7,19 @@ import React from "react";
 
 const Podcast = () => {
   return (
-    <div className="mt-10 c-auto">
-      {/* <div>
-        <p className="text-center text-4xl font-bold text-cyan-600 mb-6">
-          Universal podcast
-        </p>
-      </div> */}
-      <div>
-        <Banner />
-      </div>
-      <div className="my-12">
+    <div className="c-auto">
+      <div className="my-8">
         <SearchBox></SearchBox>
+      </div>
+      <div className="mb-6">
+        <Banner />
       </div>
       <div>
         <Trending />
       </div>
       <div>
         <ScrollToTopButton />
-        <MyModal />
+        {/* <MyModal /> */}
       </div>
     </div>
   );

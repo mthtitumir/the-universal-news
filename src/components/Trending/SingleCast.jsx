@@ -1,9 +1,15 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 
 const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
   const { title, image, host, chanel_logo } = TrendingCast;
+  const [isFollowed, setIsFollowed] = useState(false);
+
+  const toggleFollow = () => {
+    setIsFollowed((prevIsFollowed) => !prevIsFollowed);
+  };
 
   return (
     <div className="card w-full bg-base-100 shadow-xl relative h-[450px]">
@@ -29,7 +35,14 @@ const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
             />
             <p className="text-xl font-semibold">{host}</p>
           </div>
-          <p className="py-2 px-1 bg-black text-white text-center rounded-3xl shadow-lg cursor-pointer">Follow</p>
+          <button
+            className={`py-2 px-4 bg-black text-white text-center rounded-3xl shadow-lg cursor-pointer ${
+              isFollowed ? "bg-green-500" : ""
+            }`}
+            onClick={toggleFollow}
+          >
+            {isFollowed ? "Followed" : "Follow"}
+          </button>
         </div>
       </div>
 
