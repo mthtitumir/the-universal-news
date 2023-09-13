@@ -3,7 +3,7 @@ import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 
-const DeleteNews = ({ id }) => {
+const DeleteNews = ({ id, what }) => {
     const handleDelete = async (id) => {
         // console.log(id);
         const swual = await Swal.fire({
@@ -16,7 +16,7 @@ const DeleteNews = ({ id }) => {
             confirmButtonText: 'Yes, delete it!'
         })
         if (swual.isConfirmed) {
-            const res = await axios.delete(`/api/delete-news/${id}`);
+            const res = await axios.delete(`/api/delete-${what}/${id}`);
             try {
                 // If the request is successful, the response data will be returned.
                 const data = await res.data;

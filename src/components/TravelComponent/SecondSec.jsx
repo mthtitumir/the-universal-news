@@ -21,7 +21,6 @@ const SecondSec = () => {
                             <Link href={`/travel/${item?.id}`}  >
                                 <Image height="460" width="526" src={item?.img} className='w-full' alt='banner' />
                             </Link>
-
                             <div className='absolute bottom-0 p-2 bg-black bg-opacity-70 w-full'>
                                 <h1 className='text-white text-md md:text-lg whitespace-nowrap overflow-hidden hover:underline'>{item?.title}</h1>
                                 <p className='text-white text-sm mt-2'>{item?.published_date}</p>

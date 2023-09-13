@@ -15,27 +15,29 @@ const AllJobs = async () => {
                         <th>ID</th>
                         <th>Title</th>
                         <th>Company</th>
-                        <th>Location</th>
+                        <th>Employer</th>
                         <th>Category</th>
                         <th>Deadline</th>
                         <th>Salary</th>
+                        <th>Status</th>
                         <th>Experience</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        jobs.map(singleJobs => (
-                            <tr className="" key={singleJobs._id}>
-                                <td>{singleJobs?.id}</td>
-                                <th>{singleJobs?.jobTitle}</th>
-                                <td>{singleJobs?.companyName}</td>
-                                <td>{singleJobs?.jobLocation}</td>
-                                <td>{singleJobs?.category}</td>
-                                <td>{singleJobs?.applicationDeadline}</td>
-                                <td>{singleJobs?.salaryOrHourlyWage}</td>
-                                <td>{singleJobs?.experience?.slice(0,3) || "None"}</td>
-                                <DeleteNews id = {singleJobs._id.toString()} />
+                        jobs.map(job => (
+                            <tr className="" key={job._id}>
+                                <td>{job?.jobId}</td>
+                                <th>{job?.title}</th>
+                                <td>{job?.companyName}</td>
+                                <td>{job?.authorEmail}</td>
+                                <td>{job?.category}</td>
+                                <td>{job?.applicationDeadline}</td>
+                                <td>{job?.salary}</td>
+                                <td>{job?.status}</td>
+                                <td>{job?.experience?.slice(0,3) || "None"} Years</td>
+                                <DeleteNews id = {job._id.toString()} what={"job"} />
                             </tr>
                         ))
                     }
@@ -46,26 +48,3 @@ const AllJobs = async () => {
 };
 
 export default AllJobs;
-
-
-// _id: new ObjectId("64f0d5302682c3687ae2014e"),
-// id: 1,
-// employerUserID: 101,
-// jobTitle: 'Software Engineer',
-// jobDescription: 'Develop and maintain software applications...',
-// companyName: 'TechCorp Inc.',
-// companyLogo: 'logo_url_1',
-// jobLocation: 'onsite',
-// employmentType: 'full-time',
-// salaryOrHourlyWage: '$100,000',
-// applicationDeadline: '2023-09-15',
-// datePosted: '2023-08-28',
-// category: 'Information Technology',
-// jobType: 'Work from home',
-// startingTime: 'Starts Immediately',
-// experience: '0-5 year experience',
-// postDate: '1 days ago',
-// jobCategory: 'Internship',
-// requiredSkills: [ 'Java', 'Python', 'SQL' ],
-// applicationInstructions: 'Please submit your resume and portfolio...',
-// description: 'Tech Solutions Inc. is a leading technology company that specializes in providing innovative software solutions for businesses worldwide.'

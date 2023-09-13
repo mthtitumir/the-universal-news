@@ -36,7 +36,7 @@ const TopNavbar = () => {
         }
     };
     return (
-        <div className=' px-3 md:px-0 '>
+        <div className={`${pathName.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
             <div className='container mx-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
                     {/* <h1></h1> */}

@@ -8,7 +8,7 @@ import { BiSolidPaperPlane } from 'react-icons/bi';
 import SocialShare from "../miniComponents/SocialShare";
 import axios from "axios";
 
-const PostComment = ({ id }) => {
+const PostComment = ({ id, refetch }) => {
   const { user } = useAuth();
   const {
     register,
@@ -27,6 +27,7 @@ const PostComment = ({ id }) => {
     try {
       const response = await axios.post(`/api/add-comment/${newsId}`, { text, author, userImg, date });
       console.log(response.data, "from comment");
+      refetch();
     } catch (error) {
       console.error('Error submitting form:', error);
     }

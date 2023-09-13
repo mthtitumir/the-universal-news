@@ -8,7 +8,7 @@ import React from "react";
 
 const TvShow = () => {
   return (
-    <div className="mt-10 c-auto lg:px-20 px-6">
+    <div className="mt-10 c-auto px-3 md:px-0">
       <div className="w-full flex lg:flex-row flex-col justify-between items-start gap-5">
         <div className="lg:w-[68%] w-full">
           <MovieBannerLeft />

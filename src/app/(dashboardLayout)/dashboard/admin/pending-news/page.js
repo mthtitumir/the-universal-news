@@ -33,7 +33,7 @@ const PendingNews = async () => {
                                 <td>{singleNews?.category}</td>
                                 <td>{singleNews?.subcategory}</td>
                                 <ApproveNews id= {singleNews._id.toString()} />
-                                <DeleteNews id={singleNews._id.toString()} />
+                                <DeleteNews id={singleNews._id.toString()} what={"news"} />
                             </tr>
                         ))
                     }
