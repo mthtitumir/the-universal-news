@@ -6,22 +6,25 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
+import moment from 'moment/moment';
 
 const AddAJob = () => {
     const { user } = useAuth();
 
     const { register, handleSubmit, control, formState: { errors }, reset } = useForm();
     const onSubmit = async (data) => {
-        const email = user?.email
-        const id = Math.floor(Math.random() * 100000);
+        const email = user?.email;
         const status = 'pending';
-        const datePosted = new Date().toISOString();
+        const datePosted = moment().format('MMMM Do YYYY, h:mm:ss a');
         const jobId = Math.floor(1000000000 + Math.random() * 9000000000);
-        const { title, description, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, requiredSkillses,author } = data;
+        // const { title, description, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, requiredSkills,author } = data;
+        const {title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription} = data;
         const toastId = toast.loading("Loading...");
-        const requiredSkills = requiredSkillses.split(',');
+        // const skills = requiredSkills.split(/\s*,\s*/);
+        const job = {jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills:requiredSkills.split(/\s*,\s*/), salary, authorEmail, instructions, jobsDescription}
+        // { id, title, description, requiredSkills:requiredSkills.split(/\s*,\s*/), companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, status, datePosted,jobId, email,author }
         try {
-            const response = await axios.post(`/api/add-job`, { id, title, description, requiredSkills, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, status, datePosted,jobId, email,author });
+            const response = await axios.post(`/api/add-job`, job);
             // console.log(response.data);
             if (response.data.insertedId) {
                 toast.dismiss(toastId);
@@ -37,6 +40,7 @@ const AddAJob = () => {
             toast.error(error.message || "Jobs posting failed!");
         }
         reset();
+        toast.dismiss(toastId);
 
     }
     return (
@@ -53,13 +57,12 @@ const AddAJob = () => {
                             <input type="text" placeholder="Job Title" {...register("title", { required: true })} className="input input-bordered" />
                             {errors.title?.type === 'required' && <p className="text-red-500">Job Title is required</p>}
                         </div>
-
                         <div className="form-control md:w-[50%]">
                             <label className="label">
-                                <span className="label-text card-text-secondary">Job Description</span>
+                                <span className="label-text card-text-secondary">Company Details</span>
                             </label>
-                            <input type="text" placeholder="Job Description" {...register("description", { required: true })} className="input input-bordered" />
-                            {errors.description?.type === 'required' && <p className="text-red-500">Job Description is required</p>}
+                            <input type="text" placeholder="Company Details" {...register("companyDetails", { required: true })} className="input input-bordered" />
+                            {errors.companyDetails?.type === 'required' && <p className="text-red-500">Company Details is required</p>}
                         </div>
 
                     </div>
@@ -68,26 +71,26 @@ const AddAJob = () => {
                             <label className="label">
                                 <span className="label-text card-text-secondary">Company Name</span>
                             </label>
-                            <input type="text" placeholder="News img link" {...register("companyName", { required: true })} className="input input-bordered" />
+                            <input type="text" placeholder="Company Name" {...register("companyName", { required: true })} className="input input-bordered" />
                             {errors.companyName?.type === 'required' && <p className="text-red-500">company Name is required</p>}
                         </div>
 
-                        <div className="form-control md:w-[50%]">
+                        {/* <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Company Logo</span>
                             </label>
                             <input type="text" placeholder="Company Logo Link" {...register("companyLogo", { required: true })} className="input input-bordered" />
                             {errors.companyLogo?.type === 'required' && <p className="text-red-500"> Company Logo is required</p>}
-                        </div>
+                        </div> */}
 
                         <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text">Job Location</span>
                             </label>
                             <select className='input input-bordered w-full' {...register("jobLocation", { required: true })}>
-                                <option className='my-2' value="">Select Job Location </option>
-                                <option value="remote">Remote</option>
-                                <option value="onsite">On-site</option>
+                                <option value="">Select Job Location </option>
+                                <option value="Remote">Remote</option>
+                                <option value="on-site">On-site</option>
                             </select>
                             {errors.jobLocation?.type === 'required' && <p className="text-red-500">Job Location is required</p>}
                         </div>
@@ -141,24 +144,24 @@ const AddAJob = () => {
                             {errors.category?.type === 'required' && <p className="text-red-500">Job category is required</p>}
                         </div>
 
-                        <div className="form-control md:w-[50%]">
+                        {/* <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Job Type</span>
                             </label>
                             <input type="text" placeholder="Job Type" {...register("jobType", { required: true })} className="input input-bordered" />
                             {errors.jobType?.type === 'required' && <p className="text-red-500">jobType is required</p>}
-                        </div>
+                        </div> */}
 
-                        <div className="form-control md:w-[50%]">
+                        {/* <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Job starting Time</span>
                             </label>
                             <input type="text" placeholder="Job Starting Time" {...register("startingTime", { required: true })} className="input input-bordered" />
                             {errors.startingTime?.type === 'required' && <p className="text-red-500">Job starting Time is required</p>}
-                        </div>
+                        </div> */}
 
-                    </div>
-                    <div className='md:flex justify-center items-center gap-4'>
+                    {/* </div>
+                    <div className='md:flex justify-center items-center gap-4'> */}
                         <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Job Experience</span>
@@ -166,8 +169,15 @@ const AddAJob = () => {
                             <input type="text" placeholder="Job Experience" {...register("experience", { required: true })} className="input input-bordered" />
                             {errors.experience?.type === 'required' && <p className="text-red-500">Job experience is required</p>}
                         </div>
-
                         <div className="form-control md:w-[50%]">
+                            <label className="label">
+                                <span className="label-text card-text-secondary">Vacancies</span>
+                            </label>
+                            <input type="text" placeholder="Vacancies" {...register("vacancies", { required: true })} className="input input-bordered" />
+                            {errors.vacancies?.type === 'required' && <p className="text-red-500">vacancies is required</p>}
+                        </div>
+
+                        {/* <div className="form-control md:w-[50%]">
                             <label className="label">
                                 <span className="label-text">Job Category</span>
                             </label>
@@ -177,7 +187,7 @@ const AddAJob = () => {
                                 <option value="part-time">Internship</option>
                             </select>
                             {errors.jobCategory?.type === 'required' && <p className="text-red-500">Job Category is required</p>}
-                        </div>
+                        </div> */}
                       
 
                     </div>
@@ -185,23 +195,23 @@ const AddAJob = () => {
                     <div className='md:flex justify-center items-center gap-4'>
                         <div className="form-control md:w-[50%]">
                             <label className="label">
-                                <span className="label-text card-text-secondary">job requiredSkills</span>
+                                <span className="label-text card-text-secondary">Required Skills</span>
                             </label>
-                            <input type="text" placeholder="Job requiredSkills" {...register("requiredSkillses", { required: true })} className="input input-bordered" />
-                            {errors.requiredSkillses?.type === 'required' && <p className="text-red-500">Job Description is required</p>}
+                            <input type="text" placeholder="Job requiredSkills" {...register("requiredSkills", { required: true })} className="input input-bordered" />
+                            {errors.requiredSkills?.type === 'required' && <p className="text-red-500">RequiredSkills is required</p>}
                         </div>
                         <div className="form-control  md:w-[50%]">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Salary or Hourly Wage</span>
                             </label>
-                            <input type="number" placeholder="Salary or Hourly Wage" {...register("salaryOrHourlyWage", { required: true })} className="input input-bordered" />
-                            {errors.salaryOrHourlyWage?.type === 'required' && <p className="text-red-500">Job salaryOrHourlyWage is required</p>}
+                            <input type="number" placeholder="Salary or Hourly Wage" {...register("salary", { required: true })} className="input input-bordered" />
+                            {errors.salary?.type === 'required' && <p className="text-red-500">Job salary is required</p>}
                         </div>
                         <div className="form-control md:w-[50%]">
                             <label className="label">
-                                <span className="label-text card-text-secondary">Author Name</span>
+                                <span className="label-text card-text-secondary">Author Email</span>
                             </label>
-                            <input type="text" placeholder="author name" {...register("author")} defaultValue={user?.displayName} className="input input-bordered" />
+                            <input type="text" placeholder="Author Email" {...register("authorEmail")} defaultValue={user?.email} className="input input-bordered" />
                         </div>
                         
                     </div>
@@ -212,18 +222,16 @@ const AddAJob = () => {
                             <label className="label">
                                 <span className="label-text card-text-secondary">Application Instructions</span>
                             </label>
-                            <textarea placeholder="Instructions" {...register("applicationInstructions", { required: true })} className="textarea textarea-bordered textarea-lg " ></textarea>
-                            {errors.applicationInstructions?.type === 'required' && <p className="text-red-500">Job applicationInstructions is required</p>}
+                            <textarea placeholder="Instructions" {...register("instructions", { required: true })} className="textarea textarea-bordered textarea-lg " ></textarea>
+                            {errors.instructions?.type === 'required' && <p className="text-red-500">Job applicationInstructions is required</p>}
                         </div>
-
-                        
 
                         <div className="form-control w-full">
                             <label className="label">
                                 <span className="label-text card-text-secondary">Job Description</span>
                             </label>
-                            <textarea placeholder="Description" {...register("jobsdescription", { required: true })} className="textarea textarea-bordered textarea-lg " ></textarea>
-                            {errors.jobsdescription?.type === 'required' && <p className="text-red-500">Job jobs description is required</p>}
+                            <textarea placeholder="Description" {...register("jobsDescription", { required: true })} className="textarea textarea-bordered textarea-lg " ></textarea>
+                            {errors.jobsDescription?.type === 'required' && <p className="text-red-500">Job description is required</p>}
                         </div>
 
                     </div>

@@ -5,7 +5,6 @@ import Spinner from '@/components/ErrorComponents/Spinner';
 import useAuth from '@/hooks/useAuth';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { FiEdit } from 'react-icons/fi'
 
 const MyJobs = () => {
     const { user, loading } = useAuth();
@@ -23,7 +22,7 @@ const MyJobs = () => {
             }
         }
     });
-    // console.log(myJobs);
+    console.log(myJobs);
 
     if (loading || isMyJobsLoading) {
         return <Spinner />
@@ -35,38 +34,40 @@ const MyJobs = () => {
             <div>
 
                 <div className="overflow-x-auto">
-                    <table className="table">
-                        <thead>
-                            <tr className=' '>
-                                <th>JobId</th>
-                                <th>Title</th>
-                                <th>Company Name</th>
-                                <th>Category</th>
-                                <th>Date Posted</th>
-                                <th>Experience</th>
-                                <th>Job Location</th>
-                                <th>Status</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                <table className="table table-xs mt-5">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>Employer</th>
+                        <th>Category</th>
+                        <th>Deadline</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+                        <th>Experience</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        myJobs?.map(job => (
+                            <tr className="" key={job._id}>
+                                <td>{job?.jobId}</td>
+                                <th>{job?.title}</th>
+                                <td>{job?.companyName}</td>
+                                <td>{job?.authorEmail}</td>
+                                <td>{job?.category}</td>
+                                <td>{job?.applicationDeadline}</td>
+                                <td>{job?.salary}</td>
+                                <td>{job?.status}</td>
+                                <td>{job?.experience?.slice(0,3) || "None"} Years</td>
+                                <DeleteNews id = {job._id.toString()} what={"job"} />
                             </tr>
-                        </thead>
-                        <tbody>
-                            {myJobs?.map((job, index) => (
-                                <tr key={job.id}>
-                                    <td>{job?.id}</td>
-                                    <td>{job.title}</td>
-                                    <td>{job.companyName}</td>
-                                    <td>{job.category}</td>
-                                    <td>{job.datePosted}</td>
-                                    <td>{job.experience} Years</td>
-                                    <td>{job.jobLocation}</td>
-                                    <td>{job.status}</td>
-                                    <td><FiEdit /></td>
-                                    <DeleteNews />
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                        ))
+                    }
+                </tbody>
+            </table>
                 </div>
             </div>
         </div>

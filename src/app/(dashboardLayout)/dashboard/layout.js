@@ -10,8 +10,6 @@ import useRole from "@/hooks/useRole"
 import Unauthorized from "@/components/ErrorComponents/Unauthorized"
 import Spinner from "@/components/ErrorComponents/Spinner"
 
-
-
 const Dashboard = ({ children }) => {
   const { user, loading } = useAuth();
   const [role, isRoleLoading] = useRole();
