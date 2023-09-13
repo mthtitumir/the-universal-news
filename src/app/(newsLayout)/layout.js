@@ -1,12 +1,10 @@
 import Footer from "@/components/Footer/Footer"
-import TopNavbar from "@/components/Navbar/TopNavbar"
 import Providers from "@/providers"
 import Toaster from "@/components/Toaster"
-
-
+import SectionNavbar from "@/components/Navbar/SectionNavbar"
 
 export const metadata = {
-  title: 'Home | The Universal News',
+  title: 'The Universal News',
   description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
 }
 
@@ -14,7 +12,7 @@ const NewsLayout = ({ children }) => {
   return (
     <div>
       <Providers>
-          <TopNavbar />
+          <SectionNavbar />
           {children}
           <Footer />
       </Providers>

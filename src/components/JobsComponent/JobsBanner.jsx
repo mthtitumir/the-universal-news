@@ -1,7 +1,4 @@
-
-import React, { useContext } from 'react';
 import { BiFilterAlt } from 'react-icons/bi'
-import data from '../../utils/job.json'
 import SingleJob from './SingleJob';
 import Link from 'next/link';
 import HandleSearchFunction from './HandleSearchFunction';
@@ -10,7 +7,7 @@ import { GetAllJobs } from '@/services/GetAllNews';
 const JobsBanner =async () => {
     const jobsData = await GetAllJobs();
     return (
-        <div>
+        <div className='px-3 md:px-0'>
             <div className=' bg-cyan-500 text-white py-3 flex justify-center gap-10 items-center'>
                 <h1 className='text-5xl font-normal text-center '>Universal Jobs</h1>
                 <div className='text-center '>
@@ -20,16 +17,11 @@ const JobsBanner =async () => {
 
                 </div>
             </div>
-
             <div className='bg-gray-100'>
-                <h1 className='text-center md:pl-48 font-semibold text-slate-800 pt-10 text-lg
-                '>232 remote jobs and internships matching your preferences</h1>
-
-                <div className='flex-row md:flex w-[90%] mx-auto sm:gap-5 gap-5 py-5 '>
-
+                <h1 className='text-center md:pl-48 font-semibold text-slate-800 pt-10 text-lg'>{jobsData?.length} remote jobs and internships matching your preferences</h1>
+                <div className='grid md:grid-cols-9 md:w-[90%] mx-auto gap-5 py-5 '>
                     {/* Filter */}
-                    <div className='md:w-[30%] bg-white py-10 px-8 h-[450px]'>
-
+                    <div className='md:col-span-3 py-10 px-8 h-fit rounded bg-white'>
                         {/* headline */}
                         <div className='flex items-center justify-center gap-1 p-2 px'>
                             <BiFilterAlt className='text-blue-600 text-lg'></BiFilterAlt>
@@ -55,13 +47,12 @@ const JobsBanner =async () => {
                             </div>
                         </div>
                     </div>
-
                     {/* Jobs Options */}
-                    <div className='md:w-[60%] '>
+                    <div className=' md:col-span-6 rounded'>
                         <div className=''>
                             {
-                                jobsData.map(job => <SingleJob
-                                    key={job.id}
+                                jobsData?.map(job => <SingleJob
+                                    key={job?.jobId}
                                     job={job}
                                 ></SingleJob>)
                             }

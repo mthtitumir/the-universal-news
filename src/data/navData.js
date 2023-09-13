@@ -40,7 +40,7 @@ export const navData = [
         title: 'Arts'
     },
     {
-        path:'/info/food',
+        path:'/news/food',
         title: 'Food'
     },
     {

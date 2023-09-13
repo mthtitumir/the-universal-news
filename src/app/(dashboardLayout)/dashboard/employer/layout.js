@@ -17,8 +17,8 @@ const EmployerDashboardLayout = ({ children }) => {
     if (user && role && role === 'employer') {
         return children;
     }
-    refresh()
-    replace("/dashboard")
+    refresh();
+    replace("/dashboard");
 }
 
 export default EmployerDashboardLayout

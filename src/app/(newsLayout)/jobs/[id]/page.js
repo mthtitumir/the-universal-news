@@ -1,25 +1,32 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import {BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail} from "react-icons/bi";
 import { PiClockClockwise } from "react-icons/pi";
 import { CgSandClock } from "react-icons/cg";
 import { GoPeople, GoClockFill } from "react-icons/go";
 import axios from "axios";
 import useAuth from "@/hooks/useAuth";
+import Spinner from "@/components/ErrorComponents/Spinner";
+import useSingleJob from "@/hooks/TanStackHooks/useSingleJob";
 
 const JobDetails = ({ params }) => {
-  const {user} = useAuth();
-  const idP = params.id;
-  const [jobDetails, setjobDetails] = useState({});
-  useEffect(() => {
-    const singlejob = async () => {
-      const resposne = await axios.get(`/api/single-job-details/${idP}`);
-      setjobDetails(resposne.data);
-    };
-    singlejob();
-  }, [idP]);
-  const { id, email, jobTitle, jobDescription, companyName, companyLogo, jobLocation, employmentType, salaryOrHourlyWage, applicationDeadline, datePosted, category, requiredSkills, applicationInstructions, jobType, startingTime, jobCategory, experience, postDate, description } = jobDetails;
+  const {user, loading} = useAuth();
+  const id = parseInt(params?.id);
+  // console.log(id, typeof(id));
+  const [singleJob, singleJobLoading] = useSingleJob(id);
+  console.log(singleJob);
+  if(!singleJob){
+    return <Spinner />
+  }
+  // const [jobDetails, setjobDetails] = useState({});
+  // useEffect(() => {
+  //   const singlejob = async () => {
+  //     const resposne = await axios.get(`/api/single-job-details/${idP}`);
+  //     setjobDetails(resposne.data);
+  //   };
+  //   singlejob();
+  // }, [idP]);
+  const {jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription} = singleJob;
 
   const handleSubmit = async (event) => {
       event.preventDefault();
@@ -33,6 +40,7 @@ const JobDetails = ({ params }) => {
       // console.log(resume, coverLetter, email);
       event.target.reset();
   }
+  
 
   return (
     <div className="p-4 border c-auto">
@@ -45,8 +53,8 @@ const JobDetails = ({ params }) => {
       ></Image>
 
       <h1 className="capitalize text-center font-semibold text-2xl">
-        {jobDetails.employmentType} {jobDetails.jobTitle} at{" "}
-        {jobDetails.companyName}
+        {employmentType} {title} at{" "}
+        {companyName}
       </h1>
 
       {/* card */}
@@ -56,23 +64,23 @@ const JobDetails = ({ params }) => {
             <BiArrowToTop className="text-blue-500  text-base"></BiArrowToTop>
             <p>Actively hiring</p>
           </div>
-          <h2 className="card-title text-lg">{jobTitle}</h2>
+          <h2 className="card-title text-lg">{title}</h2>
           <p className="text-gray-400 font-bold text-sm">{companyName}</p>
 
           <div className="flex items-center gap-2 mt-3">
             <BiHome className="text-gray-400 text-lg"></BiHome>
-            <p className="text-sm text-gray-500 ">{jobType}</p>
+            <p className="text-sm text-gray-500 ">{jobLocation}</p>
           </div>
 
           <div className="flex justify-start gap-10 items-center mt-3">
             <div className="flex items-center gap-2">
               <BiPlay className="text-gray-400 text-lg"></BiPlay>
-              <p className="text-sm text-gray-500 ">{startingTime}</p>
+              <p className="text-sm text-gray-500 ">{"Tomorrow"}</p>
             </div>
             <div className="flex items-center gap-2">
               <BiMoney className="text-gray-400 text-lg"></BiMoney>
               <p className="text-sm text-gray-500 ">
-                {salaryOrHourlyWage} /year
+                {salary} /year
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -87,7 +95,7 @@ const JobDetails = ({ params }) => {
 
           <div className="flex items-center gap-2 bg-green-100 w-28 py-1 rounded-sm mb-3">
             <PiClockClockwise className=" text-green-500 "></PiClockClockwise>
-            <p className="text-sm text-green-500 ">{postDate}</p>
+            <p className="text-sm text-green-500 ">{datePosted}</p>
           </div>
 
           <div className="flex justify-between items-center text-xl text-blue-600">
@@ -104,7 +112,7 @@ const JobDetails = ({ params }) => {
           <hr />
 
           <p className="text-base font-semibold my-4">About {companyName}</p>
-          <p className="text-gray-500 text-sm">{description}</p>
+          <p className="text-gray-500 text-sm">{companyDetails}</p>
           <div className="border p-3 rounded-lg md:mx-3">
             <p className="text-sm font-semibold my-2 text-gray-600">
               Activity on Internshala
@@ -123,7 +131,7 @@ const JobDetails = ({ params }) => {
           </div>
 
           <p className="text-base font-semibold mt-4">About The Job</p>
-          <p className="text-gray-500 text-sm">{jobTitle}</p>
+          <p className="text-gray-500 text-sm">{title}</p>
 
           <p className="text-gray-500 text-sm mt-8 mb-4">
             {" "}
@@ -150,15 +158,15 @@ const JobDetails = ({ params }) => {
           <p className="text-base font-semibold mt-4">Skill(s) required</p>
           <div className="flex items-center gap-4 text-center md:w-2/4">
             {requiredSkills?.map((skill) => (
-              <p key={skill}>{skill}</p>
+              <p className="badge" key={skill}>{skill}</p>
             ))}
           </div>
 
           <p className="text-base font-semibold mt-4">Salary</p>
-          <p className="text-gray-500 text-sm mb-4">{salaryOrHourlyWage}</p>
+          <p className="text-gray-500 text-sm mb-4">{salary}</p>
 
           <p className="text-base font-semibold ">Number of openings</p>
-          <p className="text-gray-500 text-sm mb-4">1</p>
+          <p className="text-gray-500 text-sm mb-4">{vacancies}</p>
 
           <div className="mx-auto text-center w-full">
             <button
@@ -174,7 +182,7 @@ const JobDetails = ({ params }) => {
             <form method="dialog" onSubmit={handleSubmit} className="modal-box">
               <div className="bg-gray-100 px-3 py-5 rounded">
                 <p className="text-base font-semibold ">
-                  Applying for {jobTitle} {jobCategory}
+                  Applying for {title} {category}
                 </p>
                 <p className="text-gray-500 text-sm mb-4">{companyName}</p>
               </div>
@@ -217,7 +225,7 @@ const JobDetails = ({ params }) => {
               <div className="flex items-center gap-1 mt-2">
                 <input type="radio" />
                 <label className="text-gray-500 text-sm">
-                  No (Please slabelecify your availability)
+                  No (Please specify your availability)
                 </label>
               </div>
 

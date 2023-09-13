@@ -44,7 +44,7 @@ const MyNews = () => {
                                     <td>{singleNews?.comments.length}</td>
                                     <td>{singleNews?.status || "None"}</td>
                                     <td><FiEdit /></td>
-                                    <DeleteNews id={singleNews._id.toString()} />
+                                    <DeleteNews id={singleNews?._id.toString()} what={"news"} />
                                 </tr>
                             ))
                         }
