@@ -49,7 +49,7 @@ const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
       <div className="absolute top-[20%] left-1/2 transition-colors duration-300 ease-in-out delay-100">
         {isPlaying ? (
           <AiFillPauseCircle
-            className="w-10 h-10 text-white cursor-pointer"
+            className="w-10 h-10 text-white cursor-pointer "
             onClick={() => {
               handleSrc(); // Pause by clearing the iframe source
             }}

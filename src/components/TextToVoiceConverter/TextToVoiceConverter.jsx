@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-
-const TextToVoiceConverter = ({description}) => {
-  console.log(description)
+import { BiSolidUserVoice } from "react-icons/bi";
+import { MdVoiceOverOff } from "react-icons/md";
+const TextToVoiceConverter = ({ description }) => {
+  console.log(description);
   const [isPlaying, setIsPlaying] = useState(false);
   const [textToRead, setTextToRead] = useState(description);
   const [speech] = useState(new SpeechSynthesisUtterance());
@@ -46,14 +47,13 @@ const TextToVoiceConverter = ({description}) => {
 
   return (
     <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-4">Text to Speech Converter</h1>
       <button
         onClick={handleButtonClick}
-        className={`px-4 py-2 rounded-md ${
+        className={`px-4 py-2 rounded-md animate-bounce ${
           isPlaying ? "bg-red-500 text-white" : "bg-blue-500 text-white"
         }`}
       >
-        {isPlaying ? "Stop" : "Listen"}
+        {isPlaying ?  <MdVoiceOverOff className="w-8 h-8" /> : <BiSolidUserVoice className="w-8 h-8" />}
       </button>
       <p id="textToRead" className="text-lg mt-4">
         {description.repeat(10).length > 500
