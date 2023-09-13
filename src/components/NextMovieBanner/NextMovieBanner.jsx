@@ -18,7 +18,7 @@ const NextMovieBanner = () => {
       <h1 className="text-3xl font-bold mb-2">Up Next</h1>
 
       <div className="flex flex-col gap-5">
-        {data.map((movie) => (
+        {movies?.map((movie) => (
           <div
             key={movie.id}
             className="flex items-center justify-between gap-2 shadow-lg relative rounded-xl"

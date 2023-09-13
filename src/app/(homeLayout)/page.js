@@ -6,7 +6,7 @@ import WeekNews from '@/components/homeComponents/WeekNews/WeekNews';
 
 export default function Home() {
   return (
-    <main className='container bg-white mx-auto'>
+    <main className='container mx-auto'>
       <HomeComponent/>
       <MoreNews/>
       <AllNews/>

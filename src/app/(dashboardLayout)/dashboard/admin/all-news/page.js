@@ -25,7 +25,7 @@ const allNews = async () => {
                 </thead>
                 <tbody>
                     {
-                        news.map(singleNews => (
+                        news?.map(singleNews => (
                             <tr className="" key={singleNews._id}>
                                 <td>{singleNews?.id}</td>
                                 <th>{singleNews?.title.slice(0,15)}...</th>
@@ -35,7 +35,7 @@ const allNews = async () => {
                                 <td>{singleNews?.subcategory}</td>
                                 <td>{singleNews?.comments.length}</td>
                                 <td>{singleNews?.status || "None"}</td>
-                                <DeleteNews id = {singleNews._id.toString()} />
+                                <DeleteNews id = {singleNews._id.toString()} what={"news"} />
                             </tr>
                         ))
                     }

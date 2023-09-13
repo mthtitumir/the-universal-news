@@ -20,7 +20,7 @@ export const GET = async (request, { params }) => {
                 } else if (role === 'user'){
                     return NextResponse.json({ role: "user" });
                 } else {
-                    return NextResponse.json({ message: "Assalamualaikum vhai, login koira ashen!" });
+                    return NextResponse.json({ message: "login koira ashen boss!" });
                 }
             }
             return NextResponse.json({ message: "Xavier is calling you!" });

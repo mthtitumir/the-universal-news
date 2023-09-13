@@ -125,3 +125,28 @@ export const GetSingleJobsFromDB = async (id) => {
         return ({ error: 'error to get data' });
     }
 };
+
+// community posts get api's 
+export const GetAllPostsFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allPosts = db.collection('all-posts');
+        const result = await allPosts.find().toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+export const GetSinglePostFromDB = async (id) => {
+    try {
+        const db = await DbConnect();
+        const allPosts = db.collection('all-posts');
+        const query = { postId: id }
+        const result = await allPosts.findOne(query);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
