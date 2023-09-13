@@ -1,10 +1,10 @@
-import PhotoCompoents from '@/components/PhotoCompoents/PhotoCompoents';
+import PhotoComponent from '@/components/PhotoCompoents/PhotoComponent';
 import React from 'react';
 
 const Photo = () => {
     return (
         <div className='c-auto'>
-            <PhotoCompoents></PhotoCompoents>
+            <PhotoComponent></PhotoComponent>
         </div>
     );
 };

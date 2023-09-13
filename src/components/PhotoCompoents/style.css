@@ -1,7 +1,6 @@
 #PhotoSlide {
     height: 400px
 }
-
 html,
 body {
     position: relative;
@@ -16,12 +15,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .swiper {
     width: 100%;
     height: 70%;
 }
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -30,7 +27,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .img {
     display: block;
     width: 100%;
