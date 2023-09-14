@@ -37,7 +37,6 @@ const CategoryDisplay = ({ data }) => {
                 </div>
             </div>
 
-
             {/* Related Category */}
             <div className='my-12 '>
                 <Headline headline={"Related News"} />

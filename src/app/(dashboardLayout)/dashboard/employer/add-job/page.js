@@ -17,7 +17,6 @@ const AddAJob = () => {
         const status = 'pending';
         const datePosted = moment().format('MMMM Do YYYY, h:mm:ss a');
         const jobId = Math.floor(1000000000 + Math.random() * 9000000000);
-        // const { title, description, companyName, companyLogo, jobLocation, employmentType, applicationDeadline, category, jobType, startingTime, experience, jobCategory, applicationInstructions, jobsdescription, requiredSkills,author } = data;
         const {title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription} = data;
         const toastId = toast.loading("Loading...");
         // const skills = requiredSkills.split(/\s*,\s*/);

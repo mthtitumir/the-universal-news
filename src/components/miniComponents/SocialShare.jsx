@@ -1,3 +1,4 @@
+
 "use client"
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { BiLogoFacebook, BiLogoTwitter, BiLogoWhatsapp } from 'react-icons/bi'
@@ -35,5 +36,4 @@ const SocialShare = ({ data }) => {
         </div>
     )
 }
-
-export default SocialShare
+export default SocialShare;

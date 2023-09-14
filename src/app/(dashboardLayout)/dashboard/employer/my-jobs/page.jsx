@@ -18,7 +18,7 @@ const MyJobs = () => {
                 // console.log(res);
                 return res.data;
             } catch (error) {
-                console.error("Error fetching reporter news:", error);
+                console.error("Error fetching employer jobs:", error);
             }
         }
     });
