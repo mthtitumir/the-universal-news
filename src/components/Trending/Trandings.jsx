@@ -63,7 +63,7 @@ const Trending = () => {
 
   return (
     <div>
-      <div className="flex flex-col justify-center px-10">
+      <div className="flex flex-col justify-center">
         <iframe
           ref={iframeRef}
           src={

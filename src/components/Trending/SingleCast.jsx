@@ -12,17 +12,17 @@ const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
   };
 
   return (
-    <div className="card w-full bg-base-100 shadow-xl relative h-[450px]">
+    <div className="card w-full bg-base-100 group shadow-xl relative h-[450px]">
       <figure>
         <Image
           height={50}
           width={120}
           src={image}
           alt="book image"
-          className="w-full h-full"
+          className="w-full h-full group-hover:scale-110 duration-500"
         />
       </figure>
-      <div className="card-body absolute bottom-1">
+      <div className="card-body absolute bottom-1 ">
         <h2 className="lg:text-xl text-lg font-semibold">{title}</h2>
         <div className="flex items-center justify-between py-4 gap-10">
           <div className="flex items-center gap-1">
@@ -31,13 +31,13 @@ const SingleCast = ({ TrendingCast, handleSrc, isPlaying, scrollToIframe }) => {
               width={48}
               src={chanel_logo}
               alt="book image"
-              className="w-12 h-12 rounded-full"
+              className="w-12 h-12 rounded-full "
             />
             <p className="text-xl font-semibold">{host}</p>
           </div>
           <button
             className={`py-2 px-4 bg-black text-white text-center rounded-3xl shadow-lg cursor-pointer ${
-              isFollowed ? "bg-green-500" : ""
+              isFollowed ? "bg-cyan-600" : ""
             }`}
             onClick={toggleFollow}
           >

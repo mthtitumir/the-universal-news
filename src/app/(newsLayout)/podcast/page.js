@@ -6,7 +6,7 @@ import React from "react";
 
 const Podcast = () => {
   return (
-    <div className="c-auto">
+    <div className="c-auto lg:px-20 px-6">
       <div className="my-8">
         <SearchBox></SearchBox>
       </div>
