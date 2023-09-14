@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Headline from '../miniComponents/Headline';
 
-const  PhotoComponent = () => {
+const PhotoComponent = () => {
     const photo = photoData.slice(0, 1);
     const photo2 = photoData;
     const photo3 = photoData.slice(1, 2);
@@ -125,7 +125,10 @@ const  PhotoComponent = () => {
             <PhotoSlider2></PhotoSlider2>
 
             {/* 5th section */}
+
             <div className='border-t-2 border-gray-300 mt-4 pt-8'>
+                <h1 className='text-2xl font-bold mt-14 mb-4 capitalize'>More relevant photo </h1>
+
                 <div className="flex gap-3 w-full">
                     <div className="card1 md:col-span-4 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
                         {photos.map((item) => (
