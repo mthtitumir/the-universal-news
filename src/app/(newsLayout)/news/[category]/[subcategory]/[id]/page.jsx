@@ -15,8 +15,8 @@ const SingleNews = async ({ params }) => {
     const categoryData = await GetCategoryData(category);
 
     // console.log(data);  
-    const data1 = categoryData.slice(0, 8);
-    const relatedNewsData = categoryData.slice(0, 20)
+    const data1 = categoryData?.slice(0, 8);
+    const relatedNewsData = categoryData?.slice(0, 20)
     return (
         <div className='container mx-auto mt-5'>
             <div className=' grid md:grid-cols-12 gap-8 px-3'>
@@ -28,7 +28,7 @@ const SingleNews = async ({ params }) => {
                         <div>
                             <h1 className='text-sm md:text-base'>Update - {published_date}</h1>
                         </div>
-                        <SocialShare />
+                        <SocialShare data={data}/>
                     </div>
                     <div>
                         {/* image and description */}

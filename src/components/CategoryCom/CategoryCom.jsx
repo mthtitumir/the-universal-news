@@ -11,7 +11,7 @@ const CategoryCom = async ({ params }) => {
     let data = [];
     let categoryName = "";
     const subcategories = [];
-    categoryData.forEach(item => {
+    categoryData?.forEach(item => {
         if (!subcategories.includes(item.subcategory)) {
             subcategories.push(item.subcategory);
         }
