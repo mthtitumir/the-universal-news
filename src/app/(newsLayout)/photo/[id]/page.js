@@ -40,7 +40,7 @@ const SinglePhotoComponent = ({ params }) => {
 
                     <div className='px-16 my-4'>
                         <div className='border-b-2 border-gray-300 pb-1'>
-                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[0]} / 3</h2>
+                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[0]} / 5</h2>
                             <Image
                                 height={500}
                                 width={900}
@@ -52,7 +52,7 @@ const SinglePhotoComponent = ({ params }) => {
                         </div>
 
                         <div className='border-b-2 border-gray-300 pb-1'>
-                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[1]} / 3</h2>
+                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[1]} / 5</h2>
                             <Image
                                 height={500}
                                 width={900}
@@ -64,7 +64,7 @@ const SinglePhotoComponent = ({ params }) => {
                         </div>
 
                         <div className='border-b-2 border-gray-300 pb-1'>
-                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[2]} / 3</h2>
+                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[2]} / 5</h2>
                             <Image
                                 height={500}
                                 width={900}
@@ -74,10 +74,31 @@ const SinglePhotoComponent = ({ params }) => {
                             ></Image>
                             <p className='py-2'>{description.repeat(4).length > 500 ? description.repeat(4).split(0, 501) : description.repeat(4)} <span className='text-gray-500'> Author: {author}</span></p>
                         </div>
+
+                        <div className='border-b-2 border-gray-300 pb-1'>
+                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[3]} / 5</h2>
+                            <Image
+                                height={500}
+                                width={900}
+                                src={images[3]}
+                                alt='photo image'
+                                className='w-[700px] object-cover'
+                            ></Image>
+                            <p className='py-2'>{description.repeat(4).length > 500 ? description.repeat(4).split(0, 501) : description.repeat(4)} <span className='text-gray-500'> Author: {author}</span></p>
+                        </div>
+
+                        <div className='border-b-2 border-gray-300 pb-1'>
+                            <h2 className='text-xl p-1 border-2 border-red-600 rounded-xl w-[80px] text-center mt-5 mb-7'>{number[4]} / 5</h2>
+                            <Image
+                                height={500}
+                                width={900}
+                                src={images[4]}
+                                alt='photo image'
+                                className='w-[700px] object-cover'
+                            ></Image>
+                            <p className='py-2'>{description.repeat(4).length > 500 ? description.repeat(4).split(0, 501) : description.repeat(4)} <span className='text-gray-500'> Author: {author}</span></p>
+                        </div>
                     </div>
-
-
-                    {/* <DisplayComment></DisplayComment> */}
 
                 </div>
 
