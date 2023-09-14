@@ -75,7 +75,7 @@ export const userSideNavbar = [
         title: 'Interests'
     },
     {
-        path:'/dashboard/saved-articles',
+        path:'/dashboard/user/bookMark',
         title: 'Saved'
     },
     {
