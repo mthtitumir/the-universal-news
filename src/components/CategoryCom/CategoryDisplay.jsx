@@ -8,27 +8,27 @@ const CategoryDisplay = ({ data }) => {
         <div className='c-auto'>
             {/* category banner */}
             <div className='mt-5 '>
-                <div className='grid grid-col-3 md:grid-cols-12 gap-5 '>
-                    <div className='card1 md:col-span-6 flex flex-col gap-3'>
+                <div className='grid grid-col-3 md:grid-cols-12 gap-5 md:h-[70vh]'>
+                    <div className='card1 md:col-span-6 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden'>
                         {
-                            data.slice(2, 3).map(item => <NewsCardTwo
+                            data?.slice(2, 5).map(item => <NewsCardTwo
                                 key={item.id}
                                 item={item}
                             ></NewsCardTwo>)
                         }
                     </div>
 
-                    <div className='card1 md:col-span-3'>
+                    <div className='card1 md:col-span-3 overflow-y-scroll overflow-x-hidden'>
                         {
-                            data.slice(1, 2).map(item => <NewsCardFour
+                            data?.slice(1, 4).map(item => <NewsCardFour
                                 key={item.id}
                                 item={item}
                             ></NewsCardFour>)
                         }
                     </div>
-                    <div className='card1 md:col-span-3'>
+                    <div className='card1 md:col-span-3 overflow-y-scroll overflow-x-hidden'>
                         {
-                            data.slice(0, 7).map(item => <NewsCardOne
+                            data?.map(item => <NewsCardOne
                                 key={item.id}
                                 item={item}
                             ></NewsCardOne>)

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Jobs = () => {
     return (
-        <div className='c-auto'>
+        <div className=''>
             <JobsBanner></JobsBanner>
         </div>
     );

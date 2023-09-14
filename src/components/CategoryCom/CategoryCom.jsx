@@ -29,12 +29,12 @@ const CategoryCom = async ({ params }) => {
         <>
             <div className=' c-auto mt-5'>
                 {/* Category Navbar */}
-                <div className='flex items-center gap-5 md:gap-7 px-3 md:px-0'>
+                <div className='flex md:items-center gap-5 md:gap-7 px-3 md:px-0'>
                     <h2 className='text-2xl md:text-3xl font-semibold text-cyan-500'>{categoryName}</h2>
                     <div>
-                        <ul className=' flex justify-start gap-4 '>
+                        <ul className=' flex justify-start gap-4 flex-wrap'>
                             {
-                                subcategories.map((subCat, index) => <Link href={`/news/${params.category}/${subCat}`} key={index + 1}><li className='text-sm md:text-base'>{subCat.toUpperCase()}</li></Link>)
+                                subcategories.map((subCat, index) => <Link href={`/news/${params.category}/${subCat}`} key={index + 1}><li className='text-sm md:text-base hover:underline hover:text-cyan-500'>{subCat.toUpperCase()}</li></Link>)
                             }
                         </ul>
                     </div>

@@ -33,7 +33,13 @@ const SectionNavbar = ({ }) => {
                     </div>
                     <h2 className='text-2xl md:text-3xl'><Link href="/"> <span className={`${myFont.className}`}>The Universal News |</span> </Link> {pathName?.split('/')[1].toUpperCase()}</h2>
                 </div>
-                <div className='flex justify-between items-center gap-2 text-md '>
+                <div className='flex justify-between items-center gap-5 text-md '>
+                    {
+                        pathName === '/jobs' &&
+                        <Link href='/jobPostPayment'>
+                            <button className='py-2 px-3 bg-cyan-200 text-black shadow-md hover:scale-105 duration-500 rounded-sm hover:border-2'>Become an Employer</button>
+                        </Link>
+                    }
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">

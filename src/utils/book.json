@@ -27,7 +27,7 @@
         "img": "https://i.ibb.co/GH82fbn/book3.jpg",
         "description": "Embark on a thrilling Galactic Odyssey as humanity ventures beyond the stars. Join Captain Nova and her diverse crew as they navigate cosmic anomalies, encounter alien civilizations, and strive to save Earth from an interstellar threat.",
         "ratings": 4.9,
-        "category": "Science Fiction",
+        "category": "Science-Fiction",
         "price": 29.75,
         "authorName": "Sam Smith",
         "authorImage": "https://i.ibb.co/j32wxRc/360-F-326985142-1aa-Kc-Ej-MQW6-ULp6o-I9-MYuv8l-N9f8s-Fmj.jpg"
@@ -82,7 +82,7 @@
         "img": "https://i.ibb.co/VvXFvLM/book8.jpg",
         "description": "Venture into the realm of quantum physics where reality blurs and dimensions collide. Join physicist Maya Turner as she races to prevent a catastrophic experiment that could rupture the fabric of the universe.",
         "ratings": 4.8,
-        "category": "Science Fiction",
+        "category": "Science-Fiction",
         "price": 27.50,
         "authorName": "Jane Doe",
         "authorImage": "https://i.ibb.co/60pYKsX/depositphotos-146971633-stock-photo-smiling-guy-in-blue-shirt.webp"
@@ -137,7 +137,7 @@
         "img": "https://i.ibb.co/VpB8khX/book13.jpg",
         "description": "Embark on an intergalactic journey aboard the starship Celestial Voyager. Join Captain Arion as he leads his diverse crew through cosmic phenomena, extraterrestrial encounters, and the search for a new home.",
         "ratings": 4.9,
-        "category": "Science Fiction",
+        "category": "Science-Fiction",
         "price": 29.99,
         "authorName": "George Phillips",
         "authorImage": "https://i.ibb.co/CPC0Lwf/360-F-144946314-8-FFd-VY6c2-WJk-CWB5-Cp-IQCtym-YJlhqqmp.jpg"
@@ -181,7 +181,7 @@
         "img": "https://i.ibb.co/Jjp5hYC/book17.jpg",
         "description": "Set in a future where human minds are connected to a global network, a brilliant neuroscientist uncovers a sinister plot to control minds. She must navigate a digital landscape to expose the truth.",
         "ratings": 4.8,
-        "category": "Science Fiction",
+        "category": "Science-Fiction",
         "price": 26.50,
         "authorName": "William Johnson",
         "authorImage": "https://i.ibb.co/LnMrcSx/360-F-224869519-a-Rae-Lneq-ALf-PNBzg0xx-MZXghtv-BXkf-IA.jpg"
@@ -214,7 +214,7 @@
         "img": "https://i.ibb.co/pPdKQDW/book20.jpg",
         "description": "High above the world, a floating city holds the secrets of advanced technology and untold mysteries. When a curious engineer stumbles upon hidden agendas, he must decide whether to save or expose the city's truths.",
         "ratings": 4.3,
-        "category": "Science Fiction",
+        "category": "Science-Fiction",
         "price": 23.25,
         "authorName": "David Anderson",
         "authorImage": "https://i.ibb.co/tBNBFPR/rm328-366-tong-08-1.jpg"
