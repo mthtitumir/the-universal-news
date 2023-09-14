@@ -83,7 +83,7 @@ const CommunityPost = () => {
     return (
         <div className="border-t border-b grid grid-cols-8 py-5">
             <div className="col-span-1 mx-auto">
-                <Image className="rounded-full" height={40} width={40} alt="profile" src={user?.photoURdL || "https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} />
+                <Image className="rounded-full" height={40} width={40} alt="profile" src={user?.photoURL || "https://i.ibb.co/3Mrx6Fg/blank-profile.webp"} />
             </div>
             <div className="col-span-7">
                 <form onSubmit={handleSubmit(onSubmit)}>
