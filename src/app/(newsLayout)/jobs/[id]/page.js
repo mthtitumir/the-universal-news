@@ -12,9 +12,8 @@ import useSingleJob from "@/hooks/TanStackHooks/useSingleJob";
 const JobDetails = ({ params }) => {
   const {user, loading} = useAuth();
   const id = parseInt(params?.id);
-  // console.log(id, typeof(id));
   const [singleJob, singleJobLoading] = useSingleJob(id);
-  console.log(singleJob);
+  // console.log(singleJob);
   if(!singleJob){
     return <Spinner />
   }
@@ -35,9 +34,17 @@ const JobDetails = ({ params }) => {
       const resume = form.resume.value;
       const coverLetter = form.letter.value;
       const userEmail = user?.email;
-      const response = await axios.post('/api/apply-job',{jobId:id, resume, coverLetter, employerEmail: email, userEmail})
+      const applicationData = {jobId, resume, coverLetter, employerEmail: authorEmail, userEmail};
+      try {
+        const response = await axios.post('/api/apply-job', applicationData);
+        // Handle the response here if needed
+        console.log('API call response:', response.data);
+      } catch (error) {
+        console.error('API call error:', error);
+      }
+      
       // console.log(response.data);
-      // console.log(resume, coverLetter, email);
+      // console.log(resume, coverLetter, userEmail);
       event.target.reset();
   }
   
@@ -115,7 +122,7 @@ const JobDetails = ({ params }) => {
           <p className="text-gray-500 text-sm">{companyDetails}</p>
           <div className="border p-3 rounded-lg md:mx-3">
             <p className="text-sm font-semibold my-2 text-gray-600">
-              Activity on Internshala
+              Activity on Universal Jobs
             </p>
 
             <div className="flex items-center gap-5 text-gray-500 text-base ">

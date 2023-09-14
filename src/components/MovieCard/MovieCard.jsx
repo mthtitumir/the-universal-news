@@ -6,14 +6,14 @@ import Link from "next/link";
 const MovieCard = ({ movie }) => {
   const { id, poster_path, original_title, vote_average, release_date } = movie;
   return (
-    <div>
-      <Link href={`/tv-show/${id}`} className="shadow-lg  rounded-xl h-full">
+    <div  className="shadow-2xl rounded-xl h-full">
+      <Link href={`/tv-show/${id}`}>
         <div className="basis-1/2">
           <Image
             alt="banner image"
             width={400}
             height={300}
-            className=" z-10 rounded-xl w-full h-[300px]"
+            className=" z-10 rounded-tl-xl rounded-tr-xl  w-full h-[300px]"
             src={poster_path}
           ></Image>
         </div>

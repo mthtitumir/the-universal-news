@@ -10,9 +10,7 @@ import Image from 'next/image';
 
 const SwiperSection = () => {
     return (
-        <div>
-            <h1 className='text-5xl text-zinc-700 font-normal my-6'>Universal Books</h1>
-
+        <div className='mt-10'>
             {/* auto sliders */}
             <div>
                 <Swiper

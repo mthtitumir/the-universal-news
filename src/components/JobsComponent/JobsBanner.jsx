@@ -1,23 +1,17 @@
-import { BiFilterAlt } from 'react-icons/bi'
+import { BiFilterAlt } from 'react-icons/bi';
 import SingleJob from './SingleJob';
-import Link from 'next/link';
 import HandleSearchFunction from './HandleSearchFunction';
 import { GetAllJobs } from '@/services/GetAllNews';
+import { FaUserGraduate } from 'react-icons/fa';
 
 const JobsBanner =async () => {
     const jobsData = await GetAllJobs();
     return (
         <div className='px-3 md:px-0'>
-            <div className=' bg-cyan-500 text-white py-3 flex justify-center gap-10 items-center'>
-                <h1 className='text-5xl font-normal text-center '>Universal Jobs</h1>
-                <div className='text-center '>
-                    <Link href='/jobPostPayment'>
-                        <button className='py-2 px-3 bg-white text-black shadow-md hover:scale-105 duration-500 rounded-sm mt-2'>Become a Eomployer</button>
-                    </Link>
-
-                </div>
+            <div className='c-auto mt-3 h-36 rounded-lg  bg-cyan-400 text-gray-600 py-3 flex justify-center gap-10 items-center'>
+                <h1 className='text-5xl font-normal text-center flex gap-5'>Get Hired Today <FaUserGraduate /></h1>
             </div>
-            <div className='bg-gray-100'>
+            <div className='bg-gray-100 c-auto'>
                 <h1 className='text-center md:pl-48 font-semibold text-slate-800 pt-10 text-lg'>{jobsData?.length} remote jobs and internships matching your preferences</h1>
                 <div className='grid md:grid-cols-9 md:w-[90%] mx-auto gap-5 py-5 '>
                     {/* Filter */}

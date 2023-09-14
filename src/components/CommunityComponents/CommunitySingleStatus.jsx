@@ -4,7 +4,7 @@ import { BiCommentDetail } from "react-icons/bi";
 import { RiDislikeLine } from "react-icons/ri";
 import CommunityReaction from "./CommunityReaction";
 
-const CommunitySingleStatus = ({post}) => {
+const CommunitySingleStatus = ({postId, post}) => {
     const iconStyles = "text-xl flex gap-3 text-gray-600";
     const { text, photo, authorName, authorImage, likes, dislikes, comments } = post;
     return (
@@ -25,7 +25,7 @@ const CommunitySingleStatus = ({post}) => {
                     }
                 </div>
                 {/*bottom like comment share nav*/}
-                <CommunityReaction key={post?.postId} id={post?.postId} />
+                <CommunityReaction key={post?.postId} id={postId} />
                 {/* <div className="flex justify-evenly items-center mt-2"> 
                     <h3 className={iconStyles}><AiOutlineHeart /> {likes}</h3>
                     <h3 className={iconStyles}><RiDislikeLine /> {dislikes}</h3>

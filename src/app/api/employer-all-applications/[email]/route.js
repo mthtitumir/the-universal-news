@@ -7,7 +7,7 @@ export const GET = async (request, {params}) => {
             const email = params?.email;
             const db = await DbConnect();
             const applications = db.collection('job-applications');
-            const query = { email: email };
+            const query = { employerEmail: email };
             const result = await applications.find(query).toArray(); 
             return NextResponse.json(result);
         } catch (error) {
