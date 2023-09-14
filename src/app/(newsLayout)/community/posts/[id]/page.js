@@ -1,4 +1,3 @@
-
 const SinglePostCommunity = ({params}) => {
     return (
         <div>
