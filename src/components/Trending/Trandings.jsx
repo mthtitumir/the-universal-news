@@ -11,6 +11,10 @@ const Trending = () => {
   const iframeRef = useRef(null);
   const [playingIndex, setPlayingIndex] = useState(0); // Initialize as -1, meaning nothing is playing
 
+  // Pagination settings
+  const itemsPerPage = 4;
+  const [currentPage, setCurrentPage] = useState(1);
+
   const handleSrc = (src, title, index) => {
     if (playingIndex === index) {
       // Clicked on the currently playing item, pause it
@@ -31,9 +35,35 @@ const Trending = () => {
     });
   };
 
+  // Calculate pagination parameters
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentData = data.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Calculate total number of pages
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  // Pagination buttons
+  const paginationButtons = [];
+  for (let i = 1; i <= totalPages; i++) {
+    paginationButtons.push(
+      <button
+        key={i}
+        className={`${
+          currentPage === i
+            ? "bg-blue-500 text-white"
+            : "bg-gray-200 text-gray-700"
+        } py-2 px-4 mr-2 rounded focus:outline-none`}
+        onClick={() => setCurrentPage(i)}
+      >
+        {i}
+      </button>
+    );
+  }
+
   return (
     <div>
-      <div className="flex flex-col justify-center px-10">
+      <div className="flex flex-col justify-center">
         <iframe
           ref={iframeRef}
           src={
@@ -61,23 +91,27 @@ const Trending = () => {
         <Headline headline={"Listen More Like This"}></Headline>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-10 my-6">
-          {data.map((TrendingCast, index) => (
+          {currentData.map((TrendingCast, index) => (
             <SingleCast
               key={TrendingCast.id}
               TrendingCast={TrendingCast}
               handleSrc={() =>
-                handleSrc(TrendingCast.src, TrendingCast.title, index)
+                handleSrc(
+                  TrendingCast.src,
+                  TrendingCast.title,
+                  index + indexOfFirstItem
+                )
               }
-              isPlaying={playingIndex === index}
+              isPlaying={playingIndex === index + indexOfFirstItem}
               scrollToIframe={scrollToIframe}
             />
           ))}
         </div>
-      </div>
-      <div className=" flex justify-center items-center">
-        <button className="flex justify-center items-center bg-cyan-500 p-5 text-white rounded-lg">
-          Explore More
-        </button>
+
+        {/* Pagination buttons */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {paginationButtons}
+        </div>
       </div>
     </div>
   );
