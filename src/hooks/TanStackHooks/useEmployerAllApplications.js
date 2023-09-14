@@ -5,7 +5,6 @@ import useAuth from "@/hooks/useAuth";
 
 const useEmployerAllApplications = () => {
     const { user, loading } = useAuth();
-    // use axios with react query
     const { data: applications, isLoading: applicationsLoading } = useQuery({
         queryKey: ['applications', user?.email],
         enabled: !loading,

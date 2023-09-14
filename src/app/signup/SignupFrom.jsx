@@ -53,13 +53,14 @@ const SignupForm = () => {
         const toastId = toast.loading("Loading...");
         try {
             const { user } = await googleLogin();
-            const name = user?.displayName
-            console.log(name)
-            const photo = user?.photoURL
-            const email = user?.email
-            const role = 'user'
+            const name = user?.displayName;
+            console.log(name);
+            const photo = user?.photoURL;
+            const email = user?.email;
+            const role = 'user';
+            const myArtical = [];
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role,myArtical });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
@@ -84,8 +85,9 @@ const SignupForm = () => {
 
         try {
             const user = await createUser(email, password);
+            const myArtical = [];
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role,myArtical });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
