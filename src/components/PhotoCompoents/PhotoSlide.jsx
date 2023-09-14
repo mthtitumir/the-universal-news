@@ -7,6 +7,7 @@ import './style.css';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import data from '../../utils/photo.json'
+import Link from 'next/link';
 
 const PhotoSlide = () => {
     const photos = data.slice(0, 9)
@@ -22,14 +23,18 @@ const PhotoSlide = () => {
                 className="mySwiper "
             >
                 {photos.map((photo) => (
-                    <SwiperSlide key={photo.id}>
-                        <Image
-                            height={200}
-                            width={500}
-                            src={photo?.slideImage}
-                            alt='book image '
-                        ></Image>
-                    </SwiperSlide>
+                    <Link key={photo.id} href={`/photo/${photo?.id}`}>
+                        <SwiperSlide>
+                            <Image
+                                height={200}
+                                width={500}
+                                src={photo?.slideImage}
+                                alt='book image '
+                            ></Image>
+                        </SwiperSlide>
+                    </Link>
+
+
                 ))}
             </Swiper>
         </div>
