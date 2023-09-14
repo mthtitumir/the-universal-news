@@ -9,7 +9,7 @@ export const POST = async (request) => {
             const allJobs = db.collection('all-jobs');
             const result = await allJobs.insertOne(job);
             return NextResponse.json(result);
-        } catch (error) {
+        } catch (error) { 
             console.error("Error adding comment:", error);
             NextResponse.json({ error: "Error adding data" });
         }
