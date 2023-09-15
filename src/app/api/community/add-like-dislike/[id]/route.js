@@ -9,11 +9,11 @@ export const PATCH = async (request, { params }) => {
       const query = { postId: parseInt(params?.id) };
       const result = await allPosts.findOne(query);
       const payload = await request.json();
+      // console.log(payload);
       if (!result) {
         console.log("hello rom not result");
         return NextResponse.json({ error: "Post not found" });
       }
-      // console.log(result.likes, "form route");
       if (payload.action === "like") {
         result.likes += 1;
       } else if (payload.action === "dislike") {
