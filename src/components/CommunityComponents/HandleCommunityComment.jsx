@@ -1,5 +1,5 @@
+import axios from 'axios';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { BiSolidPaperPlane } from 'react-icons/bi';
@@ -12,16 +12,11 @@ const HandleCommunityComment = ({ posts }) => {
         reset
     } = useForm();
     const onSubmit = async (data) => {
-        if (!user) {
-            return;
-        }
         const text = data.text;
         const date = new Date().toISOString();
-        const newsId = id;
         try {
-            const response = await axios.post(`/api/add-comment/${newsId}`, { text, date });
+            const response = await axios.post(`/api/community/add-comment/${postId}`, { text, date,authorName,authorImage });
             console.log(response.data, "from comment");
-            refetch();
         } catch (error) {
             console.error('Error submitting form:', error);
         }

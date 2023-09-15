@@ -7,12 +7,14 @@ export const POST = async (request, {params}) => {
             const body = await request.json();
             // console.log(body);
             const id = params.id;
+            console.log(id)
             const db = await DbConnect();
-            const allNews = db.collection('all-news');
-            const { text, author, userImg, date } = body;
-            const result = await allNews.updateOne(
-                { _id: new ObjectId(id) },
-                { $push: { comments: { id: Math.floor(Math.random() * 100000), author, userImg, text, date } } }
+            const allPosts = db.collection('all-posts');
+            const query = { postId: parseInt(params?.id) };
+            const { text, authorName,authorImage, date } = body;
+            const result = await allPosts.updateOne(
+                query,
+                { $push: { comments: { id: Math.floor(Math.random() * 100000), text, date,authorName,authorImage } } }
             );
             return NextResponse.json(result);
         } catch (error) {
