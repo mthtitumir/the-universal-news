@@ -25,13 +25,7 @@ const CommunitySingleStatus = ({postId, post}) => {
                     }
                 </div>
                 {/*bottom like comment share nav*/}
-                <CommunityReaction key={post?.postId} id={postId} />
-                <div className="flex justify-evenly items-center mt-2"> 
-                    <h3 className={iconStyles}><AiOutlineHeart /> {likes}</h3>
-                    <h3 className={iconStyles}><RiDislikeLine /> {dislikes}</h3>
-                    <h3 className={iconStyles}><BiCommentDetail /> {comments?.length}</h3>
-                    <h3 className={iconStyles}><AiOutlineShareAlt /></h3>
-                </div>
+                <CommunityReaction key={post?.postId} posts={post} id={postId} />
             </div>
         </div>
     );

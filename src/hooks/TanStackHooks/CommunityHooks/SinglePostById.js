@@ -10,7 +10,7 @@ const SinglePostById = (id) => {
         enabled: !loading,
         queryFn: async () => {
             const res = await axios.get(`/api/community/single-post-by-id/${id}`);
-            // console.log(res);
+            console.log(res.data);
             return res.data;
         }
     })
