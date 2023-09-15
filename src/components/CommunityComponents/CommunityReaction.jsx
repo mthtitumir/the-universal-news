@@ -16,7 +16,7 @@ const CommunityReaction = ({ id }) => {
     console.log(id);
     // console.log(id, likes, dislikes);
     const handleLike = async (id, action) =>{
-        // console.log(id, action);
+        console.log(id, action);
         try {
             const res = await axios.patch(`/api/community/add-like-dislike/${id}`, {action});
             return res.data;
