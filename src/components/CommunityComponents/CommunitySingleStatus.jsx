@@ -1,12 +1,9 @@
 import Image from "next/image";
-import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
-import { BiCommentDetail } from "react-icons/bi";
-import { RiDislikeLine } from "react-icons/ri";
 import CommunityReaction from "./CommunityReaction";
 
-const CommunitySingleStatus = ({postId, post}) => {
+const CommunitySingleStatus = ({post}) => {
     const iconStyles = "text-xl flex gap-3 text-gray-600";
-    const { text, photo, authorName, authorImage, likes, dislikes, comments } = post;
+    const { text, photo, authorName, authorImage } = post;
     return (
         <div className="grid grid-cols-8 border-t border-b px-2 py-3 my-4">
             <div className="col-span-1 mx-auto">
@@ -25,7 +22,7 @@ const CommunitySingleStatus = ({postId, post}) => {
                     }
                 </div>
                 {/*bottom like comment share nav*/}
-                <CommunityReaction key={post?.postId} posts={post} id={postId} />
+                <CommunityReaction  posts={post}  />
             </div>
         </div>
     );
