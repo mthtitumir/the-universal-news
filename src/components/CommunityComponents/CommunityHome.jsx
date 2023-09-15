@@ -9,7 +9,6 @@ const CommunityHome = () => {
       <div className="border-r border-l ">
         <Welcome />
         <CommunityPost />
-        <CommunityLatestPosts />
         <CommunityTimeLine />
       </div>
     </div>
