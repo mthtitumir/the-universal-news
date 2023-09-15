@@ -52,16 +52,16 @@ export const navData = [
         title: 'Travel'
     },
     {
-        path:'/news/fashion',
-        title: 'Fashion'
+        path:'/community',
+        title: 'Community'
+    },
+    {
+        path:'/photo',
+        title: 'Photo'
     },
     {
         path:'/info/magazine',
         title: 'Magazine'
-    },
-    {
-        path:'/athlete',
-        title: 'Athlete'
     },
     {
         path:'/jobs',
