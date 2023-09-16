@@ -1,6 +1,5 @@
 import React from 'react';
 import data from '../../utils/travel.json'
-import NewsCardTwo from '../newsCards/NewsCardTwo';
 import Image from 'next/image';
 import NewsCardFour from '../newsCards/NewsCardFour';
 import Link from 'next/link';
