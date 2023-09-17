@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'Games | The Universal News',
-    description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
+    description: 'Games: Play, Compete, Conquer, Enjoy!',
   }
   
 const GamesLayout = ({children}) => {
