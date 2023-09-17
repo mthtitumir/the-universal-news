@@ -34,7 +34,7 @@ const Carosoul = () => {
 
     return (
         <div className='mt-10 px-3 md:px-0'>
-            <Headline headline={"Videos"} seeMore={""} />
+            <Headline headline={"Videos"} seeMore={"Watch More"} path={"/videos"} />
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#000',

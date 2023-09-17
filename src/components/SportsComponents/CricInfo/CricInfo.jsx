@@ -14,7 +14,7 @@ const CricInfo = async () => {
         <div className="grid md:grid-cols-12 gap-3 mb-10">
           {/* left card  */}
           <div className="card1 col-span-3  data  h-fit">
-            <Headline headline={"Latest News"} />
+            <Headline headline={"Latest News"} path={""} />
             <div>
               {data.map((item) => (
                 <NewsCardOne key={item.id} item={item}></NewsCardOne>
@@ -23,7 +23,7 @@ const CricInfo = async () => {
           </div>
           {/* middle card */}
           <div className="card1 col-span-6 flex flex-col overflow-y-scroll overflow-x-hidden  data">
-            <Headline headline={"Related News"} />
+            <Headline headline={"Related News"} path={""} />
             <div className="flex flex-col gap-2">
               {data1.map((item) => (
                 <NewsCardTwo key={item.id} item={item}></NewsCardTwo>
@@ -32,7 +32,7 @@ const CricInfo = async () => {
           </div>
           {/* right card */}
           <div className="card1 col-span-3 overflow-y-scroll overflow-x-hidden  data h-fit">
-            <Headline headline={"Featured News"} />
+            <Headline headline={"Featured News"} path={""} />
             <div className="flex flex-col gap-3">
               {data1.map((item) => (
                 <NewsCardFour key={item.id} item={item}></NewsCardFour>

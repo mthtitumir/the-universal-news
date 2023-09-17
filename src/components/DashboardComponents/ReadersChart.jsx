@@ -28,13 +28,13 @@ const ReadersChart = () => {
         <div className="border border-cyan-500 p-3 rounded-lg">
             <div className="grid grid-cols-9 gap-3">
                 <div className="col-span-5">
-                    <Headline headline={"Visitors"} />
+                    <Headline headline={"Visitors"} path={""} />
                     <div>
                         <ReactApexChart series={series} options={options} type="bar" />
                     </div>
                 </div>
                 <div className="col-span-4">
-                    <Headline headline={"Audience"} />
+                    <Headline headline={"Audience"} path={""} />
                     <div className="flex flex-col">
                         <ReactApexChart series={pieSeries} options={chartOptions} type="pie" />
                     </div>

@@ -102,7 +102,7 @@ const SingleNews = async ({ params }) => {
             {/* related news */}
             <div className="my-12">
                 {/* <h1 className='text-2xl my-3'>Read more about politics</h1> */}
-                <Headline headline={"Read more about politics"} />
+                <Headline headline={"Read more about politics"} path={""} />
                 <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {relatedNewsData.map((item) => (
                         <NewsCardFour key={item.id} item={item}></NewsCardFour>

@@ -25,25 +25,11 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="">
-                {/* <div className="md:hidden">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost md:hidden">
-                            <PiHamburger />
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            {
-                                navData.map(({ path, title }) => (
-                                    <Link key={title} href={path}><li className="text-xs">{title}</li></Link>
-                                ))
-                            }
-                        </ul>
-                    </div>
-                </div> */}
                 <div className="hidden md:block my-3">
                     <ul className="flex justify-between">
                         {
                             navData.map(({ path, title }) => (
-                                <Link key={title} href={path}><li className="text-sm">{title}</li></Link>
+                                <Link key={title} href={path}><li className="text-sm hover:font-bold">{title}</li></Link>
                             ))
                         }
                     </ul>

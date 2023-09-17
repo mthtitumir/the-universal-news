@@ -3,11 +3,9 @@ import NewsCardOne from '../newsCards/NewsCardOne';
 import news from '@/utils/photo.json'
 import PhotoSlide from './PhotoSlide';
 import PhotoSlider2 from './photoSlider2';
-import NewsCardThree from '../newsCards/NewsCardThree';
 import photoData from '../../utils/photo.json'
 import Image from 'next/image';
 import Link from 'next/link';
-import Headline from '../miniComponents/Headline';
 
 const  PhotoComponent = () => {
     const photo = photoData.slice(0, 1);

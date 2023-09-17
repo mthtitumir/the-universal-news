@@ -16,7 +16,7 @@ const ProfilePage = async () => {
             <UserInfo />
             {/* interest section  */}
             <div className="mt-8">
-                <Headline headline={"Interests"} />
+                <Headline headline={"Interests"} path={""} />
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-3 justify-between">
                     <button className="primary-btn animate-pulse">politics</button>
                     <button className="primary-btn">politics</button>
@@ -41,7 +41,7 @@ const ProfilePage = async () => {
             </div>
             {/* saved articles section  */}
             <div className="mt-8">
-                <Headline headline={"Saved Articles"} />
+                <Headline headline={"Saved Articles"} path={""} />
                 <div className="grid md:grid-cols-2 gap-3">
                     {
                         savedNews.slice(30, 36).map(news => <NewsCardThree key={news._id} item={news} />)
@@ -50,7 +50,7 @@ const ProfilePage = async () => {
             </div>
             {/* Your comments  */}
             <div className="mt-8">
-                <Headline headline={"Your Comments"} />
+                <Headline headline={"Your Comments"} path={""} />
                 <div className="grid md:grid-cols-2 gap-3">
                     {
                         comments.map(comment => <DisplayComment key={comment.id} comment={comment} />)

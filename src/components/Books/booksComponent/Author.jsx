@@ -25,7 +25,7 @@ const Author = () => {
 
     return (
         <>
-            <Headline headline={"Authors"} />
+            <Headline headline={"Authors"} path={""} />
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}

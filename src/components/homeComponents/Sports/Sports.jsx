@@ -1,14 +1,15 @@
-import React from "react";
 import NewsCardOne from "../newsCards/NewsCardOne";
 import NewsCardTwo from "../newsCards/NewsCardTwo";
 import NewsCardThree from "../newsCards/NewsCardThree";
 import Headline from "../miniComponents/Headline";
 import "./HomeComponent.css";
-import { GetAllNews } from "@/services/GetAllNews";
+import { GetAllNews, GetSubCategory } from "@/services/GetAllNews";
 
-const HomeComponent = async () => {
+const Sports = async () => {
     const news = await GetAllNews();
     // console.log(news);
+    const cricket = GetSubCategory("cricket");
+    const football = GetSubCategory("football");
     const data = news.slice(0,20);
     const data1 = news.slice(0, 10);
     const data2 = news.slice(0,10);
@@ -38,4 +39,4 @@ const HomeComponent = async () => {
   );
 };
 
-export default HomeComponent;
+export default Sports;
