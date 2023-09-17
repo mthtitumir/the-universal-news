@@ -1,15 +1,15 @@
 "use client"
-import SinglePostById from "@/hooks/TanStackHooks/CommunityHooks/SinglePostById";
 import axios from "axios";
 import { useState } from "react";
 import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
 import { BiCommentDetail } from "react-icons/bi";
-import { RiDislikeLine } from "react-icons/ri";
+import MyModal from "../HandleModal/Modal";
+import HandleCommunityComment from "./HandleCommunityComment";
 
 const CommunityReaction = ({ posts }) => {
-    
-    const iconStyles = "text-xl flex gap-3 text-gray-600 ";
-    const {postId, likes, dislikes, comments } = posts ;
+    const [isOpen, setIsOpen] = useState(false)
+    const iconStyles = "text-xl flex gap-3 text-gray-600 hover:bg-pink-500 ";
+    const {postId, likes, comments } = posts ;
     const [likies ,setLikes] = useState(likes)
     const handleLike = async (id, action) =>{
         console.log(id, action);
@@ -25,12 +25,15 @@ const CommunityReaction = ({ posts }) => {
     }
     return (
         <>
+        
             <div className="flex justify-evenly items-center mt-7"> {/*bottom like comment share nav*/}
-                <button onClick={()=>handleLike(postId, "like")} className={iconStyles}><AiOutlineHeart className="hover:rounded-full hover:bg-pink-500 hover:text-black hover:p-1 hover:text-2xl" /> {likies}</button>
-                <button className={iconStyles}><RiDislikeLine className="hover:rounded-full hover:bg-pink-500 hover:text-black hover:p-1 hover:text-2xl" />0</button>
-                <button className={iconStyles}><BiCommentDetail className="hover:rounded-full hover:bg-pink-500 hover:text-black hover:p-1 hover:text-2xl" /> {comments?.length}</button>
-                <button className={iconStyles}><AiOutlineShareAlt className="hover:rounded-full hover:bg-pink-500 hover:text-black hover:p-1 hover:text-2xl" /></button>
+                <button onClick={()=>handleLike(postId, "like")} className={iconStyles}><AiOutlineHeart className="hover:rounded-full " /> {likies}</button>
+                <button onClick={()=> setIsOpen(!isOpen)} className={iconStyles}><BiCommentDetail className="hover:rounded-full" /> {comments?.length}</button>
+                <button className={iconStyles}><AiOutlineShareAlt className="hover:rounded-full" />{postId}</button>
             </div>
+            <MyModal isOpen={isOpen} setIsOpen={setIsOpen} >
+                <HandleCommunityComment posts={posts}/>
+            </MyModal>
         </>
     );
 };
