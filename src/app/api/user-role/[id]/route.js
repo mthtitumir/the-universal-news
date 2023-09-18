@@ -6,18 +6,20 @@ export const GET = async (request, { params }) => {
             const db = await DbConnect();
             const allUsers = db.collection('all-users');
             // console.log(params);
-            const query = { email: params.id }
+            const query = { email: params?.id }
             const result = await allUsers.findOne(query);
             // console.log(result);
             const role = result.role;
             if (result) {
                 if (role === 'admin') {
                     return NextResponse.json({ role: "admin" });
-                } else if (role === 'employer'){
+                } else if (role === 'employer') {
                     return NextResponse.json({ role: "employer" });
-                } else if (role === 'reporter'){
+                } else if (role === 'reporter') {
                     return NextResponse.json({ role: "reporter" });
-                } else if (role === 'user'){
+                } else if (role === "moderator") {
+                    return NextResponse.json({ role: "moderator" });
+                } else if (role === 'user') {
                     return NextResponse.json({ role: "user" });
                 } else {
                     return NextResponse.json({ message: "login koira ashen boss!" });
