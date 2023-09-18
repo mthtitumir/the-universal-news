@@ -1,5 +1,5 @@
 import React from "react";
-import AllNewses from "../../utils/entertaiment.json";
+import AllNewses from "../../utils/entertainment.json";
 import SingleEntertainmentNews from "./SingleEntertainmentNews";
 const EntertainmentNews = () => {
   const newses = AllNewses;

@@ -4,10 +4,6 @@ export const navData = [
         title: 'Home'
     },
     {
-        path:'/news/world',
-        title: 'World'
-    },
-    {
         path:'/news/politics',
         title: 'Politics'
     },
@@ -16,11 +12,11 @@ export const navData = [
         title: 'Business'
     },
     {
-        path:'/sports/sports',
+        path:'/news/sports',
         title: 'Sports'
     },
     {
-        path:'/news/technology',
+        path:'/news/Technology',
         title: 'Technology'
     },
     {
@@ -36,7 +32,7 @@ export const navData = [
         title: 'Books'
     },
     {
-        path:'/news/arts',
+        path:'/news/Arts',
         title: 'Arts'
     },
     {
@@ -52,16 +48,20 @@ export const navData = [
         title: 'Travel'
     },
     {
-        path:'/news/fashion',
-        title: 'Fashion'
+        path:'/community',
+        title: 'Community'
     },
     {
-        path:'/info/magazine',
+        path:'/photo',
+        title: 'Photo'
+    },
+    {
+        path:'/videos',
+        title: 'Videos'
+    },
+    {
+        path:'/magazine',
         title: 'Magazine'
-    },
-    {
-        path:'/athlete',
-        title: 'Athlete'
     },
     {
         path:'/jobs',

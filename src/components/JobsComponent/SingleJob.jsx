@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop } from 'react-icons/bi'
+import { BiHome, BiSolidTimer, BiMoney, BiShoppingBag, BiArrowToTop } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
 
 const SingleJob = ({ job }) => {
-    const {_id, jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription} = job;
+    const { _id, jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription } = job;
     return (
         <div className="card w-full bg-white mb-3 rounded-sm border-gray-500">
             <div className="card-body">
@@ -15,23 +15,33 @@ const SingleJob = ({ job }) => {
                 <p className='text-gray-400 font-bold text-sm'>{companyName}</p>
 
                 <div className='flex items-center gap-2 mt-3'>
-                    <BiHome className='text-gray-400'></BiHome>
-                    <p className='text-sm text-gray-500 '>{jobLocation}</p>
+                    <BiHome className='text-gray-400  text-lg'></BiHome>
+                    <p className='text-base text-gray-900 capitalize'>{jobLocation}</p>
                 </div>
 
-                <div className='flex justify-between items-center mt-3'>
+                <div className='flex gap-14 items-center mt-3'>
+                    <div>
+                        <div className='flex items-center gap-2'>
+                            <BiSolidTimer className='text-gray-400 text-lg'></BiSolidTimer>
+                            <p className='text-base text-gray-500 '>Duration</p>
+                        </div>
+                        <p className='text-sm text-gray-900 text-center'>{applicationDeadline}</p>
+                    </div>
+                    <div>
+                        <div className='flex items-center gap-2'>
+                            <BiMoney className='text-gray-400'></BiMoney>
+                            <p className='text-base text-gray-500 '>Salary</p>
 
-                    <div className='flex items-center gap-2'>
-                        <BiPlay className='text-gray-400'></BiPlay>
-                        <p className='text-sm text-gray-500 '>{applicationDeadline}</p>
+                        </div>
+                        <p className='text-sm text-gray-900 text-center '>${salary} /year</p>
                     </div>
-                    <div className='flex items-center gap-2'>
-                        <BiMoney className='text-gray-400'></BiMoney>
-                        <p className='text-sm text-gray-500 '>{salary} /year</p>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                        <BiShoppingBag className='text-gray-400'></BiShoppingBag>
-                        <p className='text-sm text-gray-500 '>{experience}</p>
+                    <div>
+                        <div className='flex items-center gap-2'>
+                            <BiShoppingBag className='text-gray-400'></BiShoppingBag>
+                            <p className='text-base text-gray-500 '> Experience</p>
+
+                        </div>
+                        <p className='text-sm text-gray-900 text-center '>{experience}</p>
                     </div>
 
                 </div>

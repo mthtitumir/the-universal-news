@@ -14,7 +14,7 @@ const RevenueChart = () => {
         <div className="border border-cyan-500 p-3 rounded-lg">
             <div className="grid grid-cols-2 gap-3">
                 <div>
-                    <Headline headline={"Revenue from Subscription"} />
+                    <Headline headline={"Revenue from Subscription"} path={""} />
                     <ResponsiveContainer width={"100%"}  height={300} >
                     <LineChart  data={data}>
                         <Line type="monotone" dataKey="Subscription" stroke="#8884d8" />
@@ -26,7 +26,7 @@ const RevenueChart = () => {
                     </ResponsiveContainer>
                 </div>
                 <div>
-                    <Headline headline={"Revenue from Jobs"} />
+                    <Headline headline={"Revenue from Jobs"} path={""} />
                     <ResponsiveContainer width={"100%"} height={300} >
                     <LineChart  data={data}>
                         <Line type="monotone" dataKey="Subscription" stroke="#8884d8" />
