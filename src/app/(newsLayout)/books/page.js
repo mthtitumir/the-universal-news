@@ -1,18 +1,18 @@
 import BooksRightBar from '@/components/Books/BooksRightBar';
 import BooksCategory from '@/components/Books/booksComponent/BooksCategory';
-import bookCategories  from "../../../utils/booksCategory.json";
+import bookCategories from "@/utils/booksCategory.json";
 
 
 const Books = () => {
-    console.log(bookCategories);
+    // console.log(bookCategories);
     return (
         <div className='flex-row md:flex c-auto gap-4'>
             {/* left bar */}
-            <div style={{ borderRight: '1px solid #000' }} className='md:w-[20%] mt-10 pl-9'>               
+            <div style={{ borderRight: '1px solid #000' }} className='md:w-[20%] mt-10 pl-9'>
                 {
                     bookCategories.map(data => <BooksCategory
-                    key={data?.id}
-                    data={data}
+                        key={data?.id}
+                        data={data}
                     ></BooksCategory>)
                 }
             </div>

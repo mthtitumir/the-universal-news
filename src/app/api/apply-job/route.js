@@ -4,7 +4,7 @@ export const POST = async (request) => {
     if (request.method === "POST") {
         try {
             const applicationData = await request.json();
-            console.log(applicationData);
+            // console.log(applicationData);
             const db = await DbConnect();
             const appliedJobs = db.collection('job-applications');
             const result = await appliedJobs.insertOne(applicationData);

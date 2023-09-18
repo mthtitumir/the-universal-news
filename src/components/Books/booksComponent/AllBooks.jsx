@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleBooks from '../SingleBooks';
-import data from '../../../utils/book.json'
+import data from '@/utils/book.json'
 
 const AllBooks = () => {
     const booksData = data;

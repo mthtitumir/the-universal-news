@@ -1,6 +1,5 @@
 import React from 'react';
 import data from '../../utils/travel.json'
-import NewsCardTwo from '../newsCards/NewsCardTwo';
 import Image from 'next/image';
 import NewsCardFour from '../newsCards/NewsCardFour';
 import Link from 'next/link';
@@ -23,7 +22,8 @@ const SecondSec = () => {
                             </Link>
                             <div className='absolute bottom-0 p-2 bg-black bg-opacity-70 w-full'>
                                 <h1 className='text-white text-md md:text-lg whitespace-nowrap overflow-hidden hover:underline'>{item?.title}</h1>
-                                <p className='text-white text-sm mt-2'>{item?.published_date}</p>
+                                <p className='text-white text-sm mt-2'>{item?.description}</p>
+                                <p className='text-white text-sm mt-2'>{item?.date}</p>
                             </div>
                         </div>
                     ))}
@@ -53,6 +53,8 @@ const SecondSec = () => {
             </div >
             <h2 className='text-center text-3xl font-semibold my-9 mt-20'>More Place</h2>
             <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                {/* <p className='text-white text-sm mt-2'>{item?.description}</p>
+                <p className='text-white text-sm mt-2'>{item?.date}</p> */}
                 {
                     allTravelData.map(item => <Link href={`/travel/${item?.id}`} key={item.id}>
                         <NewsCardFour

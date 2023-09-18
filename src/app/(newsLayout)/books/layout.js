@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'Books | The Universal News',
-    description: 'Breaking Borders, Breaking News: Where the World Comes to Know',
+    description: 'Books: Your Imaginations Greatest Adventure',
   }
   
 const BooksLayout = ({children}) => {

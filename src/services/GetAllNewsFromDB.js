@@ -12,13 +12,13 @@ export const GetAllNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetCategoryDataFromDb = async (category) => {
+export const GetCategoryDataFromDB = async (category) => {
     try {
         const query = { category: category };
         const db = await DbConnect();
         const allNews = db.collection('all-news');
         const result = await allNews.find(query).toArray();
-        return result
+        return result;
     } catch (error) {
         console.error(error)
         return ({ error: 'error to get data' });

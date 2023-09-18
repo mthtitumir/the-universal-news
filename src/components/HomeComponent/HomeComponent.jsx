@@ -15,7 +15,7 @@ const HomeComponent = async () => {
   
   return (
     <div className="">
-      <Headline headline={"Recent News"} seeMore={""} />
+      <Headline headline={"Recent News"} seeMore={""} path={""} />
 
       <div className="grid sm:grid-cols-3 md:grid-cols-12 gap-3 md:h-[70vh]">
         <div className="card1 md:col-span-3 overflow-y-scroll overflow-x-hidden ">
