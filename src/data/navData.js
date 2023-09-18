@@ -4,10 +4,6 @@ export const navData = [
         title: 'Home'
     },
     {
-        path:'/news/world',
-        title: 'World'
-    },
-    {
         path:'/news/politics',
         title: 'Politics'
     },
@@ -60,7 +56,11 @@ export const navData = [
         title: 'Photo'
     },
     {
-        path:'/info/magazine',
+        path:'/videos',
+        title: 'Videos'
+    },
+    {
+        path:'/magazine',
         title: 'Magazine'
     },
     {

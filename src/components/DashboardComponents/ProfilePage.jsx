@@ -2,14 +2,13 @@
 import Headline from "../miniComponents/Headline";
 import UserInfo from "./UserInfo";
 import NewsCardThree from "../newsCards/NewsCardThree";
-// import GetSingleNews from "@/services/GetSingleNews";
 import DisplayComment from "../CommentCompos/DisplayComment";
 import { GetAllNews, GetSingleNews } from "@/services/GetAllNews";
 
 const ProfilePage = async () => {
     const savedNews = await GetAllNews();
-    const singleNews = await GetSingleNews('64e5a2f54c36b1a1c9171075');
-    const { comments } = singleNews;
+    // const singleNews = await GetSingleNews('64e5a2f54c36b1a1c9171075');
+    // const { comments } = singleNews;
     return (
         <div className='p-4'>
             {/* user information */}
@@ -49,14 +48,14 @@ const ProfilePage = async () => {
                 </div>
             </div>
             {/* Your comments  */}
-            <div className="mt-8">
+            {/* <div className="mt-8">
                 <Headline headline={"Your Comments"} path={""} />
                 <div className="grid md:grid-cols-2 gap-3">
                     {
                         comments.map(comment => <DisplayComment key={comment.id} comment={comment} />)
                     }
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

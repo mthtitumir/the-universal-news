@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 import Link from "next/link";
 import { navData } from "@/data/navData";
 import ShareUpdate from "../miniComponents/ShareUpdate";
-
+import moment from 'moment/moment';
 
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
@@ -15,11 +15,11 @@ const Navbar = () => {
                 <h2 className={`${myFont.className} text-3xl md:text-6xl mt-2`}><Link href="/">The Universal News</Link></h2>
                 <p className="text-xs md:text-sm my-1">Breaking Borders | Where the World Comes to Know</p>
             </div>
-            <div className="flex justify-between px-3 md:px-0">
-                <div className="hidden md:block">
-                    <h1></h1>
+            <div className="flex justify-center md:justify-between items-center px-3 md:px-0 mx-auto md:mx-0 mb-2">
+                <div className="text-xs">
+                    <h1>{moment().format('MMMM Do YYYY')}</h1>
                 </div>
-                <div className='flex gap-3 items-center text-xs mx-auto md:mx-0'>
+                <div className='md:flex gap-3 items-center text-xs hidden'>
                     <ShareUpdate />
                     <Link href='business/share-market'>View All</Link>
                 </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <ul className="flex justify-between">
                         {
                             navData.map(({ path, title }) => (
-                                <Link key={title} href={path}><li className="text-sm hover:font-bold">{title}</li></Link>
+                                <Link key={title} href={path}><li className="text-sm hover:font-semibold">{title}</li></Link>
                             ))
                         }
                     </ul>
