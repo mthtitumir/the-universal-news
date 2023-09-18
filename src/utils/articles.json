@@ -1,0 +1,128 @@
+[
+  {
+    "article_id": 1,
+    "title": "Exploring the Mysteries of the Universe",
+    "image": "https://i.ibb.co/QrygsxJ/Exploring-the-Mysteries-of-the-Universe.png",
+    "description": "In the vast expanse of the cosmos, where stars twinkle like distant diamonds and galaxies swirl in mesmerizing patterns, the universe beckons us with its enigmatic beauty and profound mysteries. A deep dive into the wonders of the cosmos, from black holes to distant galaxies.",
+    "author_name": "Astronomy Enthusiast",
+    "publication_time": "2023-09-14T10:00:00Z",
+    "time_for_reading": "10 mins",
+    "similar_articles": [
+      {
+        "article_id": 2,
+        "title": "The Search for Extraterrestrial Life",
+        "image": "https://i.ibb.co/1XkBBFX/The-Search-for-Extraterrestrial-Life.jpg"
+      },
+      {
+        "article_id": 3,
+        "title": "Unraveling the Secrets of the Red Planet: Mars",
+        "image": "https://i.ibb.co/j5fd2HK/Unraveling-the-Secrets-of-the-Red-Planet-Mars.png"
+      }
+    ]
+  },
+  {
+    "article_id": 4,
+    "title": "The Art of Culinary Fusion",
+    "image": "https://i.ibb.co/9qDpPr6/The-Art-of-Culinary-Fusion.jpg",
+    "description": "Embark on a gastronomic adventure as we explore the world of culinary fusion, where flavors and traditions from diverse cultures come together to create mouthwatering dishes that transcend borders.",
+    "author_name": "Gourmet Explorer",
+    "publication_time": "2023-09-14T11:30:00Z",
+    "time_for_reading": "8 mins",
+    "similar_articles": [
+      {
+        "article_id": 5,
+        "title": "The Spices of India: A Culinary Journey",
+        "image": "https://i.ibb.co/DYQj6p8/613933s-Lx-L-AC-UF1000-1000-QL80.jpg"
+      },
+      {
+        "article_id": 6,
+        "title": "Sushi: The Art of Japanese Cuisine",
+        "image": "https://i.ibb.co/fGHcZLD/Sushi-The-Art-of-Japanese-Cuisine.jpg"
+      }
+    ]
+  },
+  {
+    "article_id": 7,
+    "title": "The Future of Artificial Intelligence",
+    "image": "https://i.ibb.co/Rv6HkXV/The-Future-of-Artificial-Intelligence.png",
+    "description": "Delve into the rapidly evolving world of artificial intelligence, where machine learning, neural networks, and deep learning are shaping industries, revolutionizing healthcare, and even influencing art and creativity.",
+    "author_name": "Tech Enthusiast",
+    "publication_time": "2023-09-14T14:15:00Z",
+    "time_for_reading": "12 mins",
+    "similar_articles": [
+      {
+        "article_id": 8,
+        "title": "Ethical Considerations in AI Development",
+        "image": "https://i.ibb.co/qr4hJtx/Ethical-Considerations-in-AI-Development.png"
+      },
+      {
+        "article_id": 9,
+        "title": "AI in Healthcare: Transforming Patient Care",
+        "image": "https://i.ibb.co/Sm0bDSX/AI-in-Healthcare-Transforming-Patient-Care.jpg"
+      }
+    ]
+  },
+  {
+    "article_id": 10,
+    "title": "Climate Change and Our Planet's Future",
+    "image": "https://i.ibb.co/Yc4MpTh/Climate-Change-and-Our-Planets-Future.jpg",
+    "description": "A comprehensive look at the pressing issue of climate change, its causes, impacts, and the urgent need for global action. Explore the latest scientific findings and the role of renewable energy in mitigating climate change.",
+    "author_name": "Environmental Advocate",
+    "publication_time": "2023-09-14T16:45:00Z",
+    "time_for_reading": "15 mins",
+    "similar_articles": [
+      {
+        "article_id": 11,
+        "title": "The Green Revolution: Sustainable Agriculture",
+        "image": "https://i.ibb.co/XZs9ctW/The-Green-Revolution-Sustainable-Agriculture.jpg"
+      },
+      {
+        "article_id": 12,
+        "title": "Conservation Efforts: Protecting Endangered Species",
+        "image": "https://i.ibb.co/wQqsGN0/Conservation-Efforts-Protecting-Endangered-Species.jpg"
+      }
+    ]
+  },
+  {
+    "article_id": 13,
+    "title": "The World of Virtual Reality: Beyond Gaming",
+    "image": "https://i.ibb.co/N3rWjnn/The-World-of-Virtual-Reality-Beyond-Gaming.png",
+    "description": "Experience the immersive world of virtual reality, where technology transcends reality. From medical training to architectural design, discover how VR is revolutionizing various industries and enhancing human experiences.",
+    "author_name": "VR Enthusiast",
+    "publication_time": "2023-09-14T19:00:00Z",
+    "time_for_reading": "9 mins",
+    "similar_articles": [
+      {
+        "article_id": 14,
+        "title": "VR in Education: Transforming Learning",
+        "image": "https://i.ibb.co/VBV0FWz/VR-in-Education-Transforming-Learning.jpg"
+      },
+      {
+        "article_id": 15,
+        "title": "Exploring VR Art: A New Medium of Expression",
+        "image": "https://i.ibb.co/h2fNN22/Exploring-VR-Art-A-New-Medium-of-Expression.jpg"
+      }
+    ]
+  },
+  {
+    "article_id": 16,
+    "title": "The Power of Meditation: A Path to Inner Peace",
+    "image": "https://i.ibb.co/h2LxtZz/The-Power-of-Meditation-A-Path-to-Inner-Peace.jpg",
+    "description": "Discover the profound benefits of meditation in reducing stress, improving mental well-being, and achieving inner peace. Explore various meditation techniques and their positive impact on daily life.",
+    "author_name": "Mindfulness Practitioner",
+    "publication_time": "2023-09-14T20:30:00Z",
+    "time_for_reading": "7 mins",
+    "similar_articles": [
+      {
+        "article_id": 17,
+        "title": "Mindfulness in the Workplace: Enhancing Productivity",
+        "image": "https://i.ibb.co/GcRhdcm/Mindfulness-in-the-Workplace-Enhancing-Productivity.jpg"
+      },
+      {
+        "article_id": 18,
+        "title": "The Science of Happiness: How Meditation Affects the Brain",
+        "image": "https://i.ibb.co/59h5cwC/The-Science-of-Happiness-How-Meditation-Affects-the-Brain.jpg"
+      }
+    ]
+  }
+]
