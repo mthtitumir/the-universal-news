@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import Image from "next/image";
 import {BiHome, BiPlay, BiMoney, BiShoppingBag, BiArrowToTop, BiSolidBookmark, BiShareAlt, BiVoicemail} from "react-icons/bi";
@@ -9,6 +10,7 @@ import useAuth from "@/hooks/useAuth";
 import Spinner from "@/components/ErrorComponents/Spinner";
 import useSingleJob from "@/hooks/TanStackHooks/useSingleJob";
 
+
 const JobDetails = ({ params }) => {
   const {user, loading} = useAuth();
   const id = parseInt(params?.id);
@@ -17,6 +19,8 @@ const JobDetails = ({ params }) => {
   if(!singleJob){
     return <Spinner />
   }
+
+  
   // const [jobDetails, setjobDetails] = useState({});
   // useEffect(() => {
   //   const singlejob = async () => {
@@ -203,6 +207,7 @@ const JobDetails = ({ params }) => {
               <input
                 type="text"
                 name="resume"
+                
                 placeholder="Your resume Link"
                 className="border rounded w-2/4 px-2 h-9"
               />

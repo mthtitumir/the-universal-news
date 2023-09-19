@@ -4,6 +4,7 @@ export const POST = async (request) => {
     if (request.method === "POST") {
         try {
             const {searchParams} = new URL(request.url)
+            console.log(searchParams)
             const emails = searchParams.get('email');
             const db = await DbConnect();
             const role = 'employer'
