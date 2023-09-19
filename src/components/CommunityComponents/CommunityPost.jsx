@@ -58,7 +58,7 @@ const CommunityPost = () => {
             authorImage: user?.photoURL || "https://i.ibb.co/3Mrx6Fg/blank-profile.webp",
             likes: 0,
             dislikes: 0,
-            comments: []
+            comments: [],
         };
         // console.log(post);
         const toastId = toast.loading("Loading...");

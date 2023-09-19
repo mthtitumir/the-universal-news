@@ -15,9 +15,9 @@ export const PATCH = async (request, { params }) => {
         return NextResponse.json({ error: "Post not found" });
       }
       if (payload.action === "like") {
-        result.likes += 1;
+        result.likes -= 1 
       } else if (payload.action === "dislike") {
-        result.dislikes += 1;
+        result.likes += 1 
       } else {
         console.log("hello from invalid action");
         return NextResponse.json({ error: "Invalid action" });

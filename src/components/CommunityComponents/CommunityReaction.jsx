@@ -8,12 +8,12 @@ import HandleCommunityComment from "./HandleCommunityComment";
 
 const CommunityReaction = ({ posts }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const iconStyles = "text-xl flex gap-3 text-gray-600 hover:bg-pink-500 ";
-    const {postId, likes, comments } = posts ;
+    const [isReact, setisReact] = useState(false)
+    const {postId, likes, comments} = posts ;
     const [likies ,setLikes] = useState(likes)
     const handleLike = async (id, action) =>{
         console.log(id, action);
-        setLikes(likies+1)
+        setLikes(isReact?likies-1:likies+1)
    
         try {
             const res = await axios.patch(`/api/community/add-like-dislike/${id}`, {action});
@@ -27,9 +27,15 @@ const CommunityReaction = ({ posts }) => {
         <>
         
             <div className="flex justify-evenly items-center mt-7"> {/*bottom like comment share nav*/}
-                <button onClick={()=>handleLike(postId, "like")} className={iconStyles}><AiOutlineHeart className="hover:rounded-full " /> {likies}</button>
-                <button onClick={()=> setIsOpen(!isOpen)} className={iconStyles}><BiCommentDetail className="hover:rounded-full" /> {comments?.length}</button>
-                <button className={iconStyles}><AiOutlineShareAlt className="hover:rounded-full" />{postId}</button>
+                <div className="flex items-center">
+                <button onClick={() => {setisReact(!isReact); handleLike(postId, isReact?"like":"dislike");  }} className="text-pink-500"><AiOutlineHeart className="hover:rounded-full " /> </button>
+                <p className="ml-4">{likies}</p>
+                </div>
+                <div className="flex items-center">
+                <button onClick={()=> setIsOpen(!isOpen)} className=""><BiCommentDetail className="hover:rounded-full" /> </button>
+                <p className="ml-4">{comments?.length}</p>
+                </div>
+                <button className=""><AiOutlineShareAlt className="hover:rounded-full" />{postId}</button>
             </div>
             <MyModal isOpen={isOpen} setIsOpen={setIsOpen} >
                 <HandleCommunityComment posts={posts}/>

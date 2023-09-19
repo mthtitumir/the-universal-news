@@ -1,4 +1,4 @@
-import CommunityLatestPosts from "./CommunityLatestPosts"
+
 import CommunityPost from "./CommunityPost"
 import CommunityTimeLine from "./CommunityTimeLine"
 import Welcome from "./Welcome"
