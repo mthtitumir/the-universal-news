@@ -7,7 +7,7 @@ import MyModal from "../HandleModal/Modal";
 import HandleCommunityComment from "./HandleCommunityComment";
 
 const CommunityReaction = ({ posts }) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
     const iconStyles = "text-xl flex gap-3 text-gray-600 hover:bg-pink-500 ";
     const {postId, likes, comments } = posts ;
     const [likies ,setLikes] = useState(likes)

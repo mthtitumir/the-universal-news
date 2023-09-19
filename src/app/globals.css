@@ -5,12 +5,17 @@
 .title:hover {
     cursor: pointer;
 }
-
+input{
+    @apply hover:outline-none
+}
 .card1::-webkit-scrollbar {
     display: none;
 }
 .primary-btn{
     @apply bg-cyan-500 rounded px-2 py-1 text-white;
+}
+.scroll{
+    @apply h-screen overflow-y-scroll overflow-x-hidden card1
 }
 .secondary-btn{
     @apply bg-transparent rounded px-2 py-1 text-cyan-500 border border-cyan-500;
