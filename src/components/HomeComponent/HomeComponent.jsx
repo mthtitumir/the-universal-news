@@ -9,13 +9,13 @@ import { GetAllNews } from "@/services/GetAllNews";
 const HomeComponent = async () => {
     const news = await GetAllNews();
     // console.log(news);
-    const data = news.slice(0,20);
-    const data1 = news.slice(0, 10);
-    const data2 = news.slice(0,10);
+    const data = news?.slice(0,20);
+    const data1 = news?.slice(0, 10);
+    const data2 = news?.slice(0,10);
   
   return (
     <div className="">
-      <Headline headline={"Recent News"} seeMore={""} />
+      <Headline headline={"Recent News"} seeMore={""} path={""} />
 
       <div className="grid sm:grid-cols-3 md:grid-cols-12 gap-3 md:h-[70vh]">
         <div className="card1 md:col-span-3 overflow-y-scroll overflow-x-hidden ">

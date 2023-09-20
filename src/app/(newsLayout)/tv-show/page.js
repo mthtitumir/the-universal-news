@@ -4,7 +4,6 @@ import PopularMovies from "@/components/PopularMovies/PopularMovies";
 import EntertainmentNews from "@/components/EntertainmentNews/EntertainmentNews";
 import CelebrityLifeStyle from "@/components/EntertainmentNews/CelebrityLifeStyle";
 import Advertisement from "@/components/EntertainmentNews/Advertisement";
-import React from "react";
 
 const TvShow = () => {
   return (

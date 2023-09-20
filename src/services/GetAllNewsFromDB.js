@@ -12,13 +12,13 @@ export const GetAllNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 };
-export const GetCategoryDataFromDb = async (category) => {
+export const GetCategoryDataFromDB = async (category) => {
     try {
         const query = { category: category };
         const db = await DbConnect();
         const allNews = db.collection('all-news');
         const result = await allNews.find(query).toArray();
-        return result
+        return result;
     } catch (error) {
         console.error(error)
         return ({ error: 'error to get data' });
@@ -144,6 +144,66 @@ export const GetSinglePostFromDB = async (id) => {
         const allPosts = db.collection('all-posts');
         const query = { postId: id }
         const result = await allPosts.findOne(query);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+
+// moderator get data 
+export const GetAllBooksFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allBooks = db.collection('all-books');
+        const result = await allBooks.find().toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+export const GetAllVideosFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allVideos = db.collection('all-videos');
+        const result = await allVideos.find().toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+// export const GetCategoryModeratorDataFromDB = async (category) => {
+//     try {
+//         const query = { category: category };
+//         const db = await DbConnect();
+//         const allNews = db.collection('all-news');
+//         const result = await allNews.find(query).toArray();
+//         return result;
+//     } catch (error) {
+//         console.error(error)
+//         return ({ error: 'error to get data' });
+//     }
+// };
+export const GetSingleBookFromDB = async (id) => {
+    try {
+        const db = await DbConnect();
+        const allBooks = db.collection('all-books');
+        const query = { id: id }
+        const result = await allBooks.findOne(query);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+export const GetSingleVideoFromDB = async (id) => {
+    try {
+        const db = await DbConnect();
+        const allVideos = db.collection('all-videos');
+        const query = { videoId: id }
+        const result = await allVideos.findOne(query);
         return result;
     } catch (error) {
         console.error(error)
