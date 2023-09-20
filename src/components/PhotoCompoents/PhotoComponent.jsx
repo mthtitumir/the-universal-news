@@ -1,4 +1,3 @@
-import React from 'react';
 import NewsCardOne from '../newsCards/NewsCardOne';
 import news from '@/utils/photo.json'
 import PhotoSlide from './PhotoSlide';
@@ -6,8 +5,9 @@ import PhotoSlider2 from './photoSlider2';
 import photoData from '../../utils/photo.json'
 import Image from 'next/image';
 import Link from 'next/link';
+import Headline from '../miniComponents/Headline';
 
-const  PhotoComponent = () => {
+const PhotoComponent = () => {
     const photo = photoData.slice(0, 1);
     const photo2 = photoData;
     const photo3 = photoData.slice(1, 2);
@@ -16,7 +16,7 @@ const  PhotoComponent = () => {
 
     return (
         <div>
-            <h2 className='text-2xl md:text-3xl font-semibold text-cyan-500 mt-5'>Photo</h2>
+            <Headline headline={"Photos"} path={""} />
             {/* 1st section */}
             <div className='flex-row md:flex gap-8 my-7 w-[100%] border-b-2 border-gray-300 pb-6'>
                 <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden md:w-[70%] ">
@@ -49,12 +49,11 @@ const  PhotoComponent = () => {
 
             {/* Second Section */}
             <div className='border-b-2 border-gray-300 pb-3'>
-                <h1 className='text-2xl font-bold mt-14 mb-4 capitalize'>a glimpse</h1>
-                <PhotoSlide></PhotoSlide>
+                <PhotoSlide text={"A Glimpse"} seeMore={""} path={''}></PhotoSlide>
             </div>
 
             {/* 3rd section */}
-            <h1 className='text-2xl font-bold mt-14 mb-4 capitalize'>Best Clicked Photos</h1>
+            <Headline headline={"Best Clicked Photos"} path={""} />
             <div className='flex-row md:flex gap-3 my-7 mb-9 w-[100%] border-b-2 border-gray-300 pb-4'>
                 <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden md:w-[60%] ">
                     {photo3.map((item) => (
@@ -119,7 +118,7 @@ const  PhotoComponent = () => {
             </div>
 
             {/* 4th section */}
-            <h1 className='text-2xl font-bold mt-14 mb-4 capitalize'>Worlds Best Photos</h1>
+            <Headline headline={"World Best Photos"} path={""} />
             <PhotoSlider2></PhotoSlider2>
 
             {/* 5th section */}
@@ -160,7 +159,6 @@ const  PhotoComponent = () => {
                                     </div>
                                 </div>
                             </Link>
-
                         ))}
                     </div>
                 </div>

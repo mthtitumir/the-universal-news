@@ -1,5 +1,5 @@
 "use client"
-import { startTransition } from 'react';
+import { startTransition, useState } from 'react';
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 import useAuth from '@/hooks/useAuth';
@@ -7,11 +7,14 @@ import { toast } from 'react-hot-toast';
 import { usePathname, useRouter } from 'next/navigation';
 import { navData } from '@/data/navData';
 import { myFont } from './font';
+import useRole from '@/hooks/useRole';
 
 const TopNavbar = () => {
     const { user, logout } = useAuth();
     const { uid, displayName, photoURL } = user || {};
+    const [role, isRoleLoading] = useRole();
     const { replace, refresh } = useRouter();
+    // const [dashboardLink, setDashboardLink] = useState("");
     const pathName = usePathname();
     // console.log(pathName);
     const handleLogout = async () => {
@@ -35,6 +38,22 @@ const TopNavbar = () => {
             toast.dismiss(toastId);
         }
     };
+    let dashboardLink;
+    if (user && role?.toString() === "admin") {
+        dashboardLink = "/dashboard/admin";
+    } else if (user && role?.toString() === "employer") {
+        dashboardLink = "/dashboard/employer";
+    } else if (user && role?.toString() === "reporter") {
+        dashboardLink = "/dashboard/reporter";
+    } else if (user && role?.toString() === "user") {
+        dashboardLink = "/dashboard";
+    } else if (user && role?.toString() === "moderator") {
+        dashboardLink = "/dashboard/moderator";
+    } else {
+        dashboardLink = "/";
+    }
+    console.log(dashboardLink);
+
     return (
         <div className={`${pathName.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
             <div className='container mx-auto flex items-center justify-between py-2'>
@@ -52,7 +71,6 @@ const TopNavbar = () => {
                             }
                         </ul>
                     </div>
-
                     {/* search menu  */}
                     <h1 className='text-md'><AiOutlineSearch /></h1>
 
@@ -63,7 +81,17 @@ const TopNavbar = () => {
                 <div className='flex justify-between items-center gap-2 text-md '>
                     <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
                     {
-                        uid ? <><Link href="/dashboard"><button className='primary-btn'>Account</button></Link> <button className='primary-btn' title={user?.email} onClick={handleLogout}>Logout</button></>
+                        uid ? <>
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="">
+                                    <button className='primary-btn'>Account</button>
+                                </label>
+                                <ul tabIndex={0} className="mt-3 z-[1] p-1 shadow menu menu-sm dropdown-content border border-cyan-500 rounded-lg">
+                                    <li><Link href={dashboardLink}>Dashboard</Link></li>
+                                    <li><Link href={''}>Settings</Link></li>
+                                    <li onClick={handleLogout}><Link>Logout</Link></li>
+                                </ul>
+                            </div></>
                             :
                             <Link href="/login"><button className='primary-btn'>Login</button></Link>
                     }
@@ -80,3 +108,5 @@ const TopNavbar = () => {
 };
 
 export default TopNavbar;
+
+

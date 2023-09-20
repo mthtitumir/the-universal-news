@@ -17,6 +17,9 @@ input{
 .scroll{
     @apply h-screen overflow-y-scroll overflow-x-hidden card1
 }
+.res{
+    @apply px-3 md:px-0
+}
 .secondary-btn{
     @apply bg-transparent rounded px-2 py-1 text-cyan-500 border border-cyan-500;
 }
