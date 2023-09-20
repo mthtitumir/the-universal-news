@@ -163,6 +163,18 @@ export const GetAllBooksFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 };
+export const GetCategoryBooksFromDB = async (category) => {
+    try {
+        const query = { category: category };
+        const db = await DbConnect();
+        const allBooks = db.collection('all-books');
+        const result = await allBooks.find(query).toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
 export const GetAllVideosFromDB = async () => {
     try {
         const db = await DbConnect();
@@ -187,10 +199,14 @@ export const GetAllVideosFromDB = async () => {
 //     }
 // };
 export const GetSingleBookFromDB = async (id) => {
+
     try {
+        if (!id) {
+            return "wait";
+        }
         const db = await DbConnect();
         const allBooks = db.collection('all-books');
-        const query = { id: id }
+        const query = { id: parseInt(id) }
         const result = await allBooks.findOne(query);
         return result;
     } catch (error) {

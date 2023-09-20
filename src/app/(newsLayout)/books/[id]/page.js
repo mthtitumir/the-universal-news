@@ -1,24 +1,19 @@
-"use client";
-import React from "react";
-import data from "../../../../utils/book.json";
 import Image from "next/image";
-import StarRatings from "react-star-ratings";
+import Ratings from "@/components/Books/Ratings";
+import { GetSingleBookFromDB } from "@/services/GetAllNewsFromDB";
 
-const BookDetails = ({ params }) => {
-  const bookDetails = data;
-  const id = params.id;
-  const booksDetails = bookDetails.find((job) => job.id == id);
+const BookDetails = async ({ params }) => {
+  const bookDetails = await GetSingleBookFromDB(params?.id);
+  // console.log(bookDetails);
   const {
     name,
     img,
     description,
     ratings,
     price,
-    category,
     authorName,
     authorImage,
-  } = booksDetails;
-
+  } = bookDetails;
   return (
     <div className="flex-row md:flex c-auto w-[90%] md:px-20 my-10">
       {/* left bar */}
@@ -39,12 +34,7 @@ const BookDetails = ({ params }) => {
       <div className="md:w-[70%] px-20">
         <h2 className=" mt-10 mb-4 text-4xl font-semibold ">{name}</h2>
         <div className="md:flex items-center ">
-          <StarRatings
-            rating={ratings}
-            starDimension="30px"
-            starSpacing="4px"
-            starRatedColor="orange"
-          />
+          <Ratings ratings={ratings} />
           <p className="pl-3 mt-2 text-2xl font-semibold">{ratings}</p>
         </div>
         <p className="mt-4 text-gray-700">{description}</p>

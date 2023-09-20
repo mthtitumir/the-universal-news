@@ -38,7 +38,7 @@ const TopNavbar = () => {
             toast.dismiss(toastId);
         }
     };
-    let dashboardLink;
+    let dashboardLink = "";
     if (user && role?.toString() === "admin") {
         dashboardLink = "/dashboard/admin";
     } else if (user && role?.toString() === "employer") {
@@ -52,10 +52,10 @@ const TopNavbar = () => {
     } else {
         dashboardLink = "/";
     }
-    console.log(dashboardLink);
+    // console.log(dashboardLink);
 
     return (
-        <div className={`${pathName.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
+        <div className={`${pathName?.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
             <div className='container mx-auto flex items-center justify-between py-2'>
                 <div className='flex justify-between items-center gap-2 text-lg'>
                     {/* <h1></h1> */}
@@ -65,7 +65,7 @@ const TopNavbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-5 py-2 border shadow bg-base-100 rounded-lg w-30 ">
                             {
-                                navData.map(({ path, title }) => (
+                                navData?.map(({ path, title }) => (
                                     <li key={title} className="text-xs my-1 hover:underline"><Link href={path}>{title}</Link></li>
                                 ))
                             }
@@ -88,7 +88,6 @@ const TopNavbar = () => {
                                 </label>
                                 <ul tabIndex={0} className="mt-3 z-[1] p-1 shadow menu menu-sm dropdown-content border border-cyan-500 rounded-lg">
                                     <li><Link href={dashboardLink}>Dashboard</Link></li>
-                                    <li><Link href={''}>Settings</Link></li>
                                     <li onClick={handleLogout}><Link>Logout</Link></li>
                                 </ul>
                             </div></>
