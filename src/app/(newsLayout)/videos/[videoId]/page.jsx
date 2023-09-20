@@ -1,8 +1,10 @@
 import NewsCardThree from '@/components/newsCards/NewsCardThree';
-import React from 'react';
+import { GetSingleVideoFromDB } from '@/services/GetAllNewsFromDB';
 
 
-const SingleVideo = ({ params }) => {
+const SingleVideo = async ({ params }) => {
+    const data = await GetSingleVideoFromDB(params?.videoId);
+    console.log(data);
     return (
         <div className='grid md:grid-cols-10 c-auto' >
             <div className='md:col-span-7'>

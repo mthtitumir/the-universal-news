@@ -7,7 +7,7 @@ const SingleVideoCard = ({ data }) => {
     // console.log(data);
     return (
         <div className="border rounded-2xl  shadow-md hover:scale-105 duration-500">
-            <Link href={`/videos/${data.videoId}`}><Image width={460} height={510} src={`https://i.ytimg.com/vi/${data?.videoId}/hqdefault.jpg`} alt='' /></Link>
+            <Link href={`/videos/${data?.videoId}`}><Image width={460} height={510} src={`https://i.ytimg.com/vi/${data?.videoId}/hqdefault.jpg`} alt='' /></Link>
             <div className='flex items-center gap-4'>
                 <div className="avatar my-6 ml-4 pb-20">
                     <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

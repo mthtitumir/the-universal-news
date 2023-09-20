@@ -190,8 +190,8 @@ export const GetSingleBookFromDB = async (id) => {
     try {
         const db = await DbConnect();
         const allBooks = db.collection('all-books');
-        const query = { _id: new ObjectId(id) }
-        const result = await allBooks.findOne(query)
+        const query = { id: id }
+        const result = await allBooks.findOne(query);
         return result;
     } catch (error) {
         console.error(error)
@@ -202,8 +202,8 @@ export const GetSingleVideoFromDB = async (id) => {
     try {
         const db = await DbConnect();
         const allVideos = db.collection('all-videos');
-        const query = { _id: new ObjectId(id) }
-        const result = await allVideos.findOne(query)
+        const query = { videoId: id }
+        const result = await allVideos.findOne(query);
         return result;
     } catch (error) {
         console.error(error)
