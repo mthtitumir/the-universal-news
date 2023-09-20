@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
+import magazineData from "../../../utils/magazine.json"
 
 const page = () => {
+
+    console.log(magazineData);
     return (
         <div className='c-auto py-10'>
             <div className='flex lg:flex-row flex-col-reverse items-center justify-between gap-4 w-full py-10'>
@@ -67,7 +70,7 @@ const page = () => {
                 
             </div>
             <div>
-                
+
             </div>
         </div>
     );
