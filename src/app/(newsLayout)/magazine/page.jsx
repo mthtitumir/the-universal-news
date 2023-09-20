@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import magazineData from "../../../utils/magazine.json"
+import SingleMagazine from '@/components/Magazine/SingleMagazine';
 
 const page = () => {
 
@@ -67,10 +68,24 @@ const page = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, dolore ea libero ipsa omnis animi nesciunt eos eaque maiores sint?</p>
                     </div>
                 </div>
-                
-            </div>
-            <div>
 
+            </div>
+            <div className='py-6'>
+                <input type="text" placeholder="Search here" className="input input-bordered input-accent w-full" />
+            </div>
+            <div className='grid md:grid-cols-10'>
+
+                <div className='md:col-span-7'>
+                    {
+                        magazineData.map(data => <SingleMagazine
+                            key={data?.id}
+                            data={data}
+                        ></SingleMagazine>)
+                    }
+                </div>
+                <div className='md:col-span-3'>
+
+                </div>
             </div>
         </div>
     );
