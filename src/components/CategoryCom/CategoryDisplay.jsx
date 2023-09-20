@@ -39,7 +39,7 @@ const CategoryDisplay = ({ data }) => {
 
             {/* Related Category */}
             <div className='my-12 '>
-                <Headline headline={"Related News"} />
+                <Headline headline={"Related News"} path={""} />
                 <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4 '>
                     {
                         data.map(item => <NewsCardFour

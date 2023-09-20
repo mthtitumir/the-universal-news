@@ -1,10 +1,14 @@
 import Image from "next/image";
-import CirCleRating from "../../components/CircleRating/CircleRating";
+import CirCleRating from "@/components/CircleRating/CircleRating";
 import React from "react";
 import Link from "next/link";
+import Spinner from "../ErrorComponents/Spinner";
 
 const MovieCard = ({ movie }) => {
   const { id, poster_path, original_title, vote_average, release_date } = movie;
+  if(!movie){
+    return <Spinner />
+  }
   return (
     <div  className="shadow-2xl rounded-xl h-full">
       <Link href={`/tv-show/${id}`}>

@@ -4,12 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import data from '../../../utils/book.json'
 import Image from 'next/image';
 import Headline from '@/components/miniComponents/Headline';
 
-const Author = () => {
-    const bookData = data;
+const Author = ({authorData}) => {
+    const bookData = [];
     const breakpoints = {
         // For mobile devices (1 card)
         320: {
@@ -25,7 +24,7 @@ const Author = () => {
 
     return (
         <>
-            <Headline headline={"Authors"} />
+            <Headline headline={"Authors"} path={""} />
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
@@ -36,20 +35,21 @@ const Author = () => {
                 breakpoints={breakpoints}
                 className="mySwiper"
             >
-                {bookData.map((author) => (
+                {
+                authorData?.map((author) => (
                     <SwiperSlide
-                        key={author.id}
+                        key={author?.authorImage}
                         className='w-3/4 '
                     >
                         <div>
                             <Image
                                 height={100}
                                 width={130}
-                                src={author.authorImage}
+                                src={author?.authorImage}
                                 alt='Author image'
                                 className=' rounded-3xl'
                             ></Image>
-                            <p className=' md:text-xl mt-2  text-gray-600'>{author.authorName}</p>
+                            <p className=' md:text-xl mt-2  text-gray-600'>{author?.authorName}</p>
                         </div>
                     </SwiperSlide>
                 ))}

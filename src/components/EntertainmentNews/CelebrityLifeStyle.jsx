@@ -3,7 +3,7 @@ import celebrityData from "../../utils/lifeStyles.json";
 import SingleEntertainmentNews from './SingleEntertainmentNews';
 const CelebrityLifeStyle = () => {
     const newses = celebrityData;
-    console.log(newses);
+    // console.log(newses);
   return (
     <div>
        <div>

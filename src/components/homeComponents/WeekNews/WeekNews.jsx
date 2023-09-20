@@ -1,19 +1,20 @@
-import fakeData from "../../../utils/news.json"
 import Headline from '@/components/miniComponents/Headline';
 import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import NewsCardThree from '@/components/newsCards/NewsCardThree';
 import Image from 'next/image'
 import './WeeklyNews.css'
+import { GetAllNews } from "@/services/GetAllNews";
 
-const WeekNews = () => {
-    const data = fakeData.slice(0, 20);
-    const data2 = fakeData.slice(0, 20);
+const WeekNews = async () => {
+    const data = await GetAllNews();
+    const data1 = data.slice(0, 20);
+    const data2 = data.slice(20, 40);
 
 
     return (
         <div className='mt-5 grid md:grid-cols-12 gap-3 md:h-[70vh]'>
             <div className='md:col-span-4 overflow-y-scroll overflow-x-hidden card1'>
-                <Headline headline={"Week's Hottest"} seeMore={"see more"} />
+                <Headline headline={"Week's Hottest"} seeMore={""} path={""} />
                 <div className='flex flex-col gap-3'>
                     {
                         data2.map(item => <NewsCardThree
@@ -24,7 +25,7 @@ const WeekNews = () => {
                 </div>
             </div>
             <div className='md:col-span-5 overflow-y-scroll overflow-x-hidden card1'>
-                <Headline headline={"Weekly News"} seeMore={"see more"} />
+                <Headline headline={"Weekly News"} seeMore={""} path={""} />
                 <div>
                     {
                         data.map(item => <NewsCardOne
