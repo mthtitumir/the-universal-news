@@ -34,7 +34,6 @@ export const PATCH = async (request, { params }) => {
       // Update the database with the new counts and userLikes
       const updateResult = await allPosts.updateOne(query, { $set: { likes: result.likes,islike:result.islike } });
       const updateUserResult = await allUsers.updateOne(queryes, { $set: { likes: userLikes } });
-
       if (updateResult.modifiedCount === 1 && updateUserResult.modifiedCount === 1) {
         return NextResponse.json({data:result?.likes,islike:result?.islike});
       } else {
