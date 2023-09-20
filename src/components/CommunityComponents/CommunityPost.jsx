@@ -59,6 +59,7 @@ const CommunityPost = () => {
             likes: 0,
             dislikes: 0,
             comments: [],
+            userLike:[]
         };
         // console.log(post);
         const toastId = toast.loading("Loading...");

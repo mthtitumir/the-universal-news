@@ -5,31 +5,36 @@ export const PATCH = async (request, { params }) => {
   if (request.method === "PATCH") {
     try {
       const db = await DbConnect();
-      const allPosts = db.collection('all-posts');
-      const query = { postId: parseInt(params?.id) };
-      const result = await allPosts.findOne(query);
       const payload = await request.json();
-      // console.log(payload);
+      const allPosts = db.collection('all-posts');
+      const allUsers = db.collection('all-users');
+      const query = { postId: parseInt(params?.id) };
+      const queryes = { email: payload?.email };
+      
+      const result = await allPosts.findOne(query);
+      const results = await allUsers.findOne(queryes);
+
       if (!result) {
-        console.log("hello rom not result");
+        console.log("Post not found");
         return NextResponse.json({ error: "Post not found" });
       }
-      if (payload.action === "like") {
-        result.likes -= 1 
-      } else if (payload.action === "dislike") {
-        result.likes += 1 
+      const userLikes = results.likes || [];
+      const postId = params?.id;
+
+      if (userLikes.includes(postId)) {
+        result.likes -= 1;
+        userLikes.splice(userLikes.indexOf(postId), 1); // Remove postId from userLikes
       } else {
-        console.log("hello from invalid action");
-        return NextResponse.json({ error: "Invalid action" });
+        result.likes += 1;
+        userLikes.push(postId);
       }
-      // console.log(updatedLikes, "form route");
 
-      // Update the database with the new counts
-      const updateResult = await allPosts.updateOne(query, { $set: { likes: result.likes, dislikes: result.dislikes } });
-      // console.log(updateResult);
+      // Update the database with the new counts and userLikes
+      const updateResult = await allPosts.updateOne(query, { $set: { likes: result.likes } });
+      const updateUserResult = await allUsers.updateOne(queryes, { $set: { likes: userLikes } });
 
-      if (updateResult.modifiedCount === 1) {
-        return NextResponse.json({ message: "Action updated successfully" });
+      if (updateResult.modifiedCount === 1 && updateUserResult.modifiedCount === 1) {
+        return NextResponse.json(result?.likes);
       } else {
         return NextResponse.json({ error: "Failed to update action" });
       }
