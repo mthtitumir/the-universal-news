@@ -5,16 +5,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Image from "next/image";
-import photoData from '../../utils/photo.json'
 
 
-const photoSlider2 = () => {
-    const photos = photoData
+const photoSlider2 = ({data}) => {
+    const photos = data;
     return (
         <div>
             <>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                    {photos.map((photo) => (
+                    {photos?.map((photo) => (
                         <SwiperSlide key={photo.id}>
                             <div className='relative text-start '>
                                 <Image height="460" width="1200" src={photo?.images[0]} className='w-full' alt='banner' />
