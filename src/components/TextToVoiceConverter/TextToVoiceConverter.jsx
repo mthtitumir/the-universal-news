@@ -5,7 +5,7 @@ import { MdVoiceOverOff } from "react-icons/md";
 const TextToVoiceConverter = ({ description }) => {
   console.log(description);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [textToRead, setTextToRead] = useState(description);
+  const [textToRead, setTextToRead] = useState(description?.repeat(10));
   const [speech] = useState(new SpeechSynthesisUtterance());
   const [showVoiceOptions, setShowVoiceOptions] = useState(false);
 
@@ -46,8 +46,9 @@ const TextToVoiceConverter = ({ description }) => {
   }, [speech]);
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
+    <div className=" p-6 rounded-lg">
       <button
+      title="Play Audio"
         onClick={handleButtonClick}
         className={`px-4 py-2 rounded-md animate-bounce ${
           isPlaying ? "bg-red-500 text-white" : "bg-blue-500 text-white"
@@ -55,11 +56,11 @@ const TextToVoiceConverter = ({ description }) => {
       >
         {isPlaying ?  <MdVoiceOverOff className="w-8 h-8" /> : <BiSolidUserVoice className="w-8 h-8" />}
       </button>
-      <p id="textToRead" className="text-lg mt-4">
+      {/* <p id="textToRead" className="text-lg mt-4">
         {description.repeat(10).length > 500
           ? description.repeat(10).split(0, 501)
           : description.repeat(10)}
-      </p>
+      </p> */}
     </div>
   );
 };

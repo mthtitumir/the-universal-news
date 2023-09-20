@@ -3,8 +3,14 @@ import SwiperSection from './booksComponent/SwiperSection';
 import Gallery from './booksComponent/Gallery';
 import AllBooks from './booksComponent/AllBooks';
 import Author from './booksComponent/Author';
+import { GetAllBooksFromDB } from '@/services/GetAllNewsFromDB';
 
-const BooksRightBar = () => {
+const BooksRightBar = async () => {
+    const booksData = await GetAllBooksFromDB();
+    const authorData = booksData.map(book => ({
+        authorName: book.authorName,
+        authorImage: book.authorImage
+    }));
     return (
         <div className='px-3 md:px-0 '>
             <SwiperSection></SwiperSection>
@@ -13,7 +19,7 @@ const BooksRightBar = () => {
 
             <AllBooks></AllBooks>
 
-            <Author></Author>
+            <Author authorData={authorData}></Author>
 
         </div>
     );

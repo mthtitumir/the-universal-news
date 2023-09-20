@@ -1,7 +1,5 @@
-"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import StarRatings from 'react-star-ratings';
 import Ratings from './Ratings';
 const SingleBooks = ({ books }) => {
     const { id, name, img, description, ratings, price } = books;

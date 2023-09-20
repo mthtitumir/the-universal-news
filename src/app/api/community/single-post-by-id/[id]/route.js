@@ -4,6 +4,7 @@ export const GET = async (request, {params}) => {
     if (request.method === "GET") {
         try {
             const db = await DbConnect();
+            // console.log(params?.id)
             const allPosts = db.collection('all-posts');
             const query = {postId: parseInt(params?.id)};
             const result = await allPosts.findOne(query);

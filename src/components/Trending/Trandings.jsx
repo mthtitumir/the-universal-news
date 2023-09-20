@@ -88,7 +88,7 @@ const Trending = () => {
       {/* more on this topic  */}
       <div className="">
         <div className="divider"></div>
-        <Headline headline={"Listen More Like This"}></Headline>
+        <Headline headline={"Listen More Like This"} path={""} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-10 my-6">
           {currentData.map((TrendingCast, index) => (

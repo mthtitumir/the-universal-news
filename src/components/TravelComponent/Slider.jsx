@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Slider = () => {
 
     return (
-        <>
+        <div className='h-screen'>
             <h1 className='absolute z-30 text-center text-2xl md:text-4xl flex justify-center items-center mt-20 ml-8 md:mt-48 md:ml-28 md:bg-[#10101092] md:p-7 rounded text-white'>Let us Find your <br /> travel destination</h1>
             <Swiper
                 slidesPerView={4}
@@ -20,7 +20,7 @@ const Slider = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper md:h-[545px]"
+                className="mySwiper"
             >
                 <SwiperSlide className='py-5 md:pt-28'>
                     <Image
@@ -59,7 +59,7 @@ const Slider = () => {
                     ></Image>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 };
 

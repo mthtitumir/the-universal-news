@@ -3,7 +3,7 @@ import logo from '../../../public/21601.png'
 import Image from 'next/image'
 const Footer = () => {
     return (
-        <footer className="mt-10 py-5 bg-base-200">
+        <footer className="mt-10 py-5">
             <div className="container mx-auto footer grid-cols-2 px-3 md:px-0">
                 <div>
                     <Image

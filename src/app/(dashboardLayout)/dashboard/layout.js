@@ -3,7 +3,7 @@ import Providers from "@/providers"
 import Toaster from "@/components/Toaster"
 import { AiOutlineMenu } from "react-icons/ai"
 import SectionNavbar from "@/components/Navbar/SectionNavbar"
-import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar, generalSidebar } from "@/data/dashboardSidebarData"
+import { adminSideNavbar, reporterSideNavbar, employerSideNavbar, userSideNavbar, generalSidebar, moderatorSideNavbar } from "@/data/dashboardSidebarData"
 import NavLink from "@/components/Navbar/NavLink"
 import useAuth from "@/hooks/useAuth"
 import useRole from "@/hooks/useRole"
@@ -14,9 +14,10 @@ const Dashboard = ({ children }) => {
   const { user, loading } = useAuth();
   const [role, isRoleLoading] = useRole();
   let navData;
-  if(loading || isRoleLoading){
+  if (loading || isRoleLoading) {
     return <Spinner />
-}
+  }
+  console.log(role);
   if (user && role?.toString() === "admin") {
     navData = adminSideNavbar;
   } else if (user && role?.toString() === "employer") {
@@ -25,6 +26,8 @@ const Dashboard = ({ children }) => {
     navData = reporterSideNavbar;
   } else if (user && role?.toString() === "user") {
     navData = userSideNavbar;
+  } else if (user && role?.toString() === "moderator") {
+    navData = moderatorSideNavbar;
   } else {
     return <Unauthorized />
   }

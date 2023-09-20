@@ -5,7 +5,6 @@ import axios from "axios";
 
 const useRole = () => {
     const { user, loading } = useAuth();
-    // use axios secure with react query
     const { data: role, isLoading: isRoleLoading } = useQuery({
         queryKey: ['role', user?.email],
         enabled: !loading,
