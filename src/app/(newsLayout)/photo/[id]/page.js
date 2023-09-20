@@ -2,9 +2,6 @@ import React from 'react';
 import data from '@/utils/photo.json'
 import SocialShare from '@/components/miniComponents/SocialShare';
 import Image from 'next/image';
-import HandleComment from '@/components/CommentCompos/HandleComment';
-import DisplayComment from '@/components/CommentCompos/DisplayComment';
-import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
 
 
@@ -103,7 +100,22 @@ const SinglePhotoComponent = ({ params }) => {
                 </div>
 
                 <hr />
-                <div className='md:w-[30%]'>
+                <div className='md:w-[30%] flex flex-col gap-96 mt-52'>
+
+                    <Image
+                        height={500}
+                        width={500}
+                        src='https://i.ibb.co/XSRqcJb/uncookied-hp-split-flow-paypal-rewards-ratio-3-4-for-all.jpg'
+                        alt='add'
+                        className='mt-36 w-[500px] rounded mx-auto object-cover'
+                    ></Image>
+                    <Image
+                        height={500}
+                        width={500}
+                        src='https://i.ibb.co/F5y2JJN/535ba929663241-55fdead33c6be.jpg'
+                        alt='add'
+                        className='mt-10 w-[500px] rounded mx-auto object-cover'
+                    ></Image>
                 </div>
             </div>
 
