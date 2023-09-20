@@ -1,0 +1,183 @@
+[
+    {
+      "id": 1,
+      "date": "2023-09-19",
+      "title": "Tech Today",
+      "authorName": "John Smith",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "The latest in tech news and trends.",
+      "magazineData": "..."
+    },
+    {
+      "id": 2,
+      "date": "2023-09-18",
+      "title": "Science Weekly",
+      "authorName": "Sarah Johnson",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Exploring the wonders of science.",
+      "magazineData": "..."
+    },
+    {
+      "id": 3,
+      "date": "2023-09-17",
+      "title": "Fashion Forward",
+      "authorName": "Emily Davis",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "The latest fashion trends and styles.",
+      "magazineData": "..."
+    },
+    {
+      "id": 4,
+      "date": "2023-09-16",
+      "title": "Travel Adventures",
+      "authorName": "Michael Brown",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Journey to exciting destinations around the world.",
+      "magazineData": "..."
+    },
+    {
+      "id": 5,
+      "date": "2023-09-15",
+      "title": "Health and Wellness",
+      "authorName": "Lisa Miller",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Tips for a healthier and happier life.",
+      "magazineData": "..."
+    },
+    {
+      "id": 6,
+      "date": "2023-09-14",
+      "title": "Cooking Delights",
+      "authorName": "David Lee",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Delicious recipes for food enthusiasts.",
+      "magazineData": "..."
+    },
+    {
+      "id": 7,
+      "date": "2023-09-13",
+      "title": "Sports Illustrated",
+      "authorName": "Alex Carter",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "All things sports and athletics.",
+      "magazineData": "..."
+    },
+    {
+      "id": 8,
+      "date": "2023-09-12",
+      "title": "Nature Explorer",
+      "authorName": "Sophia Clark",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Discover the beauty of the natural world.",
+      "magazineData": "..."
+    },
+    {
+      "id": 9,
+      "date": "2023-09-11",
+      "title": "Business Insights",
+      "authorName": "Robert Turner",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Analysis of the latest business trends.",
+      "magazineData": "..."
+    },
+    {
+      "id": 10,
+      "date": "2023-09-10",
+      "title": "Artistic Expressions",
+      "authorName": "Grace Adams",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Celebrating the world of art and creativity.",
+      "magazineData": "..."
+    },
+    {
+      "id": 11,
+      "date": "2023-09-09",
+      "title": "Music Notes",
+      "authorName": "Daniel Lewis",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Exploring the world of music and melodies.",
+      "magazineData": "..."
+    },
+    {
+      "id": 12,
+      "date": "2023-09-08",
+      "title": "History Chronicles",
+      "authorName": "Ella Taylor",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Journey through the pages of history.",
+      "magazineData": "..."
+    },
+    {
+      "id": 13,
+      "date": "2023-09-07",
+      "title": "Home and Garden",
+      "authorName": "William Harris",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Tips for a beautiful home and garden.",
+      "magazineData": "..."
+    },
+    {
+      "id": 14,
+      "date": "2023-09-06",
+      "title": "Movie Mania",
+      "authorName": "Olivia White",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "The latest in cinema and movie reviews.",
+      "magazineData": "..."
+    },
+    {
+      "id": 15,
+      "date": "2023-09-05",
+      "title": "Literary Gems",
+      "authorName": "William Turner",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Exploring the world of literature and books.",
+      "magazineData": "..."
+    },
+    {
+      "id": 16,
+      "date": "2023-09-04",
+      "title": "Fashionista",
+      "authorName": "Sophie Bennett",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "The latest fashion trends and styles.",
+      "magazineData": "..."
+    },
+    {
+      "id": 17,
+      "date": "2023-09-03",
+      "title": "Tech Insights",
+      "authorName": "Michael Scott",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "In-depth analysis of the tech industry.",
+      "magazineData": "..."
+    },
+    {
+      "id": 18,
+      "date": "2023-09-02",
+      "title": "Science Discoveries",
+      "authorName": "Linda Davis",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Unveiling the mysteries of science.",
+      "magazineData": "..."
+    },
+    {
+      "id": 19,
+      "date": "2023-09-01",
+      "title": "Traveler's Journal",
+      "authorName": "Matthew Lewis",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Adventures from around the world.",
+      "magazineData": "..."
+    },
+    {
+      "id": 20,
+      "date": "2023-08-31",
+      "title": "Fitness and Health",
+      "authorName": "Emma Carter",
+      "img": "https://ibb.co/f9mF6qG",
+      "description": "Achieving a fit and healthy lifestyle.",
+      "magazineData": "..."
+    }
+  ]
+  
