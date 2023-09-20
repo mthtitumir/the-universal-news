@@ -22,19 +22,21 @@ export const PATCH = async (request, { params }) => {
       const postId = params?.id;
 
       if (userLikes.includes(postId)) {
+        result.islike=false
         result.likes -= 1;
-        userLikes.splice(userLikes.indexOf(postId), 1); // Remove postId from userLikes
+        userLikes.splice(userLikes.indexOf(postId), 1);     
       } else {
+        result.islike=true
         result.likes += 1;
         userLikes.push(postId);
       }
 
       // Update the database with the new counts and userLikes
-      const updateResult = await allPosts.updateOne(query, { $set: { likes: result.likes } });
+      const updateResult = await allPosts.updateOne(query, { $set: { likes: result.likes,islike:result.islike } });
       const updateUserResult = await allUsers.updateOne(queryes, { $set: { likes: userLikes } });
 
       if (updateResult.modifiedCount === 1 && updateUserResult.modifiedCount === 1) {
-        return NextResponse.json(result?.likes);
+        return NextResponse.json({data:result?.likes,islike:result?.islike});
       } else {
         return NextResponse.json({ error: "Failed to update action" });
       }
