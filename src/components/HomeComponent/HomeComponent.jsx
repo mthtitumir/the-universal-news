@@ -9,9 +9,9 @@ import { GetAllNews } from "@/services/GetAllNews";
 const HomeComponent = async () => {
     const news = await GetAllNews();
     // console.log(news);
-    const data = news.slice(0,20);
-    const data1 = news.slice(0, 10);
-    const data2 = news.slice(0,10);
+    const data = news?.slice(0,20);
+    const data1 = news?.slice(0, 10);
+    const data2 = news?.slice(0,10);
   
   return (
     <div className="">

@@ -78,6 +78,14 @@ export const moderatorSideNavbar = [
         path:'/dashboard/moderator/add-books',
         title: 'Add Book'
     },
+    {
+        path:'/dashboard/moderator/my-books',
+        title: 'My Books'
+    },
+    {
+        path:'/dashboard/moderator/my-videos',
+        title: 'My Videos'
+    },
 ]
 export const userSideNavbar = [
     {
