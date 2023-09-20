@@ -36,7 +36,7 @@ const CommunityReaction = ({ posts }) => {
                 <button onClick={()=> setIsOpen(!isOpen)} className=""><BiCommentDetail className="hover:rounded-full" /> </button>
                 <p className="ml-4">{comments?.length}</p>
                 </div>
-                <button className=""><AiOutlineShareAlt className="hover:rounded-full" />{postId}</button>
+                <button className=""><AiOutlineShareAlt className="hover:rounded-full" /></button>
             </div>
             <MyModal isOpen={isOpen} setIsOpen={setIsOpen} >
                 <HandleCommunityComment posts={posts}/>
