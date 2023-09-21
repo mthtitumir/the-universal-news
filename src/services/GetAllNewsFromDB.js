@@ -150,4 +150,3 @@ export const GetSinglePostFromDB = async (id) => {
     return { error: "error to get data" };
   }
 };
-

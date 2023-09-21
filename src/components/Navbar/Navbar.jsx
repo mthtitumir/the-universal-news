@@ -4,10 +4,20 @@ import Link from "next/link";
 import { navData } from "@/data/navData";
 import ShareUpdate from "../miniComponents/ShareUpdate";
 import moment from 'moment/moment';
+import { useEffect, useState } from 'react';
 
 const myFont = localFont({ src: "./Engravers' Old English.woff2" });
 
 const Navbar = () => {
+    const [currentTime, setCurrentTime] = useState(moment().format('MMMM Do YYYY'));
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentTime(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <div className="container mx-auto">
@@ -17,7 +27,7 @@ const Navbar = () => {
             </div>
             <div className="flex justify-center md:justify-between items-center px-3 md:px-0 mx-auto md:mx-0 mb-2">
                 <div className="text-xs">
-                    <h1>{moment().format('MMMM Do YYYY')}</h1>
+                    <h1>{currentTime}</h1>
                 </div>
                 <div className='md:flex gap-3 items-center text-xs hidden'>
                     <ShareUpdate />

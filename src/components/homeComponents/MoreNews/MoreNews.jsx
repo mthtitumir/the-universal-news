@@ -10,7 +10,7 @@ const MoreNews = async () => {
     const data2 = data?.slice(45, 53);
     // const data = fakeData.slice(0,8)
     return (
-        <div className='my-12'>
+        <div className=''>
             <Headline headline={"More News"} seeMore={""} path={""} />
             <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {

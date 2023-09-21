@@ -3,7 +3,7 @@ import NewsCardOne from '@/components/newsCards/NewsCardOne';
 import Headline from '@/components/miniComponents/Headline';
 import { GetAllNews, GetCategoryData } from "@/services/GetAllNews";
 
-const AllNews =async () => {
+const AllNews = async () => {
     const foodData = await GetCategoryData("food");
     const techData = await GetCategoryData("Technology");
     const sportsData = await GetCategoryData("sports");

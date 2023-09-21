@@ -65,6 +65,36 @@ export const reporterSideNavbar = [
         title: 'My News'
     },
 ]
+export const moderatorSideNavbar = [
+    {
+        path:'/dashboard/moderator',
+        title: 'Overview'
+    },
+    {
+        path:'/dashboard/moderator/add-videos',
+        title: 'Add Video'
+    },
+    {
+        path:'/dashboard/moderator/add-books',
+        title: 'Add Book'
+    },
+    {
+        path:'/dashboard/moderator/add-photos',
+        title: 'Add Photo'
+    },
+    {
+        path:'/dashboard/moderator/my-books',
+        title: 'My Books'
+    },
+    {
+        path:'/dashboard/moderator/my-videos',
+        title: 'My Videos'
+    },
+    {
+        path:'/dashboard/moderator/my-photos',
+        title: 'My Photos'
+    }
+]
 export const userSideNavbar = [
     {
         path:'/dashboard',

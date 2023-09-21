@@ -6,33 +6,45 @@ import 'swiper/css/pagination';
 import './style.css';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
-import data from '../../utils/photo.json'
 import Link from 'next/link';
+import Headline from '../miniComponents/Headline';
 
-const PhotoSlide = () => {
-    const photos = data.slice(0, 9)
+const PhotoSlide = ({ text, seeMore, path, data }) => {
+    const photos = data?.slice(0, 9);
+    const breakpoints = {
+        // For mobile devices (1 card)
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 7, // Adjust the spacing as needed
+        },
+        // For larger screens (3 cards)
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 15, // Adjust the spacing as needed
+        },
+    };
     return (
-        <div>
+        <div className=''>
+            <Headline headline={text} seeMore={seeMore} path={path} />
             <Swiper
-                slidesPerView={4}
-                spaceBetween={9}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper "
+                breakpoints={breakpoints}
+                className="mySwiper res"
             >
-                {photos.map((photo) => (
-                    <Link key={photo.id} href={`/photo/${photo?.id}`}>
-                        <SwiperSlide>
+                {photos?.map((photo) => (
+                    <SwiperSlide className='res' key={photo?.id}>
+                        <Link href={`/photo/${photo?.id}`}>
                             <Image
                                 height={200}
                                 width={500}
                                 src={photo?.slideImage}
                                 alt='book image '
                             ></Image>
-                        </SwiperSlide>
-                    </Link>
+                        </Link>
+                    </SwiperSlide>
 
 
                 ))}
