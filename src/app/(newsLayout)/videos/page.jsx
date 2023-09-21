@@ -1,5 +1,4 @@
 import { GetAllVideosFromDB } from '@/services/GetAllNewsFromDB';
-// import videosData from '../../../utils/videos.json'
 import SingleVideoCard from '@/components/VedioComponent/SingleVideoCard';
 
 const Videos = async () => { 

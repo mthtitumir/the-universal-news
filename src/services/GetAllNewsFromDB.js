@@ -151,7 +151,8 @@ export const GetSinglePostFromDB = async (id) => {
     }
 };
 
-// moderator get data 
+// moderator get data
+// all data  
 export const GetAllBooksFromDB = async () => {
     try {
         const db = await DbConnect();
@@ -219,18 +220,20 @@ export const GetAllPhotosFromDB = async () => {
         return ({ error: 'error to get Photos data' });
     }
 };
-// export const GetCategoryModeratorDataFromDB = async (category) => {
-//     try {
-//         const query = { category: category };
-//         const db = await DbConnect();
-//         const allNews = db.collection('all-news');
-//         const result = await allNews.find(query).toArray();
-//         return result;
-//     } catch (error) {
-//         console.error(error)
-//         return ({ error: 'error to get data' });
-//     }
-// };
+export const GetAllMagazinesFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allMagazines = db.collection('all-magazines');
+        const result = await allMagazines.find().toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get Magazines data' });
+    }
+};
+
+
+// single data by id
 export const GetSingleBookFromDB = async (id) => {
 
     try {
@@ -301,6 +304,22 @@ export const GetSinglePhotosFromDB = async (id) => {
         const allPhotos = db.collection('all-photos');
         const query = { id: parseInt(id) }
         const result = await allPhotos.findOne(query);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+};
+export const GetSingleMagazineFromDB = async (id) => {
+
+    try {
+        if (!id) {
+            return "wait";
+        }
+        const db = await DbConnect();
+        const allMagazines = db.collection('all-magazines');
+        const query = { id: parseInt(id) }
+        const result = await allMagazines.findOne(query);
         return result;
     } catch (error) {
         console.error(error)

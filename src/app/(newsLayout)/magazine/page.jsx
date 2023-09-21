@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
-import magazineData from "../../../utils/magazine.json"
 import SingleMagazine from '@/components/Magazine/SingleMagazine';
+import { GetAllMagazinesFromDB } from '@/services/GetAllNewsFromDB';
 
-const page = () => {
-
-    console.log(magazineData);
+const Magazine = async () => {
+    const magazineData = await GetAllMagazinesFromDB();
     return (
         <div className='c-auto py-10'>
             <div className='flex lg:flex-row flex-col-reverse items-center justify-between gap-4 w-full py-10'>
@@ -77,9 +75,9 @@ const page = () => {
 
                 <div className='md:col-span-7'>
                     {
-                        magazineData.map(data => <SingleMagazine
+                        magazineData?.map(data => <SingleMagazine
                             key={data?.id}
-                            data={data}
+                            id={data?.id}
                         ></SingleMagazine>)
                     }
                 </div>
@@ -91,4 +89,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Magazine;

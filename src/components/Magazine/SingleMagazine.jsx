@@ -1,8 +1,11 @@
+import { GetSingleMagazineFromDB } from '@/services/GetAllNewsFromDB';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const SingleMagazine = ({ data }) => {
+const SingleMagazine = async ({ id }) => {
+    const data = await GetSingleMagazineFromDB(id);
+    
     return (
         <Link href={`/magazine/${data?.id}`}>
             <div className='flex py-6 border-b-2 border-black hover:scale-105 duration-500'>
