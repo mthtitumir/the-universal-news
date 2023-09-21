@@ -52,7 +52,6 @@ const TopNavbar = () => {
     } else {
         dashboardLink = "/";
     }
-    // console.log(dashboardLink);
 
     return (
         <div className={`${pathName?.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
