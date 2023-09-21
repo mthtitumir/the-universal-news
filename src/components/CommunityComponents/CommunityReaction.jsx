@@ -28,19 +28,19 @@ const CommunityReaction = ({ posts }) => {
         <>
          <div className="flex justify-evenly items-center mt-7">
                 <div className="flex items-center">
-                    <button onClick={() => handleLike(postId,isReact?"like":"dislike", user?.email)} >
+                    <button title="Love" onClick={() => handleLike(postId,isReact?"like":"dislike", user?.email)} >
                         <FaHeart className={isReact?"hover:rounded-full text-pink-500":"text-black" } />
                     </button>
                     <p className="ml-4">{likies}</p>
                 </div>
                 <div className="flex items-center">
-                    <button onClick={() => setIsOpen(!isOpen)} className="">
+                    <button title="Comment" onClick={() => setIsOpen(!isOpen)} className="">
                         <BiCommentDetail className="hover:rounded-full" />
                     </button>
                     <p className="ml-4">{comments?.length}</p>
                 </div>
-                <button className="">
-                    <AiOutlineShareAlt className="hover:rounded-full" /> {postId}
+                <button title="Share" className="">
+                    <AiOutlineShareAlt className="hover:rounded-full" />
                 </button>
             </div>
             <MyModal isOpen={isOpen} setIsOpen={setIsOpen} >
