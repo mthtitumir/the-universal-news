@@ -1,6 +1,5 @@
 import DbConnect from "@/services/DbConnect";
 import { NextResponse } from "next/server";
-
 export const GET = async (request) => {
   if (request.method === "GET") {
     console.log(request.method);

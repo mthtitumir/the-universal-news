@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 const HandleSearchFunction = () => {
   const [inputValue, setInputValue] = useState("");
-  const [searchedJobs, setSearchedJobs] = useState([])
   const handelChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -20,7 +19,7 @@ const HandleSearchFunction = () => {
     const query = data?.jobQuery;
     try {
       const res = await axios.get(`/api/search-job?search=${query}`);
-      setSearchedJobs(res.data);
+      console.log(res.data);
     } catch (error) {
       console.error("Fetch error:", error);
     }
