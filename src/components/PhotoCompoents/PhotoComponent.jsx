@@ -1,21 +1,21 @@
 import NewsCardOne from '../newsCards/NewsCardOne';
-import news from '@/utils/photo.json'
 import PhotoSlide from './PhotoSlide';
 import PhotoSlider2 from './photoSlider2';
-import photoData from '../../utils/photo.json'
 import Image from 'next/image';
 import Link from 'next/link';
 import Headline from '../miniComponents/Headline';
+import { GetAllPhotosFromDB } from '@/services/GetAllNewsFromDB';
 
-const PhotoComponent = () => {
-    const photo = photoData.slice(0, 1);
-    const photo2 = photoData;
-    const photo3 = photoData.slice(1, 2);
-    const photo4 = photoData.slice(2, 3);
-    const photos = news.slice(3, 10);
+const PhotoComponent = async () => {
+    const data = await GetAllPhotosFromDB();
+    const photo = data.slice(0, 1);
+    const photo2 = data;
+    const photo3 = data.slice(1, 2);
+    const photo4 = data.slice(2, 3);
+    const photos = data.slice(3, 10);
 
     return (
-        <div>
+        <div className='c-auto'>
             <Headline headline={"Photos"} path={""} />
             {/* 1st section */}
             <div className='flex-row md:flex gap-8 my-7 w-[100%] border-b-2 border-gray-300 pb-6'>
@@ -49,7 +49,7 @@ const PhotoComponent = () => {
 
             {/* Second Section */}
             <div className='border-b-2 border-gray-300 pb-3'>
-                <PhotoSlide text={"A Glimpse"} seeMore={""} path={''}></PhotoSlide>
+                <PhotoSlide data={data} text={"A Glimpse"} seeMore={""} path={''}></PhotoSlide>
             </div>
 
             {/* 3rd section */}
@@ -119,10 +119,11 @@ const PhotoComponent = () => {
 
             {/* 4th section */}
             <Headline headline={"World Best Photos"} path={""} />
-            <PhotoSlider2></PhotoSlider2>
+            <PhotoSlider2 data={data}></PhotoSlider2>
 
             {/* 5th section */}
             <div className='border-t-2 border-gray-300 mt-4 pt-8'>
+                <Headline headline={"More Photos"} path={""} />
                 <div className="flex gap-3 w-full">
                     <div className="card1 md:col-span-4 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
                         {photos.map((item) => (

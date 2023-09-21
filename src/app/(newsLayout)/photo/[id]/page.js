@@ -1,21 +1,14 @@
-import React from 'react';
-import data from '@/utils/photo.json'
 import SocialShare from '@/components/miniComponents/SocialShare';
 import Image from 'next/image';
-import HandleComment from '@/components/CommentCompos/HandleComment';
-import DisplayComment from '@/components/CommentCompos/DisplayComment';
-import NewsCardTwo from '@/components/newsCards/NewsCardTwo';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
+import { GetSinglePhotosFromDB } from '@/services/GetAllNewsFromDB';
 
-
-const SinglePhotoComponent = ({ params }) => {
-    const bookDetails = data;
-    const id = params.id;
-    const booksDetails = bookDetails.find(job => job.id == id);
+const SinglePhotoComponent =async ({ params }) => {
+    const booksDetails = await GetSinglePhotosFromDB(params?.id);
     const { title, images, number, captions, description, published_date, author, authorEmail, tags, likes, comments, slideImage } = booksDetails;
     const allTravelData = data;
     return (
-        <div>
+        <div className='c-auto'>
             <Image
                 height={500}
                 width={800}

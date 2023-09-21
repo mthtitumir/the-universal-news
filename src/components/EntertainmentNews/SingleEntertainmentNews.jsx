@@ -1,10 +1,9 @@
 import Image from "next/image";
-import React from "react";
 
-const SingleEntertainmentNews = ({ news , newses, index }) => {
+const SingleEntertainmentNews = ({ news }) => {
   const { title, image, description, posted_time, author } = news;
   return (
-    <div className={`border-b-2 ${index === newses.length - 1 ? "border-none" : "border-gray-500"}  py-6 flex lg:flex-row flex-col-reverse justify-between gap-5 group`}>
+    <div className={`border-b-2 border-gray-500  py-6 flex lg:flex-row flex-col-reverse justify-between gap-5 group`}>
       <div className="basis-3/4 space-y-3">
         <div className="flex gap-1 flex-col">
           <h1 className="text-3xl font-bold group-hover:text-cyan-600">{title}</h1>

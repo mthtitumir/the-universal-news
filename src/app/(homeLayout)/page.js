@@ -17,7 +17,7 @@ export default function Home() {
       <HomeComponent />
       <div className="divider"></div>
       <MoreNews />
-      <HomeJobBanner text={""} />
+      <HomeJobBanner text={"home"} />
       <AllNews />
       <PhotoSlide text={"Photos"} seeMore={"See More Photos"} path={"/photo"} />
       <HomeSports />
