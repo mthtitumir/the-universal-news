@@ -43,17 +43,15 @@ const Dashboard = ({ children }) => {
             {children}
           </div>
 
-          <div className="drawer-side ">
+          <div  className="drawer-side ">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className=" p-4 w-48 min-h-full bg-cyan-50 border border-cyan-600 text-base-content mt-3 rounded-lg">
-              {/* Sidebar content here */}
-              {/* <h2 className={`${myFont.className} text-xl md:text-2xl text-center`}><Link href="/">The Universal News</Link></h2> */}
+            <ul style={{ backgroundImage: `url("https://i.ibb.co/R27gqtZ/Gray-And-Black-Simple-png.png")`, backgroundSize: 'cover', backgroundPosition: 'center' }} className=" p-4 w-48 min-h-full bg-cyan-50 border border-cyan-600 text-base-content mt-3 rounded-lg">
               {
-                navData.map(nav => <li key={nav.path} className="mb-2 hover:underline text-black" ><NavLink exact activeClassName={"text-pink-600"} href={nav.path}>{nav.title}</NavLink></li>)
+                navData.map(nav => <li key={nav.path} className="mb-2 hover:underline text-white" ><NavLink exact activeClassName={"text-pink-500 font-semibold"} href={nav.path}>{nav.title}</NavLink></li>)
               }
-              <div className="divider"></div>
+              <hr className="w-2/3" />
               {
-                generalSidebar.map(nav => <li key={nav.path} className=" mb-2 hover:underline text-black" ><NavLink exact activeClassName={"text-pink-600"} href={nav.path}>{nav.title}</NavLink></li>)
+                generalSidebar.map(nav => <li key={nav.path} className=" my-2 hover:underline text-white" ><NavLink exact activeClassName={"text-pink-500 font-semibold"} href={nav.path}>{nav.title}</NavLink></li>)
               }
 
             </ul>

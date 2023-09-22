@@ -8,7 +8,7 @@ const ReadersChart = () => {
             id: "basic-bar"
         },
         xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+            categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
         }
     };
     const series = [

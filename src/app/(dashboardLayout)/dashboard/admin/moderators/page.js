@@ -1,9 +1,9 @@
 import DashboardBanner from "@/components/DashboardComponents/DashboardBanner";
-import { GetAllUsers } from "@/services/GetAllNews"
+import { GetAllModerators } from "@/services/GetAllNews"
 import Image from "next/image";
 
-const allUsers = async () => {
-    const users = await GetAllUsers();
+const AllModerators = async () => {
+    const users = await GetAllModerators();
     // console.log(users);
     return (
         <div className="overflow-x-auto p-3">
@@ -44,4 +44,4 @@ const allUsers = async () => {
     )
 }
 
-export default allUsers
+export default AllModerators

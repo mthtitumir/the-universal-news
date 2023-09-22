@@ -1,12 +1,12 @@
 import SocialShare from '@/components/miniComponents/SocialShare';
 import Image from 'next/image';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
-import { GetSinglePhotosFromDB } from '@/services/GetAllNewsFromDB';
+import { GetAllPhotosFromDB, GetSinglePhotosFromDB } from '@/services/GetAllNewsFromDB';
 
 const SinglePhotoComponent =async ({ params }) => {
     const booksDetails = await GetSinglePhotosFromDB(params?.id);
     const { title, images, number, captions, description, published_date, author, authorEmail, tags, likes, comments, slideImage } = booksDetails;
-    const allTravelData = data;
+    const allTravelData = await GetAllPhotosFromDB();
     return (
         <div className='c-auto'>
             <Image
@@ -96,7 +96,22 @@ const SinglePhotoComponent =async ({ params }) => {
                 </div>
 
                 <hr />
-                <div className='md:w-[30%]'>
+                <div className='md:w-[30%] flex flex-col gap-96 mt-52'>
+
+                    <Image
+                        height={500}
+                        width={500}
+                        src='https://i.ibb.co/XSRqcJb/uncookied-hp-split-flow-paypal-rewards-ratio-3-4-for-all.jpg'
+                        alt='add'
+                        className='mt-36 w-[500px] rounded mx-auto object-cover'
+                    ></Image>
+                    <Image
+                        height={500}
+                        width={500}
+                        src='https://i.ibb.co/F5y2JJN/535ba929663241-55fdead33c6be.jpg'
+                        alt='add'
+                        className='mt-10 w-[500px] rounded mx-auto object-cover'
+                    ></Image>
                 </div>
             </div>
 
@@ -109,15 +124,15 @@ const SinglePhotoComponent =async ({ params }) => {
             ></Image>
 
 
-            <h1 className='text-2xl mt-16 font-semibold text-center '>More relevant News</h1>
+            {/* <h1 className='text-2xl mt-16 font-semibold text-center '>More relevant News</h1>
             <div className='grid md:grid-cols-3 gap-5 my-8'>
                 {
-                    allTravelData.map(item => <NewsCardFour
+                    allTravelData?.map(item => <NewsCardFour
                         key={item.id}
                         item={item}
                     ></NewsCardFour>)
                 }
-            </div>
+            </div> */}
         </div>
     );
 };

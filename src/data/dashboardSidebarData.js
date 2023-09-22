@@ -12,6 +12,14 @@ export const adminSideNavbar = [
         title: 'Reporters'
     },
     {
+        path:'/dashboard/admin/employers',
+        title: 'Employers'
+    },
+    {
+        path:'/dashboard/admin/moderators',
+        title: 'Moderators'
+    },
+    {
         path:'/dashboard/admin/all-news',
         title: 'All News'
     },
@@ -20,16 +28,16 @@ export const adminSideNavbar = [
         title: 'Pending News'
     },
     {
-        path:'/dashboard/admin/comments',
-        title: 'Comments'
-    },
-    {
         path:'/dashboard/admin/all-jobs',
         title: 'All Jobs'
     },
     {
-        path:'/dashboard/admin/employers',
-        title: 'Employers'
+        path:'/dashboard/admin/all-books',
+        title: 'All Books'
+    },
+    {
+        path:'/dashboard/admin/all-videos',
+        title: 'All Videos'
     },
 
 ]
@@ -79,10 +87,6 @@ export const moderatorSideNavbar = [
         title: 'Add Book'
     },
     {
-        path:'/dashboard/moderator/add-photos',
-        title: 'Add Photo'
-    },
-    {
         path:'/dashboard/moderator/my-books',
         title: 'My Books'
     },
@@ -90,10 +94,6 @@ export const moderatorSideNavbar = [
         path:'/dashboard/moderator/my-videos',
         title: 'My Videos'
     },
-    {
-        path:'/dashboard/moderator/my-photos',
-        title: 'My Photos'
-    }
 ]
 export const userSideNavbar = [
     {

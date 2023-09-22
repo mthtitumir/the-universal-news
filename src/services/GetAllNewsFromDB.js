@@ -88,6 +88,19 @@ export const GetAllEmployersFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 }
+export const GetAllModeratorsFromDB = async () => {
+    try {
+        const db = await DbConnect();
+        const allUsers = db.collection('all-users');
+        const query = { role: "moderator" }
+        const result = await allUsers.find(query).toArray();
+        // console.log(result.length);
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get data' });
+    }
+}
 
 export const GetPendingNewsFromDB = async () => {
     try {
@@ -295,7 +308,6 @@ export const GetSingleLifestyleFromDB = async (id) => {
     }
 };
 export const GetSinglePhotosFromDB = async (id) => {
-
     try {
         if (!id) {
             return "wait";
@@ -311,7 +323,6 @@ export const GetSinglePhotosFromDB = async (id) => {
     }
 };
 export const GetSingleMagazineFromDB = async (id) => {
-
     try {
         if (!id) {
             return "wait";

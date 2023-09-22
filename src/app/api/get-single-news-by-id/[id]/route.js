@@ -6,7 +6,9 @@ export const GET = async (request, {params}) => {
         try {
             const db = await DbConnect();
             const allNews = db.collection('all-news');
+            console.log(params?.id.toString(), "9")
             const query = {_id: new ObjectId(params?.id)};
+            console.log(query, "11")
             const result = await allNews.findOne(query);
             return NextResponse.json(result);
         } catch (error) {

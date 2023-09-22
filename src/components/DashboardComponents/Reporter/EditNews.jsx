@@ -7,23 +7,20 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 
 
-const AddaNews = () =>  {
+const EditNews = ({singleNews}) =>  {
     const { user } = useAuth();
-
+    const { id, title, description, img, category, subcategory, tags, comments, likes } = singleNews;
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = async (data) => {
         console.log(data);
-        const id = Math.floor(Math.random() * 100000);
         const status = 'pending';
-        const comments = [];
-        const likes = 0;
         const published_date = moment().format('MMMM Do YYYY, h:mm:ss a');
         const { title, description, img, category, subcategory, author, keywords, email, } = data;
         const toastId = toast.loading("Loading...");
         const tags = keywords.split(',');
-        const newsData = {id, title, description, img, category, subcategory, author, tags, comments, email, published_date, likes, status};
+        const newsData ={ id, title, description, img, category, subcategory, author, tags, comments, email, published_date, likes, status }
         try {
-            const response = await axios.post(`/api/add-news`, newsData);
+            const response = await axios.put(`/api/reporter/news-delete-edit`, newsData);
             console.log(response.data);
             if (response.data.insertedId) {
                 toast.dismiss(toastId);
@@ -43,34 +40,33 @@ const AddaNews = () =>  {
     }
     return (
         <div className='p-3 md:pr-0'>
-            <DashboardBanner text={"Add a News"} />
             <div className=" w-full  shadow-2xl card-background border border-cyan-500 rounded-lg mt-3">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text card-text-secondary">Title</span>
                         </label>
-                        <input type="text" placeholder="News title" {...register("title", { required: true })} className="input input-bordered" />
+                        <input type="text" placeholder="News title" defaultValue={title} {...register("title", { required: true })} className="input input-bordered" />
                     </div>
                     {errors.title?.type === 'required' && <p className="text-red-500">title is required</p>}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text card-text-secondary">Description</span>
                         </label>
-                        <input type="text" placeholder="News description" {...register("description", { required: true })} className="input input-bordered" />
+                        <input type="text" placeholder="News description" defaultValue={description} {...register("description", { required: true })} className="input input-bordered" />
                     </div>
                     {errors.description?.type === 'required' && <p className="text-red-500">description is required</p>}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text card-text-secondary">Image Link</span>
                         </label>
-                        <input type="text" placeholder="News img link" {...register("img", { required: true })} className="input input-bordered" />
+                        <input type="text" placeholder="News img link" defaultValue={img} {...register("img", { required: true })} className="input input-bordered" />
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Category</span>
                         </label>
-                        <select className='input input-bordered w-full' {...register("category", { required: true })}>
+                        <select className='input input-bordered w-full' defaultValue={category} {...register("category", { required: true })}>
                             <option value="politics">Select a Category</option>
                             <option value="politics">Politics</option>
                             <option value="business">Business</option>
@@ -90,7 +86,7 @@ const AddaNews = () =>  {
                         <label className="label">
                             <span className="label-text">Subcategory</span>
                         </label>
-                        <select className='input input-bordered w-full' {...register("subcategory", { required: true })}>
+                        <select className='input input-bordered w-full' defaultValue={subcategory} {...register("subcategory", { required: true })}>
 
                             <option value="asia">Select a sub category</option>
                             <option value="asia">Asia</option>
@@ -135,10 +131,10 @@ const AddaNews = () =>  {
                         <label className="label">
                             <span className="label-text card-text-secondary">Add Tags</span>
                         </label>
-                        <input type="text" placeholder='Related keywords!'  {...register("keywords")} className="input input-bordered" />
+                        <input type="text" placeholder='Related keywords!' defaultValue={tags.join(', ')}  {...register("keywords")} className="input input-bordered" />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="primary-btn">Add This News</button>
+                        <button className="primary-btn">Edit News</button>
                     </div>
                 </form>
             </div>
@@ -146,4 +142,4 @@ const AddaNews = () =>  {
     );
 };
 
-export default AddaNews;
+export default EditNews;

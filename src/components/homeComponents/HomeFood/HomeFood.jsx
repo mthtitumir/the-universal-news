@@ -9,7 +9,7 @@ const HomeFood = async () => {
         <div className=''>
             <Headline headline={"Foods & Recipes"} seeMore={"See More"} path={"/news/food"} />
             <div className='grid md:grid-cols-12 gap-2'>
-                <div className='md:col-span-4 flex flex-col gap-2 scroll'>
+                <div className='md:col-span-4 flex flex-col gap-2 scroll vly'>
                     {
                         foodData?.map(food => <NewsCardThree key={food?._id} item={food} />)
                     }

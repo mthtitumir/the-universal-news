@@ -17,13 +17,13 @@ const HomeComponent = async () => {
     <div className="">
       <Headline headline={"Recent News"} seeMore={""} path={""} />
 
-      <div className="grid sm:grid-cols-3 md:grid-cols-12 gap-3 md:h-[70vh]">
-        <div className="card1 md:col-span-3 overflow-y-scroll overflow-x-hidden ">
+      <div className="grid sm:grid-cols-3 md:grid-cols-12 gap-2 md:h-[70vh]">
+        <div className="card1 md:col-span-3 overflow-y-scroll overflow-x-hidden vly">
           {data.map((item) => (
             <NewsCardOne key={item.id} item={item}></NewsCardOne>
           ))}
         </div>
-        <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden ">
+        <div className="card1 order-first md:order-none md:col-span-5 flex flex-col gap-3 overflow-y-scroll overflow-x-hidden vly">
           {data1.map((item) => (
             <NewsCardTwo key={item.id} item={item}></NewsCardTwo>
           ))}
