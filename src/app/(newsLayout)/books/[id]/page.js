@@ -15,7 +15,7 @@ const BookDetails = async ({ params }) => {
     authorImage,
   } = bookDetails;
   return (
-    <div className="flex-row md:flex c-auto w-[90%] md:px-20 my-10">
+    <div className="flex-row md:flex items-center c-auto w-[90%] md:px-20 my-5">
       {/* left bar */}
       <div className="md:w-[20%]">
         <Image
@@ -25,19 +25,19 @@ const BookDetails = async ({ params }) => {
           alt="book image"
           className=" sm:mx-auto"
         ></Image>
-        <p className="text-lg mt-2 font-semibold text-gray-800">
+        <p className="text-lg font-semibold text-gray-800">
           Price: ${price}
         </p>
       </div>
 
       {/* right bar */}
       <div className="md:w-[70%] px-20">
-        <h2 className=" mt-10 mb-4 text-4xl font-semibold ">{name}</h2>
+        <h2 className=" mt-3 b-4 text-4xl font-semibold ">{name}</h2>
         <div className="md:flex items-center ">
           <Ratings ratings={ratings} />
           <p className="pl-3 mt-2 text-2xl font-semibold">{ratings}</p>
         </div>
-        <p className="mt-4 text-gray-700">{description}</p>
+        <p className="mt-4 text-gray-700">{description.repeat(7).length > 500 ? description.repeat(7).split(0, 501) : description.repeat(7)}</p>
 
         <div className="flex items-center gap-2">
           <Image

@@ -1,14 +1,15 @@
 "use client";
-
 import useAuth from "@/hooks/useAuth";
 import usejwt from "@/utils/usejwt";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { startTransition } from "react";
+import { startTransition, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+
 
 const SignupForm = () => {
     const {
@@ -60,7 +61,7 @@ const SignupForm = () => {
             const role = 'user';
             const myArtical = [];
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role,myArtical });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role, myArtical });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
@@ -87,7 +88,7 @@ const SignupForm = () => {
             const user = await createUser(email, password);
             const myArtical = [];
             try {
-                const response = await axios.post(`/api/save-user`, { name, email, photo, role,myArtical });
+                const response = await axios.post(`/api/save-user`, { name, email, photo, role, myArtical });
                 console.log(response.data);
             } catch (error) {
                 console.error('Error submitting form:', error);
@@ -108,6 +109,15 @@ const SignupForm = () => {
             toast.error(error.message || "User not signed in");
         }
     };
+
+    const [show, setShow] = useState(false);
+    const handleShow = () => {
+        setShow(!show);
+    }
+    const [show2, setShow2] = useState(false);
+    const handleShow2 = () => {
+        setShow2(!show);
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -156,15 +166,18 @@ const SignupForm = () => {
                 <label htmlFor="password" className="label label-text">
                     Password
                 </label>
-                <input
-                    type="password"
-                    placeholder="password"
-                    id="password"
-                    name="password"
-                    className="input input-bordered rounded"
-                    autoComplete="new-password"
-                    {...register("password", { required: true, minLength: 6 })}
-                />
+                <div className="flex justify-between items-center">
+                    <input
+                        type={show ? "text" : "password"}
+                        placeholder="password"
+                        id="password"
+                        name="password"
+                        className="input input-bordered rounded w-full"
+                        autoComplete="new-password"
+                        {...register("password", { required: true, minLength: 6 })}
+                    />
+                    <p onClick={handleShow} className="-ml-14 cursor-pointer">{show ? <AiFillEye className="text-2xl"></AiFillEye> : <AiFillEyeInvisible className="text-2xl"></AiFillEyeInvisible>}</p>
+                </div>
                 {errors.password && (
                     <span className="text-red-500 text-base mt-1">
                         Please enter a password.
@@ -175,20 +188,25 @@ const SignupForm = () => {
                 <label htmlFor="confirmPassword" className="label label-text">
                     Confirm Password
                 </label>
-                <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    className="input input-bordered rounded"
-                    autoComplete="new-password"
-                    {...register("confirmPassword", {
-                        required: true,
-                        minLength: 6,
-                        validate: (value) =>
-                            value === getValues("password") || "The passwords do not match.",
-                    })}
-                />
+                <div className="flex justify-between items-center">
+
+                    <input
+                        type={show2 ? "text" : "password"}
+                        placeholder="Confirm Password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        className="input input-bordered rounded w-full"
+                        autoComplete="new-password"
+                        {...register("confirmPassword", {
+                            required: true,
+                            minLength: 6,
+                            validate: (value) =>
+                                value === getValues("password") || "The passwords do not match.",
+                        })}
+                    />
+                    <p onClick={handleShow2} className="-ml-14 cursor-pointer">{show2 ? <AiFillEye className="text-2xl"></AiFillEye> : <AiFillEyeInvisible className="text-2xl"></AiFillEyeInvisible>}</p>
+                </div>
+
                 {errors.confirmPassword && (
                     <span className="text-red-500 text-base mt-1">
                         {errors.confirmPassword.message || "Please confirm your password."}
