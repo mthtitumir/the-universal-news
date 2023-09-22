@@ -1,11 +1,11 @@
-import { Dna } from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 
 
 const Spinner = () => {
     return (
         <div className='container mx-auto'>
             <div className='flex justify-center items-center  my-8'>
-                <Dna
+                <ThreeDots
                     visible={true}
                     height="80"
                     width="80"

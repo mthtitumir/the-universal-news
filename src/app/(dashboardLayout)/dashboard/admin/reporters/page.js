@@ -1,3 +1,4 @@
+import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
 import { GetAllReporters } from '@/services/GetAllNews'
 import Image from 'next/image'
 
@@ -7,12 +8,10 @@ const Reporters = async () => {
 
   return (
     <div className="overflow-x-auto p-3">
-      <div className=' border-2 border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
-        <h1 className="text-3xl text-red-600 font-semibold animate-pulse">{reporters?.length} - Brave Reporters</h1>
-      </div>
-      <div className="overflow-x-auto">
-        <table className="table mt-5">
-          <thead className="border rounded-lg">
+      <DashboardBanner text={`Brave Reporters - ${reporters?.length}`} />
+      <div className="border border-cyan-500 mt-5 p-3 rounded-lg">
+        <table className="table table-sm">
+          <thead className="">
             <tr>
               <th>Index</th>
               <th>Picture</th>
@@ -21,8 +20,8 @@ const Reporters = async () => {
               <th>Role</th>
             </tr>
           </thead>
-          <tbody className="border">
-            { reporters &&
+          <tbody className="">
+            {reporters &&
               reporters?.map((reporter, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>

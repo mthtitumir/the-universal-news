@@ -4,10 +4,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import movieData from "../../utils/movie.json"
 import Image from "next/image";
-const MovieBannerLeft = () => {
-  const data = movieData
+import Link from "next/link";
+const MovieBannerLeft = ({data}) => {
   return (
     <div className="">
       <Swiper
@@ -49,7 +48,7 @@ const MovieBannerLeft = () => {
               <div className="absolute  flex items-end justify-center h-full w-full left-0 bottom-0 bg-gradient-to-t from-[#151515] to-[rgba(21, 21, 21, 0)] ">
                 <div className="text-white space-y-3 lg:space-y-4 pl-4 lg:pl-28 w-3/4 mb-16">
                   <h2 className="lg:text-5xl  text-2xl font-bold">
-                    {movie?.original_title}
+                    <Link href={`/tv-show/${movie?.id}`}>{movie?.original_title}</Link>
                   </h2>
                   <p className="text-gray-200 text-xs lg:text-base ">
                     {movie?.overview}

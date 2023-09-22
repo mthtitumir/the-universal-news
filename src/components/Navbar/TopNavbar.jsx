@@ -39,20 +39,19 @@ const TopNavbar = () => {
         }
     };
     let dashboardLink = "";
-    if (user && role?.toString() === "admin") {
+    if (user && role?.toLowerCase() === "admin") {
         dashboardLink = "/dashboard/admin";
-    } else if (user && role?.toString() === "employer") {
+    } else if (user && role?.toLowerCase() === "employer") {
         dashboardLink = "/dashboard/employer";
-    } else if (user && role?.toString() === "reporter") {
+    } else if (user && role?.toLowerCase() === "reporter") {
         dashboardLink = "/dashboard/reporter";
-    } else if (user && role?.toString() === "user") {
+    } else if (user && role?.toLowerCase() === "user") {
         dashboardLink = "/dashboard";
-    } else if (user && role?.toString() === "moderator") {
+    } else if (user && role?.toLowerCase() === "moderator") {
         dashboardLink = "/dashboard/moderator";
     } else {
         dashboardLink = "/";
     }
-    // console.log(dashboardLink);
 
     return (
         <div className={`${pathName?.includes('news') ? 'hidden' : 'block'} px-3 md:px-0 `}>
@@ -79,16 +78,15 @@ const TopNavbar = () => {
                     pathName !== '/' && <h2 className={`${myFont.className} text-2xl md:text-3xl`}><Link href="/">The Universal News</Link></h2>
                 }
                 <div className='flex justify-between items-center gap-2 text-md '>
-                    <Link href="/subscription"><button className='bg-cyan-500 rounded px-2 py-1 text-white hidden md:block'>Subscribe</button></Link>
                     {
                         uid ? <>
                             <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="">
                                     <button className='primary-btn'>Account</button>
                                 </label>
-                                <ul tabIndex={0} className="mt-3 z-[1] p-1 shadow menu menu-sm dropdown-content border border-cyan-500 rounded-lg">
-                                    <li><Link href={dashboardLink}>Dashboard</Link></li>
-                                    <li onClick={handleLogout}><Link>Logout</Link></li>
+                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content border border-cyan-500 rounded-lg">
+                                    <Link href={dashboardLink}> <li className=' hover:underline rounded-lg'>Dashboard</li></Link>
+                                    <li className='mt-2 hover:underline rounded-lg' onClick={handleLogout}>Logout</li>
                                 </ul>
                             </div></>
                             :
@@ -107,5 +105,3 @@ const TopNavbar = () => {
 };
 
 export default TopNavbar;
-
-

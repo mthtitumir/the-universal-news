@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HomeJobBanner = ({ text }) => {
     return (
-        <div style={{ backgroundImage: `url("https://i.ibb.co/bvngMTk/Gray-And-Black-Simple-Personal-Linked-In-Banner.png")`, backgroundSize: 'cover', backgroundPosition: 'center' }} className=' border border-cyan-500 h-48 my-3 rounded-lg grid md:grid-cols-2 justify-center content-center'>
+        <div style={{ backgroundImage: `url("https://i.ibb.co/bvngMTk/Gray-And-Black-Simple-Personal-Linked-In-Banner.png")`, backgroundSize: 'cover', backgroundPosition: 'center' }} className=' border border-cyan-500 h-48 rounded-lg grid md:grid-cols-2 justify-center content-center'>
             <div className="flex justify-center items-center">
                 <div className="text-center ">
                     <div>

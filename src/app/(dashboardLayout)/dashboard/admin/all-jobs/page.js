@@ -1,3 +1,4 @@
+import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
 import DeleteNews from '@/components/DashboardComponents/DeleteNews';
 import { GetAllJobs } from '@/services/GetAllNews';
 
@@ -6,10 +7,9 @@ const AllJobs = async () => {
     // console.log(jobs[0]);
     return (
         <div className="overflow-x-auto p-3">
-            <div className=' border-2  border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
-                <h1 className="text-3xl text-red-600 font-semibold animate-pulse">{jobs?.length} - Jobs Posted</h1>
-            </div>
-            <table className="table table-xs mt-5">
+            <DashboardBanner text={`Approved Jobs - ${jobs?.length}`} />
+           <div className='border border-cyan-500 mt-5 p-3 rounded-lg'>
+            <table className="table table-xs ">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -43,6 +43,7 @@ const AllJobs = async () => {
                     }
                 </tbody>
             </table>
+           </div>
         </div>
     );
 };

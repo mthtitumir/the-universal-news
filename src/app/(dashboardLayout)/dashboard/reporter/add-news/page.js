@@ -2,6 +2,7 @@
 import DashboardBanner from '@/components/DashboardComponents/DashboardBanner';
 import useAuth from '@/hooks/useAuth';
 import axios from 'axios';
+import moment from 'moment';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 
@@ -16,12 +17,13 @@ const AddaNews = () =>  {
         const status = 'pending';
         const comments = [];
         const likes = 0;
-        const published_date = new Date().toISOString();
+        const published_date = moment().format('MMMM Do YYYY, h:mm:ss a');
         const { title, description, img, category, subcategory, author, keywords, email, } = data;
         const toastId = toast.loading("Loading...");
         const tags = keywords.split(',');
+        const newsData = {id, title, description, img, category, subcategory, author, tags, comments, email, published_date, likes, status};
         try {
-            const response = await axios.post(`/api/add-news`, { id, title, description, img, category, subcategory, author, tags, comments, email, published_date, likes, status });
+            const response = await axios.post(`/api/add-news`, newsData);
             console.log(response.data);
             if (response.data.insertedId) {
                 toast.dismiss(toastId);
@@ -99,7 +101,7 @@ const AddaNews = () =>  {
                             <option value="europe">Europe</option>
                             <option value="africa">Africa</option>
                             <option value="tech">Tech</option>
-                            <option value="econ">econ</option>
+                            <option value="econ">Econ</option>
                             <option value="media">media</option>
                             <option value="money">money</option>
                             <option value="chemistry">chemistry</option>

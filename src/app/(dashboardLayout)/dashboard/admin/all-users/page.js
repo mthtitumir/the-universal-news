@@ -1,3 +1,4 @@
+import DashboardBanner from "@/components/DashboardComponents/DashboardBanner";
 import { GetAllUsers } from "@/services/GetAllNews"
 import Image from "next/image";
 
@@ -6,12 +7,10 @@ const allUsers = async () => {
     // console.log(users);
     return (
         <div className="overflow-x-auto p-3">
-            <div className=' border-2 border-cyan-500 h-40 rounded-lg flex items-center justify-center'>
-                <h1 className="text-3xl text-red-600 font-semibold animate-pulse">{users.length} - Registered Users</h1>
-            </div>
-            <div className="overflow-x-auto">
-                <table className="table mt-5">
-                    <thead className="border rounded-lg">
+            <DashboardBanner text={`Registered Users - ${users?.length}`} />
+            <div className="border border-cyan-500 mt-5 p-3 rounded-lg">
+                <table className="table table-sm">
+                    <thead className="">
                         <tr>
                             <th>Index</th>
                             <th>Picture</th>
@@ -20,7 +19,7 @@ const allUsers = async () => {
                             <th>Role</th>
                         </tr>
                     </thead>
-                    <tbody className="border">
+                    <tbody className=" ">
                         {
                             users.map((user, index) => (
                                 <tr key={index}>

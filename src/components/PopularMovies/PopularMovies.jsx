@@ -1,20 +1,19 @@
 "use client"
 import React, { useState } from "react";
-import movieData from "../../utils/movie.json";
 import MovieCard from "../MovieCard/MovieCard";
 
-const PopularMovies = () => {
-  const popularMovies = movieData;
+const PopularMovies = ({data}) => {
+  const popularMovies = data;
   const itemsPerPage = 4; // Display 4 items per page
   const [currentPage, setCurrentPage] = useState(1);
 
   // Calculate the total number of pages
-  const totalPages = Math.ceil(popularMovies.length / itemsPerPage);
+  const totalPages = Math.ceil(popularMovies?.length / itemsPerPage);
 
   // Calculate the range of items to display on the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentMovies = popularMovies.slice(indexOfFirstItem, indexOfLastItem);
+  const currentMovies = popularMovies?.slice(indexOfFirstItem, indexOfLastItem);
 
   // Pagination buttons
   const paginationButtons = [];
@@ -38,7 +37,7 @@ const PopularMovies = () => {
       <div className="w-24 h-1 bg-cyan-600 absolute left-0 top-11"></div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2  grid-cols-1 gap-5 ">
         {currentMovies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie}></MovieCard>
+          <MovieCard key={movie?.id} movie={movie}></MovieCard>
         ))}
       </div>
 
