@@ -9,7 +9,7 @@ const HomeSports = async () => {
         <>
             <Headline headline={"Sports"} path={"/news/sports"} seeMore={"See More"} />
             <div className="grid md:grid-cols-12 gap-2">
-                <div className="md:col-span-8 scroll flex flex-col gap-2">
+                <div className="md:col-span-8 scroll flex flex-col gap-2 vly">
                     {
                         data?.map(singleData => <NewsCardTwo key={singleData._id} item={singleData} />)
                     }

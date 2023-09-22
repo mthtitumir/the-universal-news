@@ -10,14 +10,14 @@ const AllNews = async () => {
     const scienceData = await GetCategoryData("science");
     const trending = await GetAllNews();
     const data1 = foodData?.slice(3, 6);
-    const data2 = techData?.slice(3, 6);
+    const data2 = techData?.slice(3, 7);
     const data3 = sportsData?.slice(3, 6);
-    const data4 = scienceData?.slice(4, 7);
+    const data4 = scienceData?.slice(4, 8);
     const data5 = trending?.slice(1, 30);
 
     return (
-        <div className='grid md:grid-cols-12 gap-4'>
-            <div className='col-span-4'>
+        <div className='grid md:grid-cols-12 gap-2'>
+            <div className='col-span-4 vly'>
                 <div>
                     <Headline headline={"Food"} seeMore={"See More"} path={"/news/food"} />
                     <div className='flex flex-col gap-3'>
@@ -41,7 +41,7 @@ const AllNews = async () => {
                     </div>
                 </div>
             </div>
-            <div className='col-span-4'>
+            <div className='col-span-4 vly'>
                 <div>
                     <Headline headline={"Sports"} seeMore={"See More"} path={"/news/sports"} />
                     <div className='flex flex-col gap-3'>

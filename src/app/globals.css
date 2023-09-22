@@ -20,6 +20,12 @@ input{
 .res{
     @apply px-3 md:px-0
 }
+.vly{
+    @apply md:border-r md:pr-2 border-black
+}
+.hlx{
+    @apply h-[1px] bg-black my-5
+}
 .secondary-btn{
     @apply bg-transparent rounded px-2 py-1 text-cyan-500 border border-cyan-500;
 }

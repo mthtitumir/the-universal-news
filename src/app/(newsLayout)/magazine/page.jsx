@@ -4,6 +4,7 @@ import { GetAllMagazinesFromDB } from '@/services/GetAllNewsFromDB';
 
 const Magazine = async () => {
     const magazineData = await GetAllMagazinesFromDB();
+
     return (
         <div className='c-auto py-10'>
             <div className='flex lg:flex-row flex-col-reverse items-center justify-between gap-4 w-full py-10'>
@@ -29,7 +30,7 @@ const Magazine = async () => {
                         className="rounded-lg mx-auto"
                         width={400}
                         height={500}
-                        src="https://i.ibb.co/GsqJMtN/magazine2.jpg"
+                        src="https://i.ibb.co/gMpDxDM/17764909-bologna-italy-11-04-2010-magazine-and-newspaper-stand-on-streets-of-bologna-Copy.jpg"
                         alt="banner"
                     />
                     <div className='px-14'>
@@ -43,7 +44,7 @@ const Magazine = async () => {
                         className="rounded-lg mx-auto"
                         width={400}
                         height={500}
-                        src="https://i.ibb.co/GsqJMtN/magazine2.jpg"
+                        src="https://i.ibb.co/bNJ4wkX/newsstand-bookstore-at-the-grove-a-retail-and-entertainment-complex-EBP9-W6-Copy.jpg"
                         alt="banner"
                     />
                     <div className='px-14'>
@@ -57,7 +58,7 @@ const Magazine = async () => {
                         className="rounded-lg mx-auto"
                         width={400}
                         height={500}
-                        src="https://i.ibb.co/GsqJMtN/magazine2.jpg"
+                        src="https://i.ibb.co/xXK2Ffz/magazine-rack-newsstand-kiosk-kiosko-calle-florida-buenos-aires-buenos-A4-YFMK-Copy.jpg"
                         alt="banner"
                     />
                     <div className='px-14'>
@@ -68,9 +69,7 @@ const Magazine = async () => {
                 </div>
 
             </div>
-            <div className='py-6'>
-                <input type="text" placeholder="Search here" className="input input-bordered input-accent w-full" />
-            </div>
+            <div className='hlx'></div>
             <div className='grid md:grid-cols-10'>
 
                 <div className='md:col-span-7'>

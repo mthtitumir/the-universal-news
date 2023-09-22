@@ -1,56 +1,45 @@
-import React from 'react';
 import logo from '../../../public/21601.png'
 import Image from 'next/image'
+import { myFont } from '../Navbar/font';
+import { navData } from '@/data/navData';
+import Link from 'next/link';
 const Footer = () => {
     return (
-        <footer className="mt-10 py-5">
-            <div className="container mx-auto footer grid-cols-2 px-3 md:px-0">
-                <div>
+        <footer className="mt-10 py-5 border-t">
+            <div className="c-auto grid grid-cols-10  px-3 md:px-0">
+                <div className='col-span-3'>
                     <Image
                         src={logo}
-                        height={20}
+                        height={50}
                         width={70}
                         alt="Picture of the author"
                     >
                     </Image>
-                    <p>The Universal News</p>
+                    <p className={`${myFont.className} text-3xl`}>The Universal News</p>
                 </div>
-                <div>
-                    <span className="font-semibold text-base">Continental</span>
-                    <a className="link link-hover">Asia</a>
-                    <a className="link link-hover">Australia</a>
-                    <a className="link link-hover">Europe</a>
-                    <a className="link link-hover">North America</a>
-                </div>
-                <div>
-                    <span className="font-semibold text-base">Show</span>
-                    <a className="link link-hover">Series</a>
-                    <a className="link link-hover">Prod Cast</a>
-                    <a className="link link-hover">Movies</a>
-                </div>
-                <div>
-                    <span className="font-semibold text-base">Follow Us</span>
-                    <a className="link link-hover">Facebook</a>
-                    <a className="link link-hover">Twitter</a>
-                    <a className="link link-hover">Instagram</a>
-                </div>
-                <div>
-                    <span className="font-semibold text-base">Subscribe to Newsletter</span>
-                    <div className="form-control w-80">
-                        <label className="label">
-                        </label>
-                        <div className="relative">
-                            <input type="text"
-                                className=" py-1  border-y-2  w-full pr-16 rounded-none" />
-                            <button className="py-1 mt-1 bg-indigo-950 text-white text-sm absolute top-0 right-0  ">Subscribe</button>
+
+                <div className='col-span-7'>
+                    <div className='flex justify-between'>
+                        <div>
+                            {
+                                navData?.slice(0, 5).map(data => <Link key={data?.path} className='hover:font-semibold text-lg' href={data?.path}><h1>{data?.title}</h1></Link>)
+                            }
                         </div>
-                        <label className='flex mt-5 gap-5'>
-                            <Image width={100} height={30} src="https://i0.wp.com/www.techdigest.tv/wp-content/uploads/2021/02/get-it-on-google-play-badge.png?ssl=1" alt="" />
-                            <Image width={120} height={30} src="https://gotoaarhus.com/images/app-store.svg" alt="" />
-                        </label>
+                        <div>
+                            {
+                                navData?.slice(5, 10).map(data => <Link key={data?.path} className='hover:font-semibold text-lg' href={data?.path}><h1>{data?.title}</h1></Link>)
+                            }
+                        </div>
+                        <div>
+                            {
+                                navData?.slice(10, 15).map(data => <Link key={data?.path} className='hover:font-semibold text-lg' href={data?.path}><h1>{data?.title}</h1></Link>)
+                            }
+                        </div>
+                        
                     </div>
                 </div>
             </div>
+            <p className='text-center mt-8 mb-3'>Copyright © 2023 - All right reserved by <span className="font-bold">Team Code Wolves</span></p>
         </footer>
     );
 };

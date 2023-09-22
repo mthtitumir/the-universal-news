@@ -1,12 +1,12 @@
 import SocialShare from '@/components/miniComponents/SocialShare';
 import Image from 'next/image';
 import NewsCardFour from '@/components/newsCards/NewsCardFour';
-import { GetSinglePhotosFromDB } from '@/services/GetAllNewsFromDB';
+import { GetAllPhotosFromDB, GetSinglePhotosFromDB } from '@/services/GetAllNewsFromDB';
 
 const SinglePhotoComponent =async ({ params }) => {
     const booksDetails = await GetSinglePhotosFromDB(params?.id);
     const { title, images, number, captions, description, published_date, author, authorEmail, tags, likes, comments, slideImage } = booksDetails;
-    const allTravelData = data;
+    const allTravelData = await GetAllPhotosFromDB();
     return (
         <div className='c-auto'>
             <Image
@@ -109,15 +109,15 @@ const SinglePhotoComponent =async ({ params }) => {
             ></Image>
 
 
-            <h1 className='text-2xl mt-16 font-semibold text-center '>More relevant News</h1>
+            {/* <h1 className='text-2xl mt-16 font-semibold text-center '>More relevant News</h1>
             <div className='grid md:grid-cols-3 gap-5 my-8'>
                 {
-                    allTravelData.map(item => <NewsCardFour
+                    allTravelData?.map(item => <NewsCardFour
                         key={item.id}
                         item={item}
                     ></NewsCardFour>)
                 }
-            </div>
+            </div> */}
         </div>
     );
 };

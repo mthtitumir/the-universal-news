@@ -12,8 +12,8 @@ const WeekNews = async () => {
 
 
     return (
-        <div className='mt-5 grid md:grid-cols-12 gap-3 md:h-[70vh]'>
-            <div className='md:col-span-4 overflow-y-scroll overflow-x-hidden card1'>
+        <div className='mt-5 grid md:grid-cols-12 gap-2 md:h-[70vh]'>
+            <div className='md:col-span-4 overflow-y-scroll overflow-x-hidden card1 vly'>
                 <Headline headline={"Week's Hottest"} seeMore={""} path={""} />
                 <div className='flex flex-col gap-3'>
                     {
@@ -24,7 +24,7 @@ const WeekNews = async () => {
                     }
                 </div>
             </div>
-            <div className='md:col-span-5 overflow-y-scroll overflow-x-hidden card1'>
+            <div className='md:col-span-5 overflow-y-scroll overflow-x-hidden card1 vly'>
                 <Headline headline={"Weekly News"} seeMore={""} path={""} />
                 <div>
                     {
@@ -35,7 +35,7 @@ const WeekNews = async () => {
                     }
                 </div>
             </div>
-            <div className='pl-3 md:col-span-3'>
+            <div className='pl-2 md:col-span-3'>
                 <Image
                     src="https://i.ibb.co/92BFdLM/5190537997-89cf7af050-c.jpg"
                     height={400}
