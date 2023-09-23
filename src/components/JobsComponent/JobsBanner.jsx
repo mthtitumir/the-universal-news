@@ -1,12 +1,12 @@
 import { BiFilterAlt } from 'react-icons/bi';
 import SingleJob from './SingleJob';
-import HandleSearchFunction from './HandleSearchFunction';
 import { GetAllJobs } from '@/services/GetAllNews';
 import { FaUserGraduate } from 'react-icons/fa';
 import HomeJobBanner from '../homeComponents/HomeJobBanner/HomeJobBanner';
 
-const JobsBanner =async () => {
+const JobsBanner = async () => {
     const jobsData = await GetAllJobs();
+    // console.log(jobsData);
     return (
         <div className='res c-auto'>
             <HomeJobBanner text={"jobsPage"} />
@@ -21,9 +21,6 @@ const JobsBanner =async () => {
                             <h1 className='font-semibold text-slate-900'>Filter</h1>
                         </div>
 
-                        {/* input */}
-
-                        <HandleSearchFunction />
                         <div>
                             <div className='flex items-center gap-2 my-3'>
                                 <input type="checkbox" style={{ width: '17px', height: '20px' }} />

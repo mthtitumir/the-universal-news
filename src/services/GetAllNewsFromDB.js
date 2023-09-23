@@ -127,10 +127,13 @@ export const GetAllJobsFromDB = async () => {
 }
 export const GetSingleJobsFromDB = async (id) => {
     try {
-        const ids = id;
+        if (!id) {
+            return "wait";
+        }
         const db = await DbConnect();
         const allJobs = db.collection('all-jobs');
-        const query = { id: ids }
+        const query = { jobId: parseInt(id) }
+        // console.log(query);
         const result = await allJobs.findOne(query)
         return result;
     } catch (error) {
