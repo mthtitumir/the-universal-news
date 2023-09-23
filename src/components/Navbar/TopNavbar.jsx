@@ -70,8 +70,6 @@ const TopNavbar = () => {
                             }
                         </ul>
                     </div>
-                    {/* search menu  */}
-                    <h1 className='text-md'><AiOutlineSearch /></h1>
 
                 </div>
                 {

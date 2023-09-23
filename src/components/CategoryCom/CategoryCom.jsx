@@ -41,7 +41,7 @@ const CategoryCom = async ({ params }) => {
                     <div>
                         <ul className=' flex justify-start gap-4 flex-wrap'>
                             {
-                                subcategories.map((subCat, index) => <NavLink exact activeClassName={"text-cyan-500"} href={`/news/${params.category}/${subCat}`} key={index + 1}><li className='text-sm md:text-base hover:underline'>{subCat.toUpperCase()}</li></NavLink>)
+                                subcategories?.slice(0, 4).map((subCat, index) => <NavLink exact activeClassName={"text-cyan-500"} href={`/news/${params.category}/${subCat}`} key={index + 1}><li className='text-sm md:text-base hover:underline'>{subCat.toUpperCase()}</li></NavLink>)
                             }
                         </ul>
                     </div>

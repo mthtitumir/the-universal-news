@@ -30,7 +30,6 @@ const AddBooks = () => {
         toast.dismiss(toastId);
         toast.success("Book posted successfully!");
       } else {
-
         toast.dismiss(toastId);
         toast.error(error.message || "Book posting failed!");
       }

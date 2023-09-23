@@ -17,7 +17,7 @@ const TravelSingleNews = ({ params }) => {
     const allTravelData = data.slice(1, 16);
 
     return (
-        <div>
+        <div className='c-auto'>
             <div className='relative'>
                 <Swiper
                     pagination={{

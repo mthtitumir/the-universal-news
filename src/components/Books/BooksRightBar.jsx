@@ -1,4 +1,3 @@
-import React from 'react';
 import SwiperSection from './booksComponent/SwiperSection';
 import Gallery from './booksComponent/Gallery';
 import AllBooks from './booksComponent/AllBooks';

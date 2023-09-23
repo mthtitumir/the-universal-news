@@ -1,18 +1,13 @@
-"use client"
 import DashboardBanner from "@/components/DashboardComponents/DashboardBanner";
 import DeleteButton from "@/components/DashboardComponents/DeleteButton";
-import EditBook from "@/components/DashboardComponents/Moderator/EditBookModal";
-import MyModal from "@/components/HandleModal/Modal";
 import useModeratorAllBooks from "@/hooks/TanStackHooks/ModeratorHooks/useModeratorAllBooks"
-import { useState } from "react";
-import { BiEdit } from "react-icons/bi";
+import { GetAllBooks } from "@/services/GetAllNews";
 
-const ModeratorAllBooks = () => {
-  const [myBooks] = useModeratorAllBooks();
-  const [isOpen, setIsOpen] = useState(false);
+const AllBooks = async () => {
+  const allBooks = await GetAllBooks();
   return (
     <div className='p-3 md:pr-0'>
-      <DashboardBanner text={"My Books"} />
+      <DashboardBanner text={`All Books - ${allBooks?.length}`} />
       <div className='mt-5 border rounded-lg border-cyan-500 p-3'>
         <div className="overflow-x-auto">
           <table className="table table-xs">
@@ -25,13 +20,13 @@ const ModeratorAllBooks = () => {
                 <th>Price</th>
                 <th>AuthorName</th>
                 <th>Publisher</th>
-                <th>Edit</th>
+                <th>Moderator</th>
                 <th>Delete</th>
               </tr>
             </thead>
             <tbody className=''>
               {
-                myBooks?.map(books => (
+                allBooks?.map(books => (
                   <tr className="" key={books?.id}>
                     <td>{books?.id}</td>
                     <td>{books?.name}</td>
@@ -40,14 +35,7 @@ const ModeratorAllBooks = () => {
                     <td>{books?.price}</td>
                     <td>{books?.authorName}</td>
                     <td>{books?.publisher}</td>
-                    <>
-                      <td className="text-center text-2xl text-cyan-600" onClick={() => setIsOpen(!isOpen)}>
-                        <BiEdit />
-                      </td>
-                      <MyModal isOpen={isOpen} setIsOpen={setIsOpen} >
-                        <EditBook singleBook={books} />
-                      </MyModal>
-                    </>
+                    <td>{books?.moderatorEmail}</td>
                     <DeleteButton path={`/api/moderator/book-delete-edit/${books?.id}`} />
                   </tr>
                 ))
@@ -60,4 +48,4 @@ const ModeratorAllBooks = () => {
   )
 }
 
-export default ModeratorAllBooks
+export default AllBooks

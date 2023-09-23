@@ -1,9 +1,12 @@
+import { GetSingleJobsFromDB } from '@/services/GetAllNewsFromDB';
 import Link from 'next/link';
 import { BiHome, BiSolidTimer, BiMoney, BiShoppingBag, BiArrowToTop } from 'react-icons/bi'
 import { PiClockClockwise } from 'react-icons/pi'
 
-const SingleJob = ({ job }) => {
-    const { _id, jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription } = job;
+const SingleJob = async ({ job }) => {
+    // const job = await GetSingleJobsFromDB(id);
+    console.log(job);
+    const { jobId, status, datePosted, title, companyDetails, companyName, jobLocation, employmentType, applicationDeadline, category, experience, vacancies, requiredSkills, salary, authorEmail, instructions, jobsDescription } = job;
     return (
         <div className="card w-full bg-white mb-3 rounded-sm border-gray-500">
             <div className="card-body">
@@ -23,7 +26,7 @@ const SingleJob = ({ job }) => {
                     <div>
                         <div className='flex items-center gap-2'>
                             <BiSolidTimer className='text-gray-400 text-lg'></BiSolidTimer>
-                            <p className='text-base text-gray-500 '>Duration</p>
+                            <p className='text-base text-gray-500 '>Deadline</p>
                         </div>
                         <p className='text-sm text-gray-900 text-center'>{applicationDeadline}</p>
                     </div>
@@ -47,13 +50,14 @@ const SingleJob = ({ job }) => {
                 </div>
 
                 <div className='flex items-center gap-3 my-3'>
-                    <span className='bg-gray-100 capitalize  rounded-sm w-24 text-center  px-3'>{category}</span>
+                    <span className='bg-gray-100 capitalize  rounded-sm text-center  px-3'>{category}</span>
                     <span className='bg-gray-100 capitalize  rounded-sm px-3'>{employmentType}</span>
                 </div>
 
-                <div className='flex items-center gap-2 bg-green-100 w-28 py-1 rounded-sm mb-3'>
-                    <PiClockClockwise className=' text-green-500 '></PiClockClockwise>
-                    <p className='text-sm text-green-500 '>{datePosted}</p>
+                <div className='flex items-center gap-2 bg-green-100 text-green-500  w-1/2 py-1 rounded-sm mb-3'>
+                    <PiClockClockwise className=' '></PiClockClockwise>
+                    <p>Posted Date:</p>
+                    <p className='text-sm '>{datePosted}</p>
                 </div>
 
                 <hr />
