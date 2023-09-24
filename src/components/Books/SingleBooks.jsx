@@ -6,7 +6,7 @@ const SingleBooks = ({ books }) => {
     return (
         <div className="card w-full bg-base-100 border rounded-sm ">
             <figure>
-                <Link href={`/books/${id}`}>
+                <Link href={`/book/${id}`}>
                     <Image
                         height={50}
                         width={120}
