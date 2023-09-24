@@ -114,6 +114,8 @@ export const GetPendingNewsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 }
+
+// jobs get data 
 export const GetAllJobsFromDB = async () => {
     try {
         const db = await DbConnect();
@@ -125,6 +127,34 @@ export const GetAllJobsFromDB = async () => {
         return ({ error: 'error to get data' });
     }
 }
+export const GetCategoryJobsFromDB = async (category) => {
+    try {
+        const query = { category: category };
+        const db = await DbConnect();
+        const allJobs = db.collection('all-jobs');
+        const result = await allJobs.find(query).toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get job' });
+    }
+};
+export const GetLocationJobsFromDB = async (location) => {
+    try {
+        if (!location) {
+            return "wait";
+        }
+        const query = { jobLocation: location };
+        console.log(location);
+        const db = await DbConnect();
+        const allJobs = db.collection('all-jobs');
+        const result = await allJobs.find(query).toArray();
+        return result;
+    } catch (error) {
+        console.error(error)
+        return ({ error: 'error to get job' });
+    }
+};
 export const GetSingleJobsFromDB = async (id) => {
     try {
         if (!id) {

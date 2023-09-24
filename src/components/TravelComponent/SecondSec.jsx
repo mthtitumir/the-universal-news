@@ -1,14 +1,13 @@
-import React from 'react';
-import data from '../../utils/travel.json'
 import Image from 'next/image';
 import NewsCardFour from '../newsCards/NewsCardFour';
 import Link from 'next/link';
+import { GetCategoryData } from '@/services/GetAllNews';
 
-
-const SecondSec = () => {
-    const allTravelData = data;
-    const travelData = data.slice(2, 3);
-    const travelData2 = data.slice(6, 8);
+const SecondSec =async () => {
+    const data2 =await GetCategoryData('travel');
+    const allTravelData = data2;
+    const travelData = data2.slice(2, 3);
+    const travelData2 = data2.slice(6, 8);
 
     return (
         <>

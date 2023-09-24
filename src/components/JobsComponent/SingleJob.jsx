@@ -63,7 +63,7 @@ const SingleJob = async ({ job }) => {
                 <hr />
 
                 <div className="card-actions justify-end">
-                    <Link href={`/jobs/${jobId}`}>
+                    <Link href={`/job/${jobId}`}>
                         <button className='secondary-btn'>View Details</button>
                     </Link>
                 </div>
